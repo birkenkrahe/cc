@@ -153,7 +153,6 @@
 - When a ~bash~ shell is started, it looks for a startup script
 - This is a
 
-
 * REFERENCES
 
 - Gookin D (2022). Tiny C Projects. Manning.
