@@ -80,15 +80,14 @@
 
 - Linux commands accept /options/, e.g. ~-p PID~
 
-- This option prints the process ID of the currently executed process
-
   #+begin_src bash :exports both
+    ## print process of the current script
     ps -p $$
   #+end_src
 
   #+RESULTS:
   :   PID TTY          TIME CMD
-  : 22174 ?        00:00:00 bash
+  : 23059 ?        00:00:00 bash
 
 - You see the ~PID~ (~$$~ stands for the current script), the ~TIME~ this
   process has run in the CPU, and the name of the command as ~CMD~.
@@ -101,6 +100,7 @@
 - To see other processes, try ~ps -alh~ - this option provides a lot
   more information - the kind that system administrators need
   #+begin_src bash
+    ## print all processes in long format
     ps -alh
   #+end_src
 
@@ -110,19 +110,19 @@
   4  1000   983   623  20   0   8644  3708 do_wai S    tty1       0:00 -bash
   0  1000  1131   983  20   0   1976  1176 do_wai S+   tty1       0:00 /bin/sh /usr/bin/startx
   0  1000  1153  1131  20   0   3756   704 do_wai S+   tty1       0:00 xinit /etc/X11/xinit/xinitrc -- /etc/X11/xinit/xserverrc :0 vt1 -keeptty -auth /tmp/serverauth.WLi7BSMVEL
-  0  1000  1154  1153  20   0 328584 77988 do_epo Sl   tty1       2:48 /usr/lib/xorg/Xorg -nolisten tcp :0 vt1 -keeptty -auth /tmp/serverauth.WLi7BSMVEL
+  0  1000  1154  1153  20   0 329608 79508 do_epo Sl   tty1       3:34 /usr/lib/xorg/Xorg -nolisten tcp :0 vt1 -keeptty -auth /tmp/serverauth.WLi7BSMVEL
   0  1000  1158  1153  20   0  55804 12228 poll_s Sl   tty1       0:01 /usr/bin/lxsession -s LXDE-pi -e LXDE
-  0  1000  1257  1158  20   0 294640 78080 poll_s Sl   tty1       1:51 mutter
+  0  1000  1257  1158  20   0 294624 78248 poll_s Sl   tty1       2:27 mutter
   0  1000  1260  1158  20   0  48876 10932 poll_s Sl   tty1       0:00 lxpolkit
-  0  1000  1262  1158  20   0 564924 70904 poll_s Sl   tty1       0:33 lxpanel --profile LXDE-pi
-  0  1000  1263  1158  20   0 342900 77208 poll_s Sl   tty1       0:04 pcmanfm --desktop --profile LXDE-pi
+  0  1000  1262  1158  20   0 565480 71380 poll_s Sl   tty1       0:38 lxpanel --profile LXDE-pi
+  0  1000  1263  1158  20   0 342900 77208 poll_s Sl   tty1       0:05 pcmanfm --desktop --profile LXDE-pi
   0  1000  1272     1  20   0  52348 27312 poll_s S    tty1       0:00 /usr/bin/python3 /usr/share/system-config-printer/applet.py
   0  1000  1275     1  20   0  47200  5952 poll_s Sl   tty1       0:00 /usr/libexec/at-spi-bus-launcher --launch-immediately
   0  1000  1313  1275  20   0   7556  3392 do_epo S    tty1       0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
-  0  1000  1361     1  20   0  32520  6712 poll_s Sl   tty1       0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+  0  1000  1361     1  20   0  32520  6712 poll_s Sl   tty1       0:01 /usr/libexec/at-spi2-registryd --use-gnome-session
   0  1000  2298  1262  20   0 124432 35344 poll_s Sl   tty1       0:25 lxterminal
   0  1000 14754  2298  20   0   8624  3824 poll_s Ss+  pts/1      0:00 bash
-  4  1000 17338  1262  20   0 374444 145992 pipe_r Sl  tty1       3:27 /snap/emacs/1733/usr/bin/emacs
+  4  1000 17338  1262  20   0 416844 173412 pipe_r Sl  tty1       5:07 /snap/emacs/1733/usr/bin/emacs
   0  1000 17390 17338  20   0   8556  3836 wait_w Ss+  pts/3      0:00 /bin/bash --noediting -i
   #+end_example
 
@@ -130,6 +130,7 @@
   here you see e.g. that ~emacs~ was called from a terminal program
 
   #+begin_src bash :exports both
+    ## print all processes and show process hierarchy
     ps -aH
   #+end_src
 
@@ -153,10 +154,12 @@
    1272 tty1     00:00:00 applet.py
   #+end_example
 
+- To learn more about the ~ps~ command or any other Linux command, look
+  for the command's manual ("man") page: [[https://man7.org/linux/man-pages/man1/ps.1.html][online version for ps(7)]]
+  
 - To get more deeply into all of this, attend my course on Operating
   Systems (CSC 420) and/or read "The Linux Command Line" by Shotts
   (2021).
-
 
 * REFERENCES
 
