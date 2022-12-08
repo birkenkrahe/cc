@@ -82,7 +82,7 @@
 
 - This option prints the process ID of the currently executed process
 
-  #+begin_src bash
+  #+begin_src bash :exports both
     ps -p $$
   #+end_src
 
@@ -129,7 +129,7 @@
 - Lastly, try ~ps -alH~, which includes information on process nesting:
   here you see e.g. that ~emacs~ was called from a terminal program
 
-  #+begin_src bash
+  #+begin_src bash :exports both
     ps -aH
   #+end_src
 
@@ -139,15 +139,15 @@
     983 tty1     00:00:00 bash
    1131 tty1     00:00:00   startx
    1153 tty1     00:00:00     xinit
-   1154 tty1     00:02:47       Xorg
+   1154 tty1     00:03:26       Xorg
    1158 tty1     00:00:01       lxsession
-   1257 tty1     00:01:50         mutter
+   1257 tty1     00:02:20         mutter
    1260 tty1     00:00:00         lxpolkit
-   1262 tty1     00:00:33         lxpanel
+   1262 tty1     00:00:37         lxpanel
    2298 tty1     00:00:25           lxterminal
-  17338 tty1     00:03:22           emacs
+  17338 tty1     00:04:50           emacs
    1263 tty1     00:00:04         pcmanfm
-   1361 tty1     00:00:00 at-spi2-registr
+   1361 tty1     00:00:01 at-spi2-registr
    1275 tty1     00:00:00 at-spi-bus-laun
    1313 tty1     00:00:00   dbus-daemon
    1272 tty1     00:00:00 applet.py
