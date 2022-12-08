@@ -50,6 +50,9 @@
     echo $SHELL    ## print shell program and location
   #+end_src
 
+  #+RESULTS:
+  : /bin/bash
+
 ** How are you executing this?
 
 - What you see here is a so-called /Org-mode code block/
