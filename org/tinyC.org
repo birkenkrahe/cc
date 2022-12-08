@@ -46,7 +46,7 @@
 - A variable can store different values
 
 - Comments after ~##~ are not executed by the shell program
-  #+begin_src bash
+  #+begin_src bash :exports both
     echo $SHELL    ## print shell program and location
   #+end_src
 
