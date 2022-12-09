@@ -188,8 +188,14 @@
      #+BEGIN_SRC bash
        cat ~/.bash_profile
      #+END_SRC
+
+     #+RESULTS:
+
    - This either gives you something (if ~.bash_profile~ exists) or
-     nothing (if it doesn't)
+     nothing and an error (if it doesn't):
+     #+begin_example bash
+     cat: /home/pi/.bash_config: No such file or directory
+     #+end_example
 
    - The curious expression ~~/~ is short for "your home directory":
      this is the place where the computer stores your stuff
@@ -199,7 +205,7 @@
      file explorer to view these files
      #+attr_html: :width 500px
      [[../img/tinyC_hidden.png]]
-   
+
 * REFERENCES
 
   - Gookin D (2022). Tiny C Projects. Manning.
