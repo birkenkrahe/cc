@@ -1,8 +1,7 @@
 #+TITLE:Tiny C Projects by Dan Gookin
 #+AUTHOR: Dan Gookin (Manning, 2022)
 #+STARTUP:overview hideblocks
-#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :comments both :results output
-#+PROPERTY: header-args:bash :exports both :comments both :results output
+#+PROPERTY: header-args:bash :exports both :comments both :results output :tangle yes
 * README
 
   - Based on Dan Gookin's "Tiny C Projects" (2022). This book contains
@@ -19,7 +18,7 @@
     that are fast
 
 * Programming daily greetings
-  
+
   - It is nice to see what you can do with little effort
   - In this inaugural lecture, we will create a daily greeting
   - The greeting will greet you whenever you log in
@@ -41,6 +40,7 @@
    - This program starts whenever the basic setup is finished
    - There are many different shell programs: ~bash~, ~csh~, ~ksh~, ~sh~ etc.
      #+attr_html: :width 500px
+     #+caption: table 2.1 from Gookin (2022)
      [[../img/tinyC_shells.png]]
 
 ** What shell program are we using?
@@ -58,7 +58,7 @@
      : /bin/bash
 
    - The result of this command is the location of the program ~bash~ in
-     the file tree 
+     the file tree
    - ~/bin~ is the directory where most of the system programs are
      located - the equivalent of ~C:\Windows\System32\~ on Windows
 
@@ -162,34 +162,38 @@
    - The OS controls thousands of processes "simultaneously"
    - Commands take arguments (to work with), e.g. ~echo TEXT~
    - Commands take options (to alter them), e.g. ~ps -H~
-   - Commands used:
+   - Commands and terms used:
 
-     | COMMAND        | MEANING                   |
-     |----------------+---------------------------|
-     | ~echo~           | print argument to shell   |
-     | ~$SHELL~         | shell program (variable)  |
-     | ~/bin/bash~      | file tree location        |
-     | ~##~             | script comment mark       |
-     | ~ps -alhH~       | process listing w/options |
-     | ~ps -p PID~      | list process labeled ~PID~  |
-     | bash(1), ps(7) | Unix-style manual pages   |
+     | TERM           | MEANING                          |
+     |----------------+----------------------------------|
+     | ~echo~           | print argument to shell          |
+     | ~$SHELL~         | shell program (variable)         |
+     | ~/bin/bash~      | file tree location               |
+     | ~##~             | script comment mark              |
+     | ~ps -alhH~       | process listing w/options        |
+     | ~ps -p PID~      | list process labeled ~PID~         |
+     | ~bash(1)~, ~ps(7)~ | Unix-style manual pages          |
+     | Org-mode       | Editor plugin (Emacs major mode) |
 
    - Most computer users will never know what you already know!
 
-** Shell startup script
+** What is a shell startup script?
 
    - When a ~bash~ shell is started, it looks for a startup script
    - You can configure the shell using the startup script
    - We're going to add a greeting and customize it
+   - 'Script' is really annother name for a program, usually reserved
+     for programming languages that interpret rather than compile code
+   - Code interpretation means "take the code and run it"
+   - Code compilation means "translate code to something the machine
+     understands" (and then run the 'machine code').
 
-** Create/edit the startup script
+** How can you find and view the shell startup script?
 
    - To view the file use the ~cat~ command:
      #+BEGIN_SRC bash
        cat ~/.bash_profile
      #+END_SRC
-
-     #+RESULTS:
 
    - This either gives you something (if ~.bash_profile~ exists) or
      nothing and an error (if it doesn't):
@@ -204,10 +208,208 @@
      "hidden" (configuration) file. In Windows you can configure your
      file explorer to view these files
      #+attr_html: :width 500px
+     #+caption: Windows 10 File Explorer
      [[../img/tinyC_hidden.png]]
 
-* REFERENCES
+** How can you create and edit the startup script?
+
+   - At this point, we don't want get into editing with an editor app
+     quite yet - we will have to and when we do, we'll get started
+     with a powerful one, [[https://gnu.org/software/emacs][GNU Emacs]].
+
+   - Instead, we use the shell itself to ~echo~ lines to the script -
+     this is OK as long as there are only a few and as long as we
+     don't make mistakes - ~bash~ is not very smart or forgiving:
+     #+begin_src bash
+       echo '#!/bin/bash'
+       echo '#startup greetings' >> ~/.bash_profile
+       echo 'echo "Hello" $LOGNAME' >> ~/.bash_profile
+       cat ~/.bash_profile
+     #+end_src
+
+     #+RESULTS:
+     : #!/bin/bash
+     : #startup greetings
+     : echo "Hello" $LOGNAME
+
+   - In the previous /code block/, three lines are added to the file
+     ~.bash_profile~ that resides in ~$HOME~ (~/home/pi~ or ~~/~):
+     1) This is a shell script (~#!~ is called "[[https://en.wikipedia.org/wiki/Shebang_(Unix)][shebang]]")
+     2) A comment: ~startup greetings~ (not executed)
+     3) A greeting: ~Hello~ followed by the content of ~$LOGNAME~
+
+   - The variable ~$LOGNAME~ is set to your user or login name:
+     #+begin_src bash
+       echo $LOGNAME
+       ,#+end_src7
+
+       ,#+RESULTS:
+       : pi
+
+       - However, if you try to run ~.bash_profile~, you are stumped:
+       ,#+begin_src bash
+       ~/.bash_profile
+     #+end_src
+
+   - This generates the /error message/:
+     #+begin_src bash
+       bash: line 1: /home/pi/.bash_profile: Permission denied
+     #+end_src
+
+   - A long listing of the file reveals that the file /permissions/ are
+     only read (~r~) or write (~w~):
+     #+begin_src bash
+       ls -la ~/.bash_profile
+     #+end_src
+
+     #+RESULTS:
+     : -rw-r--r-- 1 pi pi 41 Dec 10 22:46 /home/pi/.bash_profile
+
+   - Let's add execute (~x~) to the permissions and then run it:
+     #+begin_src bash
+       chmod +x ~/.bash_profile
+       ~/.bash_profile
+     #+end_src
+
+     #+RESULTS:
+     : Hello pi
+
+   - It works now! From now on, every time you open a new shell,
+     you'll be greeted. Try it yourself - open a new terminal shell
+     and you should see ~Hello pi~ at the top of the shell screen.
+
+** Intermission: what did you learn?
+
+   These last two sections contained a lot of lingo - let's go through
+   it. If you think you know what a term means already, good for you!
+
+   | COMMAN/TERM     | MEANING                                      |
+   |-----------------+----------------------------------------------|
+   | Script          | Human-readable set of tasks for computers    |
+   | Interpretation  | Take the code and run it                     |
+   | Compilation     | Create a machine version of the code         |
+   | Machine code    | Code that only the machine can understand    |
+   | ~cat~ [file]      | view file                                    |
+   | ~~/~              | short for user home directory (~$HOME~)        |
+   | ~.~[file]         | file is hidden (configuration file)          |
+   | Editor          | Software to create and change files          |
+   | GNU Emacs       | GNU " Editor MACroS" popular text editor     |
+   | ~#!/bin/bash~     | First line of bash script with shebang       |
+   | code block      | Block of code (here in Emacs Org-mode)       |
+   | ~$LOGNAME~        | Name of user who is logged in (you)          |
+   | File permission | Permitted to read, write, execute (~rwx~) file |
+   | ~chmod~           | Program to change file permissions           |
+
+* A first C program
+
+  - The classic first program in any language is "hello world"
+  - The program write "hello world" to the screen
+  - As simple as it sounds, this involves a bunch of computing
+
+** What will you learn?
+
+   - [ ] A first C command (~printf~ to print something)
+   - [ ] How a complete C program looks like
+   - [ ] How a C program is turned into machine code
+   - [ ] How to get around in the file tree
+
+** The first C command - ~printf~
+
+   - The next code block contains a first command in C:
+     #+begin_src C
+       printf("Hello, Marcus!\n");
+     #+end_src
+
+   - I run this code block with the editor command ~C-c C-c~. It's not a
+     program but only a single command inside a program. Emacs helps me
+     with running it by supplementing the code around the program and
+     by compiling, linking and running the machine code.
+
+** How does a complete C program look like?
+
+   - The complete version of the program looks like this:
+     #+begin_src C :tangle ../src/hello.c :results none :comments none
+       #include <stdio.h>
+
+       int main(void)
+       {
+         printf("Hello, Marcus!\n");
+
+         return(0);
+       }
+     #+end_src
+
+   - To turn this program into an executable file, you need to
+     1) /tangle/ the code block (extract the C code) as a C file
+     2) compile the resulting C file into machine code
+     3) run the machine code
+     #+begin_src bash
+       cd ../src/
+       gcc hello.c -o hello
+       ./hello
+     #+end_src
+
+     #+RESULTS:
+     : Hello, Marcus!
+
+   - Let's take the last ~bash~ code block apart:
+     1) ~cd ../src~ changes the location to the ~src~ directory after
+        going up one level in the file tree with ~..~
+     2) ~../src/~ is a /relative path/, an address for the computer to
+        find a location.
+     3) You can also specify /absolute paths/ which begin at the /root/ of
+        the computer's file tree (~/~), e.g. ~/home/pi/~
+     4) The C file ~hello.c~ is compiled with the ~gcc~ compiler
+        software[fn:1]
+     5) The resulting /object C code/ is /linked/ to create an /executable/
+        file named ~hello~.
+     6) The name of the executable is specified with a /compiler
+        option/, ~-o~
+
+   - Let's take the program itself apart:
+     1) ~#include~ is a pre-processing directive to include a file
+     2) The included /header/ file ~stdio.h~ contains input/output
+        functions (it's a C file located in ~/usr/include/)~
+     3) When searching for the file, use ~$PATH~, which stores all
+        locations the computer always looks through
+     4) ~int main(void) { }~ is the main function - all C code must be
+        inside the curly brackets
+     5) ~printf("Hello, Marcus!\n");~ prints the /string/ of /characters/
+        between the double apostrophs and adds a /newline/ at the end
+     6) ~return (0);~ returns ~0~ if all went well
+     7) All commands need to finish with a ~;~ 
+
+** What did we learn?
+
+   | TERM/COMMAND     | MEANING                                     |
+   |------------------+---------------------------------------------|
+   | ~C-c C-c~          | Keys to run Emacs Org-mode code block       |
+   | tangle file      | Extract source code from literate file      |
+   | Relative path    | Location relative to where you are (~$PWD~)   |
+   | Absolute path    | Location relative to the file tree root (~/~) |
+   | ~cd~               | Change working directory (up, down or stay) |
+   | ~.c~               | File extension for C source files           |
+   | ~gcc~              | GNU C Compiler                              |
+   | ~gcc~ [f1] ~-o~ [f2] | Compile ~f1~ and create executable ~f2~         |
+   | ~#include~ [file]  | Preprocessor directive "include file"       |
+   | ~$PATH~            | Locations the computer looks for software   |
+   | ~stdio.h~          | C header file to input and output data      |
+   | ~printf~           | C function to print arguments to screen     |
+   | ~"hello"~          | A string of characters (~h~, ~e~ , ~l~, ~o~)        |
+   | ~\n~               | An escape character that adds a new line    |
+   | ~return~           | Return flag for (un)successful completion   |
+
+* TODO Practice    
+* References
 
   - Gookin D (2022). Tiny C Projects. Manning.
   - Shotts W (2021). The Linux Command Line. NoStarch Press. Free PDF
     version at [[https://linuxcommand.org][linuxcommand.org]]
+* Footnotes
+
+[fn:1] (~gcc~ stands for "GNU C Compiler" - that's the same "GNU" as in
+"GNU Emacs". GNU is a so-called recursive acronym. It stands for
+"GNU's Not Unix". GNU is an free operating system (OS) created
+originally by Rchard Stallman for the Free Software Foundation
+([[https://fsf.org/][fsf.org]]). Linux is another OS distributed freely and openly under a
+[[https://gnu.org/licenses/][GNU license]].
