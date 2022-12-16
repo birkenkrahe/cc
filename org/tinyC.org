@@ -17,7 +17,7 @@
   - C is a typical language for programs that make your life easier and
     that are fast
 
-* Programming daily greetings
+* Part 1: Programming daily greetings
 
   - It is nice to see what you can do with little effort
   - In this inaugural lecture, we will create a daily greeting
@@ -207,196 +207,206 @@
   - Code compilation means "translate code to something the machine
     understands" (and then run the 'machine code').
 
-** How can you find and view the shell startup script?
+* How can you find and view the shell startup script?
 
-   - To view the file use the ~cat~ command:
-     #+BEGIN_SRC bash
-       cat ~/.bash_profile
-     #+END_SRC
+  - To view the file use the ~cat~ command:
+    #+BEGIN_SRC bash
+      cat ~/.bash_profile
+    #+END_SRC
 
-   - This either gives you something (if ~.bash_profile~ exists) or
-     nothing and an error (if it doesn't):
-     #+begin_example bash
-     cat: /home/pi/.bash_config: No such file or directory
-     #+end_example
+  - This either gives you something (if ~.bash_profile~ exists) or
+    nothing and an error (if it doesn't):
+    #+begin_example bash
+    cat: /home/pi/.bash_config: No such file or directory
+    #+end_example
 
-   - The curious expression ~~/~ is short for "your home directory":
-     this is the place where the computer stores your stuff
+  - The curious expression ~~/~ is short for "your home directory":
+    this is the place where the computer stores your stuff
 
-   - The dot in the filename ~./bash_profile~ means that this is a
-     "hidden" (configuration) file. In Windows you can configure your
-     file explorer to view these files
-     #+attr_html: :width 500px
-     #+caption: Windows 10 File Explorer
-     [[../img/tinyC_hidden.png]]
+  - The dot in the filename ~./bash_profile~ means that this is a
+    "hidden" (configuration) file. In Windows you can configure your
+    file explorer to view these files
+    #+attr_html: :width 500px
+    #+caption: Windows 10 File Explorer
+    [[../img/tinyC_hidden.png]]
 
-** How can you create and edit the startup script?
+* How can you create and edit the startup script?
 
-   - At this point, we don't want get into editing with an editor app
-     quite yet - we will have to and when we do, we'll get started
-     with a powerful one, [[https://gnu.org/software/emacs][GNU Emacs]].
+  - At this point, we don't want get into editing with an editor app
+    quite yet - we will have to and when we do, we'll get started
+    with a powerful one, [[https://gnu.org/software/emacs][GNU Emacs]].
 
-   - Instead, we use the shell itself to ~echo~ lines to the script -
-     this is OK as long as there are only a few and as long as we
-     don't make mistakes - ~bash~ is not very smart or forgiving:
-     #+begin_src bash
-       echo '#!/bin/bash'
-       echo '#startup greetings' >> ~/.bash_profile
-       echo 'echo "Hello" $LOGNAME' >> ~/.bash_profile
-       cat ~/.bash_profile
-     #+end_src
+  - Instead, we use the shell itself to ~echo~ lines to the script -
+    this is OK as long as there are only a few and as long as we
+    don't make mistakes - ~bash~ is not very smart or forgiving:
+    #+begin_src bash
+      echo '#!/bin/bash'
+      echo '#startup greetings' >> ~/.bash_profile
+      echo 'echo "Hello" $LOGNAME' >> ~/.bash_profile
+      cat ~/.bash_profile
+    #+end_src
 
-     #+RESULTS:
-     : #!/bin/bash
-     : #startup greetings
-     : echo "Hello" $LOGNAME
+    #+RESULTS:
+    : #!/bin/bash
+    : #startup greetings
+    : echo "Hello" $LOGNAME
 
-   - In the previous /code block/, three lines are added to the file
-     ~.bash_profile~ that resides in ~$HOME~ (~/home/pi~ or ~~/~):
-     1) This is a shell script (~#!~ is called "[[https://en.wikipedia.org/wiki/Shebang_(Unix)][shebang]]")
-     2) A comment: ~startup greetings~ (not executed)
-     3) A greeting: ~Hello~ followed by the content of ~$LOGNAME~
+  - In the previous /code block/, three lines are added to the file
+    ~.bash_profile~ that resides in ~$HOME~ (~/home/pi~ or ~~/~):
+    1) This is a shell script (~#!~ is called "[[https://en.wikipedia.org/wiki/Shebang_(Unix)][shebang]]")
+    2) A comment: ~startup greetings~ (not executed)
+    3) A greeting: ~Hello~ followed by the content of ~$LOGNAME~
 
-   - The variable ~$LOGNAME~ is set to your user or login name:
-     #+begin_src bash
-       echo $LOGNAME
-       ,#+end_src7
+  - The variable ~$LOGNAME~ is set to your user or login name:
+    #+begin_src bash
+      echo $LOGNAME
+      ,#+end_src7
 
-       ,#+RESULTS:
-       : pi
+      ,#+RESULTS:
+      : pi
 
-       - However, if you try to run ~.bash_profile~, you are stumped:
-       ,#+begin_src bash
-       ~/.bash_profile
-     #+end_src
+      - However, if you try to run ~.bash_profile~, you are stumped:
+      ,#+begin_src bash
+      ~/.bash_profile
+    #+end_src
 
-   - This generates the /error message/:
-     #+begin_src bash
-       bash: line 1: /home/pi/.bash_profile: Permission denied
-     #+end_src
+  - This generates the /error message/:
+    #+begin_src bash
+      bash: line 1: /home/pi/.bash_profile: Permission denied
+    #+end_src
 
-   - A long listing of the file reveals that the file /permissions/ are
-     only read (~r~) or write (~w~):
-     #+begin_src bash
-       ls -la ~/.bash_profile
-     #+end_src
+  - A long listing of the file reveals that the file /permissions/ are
+    only read (~r~) or write (~w~):
+    #+begin_src bash
+      ls -la ~/.bash_profile
+    #+end_src
 
-     #+RESULTS:
-     : -rw-r--r-- 1 pi pi 41 Dec 10 22:46 /home/pi/.bash_profile
+    #+RESULTS:
+    : -rw-r--r-- 1 pi pi 41 Dec 10 22:46 /home/pi/.bash_profile
 
-   - Let's add execute (~x~) to the permissions and then run it:
-     #+begin_src bash
-       chmod +x ~/.bash_profile
-       ~/.bash_profile
-     #+end_src
+  - Let's add execute (~x~) to the permissions and then run it:
+    #+begin_src bash
+      chmod +x ~/.bash_profile
+      ~/.bash_profile
+    #+end_src
 
-     #+RESULTS:
-     : Hello pi
+    #+RESULTS:
+    : Hello pi
 
-   - It works now! From now on, every time you open a new shell,
-     you'll be greeted. Try it yourself - open a new terminal shell
-     and you should see ~Hello pi~ at the top of the shell screen.
+  - It works now! From now on, every time you open a new shell,
+    you'll be greeted. Try it yourself - open a new terminal shell
+    and you should see ~Hello pi~ at the top of the shell screen.
 
-** Intermission: what did you learn?
+* Intermission: what did you learn?
 
-   These last two sections contained a lot of lingo - let's go through
-   it. If you think you know what a term means already, good for you!
+  These last two sections contained a lot of lingo - let's go through
+  it. If you think you know what a term means already, good for you!
 
-   | COMMAN/TERM     | MEANING                                      |
-   |-----------------+----------------------------------------------|
-   | Script          | Human-readable set of tasks for computers    |
-   | Interpretation  | Take the code and run it                     |
-   | Compilation     | Create a machine version of the code         |
-   | Machine code    | Code that only the machine can understand    |
-   | ~cat~ [file]      | view file                                    |
-   | ~~/~              | short for user home directory (~$HOME~)        |
-   | ~.~[file]         | file is hidden (configuration file)          |
-   | Editor          | Software to create and change files          |
-   | GNU Emacs       | GNU " Editor MACroS" popular text editor     |
-   | ~#!/bin/bash~     | First line of bash script with shebang       |
-   | code block      | Block of code (here in Emacs Org-mode)       |
-   | ~$LOGNAME~        | Name of user who is logged in (you)          |
-   | File permission | Permitted to read, write, execute (~rwx~) file |
-   | ~chmod~           | Program to change file permissions           |
+  | COMMAN/TERM     | MEANING                                      |
+  |-----------------+----------------------------------------------|
+  | Script          | Human-readable set of tasks for computers    |
+  | Interpretation  | Take the code and run it                     |
+  | Compilation     | Create a machine version of the code         |
+  | Machine code    | Code that only the machine can understand    |
+  | ~cat~ [file]      | view file                                    |
+  | ~~/~              | short for user home directory (~$HOME~)        |
+  | ~.~[file]         | file is hidden (configuration file)          |
+  | Editor          | Software to create and change files          |
+  | GNU Emacs       | GNU " Editor MACroS" popular text editor     |
+  | ~#!/bin/bash~     | First line of bash script with shebang       |
+  | code block      | Block of code (here in Emacs Org-mode)       |
+  | ~$LOGNAME~        | Name of user who is logged in (you)          |
+  | File permission | Permitted to read, write, execute (~rwx~) file |
+  | ~chmod~           | Program to change file permissions           |
 
-* A first C program
+* Part 2:A first C program
 
   - The classic first program in any language is "hello world"
   - The program write "hello world" to the screen
   - As simple as it sounds, this involves a bunch of computing
 
-** What will you learn?
+* What will you learn?
 
-   - [ ] A first C command (~printf~ to print something)
-   - [ ] How a complete C program looks like
-   - [ ] How a C program is turned into machine code
-   - [ ] How to get around in the file tree
+  - [ ] A first C command (~printf~ to print something)
+  - [ ] How a complete C program looks like
+  - [ ] How a C program is turned into machine code
+  - [ ] How to get around in the file tree
 
-** The first C command - ~printf~
+* The first C command - ~printf~
 
-   - The next code block contains a first command in C:
-     #+begin_src C
-       printf("Hello, Marcus!\n");
-     #+end_src
+  - The next code block contains a first command in C:
+    #+begin_src C
+      printf("Hello, Marcus!\n");
+    #+end_src
 
-   - I run this code block with the editor command ~C-c C-c~. It's not a
-     program but only a single command inside a program. Emacs helps me
-     with running it by supplementing the code around the program and
-     by compiling, linking and running the machine code.
+  - I run this code block with the editor command ~C-c C-c~. It's not a
+    program but only a single command inside a program. Emacs helps me
+    with running it by supplementing the code around the program and
+    by compiling, linking and running the machine code.
 
-** How does a complete C program look like?
+* How does a complete C program look like?
 
-   - The complete version of the program looks like this:
-     #+begin_src C :tangle ../src/hello.c :results none :comments none
-       #include <stdio.h>
+  - The complete version of the program looks like this:
+    #+begin_src C :tangle ../src/hello.c :results none :comments none
+      #include <stdio.h>
 
-       int main(void)
-       {
-         printf("Hello, Marcus!\n");
+      int main(void)
+      {
+        printf("Hello, Marcus!\n");
 
-         return(0);
-       }
-     #+end_src
+        return(0);
+      }
+    #+end_src
 
-   - To turn this program into an executable file, you need to
-     1) /tangle/ the code block (extract the C code) as a C file
-     2) compile the resulting C file into machine code
-     3) run the machine code
-     #+begin_src bash
-       cd ../src/
-       gcc hello.c -o hello
-       ./hello
-     #+end_src
+  - To turn this program into an executable file, you need to
+    1) /tangle/ the code block (extract the C code) as a C file
+    2) compile the resulting C file into machine code
+    3) run the machine code
+    #+begin_src bash
+      cd ../src/
+      gcc hello.c -o hello
+      ./hello
+    #+end_src
 
-     #+RESULTS:
-     : Hello, Marcus!
+    #+RESULTS:
+    : Hello, Marcus!
 
-   - Let's take the last ~bash~ code block apart:
-     1) ~cd ../src~ changes the location to the ~src~ directory after
-        going up one level in the file tree with ~..~
-     2) ~../src/~ is a /relative path/, an address for the computer to
-        find a location.
-     3) You can also specify /absolute paths/ which begin at the /root/ of
-        the computer's file tree (~/~), e.g. ~/home/pi/~
-     4) The C file ~hello.c~ is compiled with the ~gcc~ compiler
-        software[fn:1]
-     5) The resulting /object C code/ is /linked/ to create an /executable/
-        file named ~hello~.
-     6) The name of the executable is specified with a /compiler
-        option/, ~-o~
+  - Let's take the last ~bash~ code block apart:
+    1) ~cd ../src~ changes the location to the ~src~ directory after
+       going up one level in the file tree with ~..~
+    2) ~../src/~ is a /relative path/, an address for the computer to
+       find a location.
+    3) You can also specify /absolute paths/ which begin at the /root/ of
+       the computer's file tree (~/~), e.g. ~/home/pi/~
+    4) The C file ~hello.c~ is compiled with the ~gcc~ compiler
+       software[fn:1]
+    5) The resulting /object C code/ is /linked/ to create an /executable/
+       file named ~hello~.
+    6) The name of the executable is specified with a /compiler
+       option/, ~-o~
 
-   - Let's take the program itself apart:
-     1) ~#include~ is a pre-processing directive to include a file
-     2) The included /header/ file ~stdio.h~ contains input/output
-        functions (it's a C file located in ~/usr/include/)~
-     3) When searching for the file, use ~$PATH~, which stores all
-        locations the computer always looks through
-     4) ~int main(void) { }~ is the main function - all C code must be
-        inside the curly brackets
-     5) ~printf("Hello, Marcus!\n");~ prints the /string/ of /characters/
-        between the double apostrophs and adds a /newline/ at the end
-     6) ~return (0);~ returns ~0~ if all went well
-     7) All commands need to finish with a ~;~
+  - Let's take the program itself apart:
+    #+begin_example C
+      #include <stdio.h>
+
+      int main(void)
+      {
+        printf("Hello, Marcus!\n");
+
+        return(0);
+      }
+    #+end_example
+    1) ~#include~ is a pre-processing directive to include a file
+    2) The included /header/ file ~stdio.h~ contains input/output
+       functions (it's a C file located in ~/usr/include/)~
+    3) When searching for the file, use ~$PATH~, which stores all
+       locations the computer always looks through
+    4) ~int main(void) { }~ is the main function - all C code must be
+       inside the curly brackets
+    5) ~printf("Hello, Marcus!\n");~ prints the /string/ of /characters/
+       between the double apostrophs and adds a /newline/ at the end
+    6) ~return (0);~ returns ~0~ if all went well
+    7) All commands need to finish with a ~;~
 
 ** What did we learn?
 
@@ -419,6 +429,27 @@
    | ~return~           | Return flag for (un)successful completion   |
 
 * TODO Practice
+** ~replit.com~ cloud computing
+
+   The ~replit.com~ platform offers a cloud-based environment for many
+   languages, including ~SQL~, ~C~, ~R~ or ~Python~. The platform gives you
+   access to a free Linux environment with a ~bash~ shell.
+
+   In this course, you will use the GNU Emacs environment instead but
+   at the start, you should take notice of cloud-based appls, too.
+
+   ~replit.com~ differs from others (e.g. Google cloud or RStudio)
+   because of its simplicity and speed.
+   #+attr_html: :width
+   
+   
+   - Register a (free) account at ~replit.com~ using your Lyon GMail
+   - 
+   
+** ~bash~ shell programming
+** Compiling C with ~gcc~
+** Customization of the greeting
+   
 * References
 
   - Gookin D (2022). Tiny C Projects. Manning.
