@@ -1,0 +1,341 @@
+#+TITLE:CSC 100.01 - Introduction to Programming, Spring 2023 Syllabus
+#+AUTHOR: Marcus Birkenkrahe
+#+options: toc:nil
+#+startup: overview indent
+* General Course Information
+
+- Meeting Times: Monday/Wednesday/Friday, 15:00-15:50 hrs
+- Meeting place: Lyon Building Room 104 (computer lab)
+- Professor: Marcus Birkenkrahe
+- Office: Derby Science Building 210
+- Phone: (870) 307-7254 (office) / (501) 422-4725 (private)
+- Office hours: Mon/Wed/Fri 16:15-16:45, Tue/Thu 16:00-16:30
+- Textbook: King (2008). C Programming - A Modern Approach. New
+  York: Norton. [[http://knking.com/books/c2/index.html][Online: knking.com]]
+
+** Objectives
+
+This course introduces you to programming using C. We cover C++ as an
+extension. C is a system programming language of pure power: it
+enables you to converse with the computer at a level unknown to users
+other high level languages many of which come from C. You also learn
+about: compilers, working on the command line, text editors Emacs,
+using C for Internet of Things (IoT) devices, cybersecurity, using
+pseudocode and process modeling. You get a foundation in critical
+thinking in concert with one of the three currently most popular
+languages (the other two, according to the TIOBE index, are Python and
+Java). You’ll learn some great tools: we use the “hacker’s editor”
+Emacs, the world’s foremost software engineering platform, GitHub, and
+BPMN for process modeling and pseudo code generation.
+
+** Student Learning Outcomes
+
+Students who complete CSC 100.01 "Introduction to programming in
+C/C++", will be able to:
+
+- Master basic sequential programming skills (conditional
+  statements, loops, functions, input/output, use of data types)
+- Explain the basic components of a procedural programming language
+- Apply the basics of programming to solve a variety of quantitative
+  problems
+- Master computing infrastructure (compiler, editor, shell)
+- Research and present a project as a team
+- Know how to effectively present assignment results
+- Be ready for "Data stuctures with C++" (CSC 240)
+- Be ready for "Algorithms" (CSC 265)
+- Improve data literacy
+
+** Course requirements
+
+- No prior knowledge required
+- Curiosity is essential
+- Experience with computers is useful but not critical
+
+** Grading system
+
+| REQUIREMENT            | UNITS | PPU | TOTAL | % of TOTAL |
+|------------------------+-------+-----+-------+------------|
+| Final exam             |     1 | 100 |   100 |        20. |
+| Home assignments       |    10 |  10 |   100 |        20. |
+| Class assignments      |    10 |  10 |   100 |        20. |
+| Project sprint reviews |     5 |  20 |   100 |        20. |
+| Multiple-choice tests  |    10 |  10 |   100 |        20. |
+|------------------------+-------+-----+-------+------------|
+| TOTAL                  |       |     |   500 |       100. |
+|------------------------+-------+-----+-------+------------|
+#+TBLFM: @2$4=$2*$3::@2$5=(@2$4/@7$4)*100::@3$4=$2*$3::@3$5=(@3$4/@7$4)*100::@4$4=$2*$3::@4$5=(@4$4/@7$4)*100::@5$4=$2*$3::@5$5=(@5$4/@7$4)*100::@6$5=(@6$4/@7$4)*100::@7$4=vsum(@2..@6)::@7$5=vsum(@2..@6)
+
+You should be able to see your current grade at any time using the
+Canvas gradebook for the course.
+
+** Grading table
+
+This table is used to convert completion rates into letter grades. For
+the midterm results, letter grades still carry signs, while for the
+term results, only straight letters are given (by rounding up).
+
+|--------+---------------+---------------------------|
+|      *%* | *Midterm Grade* | *Final Grade*             |
+|--------+---------------+---------------------------|
+| 100-98 | A+            |                           |
+|  97-96 | A             | A (passed - very good)    |
+|  95-90 | A-            |                           |
+|--------+---------------+---------------------------|
+|  89-86 | B+            |                           |
+|  85-80 | B             | B (passed - good)         |
+|  79-76 | B-            |                           |
+|--------+---------------+---------------------------|
+|  75-70 | C+            |                           |
+|  69-66 | C             | C (passed - satisfactory) |
+|  65-60 | C-            |                           |
+|--------+---------------+---------------------------|
+|  59-56 | D+            |                           |
+|  55-50 | D             | D (passed)                |
+|--------+---------------+---------------------------|
+|   49-0 | F             | F (failed)                |
+|--------+---------------+---------------------------|
+
+* Standard Policies
+** Honor Code
+
+All graded work in this class is to be pledged in accordance with the
+Lyon College Honor Code. The use of a phone for any reason during the
+course of an exam is considered an honor code violation.
+
+** Class Attendance Policy
+
+Students are expected to attend all class periods for the courses in
+which they are enrolled. They are responsible for conferring with
+individual professors regarding any missed assignments. Faculty
+members are to notify the Registrar when a student misses the
+equivalent of one, two, three, and four weeks of class periods in a
+single course. Under this policy, there is no distinction between
+“excused” and “unexcused” absences, except that a student may make up
+work missed during an excused absence. A reminder of the college’s
+attendance policy will be issued to the student at one week, a second
+reminder at two weeks, a warning at three weeks, and notification of
+administrative withdrawal and the assigning of an “F” grade at four
+weeks. Students who are administratively withdrawn from more than one
+course will be placed on probation or suspended.
+
+** Academic Support
+
+The Morrow Academic Center (MAC) helps students who want to improve
+grades by providing peer-led services including Supplemental
+Instruction (SI), tutoring, the Writing Center, and academic coaching
+as well providing 24-hour, online tutoring for all subjects through
+Tutor.com. A schedule of peer-led services is available at
+lyon.edu/mac and Tutor.com is accessed through courses in
+Schoology. Contact Donald Taylor, Director of Academic Support, at
+870-307-7319 or donald.taylor@lyon.edu for more information about MAC
+services.
+
+** Technology Support
+
+For general technology support, you can contact the IT department by
+emailing support@lyon.edu or by calling 870-307-7555. For assistance
+with classroom-related technologies, such as the learning management
+system (LMS), you can request support using the methods above, or you
+can contact sarah.williams@lyon.edu directly for assistance. Your
+course content will be accessible digitally using either the Schoology
+or Canvas LMS. Both LMS platforms will use your myLyon credentials for
+your student login.
+
+- For Canvas, login at lyon.instructure.com
+- For Schoology, login at lyon.schoology.com
+
+** Disabilities
+
+Students seeking reasonable accommodations based on documented
+learning disabilities must contact Interim Director of Academic
+Support Donald Taylor in the Morrow Academic Center at (870) 307-7019
+or at donald.taylor@lyon.edu.
+
+** Harassment, Discrimination, and Sexual Misconduct
+
+Lyon College seeks to provide all members of the community with a safe
+and secure learning and work environment that is free of crime and/or
+policy violations motivated by discrimination, sexual and bias-related
+harassment, and other violations of rights. The College has a
+zero-tolerance policy against gender-based misconduct, sexual assault,
+and interpersonal violence toward any member or guest of the Lyon
+College community. Any individual who has been the victim of an act of
+violence or intimidation is urged to make an official report by
+contacting a campus Title IX coordinator or by visiting
+www.lyon.edu/file-a-title-ix-report. A report of an act of violence or
+intimidation will be dealt with promptly. Confidentiality will be
+maintained to the greatest extent possible within the constraints of
+the law. For more information regarding the College’s Title IX
+policies and procedures, visit www.lyon.edu/title-ix.
+
+** Mental & Behavioral Health
+
+Lyon College is dedicated to ensuring each student has access to
+mental and behavioral health resources. The College’s Mental and
+Behavioral Health Office is located in Edwards Commons and is
+partnered with White River Health System’s Behavioral Health
+Clinic. The office is committed to helping the Lyon community achieve
+maximum mental and behavioral wellness through both preventative and
+reactive care. A full-time, licensed, professional counselor provides
+counseling, consultations, outreach, workshops, and many more mental
+and behavioral services to Lyon students, faculty, and staff at no
+cost. The Mental and Behavioral Health Office also provides access to
+White River Health System’s services and facilities, including
+medication management and in-patient and out-patient care. To make an
+appointment, contact counseling@lyon.edu.
+
+** College-Wide COVID-19 Policies
+
+The College does not require masks in instructional and meeting spaces
+inside academic buildings. However, if instructors require masks in
+their classroom, lab, or studio, then students and guests must comply
+with that requirement.  Vaccines are strongly encouraged for all
+faculty, staff, and students. Vaccines are not mandated for Lyon
+College community members, although there may be specific courses
+involving interactions with vulnerable, external populations where a
+vaccine may be required.  The College will continue to offer
+symptomatic testing for students, faculty and staff.
+
+** Details
+
+Details specific to this course may be found in the subsequent pages
+of this syllabus. Those details will include at least the following:
+- A description of the course consistent with the Lyon College
+  catalog.
+- A list of student learning outcomes for the course.
+- A summary of all course requirements.
+- An explanation of the grading system to be used in the course.
+- Any course-specific attendance policies that go beyond the College
+  policy.
+- Details about what constitutes acceptable and unacceptable student
+  collaboration on graded work.
+- A clear statement about which LMS is being used for the course.
+
+** Learning Management System (LMS)
+
+We will use Canvas in this course.
+** Assignments and Honor Code
+
+There will be several assignments during the summer school,
+including programming assignments and multiple-choice tests. They
+are due at the beginning of the class period on the due date. Once
+class begins, the assigment will be considered one day late if it
+has not been turned in.  Late programs will not be accepted without
+an extension. Extensions will *not* be granted for reasons such as:
+
+- You could not get to a computer
+- You could not get a computer to do what you wanted it to do
+- The network was down
+- The printer was out of paper or toner
+- You erased your files, lost your homework, or misplaced your
+  flash drive
+- You had other coursework or family commitments that interfered
+  with your work in this course
+
+Put “Pledged” and a note of any collaboration in the comments of any
+program you turn in. Programming assignments are individual efforts,
+but you may seek assistance from another student or the course
+instructor.  You may not copy someone else’s solution. If you are
+having trouble finishing an assignment, it is far better to do your
+own work and receive a low score than to go through an honor trial and
+suffer the penalties that may be involved.
+
+What is cheating on an assignment? Here are a few examples:
+
+- Having someone else write your assignment, in whole or in part
+- Copying an assignment someone else wrote, in whole or in part
+- Collaborating with someone else to the extent that your
+  submissions are identifiably very similar, in whole or in part
+- Turning in a submission with the wrong name on it
+
+What is not cheating?  Here are some examples:
+- Talking to someone in general terms about concepts involved in an
+  assignment
+- Asking someone for help with a specific error message or bug in
+  your program
+- Getting help with the specifics of language syntax or citation
+  style
+- Utilizing information given to you by the instructor
+
+Any assistance must be clearly explained in the comments at the
+beginning of your submission.  If you have any questions about this,
+please ask or review the policies relating to the Honor Code.
+
+Absences on Days of Exams: Test “make-ups” will only be allowed if
+arrangements have been made prior to the scheduled time.  If you are
+sick the day of the test, please e-mail me or leave a message on my
+phone before the scheduled time, and we can make arrangements when
+you return.
+** Attendance policy
+
+In accordance with college policy, if you miss 4 weeks of class, you
+fail the course automatically. Any missed meetings result in an [[https://catalog.lyon.edu/class-attendance]["Early
+Alert" report]].
+
+You should take care not to miss consecutive sessions if at all
+possible - otherwise you risk losing touch with the class and falling
+behind.
+
+* Important Dates
+
+| DATE           | DAY              | DESCRIPTION                                 |
+|----------------+------------------+---------------------------------------------|
+| 3 January      | Tuesday          | Last day to deposit for '22 spring semester |
+| 10 January     | Tuesday          | Classes begin                               |
+| 16 January     | Monday           | MLK Day - no classes                        |
+| 17 January     | Tuesday          | Last day to add a class                     |
+| 24 January     | Tuesday          | Last day to drop without record of course   |
+|                |                  | Last day to declare a course pass-fail      |
+|                |                  | Deadline for removal of incompletes         |
+| 25-28 February | Saturday-Tuesday | Mental-Health break (no classes)            |
+| 1 March        | Wednesday        | Mid-term grades available by noon           |
+| 8 March        | Wednesday        | Lst day to drop a course with a "W"         |
+| 18-26 March    | Saturday-Sunday  | Spring break                                |
+| 7-9 April      | Friday-Sunday    | Easter break                                |
+| 18 April       | Tuesday          | Honors Convocation                          |
+| 4 May          | Wednesday        | Last day of spring classes                  |
+| 4-7 May        | Thursday-Sunday  | Final exams for graduating seniors          |
+|                |                  | (start 6pm Thu, no exams before 1pm Sun)    |
+| 5-10 May       | Thursday-Tuesday | Final exams for non-graduating students     |
+|                |                  | (no exams before 1pm on Sunday)             |
+| 9 May          | Tuesday          | Senior grades due by noon                   |
+| 12 May         | Friday           | Baccalaureate                               |
+| 13 May         | Saturday         | Spring commencement                         |
+| 17 May         | Wednesday        | All final grades due by noon                |
+
+* Schedule and session content
+
+| WEEK | DATE            | ASSIGNMENT      | TEXTBOOK CHAPTER       | TEST    |
+|------+-----------------+-----------------+------------------------+---------|
+|    1 | Jan 11,13       |                 |                        |         |
+|------+-----------------+-----------------+------------------------+---------|
+|    2 | Jan 18,20       | Program 1       | 1 Introducing C        | Test 1  |
+|------+-----------------+-----------------+------------------------+---------|
+|    3 | Jan 23,25,27    | Program 2       | 2 C Fundamentals       | Test 2  |
+|------+-----------------+-----------------+------------------------+---------|
+|    4 | Jan 30, Feb 1,3 | Program 3       | 3 Input/Output         | Test 3  |
+|------+-----------------+-----------------+------------------------+---------|
+|    5 | Feb 6,8,10      | Sprint Review 1 | 4 Expressions          |         |
+|------+-----------------+-----------------+------------------------+---------|
+|    6 | Feb 13,15,17    | Program 4       | 5 Selection Statements | Test 4  |
+|------+-----------------+-----------------+------------------------+---------|
+|    7 | Feb 20,22,24    | Program 5       | 6 Loops                | Test 5  |
+|------+-----------------+-----------------+------------------------+---------|
+|    8 | Mar 1,3         | Program 6       | 7 Basic types          |         |
+|------+-----------------+-----------------+------------------------+---------|
+|    9 | Mar 6,8,10      | Sprint Review 2 | 8 Arrays               | Test 6  |
+|------+-----------------+-----------------+------------------------+---------|
+|   10 | Mar 13,15,17    | Program 8       | 9 Functions            | Test 7  |
+|------+-----------------+-----------------+------------------------+---------|
+|   11 | Mar 27,19,31    | Program 9       | 11 Pointers            | Test 8  |
+|------+-----------------+-----------------+------------------------+---------|
+|   12 | Apr 3,5         | Program 10      | 12 Pointers and Arrays |         |
+|------+-----------------+-----------------+------------------------+---------|
+|   13 | Apr 10,12,14    | Sprint Review 3 | 13 Strings             | Test 9  |
+|------+-----------------+-----------------+------------------------+---------|
+|   14 | Apr 17,19,21    |                 | 14 The Preprocessor    |         |
+|------+-----------------+-----------------+------------------------+---------|
+|   15 | Apr 24,26,28    |                 | C vs. C++              | Test 10 |
+|------+-----------------+-----------------+------------------------+---------|
+|   16 | May 1, 3        | Sprint Review 4 |                        |         |
+|------+-----------------+-----------------+------------------------+---------|

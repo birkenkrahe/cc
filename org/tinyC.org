@@ -448,8 +448,7 @@
    
 ** ~bash~ shell programming
 ** Compiling C with ~gcc~
-** Customization of the greeting
-   
+** Customization of the greeting   
 * References
 
   - Gookin D (2022). Tiny C Projects. Manning.
