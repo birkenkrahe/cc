@@ -1,0 +1,118 @@
+o#+TITLE:COURSE OVERVIEW
+#+AUTHOR: Marcus Birkenkrahe
+#+SUBTITLE: CSC 205 - ADVANCED INTRODUCTION TO DATA SCIENCE - SPRING 23
+#+STARTUP: overview hideblocks indent
+#+OPTIONS: toc:nil num:nil ^:nil
+#+attr_html: :width 600px
+[[../img/cover.jpg]]
+* Who is your lecturer?
+#+attr_latex: :width 500px
+#+caption: Photo of Poppy as a puppy
+[[../img/0_poppy.png]]
+
+- Not cats OR dogs, but cats AND dogs
+- Physicist by training
+- Teacher by profession
+- Data scientist by choice
+- Lyon College since 2021 (from Berlin, Germany)
+- First programming languages:
+  1) BASIC (ca. 1978),
+  2) FORTRAN (ca. 1985),
+  3) C++ (ca. 1989)
+  
+* What do you expect from this course?
+#+attr_latex: :width 400px
+#+caption: Dandelion in the grass, by Aaron Burden, @Unsplash
+[[../img/0_expectations.jpg]]
+
+* What will you do in this course?
+#+attr_html: :width 350px
+#+attr_latex: :width 250px
+#+caption: Syllabus, Canvas (lyon.instructure.com) or GitHub (github.com/birkenkrahe/ds2)
+[[../img/0_schedule.png]]
+
+- Mixture of DataCamp lessons and current topics
+- Last course in spring'22 was too "tidy"
+     
+* How will you be evaluated?
+#+attr_html: :width 400px
+#+attr_latex: :width 400px
+#+caption: Source: syllabus, Canvas (lyon.instructure.com) or GitHub (github.com/birkenkrahe/ml)
+[[../img/0_grades.png]]
+
+- All course requirements have deadlines
+- Late submissions will be penalized (loss of points)
+- Final exam will be sourced by term test questions
+- The project topic can come from any of the course sub-topics
+- The project deliverable is a working *literate* program
+
+* Which tools are you going to use?
+#+attr_html: :width 500px
+#+attr_latex: :width 300px
+#+caption: Unsplash, workshop
+[[../img/0_tools.png]]
+
+- [[https://app.datacamp.com/learn/skill-tracks/text-mining-with-r][DataCamp courses]] (10 weekly home assignments)
+- [[https://github.com/birkenkrahe/tm][GitHub repository]] (all course materials except tests)
+- [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][GNU Emacs + ESS + R]] (literate programming environment)
+- [[https://lyon.instructure.com/][Canvas]] (learning management system)
+
+* How can you register at DataCamp?
+#+attr_latex: :width 400px
+#+caption: DataCamp assignments for January 2023
+[[../img/0_datacamp.png]]
+
+- You find the invitation link to the group for Spring 23 [[https://lyon.instructure.com/courses/1041/pages/course-links][in Canvas]].
+- You will automatically be subscribed to the Digital Humanities team
+- If you are in more than one course, I will add you later manually
+- These accounts will be valid until July 8, 2023 only
+
+* When is the first assignment due?
+#+attr_html: :width 300px
+#+attr_latex: :width 300px
+[[../img/0_test.jpg]]
+
+- The first DataCamp home assignment is due on January 20. For late
+  submissions, you lose 1 point per day (out of 10 possible points)
+
+- The first in-class assignment is due on January 20. For late
+  submissions, you lose 1 point per day (out of 10 possible points)
+  
+- We'll write the first weekly multiple-choice test on January 20,
+  covering all of the material that was covered until then.
+
+* What should we do as a project?
+#+attr_latex: :width 500px
+#+caption: R packages suitable for student projects by ChatGPT
+[[../img/0_chatgpt.png]]
+
+- For your term project, *pick an R package* to explore and explain
+- The exploration should include *examples and tests*
+- Your final deliverable should be a *literate program* (Org-mode)
+- The final presentation should include *exercises* for the audience
+- We can only accommodate *four (4) projects* altogether
+- You need to deliver:
+  a proposal, a literature review, an abstract
+
+* What are you looking forward to?
+#+attr_html: :width 400px
+#+attr_latex: :width 250px
+[[../img/0_package.jpg]]
+
+- Developing lectures and exercises away from DataCamp
+- Learning more about R packages through your projects
+- Having fun with R programming and real applications
+
+* Next
+#+attr_html: :width 400px
+#+attr_latex: :width 250px
+#+caption: Our next topic is "Argument matching"
+[[../img/0_argument.jpg]]
+
+* Footnotes
+
+[fn:1]Maps and GIS (Geographic Information Systems) are super cool but
+deserve an introductory course on their own. The focus of my teaching
+is to get you practical experience that you can use on the job instead
+of a broad conceptual overview (though the latter would be easier for
+all of us).
