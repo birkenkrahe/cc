@@ -3,10 +3,10 @@ o#+TITLE:COURSE OVERVIEW
 #+SUBTITLE: CSC 205 - ADVANCED INTRODUCTION TO DATA SCIENCE - SPRING 23
 #+STARTUP: overview hideblocks indent
 #+OPTIONS: toc:nil num:nil ^:nil
-#+attr_html: :width 600px
+#+attr_html: :width 400px
 [[../img/cover.jpg]]
 * Who is your lecturer?
-#+attr_latex: :width 500px
+#+attr_latex: :width 400px
 #+caption: Photo of Poppy as a puppy
 [[../img/0_poppy.png]]
 
@@ -31,10 +31,12 @@ o#+TITLE:COURSE OVERVIEW
 #+caption: Syllabus, Canvas (lyon.instructure.com) or GitHub (github.com/birkenkrahe/ds2)
 [[../img/0_schedule.png]]
 
-- Mixture of DataCamp lessons and current topics
-- Last course in spring'22 was too "tidy"
-     
-* How will you be evaluated?
+- We have a *textbook* - King, C Programming - A modern approach (2008)
+- We have an *operating system* - Linux
+- We have (more than) an *editor* - Emacs
+- We have a *compiler* - GCC 
+  
+* IN PROGRESS How will you be evaluated?
 #+attr_html: :width 400px
 #+attr_latex: :width 400px
 #+caption: Source: syllabus, Canvas (lyon.instructure.com) or GitHub (github.com/birkenkrahe/ml)
@@ -47,7 +49,7 @@ o#+TITLE:COURSE OVERVIEW
 - The project deliverable is a working *literate* program
 
 * Which tools are you going to use?
-#+attr_html: :width 500px
+#+attr_html: :width 400px
 #+attr_latex: :width 300px
 #+caption: Unsplash, workshop
 [[../img/0_tools.png]]
@@ -82,7 +84,7 @@ o#+TITLE:COURSE OVERVIEW
   covering all of the material that was covered until then.
 
 * What should we do as a project?
-#+attr_latex: :width 500px
+#+attr_latex: :width 400px
 #+caption: R packages suitable for student projects by ChatGPT
 [[../img/0_chatgpt.png]]
 
@@ -108,6 +110,10 @@ o#+TITLE:COURSE OVERVIEW
 #+attr_latex: :width 250px
 #+caption: Our next topic is "Argument matching"
 [[../img/0_argument.jpg]]
+
+* References
+
+- King K N (2008). C Programming - A Modern Approach. Norton.
 
 * Footnotes
 
