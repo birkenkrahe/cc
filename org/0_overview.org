@@ -3,7 +3,7 @@ o#+TITLE:COURSE OVERVIEW
 #+SUBTITLE: CSC 205 - ADVANCED INTRODUCTION TO DATA SCIENCE - SPRING 23
 #+STARTUP: overview hideblocks indent
 #+OPTIONS: toc:nil num:nil ^:nil
-#+attr_html: :width 400px
+#+attr_latex: :width 400px
 [[../img/cover.jpg]]
 * Who is your lecturer?
 #+attr_latex: :width 400px
@@ -26,8 +26,7 @@ o#+TITLE:COURSE OVERVIEW
 [[../img/0_expectations.jpg]]
 
 * What will you do in this course?
-#+attr_html: :width 350px
-#+attr_latex: :width 250px
+#+attr_latex: :width 300px
 #+caption: Syllabus, Canvas (lyon.instructure.com) or GitHub (github.com/birkenkrahe/ds2)
 [[../img/0_schedule.png]]
 
@@ -36,8 +35,7 @@ o#+TITLE:COURSE OVERVIEW
 - We have (more than) an *editor* - Emacs
 - We have a *compiler* - GCC 
   
-* IN PROGRESS How will you be evaluated?
-#+attr_html: :width 400px
+* How will you be evaluated?
 #+attr_latex: :width 400px
 #+caption: Source: syllabus, Canvas (lyon.instructure.com) or GitHub (github.com/birkenkrahe/ml)
 [[../img/0_grades.png]]
@@ -45,18 +43,20 @@ o#+TITLE:COURSE OVERVIEW
 - All course requirements have deadlines
 - Late submissions will be penalized (loss of points)
 - Final exam will be sourced by term test questions
-- The project topic can come from any of the course sub-topics
-- The project deliverable is a working *literate* program
+- Programming assignments are home assignments
+- In-class practices are "literate programming" exercises
 
 * Which tools are you going to use?
-#+attr_html: :width 400px
-#+attr_latex: :width 300px
+#+attr_latex: :width 400px
 #+caption: Unsplash, workshop
-[[../img/0_tools.png]]
+[[../img/0_tools.jpg]]
 
 - [[https://app.datacamp.com/learn/skill-tracks/text-mining-with-r][DataCamp courses]] (10 weekly home assignments)
+
 - [[https://github.com/birkenkrahe/tm][GitHub repository]] (all course materials except tests)
+
 - [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][GNU Emacs + ESS + R]] (literate programming environment)
+
 - [[https://lyon.instructure.com/][Canvas]] (learning management system)
 
 * How can you register at DataCamp?
@@ -69,7 +69,18 @@ o#+TITLE:COURSE OVERVIEW
 - If you are in more than one course, I will add you later manually
 - These accounts will be valid until July 8, 2023 only
 
-* When is the first assignment due?
+* What is GitHub?
+#+attr_latex: :width 400px
+#+caption: My GitHub dashboard
+[[../img/0_github.png]]
+
+- [[https://github.com/birkenkrahe][GitHub]] is the most popular software development platform.
+
+- It's now owned by Microsoft (which is becoming a problem)
+
+- Here for you: all course materials, and the course FAQ
+
+* NEXT When is the first assignment due?
 #+attr_html: :width 300px
 #+attr_latex: :width 300px
 [[../img/0_test.jpg]]
