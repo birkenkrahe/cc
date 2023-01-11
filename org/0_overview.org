@@ -4,6 +4,7 @@ o#+TITLE:COURSE OVERVIEW
 #+STARTUP: overview hideblocks indent
 #+OPTIONS: toc:nil num:nil ^:nil
 #+attr_latex: :width 400px
+#+caption: Dashboard of a sportscar of the 1970s
 [[../img/cover.jpg]]
 * Who is your lecturer?
 #+attr_latex: :width 400px
@@ -15,11 +16,18 @@ o#+TITLE:COURSE OVERVIEW
 - Teacher by profession
 - Data scientist by choice
 - Lyon College since 2021 (from Berlin, Germany)
-- First programming languages:
-  1) BASIC (ca. 1978),
-  2) FORTRAN (ca. 1985),
-  3) C++ (ca. 1989)
-  
+* My first programming languages
+#+attr_latex: :width 400px
+#+caption: Texas Instruments TI-99/4 16-bit microcomputer, 1979
+[[../img/0_ti99.jpg]]
+
+- My first programming languages:
+  1) BASIC - Beginner's All-purpose Symbolic Instruction Code (1979),
+  2) FORTRAN - FORMula TRANslator (1985),
+  3) C++ (1989)
+
+- [ ] How many programming languages are there today?
+     
 * What do you expect from this course?
 #+attr_latex: :width 400px
 #+caption: Dandelion in the grass, by Aaron Burden, @Unsplash
@@ -31,8 +39,8 @@ o#+TITLE:COURSE OVERVIEW
 [[../img/0_schedule.png]]
 
 - We have a *textbook* - King, C Programming - A modern approach (2008)
-- We have an *operating system* - Linux
-- We have (more than) an *editor* - Emacs
+- We have an *operating system* - Linux (maybe) or Windows/MacOS
+- We have (more than) an *editor* - Emacs + Org-mode
 - We have a *compiler* - GCC 
   
 * How will you be evaluated?
@@ -51,27 +59,28 @@ o#+TITLE:COURSE OVERVIEW
 #+caption: Unsplash, workshop
 [[../img/0_tools.jpg]]
 
-- [[https://app.datacamp.com/learn/skill-tracks/text-mining-with-r][DataCamp courses]] (10 weekly home assignments)
+- [[https://lyon.instructure.com/][Canvas]] (learning management system)
 
-- [[https://github.com/birkenkrahe/tm][GitHub repository]] (all course materials except tests)
+- [[https://github.com/birkenkrahe/cc][GitHub repository]] (all course materials except tests)
 
 - [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][GNU Emacs + ESS + R]] (literate programming environment)
 
-- [[https://lyon.instructure.com/][Canvas]] (learning management system)
+- [[https://en.wikipedia.org/wiki/Command-line_interface][Command line interface]] / interpreter - (shell / replit.com)
 
-* How can you register at DataCamp?
+* The (new) Canvas LMS
 #+attr_latex: :width 400px
-#+caption: DataCamp assignments for January 2023
-[[../img/0_datacamp.png]]
+#+caption: Canvas
+[[../img/0_canvas.png]]
 
-- You find the invitation link to the group for Spring 23 [[https://lyon.instructure.com/courses/1041/pages/course-links][in Canvas]].
-- You will automatically be subscribed to the Digital Humanities team
-- If you are in more than one course, I will add you later manually
-- These accounts will be valid until July 8, 2023 only
+- Announcements
+- Assignments (Programming assignments and in-class practice)
+- Zoom links (participate/cloud recording)
+- Course links (GitHub, Whiteboard)
+- Gradebook
 
-* What is GitHub?
+* The (popular) GitHub platform
 #+attr_latex: :width 400px
-#+caption: My GitHub dashboard
+#+caption: My GitHub dashboard - close to 4,000 commits in 2022 (100,000 lines of code?)
 [[../img/0_github.png]]
 
 - [[https://github.com/birkenkrahe][GitHub]] is the most popular software development platform.
@@ -80,12 +89,67 @@ o#+TITLE:COURSE OVERVIEW
 
 - Here for you: all course materials, and the course FAQ
 
-* NEXT When is the first assignment due?
-#+attr_html: :width 300px
-#+attr_latex: :width 300px
-[[../img/0_test.jpg]]
+* The (feared) Emacs editor
+#+attr_latex: :width 400px
+#+caption: My GitHub dashboard
+[[../img/0_litprog.png]]
 
-- The first DataCamp home assignment is due on January 20. For late
+* Practice: first "literate" C program!
+#+attr_latex: :width 400px
+#+caption: My GitHub dashboard
+[[../img/0_books.png]]
+
+Let's set Emacs up, write and run a first "literate" C program!
+
+1) Open the command line terminal with ~CMD~ in the search field
+
+2) At the prompt, type ~gcc --version~
+
+3) Open https://github.com/birkenkrahe/org/ in a browser
+
+4) Navigate to the repository ~emacs~ in GitHub
+
+5) Click on the file name ~.emacs~ to open it
+
+6) Open the ~Raw~ version of this file (there's a button)
+
+7) Right click to ~Save as~ and save file as ~emacs.txt~ in ~/Downloads~
+
+8) Open a terminal by entering ~CMD~ in the Windows search bar
+
+9) Pin the terminal to your taskbar
+
+10) At the prompt, enter ~DIR emacs.txt~ - you should see the file
+
+11) Enter ~emacs -nw -l emacs.txt~
+
+12) Inside Emacs, click ~<F10>~ and ~ENTER~ to open a new file
+
+13) At the prompt at the bottom of the screen, enter ~first.org~
+
+14) Enter the following text (replace ~yourname~ with your own name):
+    #+attr_latex: :width 400px
+    [[../img/0_first.png]]
+
+15) Run the program by putting the cursor anywhere on the code block
+    and typing ~CTRL-c CTRL-c~ (or ~C-c C-c~)
+
+16) Tangle the code with ~C-c C-v t~ (or ~M-x org-babel-tangle~)
+
+17) Open a shell (terminal program) with ~ALT-x eshell~
+
+18) At the prompt, enter ~ls -l first*~ - you should see ~first.C~
+
+19) Enter ~gcc first.C -o hello~
+
+20) Enter ~hello~ to run the program.
+
+* When is the first assignment due?
+#+attr_latex: :width 400px
+#+caption: Four monks by Claudio Rinaldi (1852-1909)
+[[../img/0_monks.png]]
+
+- The first programming assignment is due on January 20. For late
   submissions, you lose 1 point per day (out of 10 possible points)
 
 - The first in-class assignment is due on January 20. For late
@@ -94,42 +158,34 @@ o#+TITLE:COURSE OVERVIEW
 - We'll write the first weekly multiple-choice test on January 20,
   covering all of the material that was covered until then.
 
-* What should we do as a project?
-#+attr_latex: :width 400px
-#+caption: R packages suitable for student projects by ChatGPT
-[[../img/0_chatgpt.png]]
-
-- For your term project, *pick an R package* to explore and explain
-- The exploration should include *examples and tests*
-- Your final deliverable should be a *literate program* (Org-mode)
-- The final presentation should include *exercises* for the audience
-- We can only accommodate *four (4) projects* altogether
-- You need to deliver:
-  a proposal, a literature review, an abstract
-
 * What are you looking forward to?
-#+attr_html: :width 400px
-#+attr_latex: :width 250px
+#+attr_latex: :width 400px
 [[../img/0_package.jpg]]
 
-- Developing lectures and exercises away from DataCamp
-- Learning more about R packages through your projects
-- Having fun with R programming and real applications
+* TODO The (convenient) online REPL
+#+attr_latex: :width 400px
+#+caption: C IDE at replit.com
+[[../img/cc_replit.png]]
+
+- You can open this program online at [[https://tinyurl.com/52p288p5][tinyurl.com/52p288p5]]
+
+- You will only see all parts of it if you register: follow the invite
+  link [[https://replit.com/join/xpersfuvad-marcusbirkenkra][replit.com/join/xpersfuvad-marcusbirkenkra]]
+
+- Then ~Continue with Google~ using your Lyon GMail account:
+  #+attr_latex: :width 400px
+  #+caption: C IDE at replit.com
+  [[../img/0_replit.png]]
 
 * Next
-#+attr_html: :width 400px
-#+attr_latex: :width 250px
-#+caption: Our next topic is "Argument matching"
-[[../img/0_argument.jpg]]
+#+attr_latex: :width 400px
+#+caption: Introduction to C programming
+[[../img/0_gnuemacs.png]]
+
+#+attr_latex: :width 400px
+#+caption: Introduction to C programming
+[[../img/0_cprogramming.png]]
 
 * References
 
 - King K N (2008). C Programming - A Modern Approach. Norton.
-
-* Footnotes
-
-[fn:1]Maps and GIS (Geographic Information Systems) are super cool but
-deserve an introductory course on their own. The focus of my teaching
-is to get you practical experience that you can use on the job instead
-of a broad conceptual overview (though the latter would be easier for
-all of us).
