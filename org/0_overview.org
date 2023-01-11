@@ -41,7 +41,7 @@
 - We have a *textbook* - King, C Programming - A modern approach (2008)
 - We have an *operating system* - Linux (maybe) or Windows/MacOS
 - We have (more than) an *editor* - Emacs + Org-mode
-- We have a *compiler* - GCC (also on a Mac)
+- We have a *compiler* - GCC ([[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/img/0_gcc_mac.png][also on a Mac]])
   
   
 * How will you be evaluated?
