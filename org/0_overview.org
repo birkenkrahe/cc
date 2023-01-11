@@ -15,15 +15,15 @@
 - Physicist by training ([[https://images.nature.com/original/magazine-assets/d41586-022-01388-6/d41586-022-01388-6_20499086.jpg][making sense of this]])
 - Teacher by profession ([[https://m.media-amazon.com/images/I/91UJz-ti6BL.jpg][making sense of this]])
 - Data scientist by choice ([[https://media.wired.com/photos/601c6246898afb612573ad4c/master/w_960,c_limit/BLACK%20SUN%20#34.jpg][making sense of this]])
-- Lyon College since 2021 ([[https://www.visitberlin.de/system/files/styles/visitberlin_hero_visitberlin_desktop_2x/private/image/eberswalderstrasse26_c_visitBerlin_Foto_Dagmar_Schwelle_web.jpg?h=1c9b88c9&itok=xMVdiKwM][from Berlin, Germany]])x
+- Lyon College since 2021 ([[https://www.visitberlin.de/system/files/styles/visitberlin_hero_visitberlin_desktop_2x/private/image/eberswalderstrasse26_c_visitBerlin_Foto_Dagmar_Schwelle_web.jpg?h=1c9b88c9&itok=xMVdiKwM][from Berlin, Germany]])
 * My first programming languages
 #+attr_latex: :width 400px
 #+caption: Texas Instruments TI-99/4 16-bit microcomputer, 1979
 [[../img/0_ti99.jpg]]
 
 - My first programming languages:
-  1) BASIC - Beginner's All-purpose Symbolic Instruction Code (1979),
-  2) FORTRAN - FORMula TRANslator (1985),
+  1) BASIC - Beginner's All-purpose Symbolic Instruction Code (1979)
+  2) FORTRAN - FORMula TRANslator (1985)
   3) C++ (1989)
 
 - [ ] How many programming languages are there today?
@@ -41,7 +41,8 @@
 - We have a *textbook* - King, C Programming - A modern approach (2008)
 - We have an *operating system* - Linux (maybe) or Windows/MacOS
 - We have (more than) an *editor* - Emacs + Org-mode
-- We have a *compiler* - GCC 
+- We have a *compiler* - GCC (also on a Mac)
+  
   
 * How will you be evaluated?
 #+attr_latex: :width 400px
