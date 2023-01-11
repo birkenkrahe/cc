@@ -1,6 +1,6 @@
-o#+TITLE:COURSE OVERVIEW
+#+TITLE:COURSE OVERVIEW
 #+AUTHOR: Marcus Birkenkrahe
-#+SUBTITLE: CSC 205 - ADVANCED INTRODUCTION TO DATA SCIENCE - SPRING 23
+#+SUBTITLE: CSC 100 - Introduction to programming - Spring 2023
 #+STARTUP: overview hideblocks indent
 #+OPTIONS: toc:nil num:nil ^:nil
 #+attr_latex: :width 400px
@@ -11,11 +11,11 @@ o#+TITLE:COURSE OVERVIEW
 #+caption: Photo of Poppy as a puppy
 [[../img/0_poppy.png]]
 
-- Not cats OR dogs, but cats AND dogs
-- Physicist by training
-- Teacher by profession
-- Data scientist by choice
-- Lyon College since 2021 (from Berlin, Germany)
+- Not cats OR dogs, but [[https://drive.google.com/file/d/1z-0cbqfXPA_6HMgIxb043CN5qCUJLEYz/view?usp=sharing][cats AND dogs]]
+- Physicist by training ([[https://images.nature.com/original/magazine-assets/d41586-022-01388-6/d41586-022-01388-6_20499086.jpg][making sense of this]])
+- Teacher by profession ([[https://m.media-amazon.com/images/I/91UJz-ti6BL.jpg][making sense of this]])
+- Data scientist by choice ([[https://media.wired.com/photos/601c6246898afb612573ad4c/master/w_960,c_limit/BLACK%20SUN%20#34.jpg][making sense of this]])
+- Lyon College since 2021 ([[https://www.visitberlin.de/system/files/styles/visitberlin_hero_visitberlin_desktop_2x/private/image/eberswalderstrasse26_c_visitBerlin_Foto_Dagmar_Schwelle_web.jpg?h=1c9b88c9&itok=xMVdiKwM][from Berlin, Germany]])x
 * My first programming languages
 #+attr_latex: :width 400px
 #+caption: Texas Instruments TI-99/4 16-bit microcomputer, 1979
@@ -162,7 +162,7 @@ Let's set Emacs up, write and run a first "literate" C program!
 #+attr_latex: :width 400px
 [[../img/0_package.jpg]]
 
-* TODO The (convenient) online REPL
+* The (convenient) online REPL
 #+attr_latex: :width 400px
 #+caption: C IDE at replit.com
 [[../img/cc_replit.png]]
