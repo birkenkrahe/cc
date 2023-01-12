@@ -26,12 +26,33 @@
   2) FORTRAN - FORMula TRANslator (1985)
   3) C++ (1989)
 
-- [ ] How many programming languages are there today?
-     
+- [X] How many programming languages are there today?
+* The importance of infrastructure
+#+attr_latex: :width 400px
+#+caption: Layers between you and a document on your computer
+[[../img/0_infrastructure.jpg]]
+
+Here are eight layers that your computing infrastructure has to
+manage - most of the software enabling you to do this (without you
+noticing) is written in C.
+
 * What do you expect from this course?
 #+attr_latex: :width 400px
 #+caption: Dandelion in the grass, by Aaron Burden, @Unsplash
 [[../img/0_expectations.jpg]]
+
+- I would like to make a website
+- I want to learn as many languages as I can
+- I may need it (formally) for my Math major
+- I want to make video games
+- I want to get better at computing because of math/eng
+- I want to become a software developer
+- I want to see if computing may be in my future
+
+* What careers do our students have?
+#+attr_latex: :width 400px
+#+caption: Careers of recent computer and data science graduates from Lyon College
+[[../img/0_careers.png]]
 
 * What will you do in this course?
 #+attr_latex: :width 300px
@@ -42,8 +63,18 @@
 - We have an *operating system* - Linux (maybe) or Windows/MacOS
 - We have (more than) an *editor* - Emacs + Org-mode
 - We have a *compiler* - GCC ([[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/img/0_gcc_mac.png][also on a Mac]])
-  
-  
+
+* GCC installation on MacOS
+
+The following two answers came from ChatGPT, a conversational machine
+learning model created by OpenAI.
+#+attr_latex: :width 400px
+#+caption: First answer on how to install GCC on MacOS
+[[../img/0_gcc_mac.png]]
+#+attr_latex: :width 400px
+#+caption: Second answer on how to install GCC on MacOS 
+[[../img/0_gcc_mac_new.png]]
+   
 * How will you be evaluated?
 #+attr_latex: :width 400px
 #+caption: Source: syllabus, Canvas (lyon.instructure.com) or GitHub (github.com/birkenkrahe/ml)
@@ -55,7 +86,7 @@
 - Programming assignments are home assignments
 - In-class practices are "literate programming" exercises
 
-* Which tools are you going to use?
+* NEXT Which tools are you going to use?
 #+attr_latex: :width 400px
 #+caption: Unsplash, workshop
 [[../img/0_tools.jpg]]

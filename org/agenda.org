@@ -3,14 +3,22 @@
 #+SUBTITLE: Lyon College, Spring 2023
 #+STARTUP:overview hideblocks indent
 #+OPTIONS: toc:nil num:nil ^:nil
-#+PROPERTY: header-args:R :session *R* :results: output :exports both :noweb yes
 * Week 1 - Course overview & introduction
-#+attr_html: :width 500px
+#+attr_html: :width 400px
 [[../img/cover.jpg]]
 
-1) [ ] Entry *survey* - [[https://docs.google.com/forms/d/1yz2EtuSin3r54zMG1d_JCnnVAGb0XI8cP-Yvr7FmZbo/edit#responses][review of your responses]]
-2) [ ] Course *overview* - assignments, grading, topics, platforms
-4) [ ] The C programming *toolchain*: course infrastructure
-5) [ ] *Practice:* the C programming toolchain
+1) [X] Entry *survey* - [[https://docs.google.com/forms/d/1yz2EtuSin3r54zMG1d_JCnnVAGb0XI8cP-Yvr7FmZbo/edit#responses][review of your responses]]
+2) [X] Course *overview* - assignments, grading, topics, platforms
+3) [ ] The C programming *toolchain*: course infrastructure
+4) [ ] *Practice:* the C programming toolchain
 
-  
+** Meta data
+This page with and without meta data (in presentation mode):
+
+#+attr_latex: :width 400px
+#+caption: Org-mode file with visible meta data
+[[../img/0_meta.png]]
+
+#+attr_latex: :width 400px
+#+caption: Org-mode file with hidden meta data 
+[[../img/0_meta1.png]]
