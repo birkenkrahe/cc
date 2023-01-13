@@ -11,17 +11,23 @@
 
 1) [X] Entry *survey* - [[https://docs.google.com/forms/d/1yz2EtuSin3r54zMG1d_JCnnVAGb0XI8cP-Yvr7FmZbo/edit#responses][review of your responses]]
 2) [X] Course *overview* - assignments, grading, topics, platforms
-3) [ ] The C programming *toolchain*: course infrastructure
-4) [ ] *Practice:* the C programming toolchain
+3) [X] The C programming *toolchain*: course infrastructure
+4) [X] *Practice:* the C programming toolchain
 
-* Review topics/questions (Friday 13-Jan)
+** Review topics/questions (Friday 13-Jan)
 #+attr_latex: :width 400px
 #+caption: Illustration of ignorance and ignorance of your own ignorance
 [[../img/dunningkruger.png]]
 
 Test yourself![fn:1]
 
-* Why is computing infrastructure important?
+Graph: hype cycle (like [[https://www.gartner.com/en/research/methodologies/gartner-hype-cycle][Gartner graph of emerging technologies]]).
+
+- Why is computing infrastructure important?
+- What is meta data?
+- What is a compiler?
+
+** Why is computing infrastructure important?
 #+attr_latex: :width 400px
 #+caption: Layers between you and a document on your computer
 [[../img/0_infrastructure.jpg]]
@@ -36,7 +42,7 @@ Test yourself![fn:1]
 
 - *Changeability:* IT changes faster than most other technologies
 
-* What is meta data?
+** What is meta data?
 #+attr_latex: :width 400px
 #+caption: Org-mode file with visible meta data
 [[../img/0_meta.png]]
@@ -49,7 +55,7 @@ about the characteristics of other data, such as its content, format,
 and structure. Meta data can be used to describe many different types
 of data, including files, images, videos, documents, and databases.
 
-* What is a compiler (e.g. GCC)?
+** What is a compiler (e.g. GCC)?
 #+attr_latex: :width 400px
 #+caption: Compiler (source: High performance R computing, Packt)
 [[../img/compiler.png]]
@@ -62,6 +68,40 @@ of data, including files, images, videos, documents, and databases.
 
 - The machine code produced by a compiler is specific to the
   architecture of the computer it is being run on.
+
+* Week 2 - Programming environment
+#+attr_html: :width 400px
+[[../img/0_gnuemacs.png]]
+
+1) [ ] Practice: first literate C program
+2) [ ] Lecture: Introduction to C
+3) [ ] Practice: Emacs tutorial
+
+* Review week 1
+#+attr_html: :width 400px
+ [[../img/cweb.png]]
+
+- What is the command line interface?
+- What is literate programming?
+- What is syntax highlighting?
+
+* What is the command line interface?
+#+attr_html: :width 400px
+ [[../img/cli.png]]
+
+
+
+* What is literate programming?
+#+attr_html: :width 400px
+ [[../img/0_litprog1.png]]
+
+* What is syntax highlighting?
+#+attr_html: :width 400px
+#+caption: Raw file without syntax highlighting
+ [[../img/0_raw.png]]
+#+attr_html: :width 400px
+#+caption: Syntax highlighting on GitHub (Emacs-Lisp file)
+ [[../img/0_syntax.png]]
 
 * References
 
