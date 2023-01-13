@@ -32,9 +32,9 @@
 #+caption: Layers between you and a document on your computer
 [[../img/0_infrastructure.jpg]]
 
-Here are eight layers that your computing infrastructure has to
-manage - most of the software enabling you to do this (without you
-noticing) is written in C.
+The image shows eight layers that your computing infrastructure has to
+manage (there are more in fact) - most of the software enabling you to
+do this (without you noticing) is written in C.
 
 * What do you expect from this course?
 #+attr_latex: :width 400px
@@ -86,7 +86,7 @@ learning model created by OpenAI.
 - Programming assignments are home assignments
 - In-class practices are "literate programming" exercises
 
-* NEXT Which tools are you going to use?
+* Which tools are you going to use?
 #+attr_latex: :width 400px
 #+caption: Unsplash, workshop
 [[../img/0_tools.jpg]]
@@ -126,10 +126,12 @@ learning model created by OpenAI.
 #+caption: My GitHub dashboard
 [[../img/0_litprog.png]]
 
-* Practice: first "literate" C program!
+* IN PROGRESS Practice: first "literate" C program!
 #+attr_latex: :width 400px
 #+caption: My GitHub dashboard
 [[../img/0_books.png]]
+
+(You can find a [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/first_org_print.pdf][PDF of this exercise]] on GitHub)
 
 Let's set Emacs up, write and run a first "literate" C program!
 
@@ -219,6 +221,34 @@ Let's set Emacs up, write and run a first "literate" C program!
 #+attr_latex: :width 400px
 #+caption: Introduction to C programming
 [[../img/0_cprogramming.png]]
+
+* Glossary
+
+| TERM                  | MEANING                                       |
+|-----------------------+-----------------------------------------------|
+| Meta data             | Data about data (e.g. layout instructions)    |
+| Infrastructure        | Computing roadworks: hardware and software    |
+| Editor                | Program to write programs in                  |
+| Compiler              | Program to turn source into machine code      |
+| ~gcc~                   | The GNU C compiler                            |
+| Source code           | Code for humans to read and edit (~.c~)         |
+| Machine code          | Code for machines to execute (~.exe~)           |
+| [[https://en.wikipedia.org/wiki/Git][Git]]                   | Software version control system (2005)        |
+| [[https://www.gnu.org/software/emacs/][Emacs]]                 | Extensible editor written in Lisp (1985)      |
+| FOSS                  | Free and Open Source Software                 |
+| [[https://en.wikipedia.org/wiki/Linux][Linux]]                 | FOSS operating system (1991)                  |
+| Windows, MacOS        | Commercial OS (Microsoft, Apple)              |
+| Android               | Linux for smartphones (Google)                |
+| iOS                   | MacOS for Apple smartphones                   |
+| Command line          | Terminal, shell program to talk to the OS     |
+| Prompt                | Location on your computer, e.g. ~C:\User\~      |
+| Raw file              | No control characters for syntax highlighting |
+| Syntax highlighting   | Making programming language visible           |
+| ~DIR~                   | Windows command to list files                 |
+| ~cd~                    | Command to change directory                   |
+| Literate pgm          | Doc + code + output for humans and machines   |
+| Org-mode              | Plugin for Emacs to edit Org files (~.org~)     |
+| Dunning-Kruger effect | Illustrating ignorance of your own ignorance  |
 
 * References
 
