@@ -176,6 +176,8 @@ Let's set Emacs up, write and run a first "literate" C program!
 
 20) Enter ~hello~ to run the program.
 
+21) Upload ~first.org~ as your first in-class assignment [[https://lyon.instructure.com/courses/1041/assignments/5889][to Canvas!]]
+
 * When is the first assignment due?
 #+attr_latex: :width 400px
 #+caption: Four monks by Claudio Rinaldi (1852-1909)

@@ -3,22 +3,83 @@
 #+SUBTITLE: Lyon College, Spring 2023
 #+STARTUP:overview hideblocks indent
 #+OPTIONS: toc:nil num:nil ^:nil
-* Week 1 - Course overview & introduction
 #+attr_html: :width 400px
 [[../img/cover.jpg]]
+* Week 1 - Course overview & introduction
+#+attr_html: :width 400px
+[[../img/week1.png]]
 
 1) [X] Entry *survey* - [[https://docs.google.com/forms/d/1yz2EtuSin3r54zMG1d_JCnnVAGb0XI8cP-Yvr7FmZbo/edit#responses][review of your responses]]
 2) [X] Course *overview* - assignments, grading, topics, platforms
 3) [ ] The C programming *toolchain*: course infrastructure
 4) [ ] *Practice:* the C programming toolchain
 
-** Meta data
-This page with and without meta data (in presentation mode):
+* Review topics/questions (Friday 13-Jan)
+#+attr_latex: :width 400px
+#+caption: Illustration of ignorance and ignorance of your own ignorance
+[[../img/dunningkruger.png]]
 
+Test yourself![fn:1]
+
+* Why is computing infrastructure important?
+#+attr_latex: :width 400px
+#+caption: Layers between you and a document on your computer
+[[../img/0_infrastructure.jpg]]
+
+- *Scalability:* when you want to go from 10 customers to 1,000,000
+
+- *Reliability:* systems must be available and performant when needed
+
+- *Security:* protect against unauthorized access and cyberthreats
+
+- *Adaptability:* businesses must adapt quickly to stay competitive
+
+- *Changeability:* IT changes faster than most other technologies
+
+* What is meta data?
 #+attr_latex: :width 400px
 #+caption: Org-mode file with visible meta data
 [[../img/0_meta.png]]
-
 #+attr_latex: :width 400px
 #+caption: Org-mode file with hidden meta data 
 [[../img/0_meta1.png]]
+
+*Meta data is data that describes other data.* It provides information
+about the characteristics of other data, such as its content, format,
+and structure. Meta data can be used to describe many different types
+of data, including files, images, videos, documents, and databases.
+
+* What is a compiler (e.g. GCC)?
+#+attr_latex: :width 400px
+#+caption: Compiler (source: High performance R computing, Packt)
+[[../img/compiler.png]]
+
+- A compiler is a type of program that takes *source code* written in a
+  high-level programming language and converts it into *machine code*.
+
+- Machine code can be executed directly by a computer's central
+  processing unit (CPU).
+
+- The machine code produced by a compiler is specific to the
+  architecture of the computer it is being run on.
+
+* References
+
+Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].
+
+* Footnotes
+
+[fn:1]"The Dunning-Kruger effect was first discovered and written
+about in 1999, by researchers David Dunning and Justin Kruger at
+Cornell University. The researchers spotted how much people
+overestimated their own abilities in daily life—think of the guy in
+class who keeps raising his hand to relay his useless ideas—and coined
+the term “dual burden”. Dual burden was used to describe that these
+people suffer from two things: ignorance, and ignorance of their own
+ignorance. The researchers tested random participants on tests of
+humour, grammar, and logical reasoning. They found that people who
+ranked in the bottom 25% of any of these test scores tended to predict
+themselves to be at the top of the pack. When they scored in the 12th
+percentile, they estimated themselves to be in the 62nd. On the flip
+side, people in the top 25% predicted their scores to be slightly
+lower than they actually were." (Source: [[https://thedecisionlab.com/biases/dunning-kruger-effect][thedecisionlab.com]])
