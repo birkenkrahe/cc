@@ -29,6 +29,8 @@ TODO
    - How far down in the file you've come (~All~ because it's empty)
    - The line number your cursor is on (e.g. ~L1~)
    - The file mode (~Text~)
+
+3) Write a sentence     
         
    Type ~C-x C-s~ to save the file. Look at the modeline: it shows that
    the file is saved (~--
