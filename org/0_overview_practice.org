@@ -1,0 +1,93 @@
+#+title: Course Overview Practice Assignments
+#+author: Marcus Birkenkrahe
+#+subtitle: Introduction to Programming - Spring 2023 - Lyon College
+#+startup: overview hideblocks indent
+#+options: toc:nil num:nil ^:nil
+* Class Practice: first C program (due Jan 20)
+#+attr_latex: :width 400px
+#+caption: Books aren't the only way to be "literate" in programming!
+[[../img/0_books.png]]
+
+(You can find a [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/first_org_print.pdf][PDF of this exercise]] on GitHub)
+
+Let's set Emacs up, write and run a first "literate" C program!
+
+1) Open the command line terminal with ~CMD~ in the search field
+
+2) At the prompt, type ~gcc --version~
+
+3) Open https://github.com/birkenkrahe/org/ in a browser
+
+4) Navigate to the repository ~emacs~ in GitHub
+
+5) Click on the file name ~.emacs~ to open it
+
+6) Open the ~Raw~ version of this file (there's a button)
+
+7) Right click to ~Save as~ and save file as ~emacs.txt~ in ~/Downloads~
+
+8) Open a terminal by entering ~CMD~ in the Windows search bar
+
+9) Pin the terminal to your taskbar
+
+10) At the prompt, enter ~DIR emacs.txt~ - you should see the file
+
+11) At the prompt, enter ~emacs --version~
+
+12) Enter ~emacs -nw -l emacs.txt~
+
+13) Inside Emacs, click ~<F10>~ and ~ENTER~ to open a new file
+
+14) At the prompt at the bottom of the screen, enter ~first.org~
+
+15) Enter the following text (replace ~yourname~ with your own name):
+    #+attr_latex: :width 400px
+    [[../img/0_first.png]]
+
+16) Run the program by putting the cursor anywhere on the code block
+    and typing ~CTRL-c CTRL-c~ (or ~C-c C-c~)
+
+17) Tangle the code with ~C-c C-v t~ (or ~M-x org-babel-tangle~)
+    #+attr_latex: :width 400px
+    #+caption: What happens when you tangle or weave a literate program
+    [[../img/0_litprog1.png]]
+
+18) Open a shell (terminal program) with ~ALT-x eshell~
+
+19) At the prompt, enter ~ls -l first*~ - you should see ~first.C~
+
+20) Enter ~gcc first.C -o hello~
+
+21) Enter ~hello~ to run the program.
+
+22) Upload ~first.org~ as your first in-class assignment [[https://lyon.instructure.com/courses/1041/assignments/5889][to Canvas!]]
+
+* Home Assignment: Emacs tutorial (due Jan 23)
+
+1) Open Emacs from the terminal application with ~emacs -nw~
+
+2) Open the Emacs tutorial (link on start page, or ~C-h t~)
+   #+attr_latex: :width 400px
+   #+caption: Emacs startup screen (M-x about-emacs) in no-window mode
+   [[../img/gnuemacs2.png]]
+
+3) Complete the Emacs tutorial (start in class)
+
+4) Insert these two lines at the top of the buffer:
+   #+begin_example
+     STUDENT: YourName [PLEDGED]
+     Time-stamp: <>
+   #+end_example
+
+5) Remember that *"Pledged"* means that you have actually completed the
+   tutorial along the lines of the instructions and in good faith as
+   laid out in the [[https://catalog.lyon.edu/the-lyon-college-honor-pledge][Lyon College Honor Pledge]].
+
+6) While visiting the buffer, insert a time stamp with the command ~M-x
+   time-stamp~. Save the file with ~C-x C-w~ as a file ~tutorial.txt~ file
+   and submit it in Canvas. The top of the submission should look like
+   this (with your name and your time stamp, not mine - the added text
+   was marked in red by me):
+   #+attr_html: :width 400px
+   #+caption: Author, pledged and time stamp at top of completed Emacs tutorial
+   [[../img/tutorial.png]]

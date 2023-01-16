@@ -47,7 +47,7 @@ Graph: hype cycle (like [[https://www.gartner.com/en/research/methodologies/gart
 #+caption: Org-mode file with visible meta data
 [[../img/0_meta.png]]
 #+attr_latex: :width 400px
-#+caption: Org-mode file with hidden meta data 
+#+caption: Org-mode file with hidden meta data
 [[../img/0_meta1.png]]
 
 *Meta data is data that describes other data.* It provides information
@@ -69,17 +69,20 @@ of data, including files, images, videos, documents, and databases.
 - The machine code produced by a compiler is specific to the
   architecture of the computer it is being run on.
 
+
 * Week 2 - Programming environment
 #+attr_html: :width 400px
 [[../img/0_gnuemacs.png]]
 
 1) [ ] Practice: first literate C program
-2) [ ] Lecture: Introduction to C
-3) [ ] Practice: Emacs tutorial
+2) [ ] Practice/assignment: Emacs tutorial
+3) [ ] Demo: REPL
+4) [ ] Glossary terms
+5) [ ] Lecture: Introduction to C
 
 * Review week 1
 #+attr_html: :width 400px
- [[../img/cweb.png]]
+[[../img/cweb.png]]
 
 - What is the command line interface?
 - What is literate programming?
@@ -87,21 +90,115 @@ of data, including files, images, videos, documents, and databases.
 
 * What is the command line interface?
 #+attr_html: :width 400px
- [[../img/cli.png]]
-
-
+[[../img/cli.png]]
 
 * What is literate programming?
 #+attr_html: :width 400px
- [[../img/0_litprog1.png]]
+[[../img/0_litprog1.png]]
 
 * What is syntax highlighting?
 #+attr_html: :width 400px
 #+caption: Raw file without syntax highlighting
- [[../img/0_raw.png]]
+[[../img/0_raw.png]]
 #+attr_html: :width 400px
 #+caption: Syntax highlighting on GitHub (Emacs-Lisp file)
- [[../img/0_syntax.png]]
+[[../img/0_syntax.png]]
+
+* TODO Assignment: Emacs tutorial (due Jan 23)
+
+1) Open Emacs from the terminal application with ~emacs -nw~
+
+2) For the full experiemce, open the Emacs tutorial (link on start
+   page, or ~C-h t~). In class, we're going to start your home
+   assignment with a self-made tutorial, 
+   #+attr_latex: :width 400px
+   [[../img/gnuemacs2.png]]
+
+3) Complete the Emacs tutorial (start in class):
+   1) Basic navigation up/down/left/right/top/bottom (ca. 25%)
+   2) Exit/quit/undo steps
+   3) Inserting/deleting/killing/yanking
+   4) Finding/saving files
+   5) Listing/selecting/deleting buffers
+   6) Auto-saving/echo area/mode line
+   7) Searching up and down in a text
+   8) Open/close/divide/change windows
+   9) Getting more help
+   10) Write, time-stamp and upload completed file
+   
+4) You do not have to remember most of the information now but you
+   have to try all commands offered to you. 
+
+5) Insert these two lines at the top of the buffer:
+   #+begin_example
+     STUDENT: YourName [PLEDGED]
+     Time-stamp: <>
+   #+end_example
+
+6) Remember that *"Pledged"* means that you have actually completed the
+   tutorial along the lines of the instructions and in good faith as
+   laid out in the [[https://catalog.lyon.edu/the-lyon-college-honor-pledge][Lyon College Honor Pledge]].
+    
+7) While visiting the buffer, insert a time stamp with the command ~M-x
+   time-stamp~. Save the file with ~C-x C-w~ as a file ~tutorial.txt~ file
+   and submit it in Canvas. The top of the submission should look like
+   this (with your name and your time stamp, not mine - the added text
+   was marked in red by me):
+   #+attr_html: :width 400px
+   [[../img/tutorial.png]]
+
+* TODO Review and explanations: Emacs tutorial
+
+- [L68] If you inadvertently used the mouse, your terminal display may
+  be messed up. Simply type ~C-l~ to re-center the screen and fix the
+  terminal. You only have to use your mouse if you want to leave Emacs.
+  
+- [L4] "Key bindings": Emacs users favor the keyboard. Translating the
+  keys to a keyboard is fixed in the keymap. In Emacs, you can change
+  the association of all keys to all commands freely. CTRL (~C-~) and
+  META or ALT (~M-~) keys are standard on most keyboards. On MacOS, you
+  may have to experiment a little to find the right keys.
+
+- [L115] "Newline character": you've seen this in your first C inside
+  the ~printf~ function: ~printf("hello world\n");~ - the ~\n~ is this
+  character, also called an "escape character" because it does not
+  lead to printing but to carriage return (go to next line).
+
+- [L130] "Scrolling": when the screen is automatically moved up as you
+  scroll down with the cursor.
+
+- [L206] Do not use the arrow keys but learn the keyboard keys instead
+  so that you're independent of a particular keyboard:
+  1) Start/end of a line ~C-a~ and ~C-e~
+  2) Start/end of a buffer ~M-<~ and ~M->~
+  3) Up/down/fwd/bwd with ~C-p~, ~C-n~, ~C-f~ and ~C-b~
+  4) PgUp/PgDown with ~C-v~ and ~M-v~
+
+- [L252] Interrupting commands with ~C-g~, and redoing steps with ~C-x u~
+  or ~C-/~. To redo N steps: ~C-u N C-/~.
+
+- [L345] Instead of the ~DEL~ key, use ~C-d~. Standard is that text is
+  inserted at (cursor) point but you can change that with ~M-x
+  overwrite-mode~ (toggles).
+
+- [L410] What's the difference between "killing" and "deleting"?
+  
+* TODO REPL demo @replit.com
+#+attr_latex: :width 400px
+#+caption: C IDE at replit.com
+[[../img/cc_replit.png]]
+
+- You can open this program online at [[https://tinyurl.com/52p288p5][tinyurl.com/52p288p5]]
+
+- You will only see all parts of it if you register: follow the invite
+  link [[https://replit.com/join/xpersfuvad-marcusbirkenkra][replit.com/join/xpersfuvad-marcusbirkenkra]]
+
+- Then ~Continue with Google~ using your Lyon GMail account:
+  #+attr_latex: :width 400px
+  #+caption: C IDE at replit.com
+  [[../img/0_replit.png]]
+
+
 
 * References
 

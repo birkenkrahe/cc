@@ -128,7 +128,7 @@ learning model created by OpenAI.
 
 * IN PROGRESS Practice: first "literate" C program!
 #+attr_latex: :width 400px
-#+caption: My GitHub dashboard
+#+caption: Books aren't the only way to be "literate" in programming!
 [[../img/0_books.png]]
 
 (You can find a [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/first_org_print.pdf][PDF of this exercise]] on GitHub)
@@ -155,41 +155,48 @@ Let's set Emacs up, write and run a first "literate" C program!
 
 10) At the prompt, enter ~DIR emacs.txt~ - you should see the file
 
-11) Enter ~emacs -nw -l emacs.txt~
+11) At the prompt, enter ~emacs --version~
 
-12) Inside Emacs, click ~<F10>~ and ~ENTER~ to open a new file
+12) Enter ~emacs -nw -l emacs.txt~
 
-13) At the prompt at the bottom of the screen, enter ~first.org~
+13) Inside Emacs, click ~<F10>~ and ~ENTER~ to open a new file
 
-14) Enter the following text (replace ~yourname~ with your own name):
+14) At the prompt at the bottom of the screen, enter ~first.org~
+
+15) Enter the following text (replace ~yourname~ with your own name):
     #+attr_latex: :width 400px
     [[../img/0_first.png]]
 
-15) Run the program by putting the cursor anywhere on the code block
+16) Run the program by putting the cursor anywhere on the code block
     and typing ~CTRL-c CTRL-c~ (or ~C-c C-c~)
 
-16) Tangle the code with ~C-c C-v t~ (or ~M-x org-babel-tangle~)
+17) Tangle the code with ~C-c C-v t~ (or ~M-x org-babel-tangle~)
+    #+attr_latex: :width 400px
+    #+caption: What happens when you tangle or weave a literate program
+    [[../img/0_litprog1.png]]
 
-17) Open a shell (terminal program) with ~ALT-x eshell~
+18) Open a shell (terminal program) with ~ALT-x eshell~
 
-18) At the prompt, enter ~ls -l first*~ - you should see ~first.C~
+19) At the prompt, enter ~ls -l first*~ - you should see ~first.C~
 
-19) Enter ~gcc first.C -o hello~
+20) Enter ~gcc first.C -o hello~
 
-20) Enter ~hello~ to run the program.
+21) Enter ~hello~ to run the program.
 
-21) Upload ~first.org~ as your first in-class assignment [[https://lyon.instructure.com/courses/1041/assignments/5889][to Canvas!]]
+22) Upload ~first.org~ as your first in-class assignment [[https://lyon.instructure.com/courses/1041/assignments/5889][to Canvas!]]
 
 * When is the first assignment due?
 #+attr_latex: :width 400px
 #+caption: Four monks by Claudio Rinaldi (1852-1909)
 [[../img/0_monks.png]]
 
-- The first programming assignment is due on January 20. For late
-  submissions, you lose 1 point per day (out of 10 possible points)
+- The first in-class assignment (~first.org~, see Canvas) is due on
+  January 20. For late submissions, you lose 1 point per day (out of
+  10 possible points)
 
-- The first in-class assignment is due on January 20. For late
-  submissions, you lose 1 point per day (out of 10 possible points)
+- The first home assignment (~Emacs tutorial~, see Canvas) is due on
+  Monday, January 23. For late submissions, you lose 1 point per day
+  (out of 10 possible points)
   
 - We'll write the first weekly multiple-choice test on January 20,
   covering all of the material that was covered until then.
@@ -197,21 +204,6 @@ Let's set Emacs up, write and run a first "literate" C program!
 * What are you looking forward to?
 #+attr_latex: :width 400px
 [[../img/0_package.jpg]]
-
-* The (convenient) online REPL
-#+attr_latex: :width 400px
-#+caption: C IDE at replit.com
-[[../img/cc_replit.png]]
-
-- You can open this program online at [[https://tinyurl.com/52p288p5][tinyurl.com/52p288p5]]
-
-- You will only see all parts of it if you register: follow the invite
-  link [[https://replit.com/join/xpersfuvad-marcusbirkenkra][replit.com/join/xpersfuvad-marcusbirkenkra]]
-
-- Then ~Continue with Google~ using your Lyon GMail account:
-  #+attr_latex: :width 400px
-  #+caption: C IDE at replit.com
-  [[../img/0_replit.png]]
 
 * Next
 #+attr_latex: :width 400px
