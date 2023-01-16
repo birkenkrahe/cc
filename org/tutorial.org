@@ -1,0 +1,76 @@
+#+TITLE:Emacs Beginner's Tutorial
+#+AUTHOR:Marcus Birkenkrahe
+#+STARTUP:overview indent
+* README
+
+- This is a makeshift Emacs tutorial for absolute beginners to enable
+  you to do the most basic things with Emacs as your text editor.
+
+- For the best gain from this tutorial, open Emacs on the terminal
+  (command line interface) with ~emacs -nw~ in non-graphics mode.
+  
+* Basics
+
+- If you can read this, you're in an Emacs buffer - the basic editing
+  location for all text files.
+
+- The buffer has three parts:
+  - The main editing area at the top
+  - The mode line below it
+  - The echo or message area at the bottom
+
+TODO
+1) 
+
+
+
+
+* Basic navigation up/down/left/right/top/bottom (ca. 25%)
+
+Basic navigation includes:
+1) Moving the cursor up and down
+2) Moving the cursor left and right
+3) Jumping to the top or the bottom of the current buffer
+
+* Exit/quit/undo steps
+* Inserting/deleting/killing/yanking
+* Finding/saving files
+* Listing/selecting/deleting buffers
+* Auto-saving/echo area/mode line
+* Searching up and down in a text
+* Open/close/divide/change windows
+* Getting more help
+
+- For the full tutorial experience, open the Emacs tutorial (link on
+  start page, or ~C-h t~). In class, we're going to start your home
+  assignment with a self-made tutorial.
+
+- There is also complete self-documentation in hypertext stored inside
+  Emacs. To access this system, enter ~C-x i~. Info files expand into
+  HTML files and are also [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Help.html][available on the Web]].
+
+- Note: you can open any Web page in Emacs with ~M-x eww URL~.
+
+- To get help on a key binding, use ~C-h k~ and type the key
+
+- To get help on a function, use ~C-h f~ and enter the function
+
+- To get fuzzy help on anything, use ~C-h a~ followed by the term
+
+*TODO*
+
+1) open the GNU Emacs home page in Emacs: ~M-x eww RET~ and give ~gnu
+   emacs~ as the keyword.
+
+2) open the Google search page in EMacs: ~M-x eww RET~ followed by
+   ~google.com~.
+
+3) Look up the help for the undo command ~C-/~.
+
+4) Look up the help for the ~undo~ function.
+
+5) Look up the help for ~url~ then open the browser on the URL
+   ~https://github.com/birkenkrahe/cc~
+
+
+* Write, time-stamp and upload completed file
