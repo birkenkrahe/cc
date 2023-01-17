@@ -191,8 +191,8 @@ Let's set Emacs up, write and run a first "literate" C program!
 [[../img/0_monks.png]]
 
 - The first in-class assignment (~first.org~, see Canvas) is due on
-  January 20. For late submissions, you lose 1 point per day (out of
-  10 possible points)
+  Friday, January 20. For late submissions, you lose 1 point per day
+  (out of 10 possible points)
 
 - The first home assignment (~Emacs tutorial~, see Canvas) is due on
   Monday, January 23. For late submissions, you lose 1 point per day

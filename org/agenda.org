@@ -69,7 +69,6 @@ of data, including files, images, videos, documents, and databases.
 - The machine code produced by a compiler is specific to the
   architecture of the computer it is being run on.
 
-
 * Week 2 - Programming environment
 #+attr_html: :width 400px
 [[../img/0_gnuemacs.png]]
@@ -104,48 +103,27 @@ of data, including files, images, videos, documents, and databases.
 #+caption: Syntax highlighting on GitHub (Emacs-Lisp file)
 [[../img/0_syntax.png]]
 
-* TODO (Home) Assignment: Emacs tutorial (due Jan 23)
+* TODO (Home) Assignment: Emacs tutorial (due Jan 20)
+#+attr_latex: :width 300px
+[[../img/0_gnuemacs.png]]
 
-1) Open Emacs from the terminal application with ~emacs -nw~
+- We're going to begin this assignment together in class - but you may
+  need to finish it at home (or in the MAC or in one of the computer
+  labs, Lyon 104 or Derby 209) on your own.
 
-2) For the full experiemce, open the Emacs tutorial (link on start
-   page, or ~C-h t~). In class, we're going to start your home
-   assignment with a self-made tutorial, 
-   #+attr_latex: :width 400px
-   [[../img/gnuemacs2.png]]
+- To install Emacs on your computer, follow the instructions in the
+  [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][GitHub FAQ]]. When you're at it, you should also install a C compiler.
 
-3) Complete the Emacs tutorial (start in class):
-   1) Basic navigation up/down/left/right/top/bottom (ca. 25%)
-   2) Exit/quit/undo steps
-   3) Inserting/deleting/killing/yanking
-   4) Finding/saving files
-   5) Listing/selecting/deleting buffers
-   6) Auto-saving/echo area/mode line
-   7) Searching up and down in a text
-   8) Open/close/divide/change windows
-   9) Getting more help
-   10) Write, time-stamp and upload completed file
-   
-4) You do not have to remember most of the information now but you
-   have to try all commands offered to you. 
+- If you have trouble installing anything on your own computer, bring
+  it to class or come to my office hours (Mon-Fri, 4.15-4.45 PM).
 
-5) Insert these two lines at the top of the buffer:
-   #+begin_example
-     STUDENT: YourName [PLEDGED]
-     Time-stamp: <>
-   #+end_example
+- Open the Tutorial [[https://github.com/birkenkrahe/cc/blob/piHome/org/tutorial.org][in GitHub]] and follow the instructions:
+  [[https://tinyurl.com/3j5ddtuk][tinyurl.com/3j5ddtuk]]
+  
+- There is also a [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/tutorial.pdf][PDF version]] if you like to print things out.
 
-6) Remember that *"Pledged"* means that you have actually completed the
-   tutorial along the lines of the instructions and in good faith as
-   laid out in the [[https://catalog.lyon.edu/the-lyon-college-honor-pledge][Lyon College Honor Pledge]].
-    
-7) While visiting the buffer, insert a time stamp with the command ~M-x
-   time-stamp~. Save the file with ~C-x C-w~ as a file ~tutorial.txt~ file
-   and submit it in Canvas. The top of the submission should look like
-   this (with your name and your time stamp, not mine - the added text
-   was marked in red by me):
-   #+attr_html: :width 400px
-   [[../img/tutorial.png]]
+- When you've completed the instructions, you should have a
+  time-stamped Org-mode file that you can [[https://lyon.instructure.com/courses/1014/assignments/6479][upload to Canvas]].
 
 * TODO REPL demo @replit.com
 #+attr_latex: :width 400px
