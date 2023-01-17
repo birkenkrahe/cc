@@ -104,7 +104,7 @@ of data, including files, images, videos, documents, and databases.
 #+caption: Syntax highlighting on GitHub (Emacs-Lisp file)
 [[../img/0_syntax.png]]
 
-* TODO Assignment: Emacs tutorial (due Jan 23)
+* TODO (Home) Assignment: Emacs tutorial (due Jan 23)
 
 1) Open Emacs from the terminal application with ~emacs -nw~
 
@@ -147,42 +147,6 @@ of data, including files, images, videos, documents, and databases.
    #+attr_html: :width 400px
    [[../img/tutorial.png]]
 
-* TODO Review and explanations: Emacs tutorial
-
-- [L68] If you inadvertently used the mouse, your terminal display may
-  be messed up. Simply type ~C-l~ to re-center the screen and fix the
-  terminal. You only have to use your mouse if you want to leave Emacs.
-  
-- [L4] "Key bindings": Emacs users favor the keyboard. Translating the
-  keys to a keyboard is fixed in the keymap. In Emacs, you can change
-  the association of all keys to all commands freely. CTRL (~C-~) and
-  META or ALT (~M-~) keys are standard on most keyboards. On MacOS, you
-  may have to experiment a little to find the right keys.
-
-- [L115] "Newline character": you've seen this in your first C inside
-  the ~printf~ function: ~printf("hello world\n");~ - the ~\n~ is this
-  character, also called an "escape character" because it does not
-  lead to printing but to carriage return (go to next line).
-
-- [L130] "Scrolling": when the screen is automatically moved up as you
-  scroll down with the cursor.
-
-- [L206] Do not use the arrow keys but learn the keyboard keys instead
-  so that you're independent of a particular keyboard:
-  1) Start/end of a line ~C-a~ and ~C-e~
-  2) Start/end of a buffer ~M-<~ and ~M->~
-  3) Up/down/fwd/bwd with ~C-p~, ~C-n~, ~C-f~ and ~C-b~
-  4) PgUp/PgDown with ~C-v~ and ~M-v~
-
-- [L252] Interrupting commands with ~C-g~, and redoing steps with ~C-x u~
-  or ~C-/~. To redo N steps: ~C-u N C-/~.
-
-- [L345] Instead of the ~DEL~ key, use ~C-d~. Standard is that text is
-  inserted at (cursor) point but you can change that with ~M-x
-  overwrite-mode~ (toggles).
-
-- [L410] What's the difference between "killing" and "deleting"?
-  
 * TODO REPL demo @replit.com
 #+attr_latex: :width 400px
 #+caption: C IDE at replit.com
