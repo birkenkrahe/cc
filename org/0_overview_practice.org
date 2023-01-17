@@ -62,32 +62,25 @@ Let's set Emacs up, write and run a first "literate" C program!
 
 22) Upload ~first.org~ as your first in-class assignment [[https://lyon.instructure.com/courses/1041/assignments/5889][to Canvas!]]
 
-* Home Assignment: Emacs tutorial (due Jan 23)
+* (Home) Assignment: Emacs tutorial (due Jan 23)
+#+attr_latex: :width 200px
+[[../img/0_gnuemacs.png]]
 
-1) Open Emacs from the terminal application with ~emacs -nw~
+- We're going to begin this assignment together in class - but you may
+  need to finish it at home (or in the MAC or in one of the computer
+  labs, Lyon 104 or Derby 209) on your own.
 
-2) Open the Emacs tutorial (link on start page, or ~C-h t~)
-   #+attr_latex: :width 400px
-   #+caption: Emacs startup screen (M-x about-emacs) in no-window mode
-   [[../img/gnuemacs2.png]]
+- To install Emacs on your computer, follow the instructions in the
+  [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][GitHub FAQ]]. When you're at it, you should also install a C compiler.
 
-3) Complete the Emacs tutorial (start in class)
+- If you have trouble installing anything on your own computer, bring
+  it to class or come to my office hours (Mon-Fri, 4.15-4.45 PM).
 
-4) Insert these two lines at the top of the buffer:
-   #+begin_example
-     STUDENT: YourName [PLEDGED]
-     Time-stamp: <>
-   #+end_example
+- Open the Tutorial [[https://github.com/birkenkrahe/cc/blob/piHome/org/tutorial.org][in GitHub]] and follow the instructions:
+  [[https://tinyurl.com/3j5ddtuk][tinyurl.com/3j5ddtuk]]
+  
+- There is also a [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/tutorial.pdf][PDF version]] if you like to print things out.
 
-5) Remember that *"Pledged"* means that you have actually completed the
-   tutorial along the lines of the instructions and in good faith as
-   laid out in the [[https://catalog.lyon.edu/the-lyon-college-honor-pledge][Lyon College Honor Pledge]].
+- When you've completed the instructions, you should have a
+  time-stamped Org-mode file that you can [[https://lyon.instructure.com/courses/1014/assignments/6479][upload to Canvas]].
 
-6) While visiting the buffer, insert a time stamp with the command ~M-x
-   time-stamp~. Save the file with ~C-x C-w~ as a file ~tutorial.txt~ file
-   and submit it in Canvas. The top of the submission should look like
-   this (with your name and your time stamp, not mine - the added text
-   was marked in red by me):
-   #+attr_html: :width 400px
-   #+caption: Author, pledged and time stamp at top of completed Emacs tutorial
-   [[../img/tutorial.png]]
