@@ -83,12 +83,13 @@ of data, including files, images, videos, documents, and databases.
 #+attr_html: :width 400px
 [[../img/cweb.png]]
 
-- What is the command line interface?
-- What is literate programming?
-- What is syntax highlighting?
+- [ ] What is the command line interface?
+- [ ] What is literate programming?
+- [ ] What is syntax highlighting?
 
 * What is the command line interface?
 #+attr_html: :width 400px
+
 [[../img/cli.png]]
 
 * What is literate programming?
@@ -103,7 +104,7 @@ of data, including files, images, videos, documents, and databases.
 #+caption: Syntax highlighting on GitHub (Emacs-Lisp file)
 [[../img/0_syntax.png]]
 
-* TODO (Home) Assignment: Emacs tutorial (due Jan 20)
+* TODO (Home) Assignment: Emacs tutorial (due Jan 23)
 #+attr_latex: :width 300px
 [[../img/0_gnuemacs.png]]
 
