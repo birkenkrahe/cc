@@ -31,13 +31,21 @@ Source:
 
 * How popular is C?
 
-C consistently ranks among the top 3 programming languages.
+- C consistently ranks among the top 3 programming languages.
+- TIOBE Language of the year 2008, 2017, 2019
 
-#+caption: TIOBE Index for C, 2002-2022 (Source: TIOBE)
+#+caption: TIOBE Index for C, 2002-2023 (Source: TIOBE)
 #+attr_latex: :width 400px
 [[../img/1_tiobe.png]]
 
-Popularity contest: cp. [[https://www.tiobe.com/tiobe-index/][TIOBE Index]][fn:2]
+- Popularity contest: cp. [[https://www.tiobe.com/tiobe-index/][TIOBE Index]][fn:2]
+
+#+caption: TIOBE Index for C, 2002-2023 (Source: TIOBE)
+#+attr_latex: :width 400px
+[[../img/1_tiobe.png]]
+
+- Of the top 10 languages, 7 are direct descendants of C - only Visual
+  Basic, SQL and Assembly language are not C-type languages
 
 #+caption: IEEE index (Source: Cass, 2019)
 #+attr_latex: :width 400px
