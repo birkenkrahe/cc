@@ -73,27 +73,39 @@ of data, including files, images, videos, documents, and databases.
 #+attr_html: :width 400px
 [[../img/0_gnuemacs.png]]
 
-1) [ ] Practice: first literate C program
-2) [ ] Practice/assignment: Emacs tutorial
-3) [ ] Demo: REPL
-4) [ ] Glossary terms
-5) [ ] Lecture: Introduction to C
+Review:
+- [ ] Week 1
+- [ ] Glossary terms
 
+Lecture
+- [ ] Demo: REPL
+- [ ] Lecture: Introduction to C
+
+Practice:
+- [ ] Practice: first literate C program (submit Jan 20)
+- [ ] Practice/assignment: Emacs tutorial (submit Jan 23)
+
+Test:
+- [ ] Test 1 on Friday (on everything we've seen and done so far)
+  
 * Review week 1
 #+attr_html: :width 400px
+#+caption: Literate programming with CWEB
 [[../img/cweb.png]]
 
 - [ ] What is the command line interface?
 - [ ] What is literate programming?
 - [ ] What is syntax highlighting?
+- [ ] What is Emacs?
 
 * What is the command line interface?
 #+attr_html: :width 400px
-
+#+caption: Command line interface (WSL on Windows with Ubuntu 22.04 LTS)
 [[../img/cli.png]]
 
 * What is literate programming?
 #+attr_html: :width 400px
+#+caption: Literate programming with C and Emacs Org-mode
 [[../img/0_litprog1.png]]
 
 * What is syntax highlighting?
@@ -103,6 +115,11 @@ of data, including files, images, videos, documents, and databases.
 #+attr_html: :width 400px
 #+caption: Syntax highlighting on GitHub (Emacs-Lisp file)
 [[../img/0_syntax.png]]
+
+* What is Emacs?
+#+attr_latex: :width 400px
+#+caption: GNU Emacs screen and properties
+[[../img/0_gnuemacs1.png]]
 
 * TODO (Home) Assignment: Emacs tutorial (due Jan 23)
 #+attr_latex: :width 300px
@@ -141,13 +158,22 @@ of data, including files, images, videos, documents, and databases.
   #+caption: C IDE at replit.com
   [[../img/0_replit.png]]
 
+* TODO Preparing for a test (2.5% each)
+#+attr_latex: :width 400px
+#+caption: Medieval food preparation
+[[../img/preptest.jpg]]
 
+*How do you prepare for a test?*[fn:2]
 
 * References
 
 Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].
 
 * Footnotes
+[fn:2] (1) Look through the material on GitHub ([[https://github.com/birkenkrahe/cc/tree/piHome/org][Markdown]] or [[https://github.com/birkenkrahe/cc/tree/piHome/pdf][PDF]]). (2)
+Check the review of questions at the start of each session. (3) After
+each class room session: write down what you didn't understand and ask
+me after class or before the next class (or send me an email).
 
 [fn:1]"The Dunning-Kruger effect was first discovered and written
 about in 1999, by researchers David Dunning and Justin Kruger at
