@@ -323,6 +323,8 @@ be using them plenty later on:
   [[../img/0_github_search.png]]
 * Glossary / Emacs cheat sheet
 
+Here is the [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/emacs.pdf][PDF version of the cheat sheet]].
+
 |------------+-----------------------------|
 | TERM/KEY   | Meaning                     |
 |------------+-----------------------------|
