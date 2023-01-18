@@ -26,28 +26,28 @@ Source:
 - In turn, UNIX grew out of a space travel game (Brock, 2019).
 
 #+caption: Thompson & Ritchie & DEC PDP-11, 1970. (Brock, 2019)
-#+attr_html: :width 600px
-[[./img/unix.png]]
+#+attr_latex: :width 400px
+[[../img/1_unix.png]]
 
 * How popular is C?
 
 C consistently ranks among the top 3 programming languages.
 
 #+caption: TIOBE Index for C, 2002-2022 (Source: TIOBE)
-#+attr_html: :width 700px
-[[./img/tiobe.png]]
+#+attr_latex: :width 400px
+[[../img/1_tiobe.png]]
 
 Popularity contest: cp. [[https://www.tiobe.com/tiobe-index/][TIOBE Index]][fn:2]
 
 #+caption: IEEE index (Source: Cass, 2019)
-#+attr_html: :width 400px
-[[./img/ieee.png]]
+#+attr_latex: :width 400px
+[[../img/1_ieee.png]]
 
 * How important is C?
 
 #+caption: Real world applications of C (Source: DataFlair)
-#+attr_html: :width 600px
-[[./img/usage.jpg]]
+#+attr_latex: :width 400px
+[[../img/1_usage.jpg]]
 
 Some well-known programs written in C:
 - The Linux kernel (and therefore, Android)
@@ -81,14 +81,14 @@ Fortunately, computer (and data) science isn't really a science at all!
 (it's more of a craft like mining, knitting, or pottering.)
 
 #+caption: Scientific fields arranged by "purity" (xkcd)
-#+attr_html: :width 700px
-[[./img/purity.png]]
+#+attr_latex: :width 400px
+[[../img/1_purity.png]]
 
 * Where does C come from?
 
 #+caption: "K&R" (Kernighan/Ritchie, 1978)
-#+attr_html: :width 200px
-[[./img/kr.png]]
+#+attr_latex: :width 200px
+[[../img/1_kr.png]]
 
 - By-product of the UNIX operating system 1969 [fn:3]
 - Developed on DEC PDP-7 (computer with 8K words of main memory)
@@ -108,8 +108,8 @@ See also: [[https://youtu.be/G1-wse8nsxY][C Programming Language | Brian Kernigh
 * Standardization
 
 #+caption: How standards proliferate (Source: xkcd)
-#+attr_html: :width 500px
-[[./img/standards.png]]
+#+attr_latex: :width 400px
+[[../img/1_standards.png]]
 
 Details: see [[https://blog.ansi.org/2018/11/c-language-standard-iso-iec-9899-2018-c18/#gref][ANSI]] (American National Standards Institute)
 
@@ -118,8 +118,8 @@ Details: see [[https://blog.ansi.org/2018/11/c-language-standard-iso-iec-9899-20
 Well, at least this is one way of looking at it.
 
 #+caption: Computer architecture (simplified)
-#+attr_html: :width 700px
-[[./img/computer.png]]
+#+attr_latex: :width 400px
+[[../img/1_computer.png]]
 
 The "hard disk" can also be a Solid State Drive (SSD) or some other
 form of Non-Volatile Memory (NVM) - i.e. it doesn't disappear when
@@ -140,16 +140,16 @@ Specifically for C and our compiler GCC, this process looks
 technically like this:
 
 #+caption: GCC compilation process (Source: Hock-Chuan, 2018).
-#+attr_html: :width 700px
-[[./img/gcc.png]]
+#+attr_latex: :width 400px
+[[../img/1_gcc.png]]
 
 * Looks matter
 
 She's a beauty.
 
 #+caption: PDP-11/70
-#+attr_html: :width 500px
-[[./img/pdp11.jpg]]
+#+attr_latex: :width 400px
+[[../img/1_pdp11.jpg]]
 
 | Challenge: was C the first programming language? [fn:5] |
 
@@ -176,10 +176,10 @@ languages." (Anonymous)
 * Benchmarking
      
    #+caption: Image source: Kostya benchmark, GitHub, Nov 2021
-   [[./img/fast.png]]
+   [[../img/1_fast.png]]
 
     #+caption: Image source: Kostya benchmark, GitHub, Nov 2021
-    [[./img/slow.png]]
+    [[../img/1_slow.png]]
 
  * Excerpts for parsing and printing a /Mandelbrot/ set
  * /Benchmarks/ depend on algorithm implementation
@@ -202,8 +202,8 @@ languages." (Anonymous)
 C++ is a superset of C.
 
 #+caption: C/C++ logos
-#+attr_html: :width 400px
-[[./img/ccpp.png]]
+#+attr_latex: :width 400px
+[[../img/1_ccpp.png]]
 
 | WHAT | C                      | C++                |
 |------+------------------------+--------------------|
@@ -221,8 +221,8 @@ Source: Lemonaki, 2021.
  - C is simpler, smaller, and faster
 
  #+caption: Computer Landscape. (Modified from: Steinhart, 2019)
- #+attr_html: :width 500px
- [[./img/power2.png]]
+ #+attr_latex: :width 400px
+ [[../img/1_power2.png]]
 
  - Bjarne Stroustrup (2011): "[[https://youtu.be/KlPC3O1DVcg][C is obsolete]]"[fn:7]
  - Linus Torvalds (2007): "[[http://harmful.cat-v.org/software/c++/linus][C++ is a horrible language]]"[fn:8].
@@ -243,8 +243,8 @@ Source: Lemonaki, 2021.
 It's personal.
 
 #+caption: The C++ Virtual Library, 1993-1995 (DESY)
-#+attr_html: :width 500px
-[[./img/desy.png]]
+#+attr_latex: :width 400px
+[[../img/1_desy.png]]
 
 #+begin_quote
 I used C++ during my PhD studies at DESY, Germany, to write a
@@ -257,8 +257,8 @@ theory simulations in theoretical particle physics).[fn:10]
 Whatever happens, good new for learning C.
 
 #+caption: One expert's opinion (Source: Quora)
-#+attr_html: :width 500px
-[[./img/future.png]]
+#+attr_latex: :width 400px
+[[../img/1_future.png]]
 
 I increasingly see propaganda for [[https://www.incredibuild.com/blog/rust-vs-c-and-is-it-good-for-enterprise][replacing C++ by Rust]] (Kirsh, 2021),
 another relatively new language with OOP support and better security
@@ -306,7 +306,7 @@ properties.
 - MinGW (compiler) + Emacs (editor) + GitHub (collaboration)
 - First program: "hello world" (Lecture + Lab)
 
-  [[./img/river.gif]]
+  [[../img/1_river.gif]]
 
 * References
 
