@@ -86,7 +86,7 @@ Practice:
 - [ ] Practice/assignment: Emacs tutorial (submit Jan 23)
 
 Test:
-- [ ] Test 1 on Friday (on everything we've seen and done so far)
+- [ ] Test 1 on Monday, Jan-23 (on everything we've done so far)
   
 * Review week 1
 #+attr_html: :width 400px
