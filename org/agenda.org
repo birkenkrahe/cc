@@ -78,7 +78,7 @@ Review:
 - [ ] Glossary terms
 
 Lecture
-- [ ] Demo: REPL
+- [ ] Demo: REPL (replit.com)
 - [ ] Lecture: Introduction to C
 
 Practice:
@@ -93,10 +93,10 @@ Test:
 #+caption: Literate programming with CWEB
 [[../img/cweb.png]]
 
-- [ ] What is the command line interface?
-- [ ] What is literate programming?
-- [ ] What is syntax highlighting?
-- [ ] What is Emacs?
+- [X] What is the command line interface? ("The black thing")
+- [X] What is literate programming?
+- [X] What is syntax highlighting?
+- [X] What is Emacs?
 
 * What is the command line interface?
 #+attr_html: :width 400px
