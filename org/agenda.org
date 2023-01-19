@@ -135,6 +135,9 @@ Test:
 - If you have trouble installing anything on your own computer, bring
   it to class or come to my office hours (Mon-Fri, 4.15-4.45 PM).
 
+- Here is a [[https://www.youtube.com/playlist?list=PLwgb17bzeNygo8GU6SivwwjsQj9QabqAJ][YouTube playlist]] with 11 short video tutorials on Emacs
+  installation and use as a literate programming tool (total: 90 min).
+
 - Open the Tutorial [[https://github.com/birkenkrahe/cc/blob/piHome/org/tutorial.org][in GitHub]] and follow the instructions:
   [[https://tinyurl.com/3j5ddtuk][tinyurl.com/3j5ddtuk]]
   
