@@ -34,33 +34,35 @@ Let's set Emacs up, write and run a first "literate" C program!
 
 11) At the prompt, enter ~emacs --version~
 
-12) Enter ~emacs -nw -l emacs.txt~
+12) Rename ~emacs.txt~ to ~.emacs~: ~RENAME emacs.txt .emacs~
 
-13) Inside Emacs, click ~<F10>~ and ~ENTER~ to open a new file
+13) Start (non-graphical/terminal) Emacs: ~emacs -nw~
 
-14) At the prompt at the bottom of the screen, enter ~first.org~
+14) Inside Emacs, click ~<F10>~ and ~ENTER~ to open a new file
 
-15) Enter the following text (replace ~yourname~ with your own name):
+15) At the prompt at the bottom of the screen, enter ~first.org~
+
+16) Enter the following text (replace ~yourname~ with your own name):
     #+attr_latex: :width 400px
     [[../img/0_first.png]]
 
-16) Run the program by putting the cursor anywhere on the code block
+17) Run the program by putting the cursor anywhere on the code block
     and typing ~CTRL-c CTRL-c~ (or ~C-c C-c~)
 
-17) Tangle the code with ~C-c C-v t~ (or ~M-x org-babel-tangle~)
+18) Tangle the code with ~C-c C-v t~ (or ~M-x org-babel-tangle~)
     #+attr_latex: :width 400px
     #+caption: What happens when you tangle or weave a literate program
     [[../img/0_litprog1.png]]
 
-18) Open a shell (terminal program) with ~ALT-x eshell~
+19) Open a shell (terminal program) with ~ALT-x eshell~
 
-19) At the prompt, enter ~ls -l first*~ - you should see ~first.C~
+20) At the prompt, enter ~ls -l first*~ - you should see ~first.C~
 
-20) Enter ~gcc first.C -o hello~
+21) Enter ~gcc first.C -o hello~
 
-21) Enter ~hello~ to run the program.
+22) Enter ~hello~ to run the program.
 
-22) Upload ~first.org~ as your first in-class assignment [[https://lyon.instructure.com/courses/1041/assignments/5889][to Canvas!]]
+23) Upload ~first.org~ as your first in-class assignment [[https://lyon.instructure.com/courses/1041/assignments/5889][to Canvas!]]
 
 * (Home) Assignment: Emacs tutorial (due Jan 23)
 #+attr_latex: :width 200px
