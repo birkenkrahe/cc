@@ -1,24 +1,24 @@
 
 # Table of Contents
 
-1.  [README](#org51dbade)
-2.  [Buffer and key basics](#org8b8b271)
-3.  [The mode line - basic buffer movement](#orgf7b8f68)
-4.  [Splitting windows](#orgf4db362)
-5.  [Indentation, lines, paragraphs, undo](#org614bea8)
-6.  [Delete, copy, kill/cut, yank/paste text](#org83b65ba)
-7.  [Searching up and down](#org687c104)
-8.  [Directory and listing buffer](#org96be9c3)
-9.  [Open shell, write, export, time stamp file](#org69e087a)
-10. [Getting help](#orgf5d47e3)
-11. [Looking up online help](#org72830c8)
-12. [More information: video, refcard, FAQs](#org9eb0279)
-13. [Glossary / Emacs cheat sheet](#org6b36666)
-14. [Acknowledgements](#org98391ca)
+1.  [README](#org10d93d5)
+2.  [Buffer and key basics](#orgc3ea6d7)
+3.  [The mode line - basic buffer movement](#org37c2a33)
+4.  [Splitting windows](#orgbef1a5d)
+5.  [Indentation, lines, paragraphs, undo](#org7eac205)
+6.  [Delete, copy, kill/cut, yank/paste text](#orgce66d67)
+7.  [Searching up and down](#org5d7e954)
+8.  [Directory and listing buffer](#org6398ee1)
+9.  [Open shell, write, export, time stamp file](#org05fd4bf)
+10. [Getting help](#org2f627fe)
+11. [Looking up online help](#org9a473a0)
+12. [More information: video, refcard, FAQs](#orge811e12)
+13. [Glossary / Emacs cheat sheet](#orgaca2c92)
+14. [Acknowledgements](#orge2e2f55)
 
 
 
-<a id="org51dbade"></a>
+<a id="org10d93d5"></a>
 
 # README
 
@@ -33,8 +33,12 @@
     likely less than half the time of the more comprehensive Emacs
     onboard tutorial (reachable e.g. from the startup screen).
 
+-   Unlike the standard tutorial, this is an instruction file: you will
+    do the editing in a separate text file whose content you will
+    download.
 
-<a id="org8b8b271"></a>
+
+<a id="orgc3ea6d7"></a>
 
 # Buffer and key basics
 
@@ -47,10 +51,10 @@
     "Meta", which is the `<ALT>` key on most keyboards).
 
 -   For example, `C-x C-f` means: hold down CTRL and press x and f. `M-<`
-    means: hold down ALT + SHIFT + < all at the same time.
+    means: hold down `ALT` + `SHIFT` + `<` all at the same time.
 
 
-<a id="orgf7b8f68"></a>
+<a id="org37c2a33"></a>
 
 # The mode line - basic buffer movement
 
@@ -65,10 +69,11 @@
     -   The file mode (`Text`)
 
 3.  Open a browser, open at [tinyurl.com/22rt7t2f](https://tinyurl.com/22rt7t2f) and save the file as
-    `Downloads/text.txt` - this directory is in `c:/User/yourname/`
+    `text.txt` in your downloads directory - `c:/User/yourname/Downloads`.
 
 4.  In `tutor.txt`, enter `C-x i` and insert the file `text.txt` from its
-    location, `Downloads`. If you mess up, type `C-g` to quit:
+    location, `Downloads`. If you mess up (at any time), type `C-g` to
+    quit any command sequence:
     
     ![img](../img/0_text.png "Inserting a text file into buffer with C-x i")
 
@@ -85,15 +90,16 @@
 8.  Go back on the line with `C-b`, and forward with `C-f` (one character),
     or with `M-b` and `M-f` (one word).
 
-9.  Type `M-x column <TAB> <RET>` (that's ALT + column + Tab-key +
-    Enter). The command completes to `M-x column-number-mode` and you
-    will now see both row and column number of the cursor position.
+9.  Type `M-x column <TAB> <RET>` (that's `ALT` + `column` + `Tab-key` +
+    `Enter`). The command completes to `M-x column-number-mode`. In the
+    mode line, you will now see both row and column number of the
+    cursor position.
 
 10. This last command "toggles", which means that you can switch it
     on/off by repeating the command. Try that a couple of times.
 
 
-<a id="orgf4db362"></a>
+<a id="orgbef1a5d"></a>
 
 # Splitting windows
 
@@ -112,7 +118,7 @@ You can split windows any way you like.
     ![img](../img/0_windows.png)
 
 
-<a id="org614bea8"></a>
+<a id="org7eac205"></a>
 
 # Indentation, lines, paragraphs, undo
 
@@ -151,7 +157,7 @@ You can split windows any way you like.
     file, enter `M->`.
 
 
-<a id="org83b65ba"></a>
+<a id="orgce66d67"></a>
 
 # Delete, copy, kill/cut, yank/paste text
 
@@ -191,7 +197,7 @@ You can split windows any way you like.
     active, that is when a mark has been set or a region selected.
 
 
-<a id="org687c104"></a>
+<a id="org5d7e954"></a>
 
 # Searching up and down
 
@@ -220,7 +226,7 @@ You can split windows any way you like.
     appear.
 
 
-<a id="org96be9c3"></a>
+<a id="org6398ee1"></a>
 
 # Directory and listing buffer
 
@@ -265,7 +271,7 @@ You can split windows any way you like.
     windows with `C-x 1`.
 
 
-<a id="org69e087a"></a>
+<a id="org05fd4bf"></a>
 
 # Open shell, write, export, time stamp file
 
@@ -317,7 +323,7 @@ be using them plenty later on:
 9.  Save the file with `C-x C-s` and submit it in Canvas.
 
 
-<a id="orgf5d47e3"></a>
+<a id="org2f627fe"></a>
 
 # Getting help
 
@@ -338,7 +344,7 @@ be using them plenty later on:
 6.  To get fuzzy help on anything, use `C-h a` followed by the term.
 
 
-<a id="org72830c8"></a>
+<a id="org9a473a0"></a>
 
 # Looking up online help
 
@@ -356,7 +362,7 @@ be using them plenty later on:
        C-o`): <https://tinyurl.com/3j5ddtuk>
 
 
-<a id="org9eb0279"></a>
+<a id="orge811e12"></a>
 
 # More information: video, refcard, FAQs
 
@@ -369,7 +375,7 @@ be using them plenty later on:
     ![img](../img/0_github_search.png "Searching for headlines with "Emacs" in the FAQ file")
 
 
-<a id="org6b36666"></a>
+<a id="orgaca2c92"></a>
 
 # Glossary / Emacs cheat sheet
 
@@ -580,7 +586,7 @@ Here is the [PDF version of the cheat sheet](https://github.com/birkenkrahe/cc/b
 </table>
 
 
-<a id="org98391ca"></a>
+<a id="orge2e2f55"></a>
 
 # Acknowledgements
 
