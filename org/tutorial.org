@@ -13,6 +13,10 @@
 - You should be able to complete this tutorial in less than 1 hr -
   likely less than half the time of the more comprehensive Emacs
   onboard tutorial (reachable e.g. from the startup screen).
+
+- Unlike the standard tutorial, this is an instruction file: you will
+  do the editing in a separate text file whose content you will
+  download.
   
 * Buffer and key basics
 
@@ -25,7 +29,7 @@
   "Meta", which is the ~<ALT>~ key on most keyboards).
 
 - For example, ~C-x C-f~ means: hold down CTRL and press x and f. ~M-<~
-  means: hold down ALT + SHIFT + < all at the same time.
+  means: hold down ~ALT~ + ~SHIFT~ + ~<~ all at the same time.
 
 * The mode line - basic buffer movement
 
@@ -40,10 +44,11 @@
    - The file mode (~Text~)
 
 3) Open a browser, open at [[https://tinyurl.com/22rt7t2f][tinyurl.com/22rt7t2f]] and save the file as
-   ~Downloads/text.txt~ - this directory is in ~c:/User/yourname/~
+   ~text.txt~ in your downloads directory - ~c:/User/yourname/Downloads~.
 
 4) In ~tutor.txt~, enter ~C-x i~ and insert the file ~text.txt~ from its
-   location, ~Downloads~. If you mess up, type ~C-g~ to quit:
+   location, ~Downloads~. If you mess up (at any time), type ~C-g~ to
+   quit any command sequence:
    #+attr_latex: :width 400px
    #+caption: Inserting a text file into buffer with C-x i
    [[../img/0_text.png]]
@@ -62,9 +67,10 @@
 8) Go back on the line with ~C-b~, and forward with ~C-f~ (one character),
    or with ~M-b~ and ~M-f~ (one word).
 
-9) Type ~M-x column <TAB> <RET>~ (that's ALT + column + Tab-key +
-   Enter). The command completes to ~M-x column-number-mode~ and you
-   will now see both row and column number of the cursor position.
+9) Type ~M-x column <TAB> <RET>~ (that's ~ALT~ + ~column~ + ~Tab-key~ +
+   ~Enter~). The command completes to ~M-x column-number-mode~. In the
+   mode line, you will now see both row and column number of the
+   cursor position.
 
 10) This last command "toggles", which means that you can switch it
     on/off by repeating the command. Try that a couple of times.
