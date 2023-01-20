@@ -1,24 +1,24 @@
 
 # Table of Contents
 
-1.  [README](#org6e2b291)
-2.  [Buffer and key basics](#org41251a0)
-3.  [The mode line - basic buffer movement](#org186bb86)
-4.  [Splitting windows](#org9eb124d)
-5.  [Indentation, lines, paragraphs, undo](#org2e5cc32)
-6.  [Delete, copy, kill/cut, yank/paste text](#org64d066b)
-7.  [Searching up and down](#orga79b04d)
-8.  [Directory and listing buffer](#org8502880)
-9.  [Open shell, write, export, time stamp file](#org5e7d62b)
-10. [Getting help](#org4e1d13f)
-11. [Looking up online help](#org4d8742e)
-12. [More information: video, refcard, FAQs](#org5d39f4f)
-13. [Glossary / Emacs cheat sheet](#org1fb0a15)
-14. [Acknowledgements](#org3234aab)
+1.  [README](#org55b6b1d)
+2.  [Buffer and key basics](#org5d893b5)
+3.  [The mode line - basic buffer movement](#orgb03f435)
+4.  [Splitting windows](#orgc3330c4)
+5.  [Indentation, lines, paragraphs, undo](#org5726f94)
+6.  [Delete, copy, kill/cut, yank/paste text](#org60d904b)
+7.  [Searching up and down](#orgbb413e9)
+8.  [Directory and listing buffer](#org7686069)
+9.  [Open shell, write, export, time stamp file](#org3e0207e)
+10. [Getting help](#org3813c29)
+11. [Looking up online help](#org048140e)
+12. [More information: video, refcard, FAQs](#orgadb2fe5)
+13. [Glossary / Emacs cheat sheet](#org2e7e262)
+14. [Acknowledgements](#org925dc43)
 
 
 
-<a id="org6e2b291"></a>
+<a id="org55b6b1d"></a>
 
 # README
 
@@ -34,7 +34,7 @@
     onboard tutorial (reachable e.g. from the startup screen).
 
 
-<a id="org41251a0"></a>
+<a id="org5d893b5"></a>
 
 # Buffer and key basics
 
@@ -50,7 +50,7 @@
     means: hold down ALT + SHIFT + < all at the same time.
 
 
-<a id="org186bb86"></a>
+<a id="orgb03f435"></a>
 
 # The mode line - basic buffer movement
 
@@ -93,7 +93,7 @@
     on/off by repeating the command. Try that a couple of times.
 
 
-<a id="org9eb124d"></a>
+<a id="orgc3330c4"></a>
 
 # Splitting windows
 
@@ -112,7 +112,7 @@ You can split windows any way you like.
     ![img](../img/0_windows.png)
 
 
-<a id="org2e5cc32"></a>
+<a id="org5726f94"></a>
 
 # Indentation, lines, paragraphs, undo
 
@@ -151,7 +151,7 @@ You can split windows any way you like.
     file, enter `M->`.
 
 
-<a id="org64d066b"></a>
+<a id="org60d904b"></a>
 
 # Delete, copy, kill/cut, yank/paste text
 
@@ -191,7 +191,7 @@ You can split windows any way you like.
     active, that is when a mark has been set or a region selected.
 
 
-<a id="orga79b04d"></a>
+<a id="orgbb413e9"></a>
 
 # Searching up and down
 
@@ -220,7 +220,7 @@ You can split windows any way you like.
     appear.
 
 
-<a id="org8502880"></a>
+<a id="org7686069"></a>
 
 # Directory and listing buffer
 
@@ -265,7 +265,7 @@ You can split windows any way you like.
     windows with `C-x 1`.
 
 
-<a id="org5e7d62b"></a>
+<a id="org3e0207e"></a>
 
 # Open shell, write, export, time stamp file
 
@@ -317,7 +317,7 @@ be using them plenty later on:
 9.  Save the file with `C-x C-s` and submit it in Canvas.
 
 
-<a id="org4e1d13f"></a>
+<a id="org3813c29"></a>
 
 # Getting help
 
@@ -338,7 +338,7 @@ be using them plenty later on:
 6.  To get fuzzy help on anything, use `C-h a` followed by the term.
 
 
-<a id="org4d8742e"></a>
+<a id="org048140e"></a>
 
 # Looking up online help
 
@@ -356,7 +356,7 @@ be using them plenty later on:
        C-o`): <https://tinyurl.com/3j5ddtuk>
 
 
-<a id="org5d39f4f"></a>
+<a id="orgadb2fe5"></a>
 
 # More information: video, refcard, FAQs
 
@@ -369,7 +369,7 @@ be using them plenty later on:
     ![img](../img/0_github_search.png "Searching for headlines with "Emacs" in the FAQ file")
 
 
-<a id="org1fb0a15"></a>
+<a id="org2e7e262"></a>
 
 # Glossary / Emacs cheat sheet
 
@@ -580,11 +580,12 @@ Here is the [PDF version of the cheat sheet](https://github.com/birkenkrahe/cc/b
 </table>
 
 
-<a id="org3234aab"></a>
+<a id="org925dc43"></a>
 
 # Acknowledgements
 
-I'm indebted to Jacob Strickland and Jacob Wolfrom for comments that
+I'm indebted to Jacob Strickland and Jacob Wolfrom for testing the
+first version, for their careful reading and for many comments that
 helped improve this tutorial.
 
 

@@ -373,7 +373,8 @@ Here is the [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/emacs.pdf][PDF v
 
 * Acknowledgements
 
-I'm indebted to Jacob Strickland and Jacob Wolfrom for comments that
+I'm indebted to Jacob Strickland and Jacob Wolfrom for testing the
+first version, for their careful reading and for many comments that
 helped improve this tutorial.
 
 * Footnotes
