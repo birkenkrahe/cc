@@ -1,24 +1,24 @@
 
 # Table of Contents
 
-1.  [README](#org523a606)
-2.  [Buffer and key basics](#orgd7ff23b)
-3.  [The mode line - basic buffer movement](#orgb5b45c2)
-4.  [Splitting windows](#org7a7f4a4)
-5.  [Indentation, lines, paragraphs, undo](#orgf4ad253)
-6.  [Delete, copy, kill/cut, yank/paste text](#org8b316d3)
-7.  [Searching up and down](#org3cb868f)
-8.  [Directory and listing buffer](#org31d4023)
-9.  [Open shell, write, export, time stamp file](#org9439b7a)
-10. [Getting help](#org1140cfa)
-11. [Looking up online help](#org1503ce0)
-12. [More information: video, refcard, FAQs](#orgdfb3a45)
-13. [Glossary / Emacs cheat sheet](#org6ccfa65)
-14. [Acknowledgements](#org4037d21)
+1.  [README](#org4896604)
+2.  [Buffer and key basics](#org3a31b8e)
+3.  [The mode line - basic buffer movement](#org5e12353)
+4.  [Indentation, lines, paragraphs, undo](#orgb2ac440)
+5.  [Splitting windows](#orgd6e32bd)
+6.  [Delete, copy, kill/cut, yank/paste text](#org0a3aac0)
+7.  [Searching up and down](#org762dd4a)
+8.  [Directory and listing buffer](#orgc09350f)
+9.  [Open shell, write, export, time stamp file](#orgf8684c7)
+10. [Getting help](#org98d1c12)
+11. [Looking up online help](#orgce94873)
+12. [More information: video, refcard, FAQs](#orgb1117b8)
+13. [Glossary / Emacs cheat sheet](#org67ee150)
+14. [Acknowledgements](#orga70f66d)
 
 
 
-<a id="org523a606"></a>
+<a id="org4896604"></a>
 
 # README
 
@@ -40,7 +40,7 @@
     download.
 
 
-<a id="orgd7ff23b"></a>
+<a id="org3a31b8e"></a>
 
 # Buffer and key basics
 
@@ -61,7 +61,7 @@
     have compound commands like `C-x C-f`, you can check your progress.
 
 
-<a id="orgb5b45c2"></a>
+<a id="org5e12353"></a>
 
 # The mode line - basic buffer movement
 
@@ -91,7 +91,8 @@
 6.  The mode line now indicates that the file has been changed: `**--`
 
 7.  Save the file with `C-x C-s`. You should get a confirmation in the
-    minibuffer, alongside the full path to the file, e.g.
+    minibuffer, alongside the full path to the file - and the mode line
+    changes to `----`:
     
         Wrote c:/Users/birkenkrahe/tutor.txt
 
@@ -110,7 +111,64 @@
     on/off by repeating the command. Try that a couple of times.
 
 
-<a id="org7a7f4a4"></a>
+<a id="orgb2ac440"></a>
+
+# Indentation, lines, paragraphs, undo
+
+1.  To distribute the text over more than one line, enter `M-q`, or `M-x
+       fill-paragraph`: this command will fill the text in lines of max 70
+    characters).
+
+2.  You can also toggle `M-x auto-fill-mode`, which will fill the
+    paragraph any time you're at the of a line. You're told when a mode
+    is enabled/disabled for the current buffer.
+
+3.  Test that: go to the end of the current paragraph, enter a new
+    (empty) line and insert the text from `text.txt` once again.
+
+4.  Enable `auto-fill-mode`, go to the end of the new line you just
+    inserted, and press `<RET>`. The paragraph should be filled just so.
+
+5.  You probably want to see this again! Type `C-x u` (or `C-/` or `C-_`) to
+    undo the last operation, then press `<RET>` again. The minibuffer
+    will report `Undo`.
+
+6.  `C-x` commands can be repeated as often as you wish. For example, to
+    go back 4 words, enter `C-u 4 M-x b`.
+
+7.  If you filled the lines, you should now have multiple lines. To go
+    up and down them, use `C-p` (up/previous) and `C-n` (down/next). How
+    would you go up 3 lines?  Right: `C-u 3 C-p`.
+
+8.  Add the `text.txt` files another 5 times: navigate to the end of
+    the text using `C-e` (end of line) and `C-n` (next line). Then 5 times:
+    -   `<RET>` to create a new line
+    -   `C-x i text.txt <RET>` to insert
+    -   `C-e` to go to the end of the line
+    -   Press `<RET>` to auto-fill paragraph
+
+9.  To scroll one page down in this large file, use `C-v`. To scroll up,
+    use `M-v`.
+
+10. To go to the top of the file, enter `M-<`. To go to the end of the
+    file, enter `M->`.
+
+11. To recenter so that the line under the cursor is in the middle of
+    the window, enter `C-l`.
+
+12. Move around the file a little **without touching your mouse**:
+    -   Jump to the top of the buffer (`M-<`)
+    -   Go down one page (`C-v`)
+    -   Go to column 35 jumping by words (`M-f`)
+    -   Correct with character movements until you're at 35 (`C-f`, `C-b`)
+    -   Jump to the end of the file (`M->`)
+    -   Go up two pages (`M-v M-v`)
+    -   Recenter (`C-l`)
+    -   Go to the end of the line (`C-e`)
+    -   Go back to the top of the buffer (`M-<`)
+
+
+<a id="orgd6e32bd"></a>
 
 # Splitting windows
 
@@ -122,53 +180,18 @@ You can split windows any way you like.
 
 3.  Move between windows with `C-x o` <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
 
-4.  Delete all but the current window with `C-x 1`.
+4.  Delete a window you're in with `C-x 0`
 
-5.  Recreate the following window setup:
+5.  Delete all but the current window with `C-x 1`.
+
+6.  Recreate the following window setup:
     
     ![img](../img/0_windows.png)
 
-
-<a id="orgf4ad253"></a>
-
-# Indentation, lines, paragraphs, undo
-
-1.  To distribute the text over more than one line, enter `M-q`, or `M-x
-       fill-paragraph`: this command will fill the text in lines (max 70
-    characters)<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>.
-
-2.  You can also toggle `M-x auto-fill-mode`, which will fill the
-    paragraph any time you're at the of a line.
-
-3.  Test that: go to the end of the current paragraph, enter a new
-    (empty) line and insert the text from `text.txt` once again.
-
-4.  Enable `auto-fill-mode`, go to the end of the new line you just
-    inserted, and press `<RET>`. The paragraph should be filled just so.
-
-5.  You probably want to see this again! Type `C-x u` (or `C-/` or `C-_`) to
-    undo the last operation, then press `<RET>` again.
-
-6.  `C-x` commands can be repeated as often as you wish. For example, to
-    go back 4 steps, enter `C-u 4 C-x u`.
-
-7.  Now you have multiple lines. To go up and down them, use `C-p`
-    (up/previous) and `C-n` (down/next). How would you go up 10 lines?
-    Right: `C-u 10 C-p`.
-
-8.  Add the `text.txt` files another three times. Each time:
-    -   `C-x i text.txt` to insert
-    -   `C-e` to go to the end of the line
-    -   Press `<RET>` to auto-fill paragraph
-
-9.  To scroll one page down in this large file, use `C-v`. To scroll up,
-    use `M-v`.
-
-10. To go to the top of the file, enter `M-<`. To go to the end of the
-    file, enter `M->`.
+7.  Delete all but the current window with `C-x 1`.
 
 
-<a id="org8b316d3"></a>
+<a id="org0a3aac0"></a>
 
 # Delete, copy, kill/cut, yank/paste text
 
@@ -177,9 +200,10 @@ You can split windows any way you like.
 
 2.  You can delete forward by toggling `M-x overwrite-mode`. Try that:
     press the space bar (`<SPC>`) a few times with and without overwrite
-    mode.
+    mode. The modeline now shows `Ovwr`.
 
-3.  Switch overwrite mode off (no `Ovwr` in the mode line).
+3.  Disable overwrite by running the function again: `M-x
+       overwrite-mode`. There should now be **no** `Ovwr` in the mode line.
 
 4.  Highlight a region: mark the beginning of the region with `C-SPC`
     (minibuffer: `Mark set`), and then move the cursor to wherever you
@@ -187,7 +211,7 @@ You can split windows any way you like.
     
     ![img](../img/0_region.png "Highlight region after setting mark with C-SPC")
 5.  You can now run commands on the region, for example:
-    -   delete it `C-d`)
+    -   delete it (`<Backdelete>`)
     -   cut ("kill") it (`C-w`)
     -   copy it (`M-w`)
     -   paste ("yank") it (`C-y`)
@@ -195,8 +219,8 @@ You can split windows any way you like.
 6.  To try this, mark a whole paragraph (beginning with `Lorem` and
     ending with `laborum`) and cut it (`C-w`).
 
-7.  Move to the end of the buffer (`M->`) and yank the region there
-    (`C-y`).
+7.  Move to the end of the buffer (`M->`), enter a new line (`<RET>`) and
+    yank the region there (`C-y`).
 
 8.  Mark another paragraph and copy (`M-w`) it, then go to to the top of
     the buffer (`M-<`) and yank it (`C-y`).
@@ -208,7 +232,7 @@ You can split windows any way you like.
     active, that is when a mark has been set or a region selected.
 
 
-<a id="org3cb868f"></a>
+<a id="org762dd4a"></a>
 
 # Searching up and down
 
@@ -232,12 +256,14 @@ You can split windows any way you like.
        I-search backward` when you incrementally searched past the buffer
     with `C-r`.
 
-6.  Stop the search and start it again: if you do not enter a search
-    term but just type `C-s` or `C-r` again, the last search term will
-    appear.
+6.  Stop the search (`C-g`) and start it again: if you do not enter a
+    search term but just type `C-s` or `C-r` again, the last search term
+    will appear.
+
+7.  Stop the search with `C-g`.
 
 
-<a id="org31d4023"></a>
+<a id="orgc09350f"></a>
 
 # Directory and listing buffer
 
@@ -247,42 +273,47 @@ You can split windows any way you like.
     ("Directory editor") buffer, which is very powerful.
 
 3.  `Dired` has a bunch of single letter commands. One is `s` to sort the
-    files by name or time: toggle this by pressing `s` twice.
+    files by name or time: Go to the top of the buffer (`M-<`), then
+    toggle this by pressing `s` twice.
 
 4.  In the directory list, `.` stands for the current directory (the name
     of which appears at the top), and `..` stands for the next upper
     level directory.
 
-5.  When the cursor is on the line for that file or directory, you can:
+5.  Go to the `..` line and press `<RET>` - this will get you to the `Users`
+    directory above your own. Find your name, go there with the cursor
+    and press `<RET>` to get back home.
+
+6.  When the cursor is on the line for that file or directory, you can:
     -   rename it with `R`
     -   copy it with `C` (upper case)
     -   compress it (zip it) with `c` (lower case)
     -   mark it for some other command with `m`
 
-6.  Now, you already have several buffers open, including the file
+7.  Now, you already have several buffers open, including the file
     `tutor.txt`, a `Dired` buffer, and others: display all open buffers in a
     separate window with `C-x C-b`.
     
     ![img](../img/0_bufferlist.png "C-x C-b opens the **Buffer List** in a separate buffer")
 
-7.  Change to the `*Buffer List*` window with `C-x o`. Move the cursor on
+8.  Change to the `*Buffer List*` window with `C-x o`. Move the cursor on
     the line with `*scratch*` and press `<RET>` to open the `*scratch*`
     buffer.
 
-8.  Now enter `C-x b` and you see the message `Switch to buffer (default
+9.  Now enter `C-x b` and you see the message `Switch to buffer (default
        *Buffer List*):` in the mini-buffer. If you press `<RET>`, you get back
     to the `*Buffer List*`.
 
-9.  Enter `C-x b` again, but this time type `C-p` when the cursor is in the
+10. Enter `C-x b` again, but this time type `C-p` when the cursor is in the
     mini-buffer: the buffer you were in before that (the `Dired` buffer)
     is suggested. With `C-p` you can get to previous, with `C-n` to the
     next default until the list is at an end.
 
-10. Using `C-x b`, return to the `tutor.txt` buffer and delete all other
+11. Using `C-x b`, return to the `tutor.txt` buffer and delete all other
     windows with `C-x 1`.
 
 
-<a id="org9439b7a"></a>
+<a id="orgf8684c7"></a>
 
 # Open shell, write, export, time stamp file
 
@@ -334,7 +365,7 @@ be using them plenty later on:
 9.  Save the file with `C-x C-s` and submit it in Canvas.
 
 
-<a id="org1140cfa"></a>
+<a id="org98d1c12"></a>
 
 # Getting help
 
@@ -357,7 +388,7 @@ be using them plenty later on:
 7.  For psychological help, try `M-x doctor`.
 
 
-<a id="org1503ce0"></a>
+<a id="orgce94873"></a>
 
 # Looking up online help
 
@@ -375,7 +406,7 @@ be using them plenty later on:
        C-o`): <https://tinyurl.com/3j5ddtuk>
 
 
-<a id="orgdfb3a45"></a>
+<a id="orgb1117b8"></a>
 
 # More information: video, refcard, FAQs
 
@@ -388,7 +419,7 @@ be using them plenty later on:
     ![img](../img/0_github_search.png "Searching for headlines with "Emacs" in the FAQ file")
 
 
-<a id="org6ccfa65"></a>
+<a id="org67ee150"></a>
 
 # Glossary / Emacs cheat sheet
 
@@ -587,7 +618,7 @@ Here is the [PDF version of the cheat sheet](https://github.com/birkenkrahe/cc/b
 
 <tr>
 <td class="org-left"><code>C-c C-v t</code></td>
-<td class="org-left"><code>org-babel-tangle</code> file<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup></td>
+<td class="org-left"><code>org-babel-tangle</code> file<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup></td>
 </tr>
 
 
@@ -599,7 +630,7 @@ Here is the [PDF version of the cheat sheet](https://github.com/birkenkrahe/cc/b
 </table>
 
 
-<a id="org4037d21"></a>
+<a id="orga70f66d"></a>
 
 # Acknowledgements
 
@@ -615,7 +646,5 @@ me of Eliza in Emacs!
 use the `ace-window` package. You can install and update Emacs packages
 with the package manager (`M-x package-list-packages`).
 
-<sup><a id="fn.2" href="#fnr.2">2</a></sup> You can change the `fill-column` value to any other value > 0.
-
-<sup><a id="fn.3" href="#fnr.3">3</a></sup> This operation refers to extracting source code from a code
+<sup><a id="fn.2" href="#fnr.2">2</a></sup> This operation refers to extracting source code from a code
 block. The header command `:tangle yes` has to be set.
