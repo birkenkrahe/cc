@@ -1,24 +1,24 @@
 
 # Table of Contents
 
-1.  [README](#org69a6e37)
-2.  [Buffer and key basics](#orgd7c5c07)
-3.  [The mode line - basic buffer movement](#orgc55ab68)
-4.  [Splitting windows](#org68fbcc9)
-5.  [Indentation, lines, paragraphs, undo](#org264ec09)
-6.  [Delete, copy, kill/cut, yank/paste text](#org4d38cd2)
-7.  [Searching up and down](#orgeeb9e17)
-8.  [Directory and listing buffer](#orga76bfea)
-9.  [Open shell, write, export, time stamp file](#org8245496)
-10. [Getting help](#org1a586e4)
-11. [Looking up online help](#org03a4535)
-12. [More information: video, refcard, FAQs](#orgb285720)
-13. [Glossary / Emacs cheat sheet](#org284754d)
-14. [Acknowledgements](#org19522fd)
+1.  [README](#org523a606)
+2.  [Buffer and key basics](#orgd7ff23b)
+3.  [The mode line - basic buffer movement](#orgb5b45c2)
+4.  [Splitting windows](#org7a7f4a4)
+5.  [Indentation, lines, paragraphs, undo](#orgf4ad253)
+6.  [Delete, copy, kill/cut, yank/paste text](#org8b316d3)
+7.  [Searching up and down](#org3cb868f)
+8.  [Directory and listing buffer](#org31d4023)
+9.  [Open shell, write, export, time stamp file](#org9439b7a)
+10. [Getting help](#org1140cfa)
+11. [Looking up online help](#org1503ce0)
+12. [More information: video, refcard, FAQs](#orgdfb3a45)
+13. [Glossary / Emacs cheat sheet](#org6ccfa65)
+14. [Acknowledgements](#org4037d21)
 
 
 
-<a id="org69a6e37"></a>
+<a id="org523a606"></a>
 
 # README
 
@@ -40,7 +40,7 @@
     download.
 
 
-<a id="orgd7c5c07"></a>
+<a id="orgd7ff23b"></a>
 
 # Buffer and key basics
 
@@ -61,7 +61,7 @@
     have compound commands like `C-x C-f`, you can check your progress.
 
 
-<a id="orgc55ab68"></a>
+<a id="orgb5b45c2"></a>
 
 # The mode line - basic buffer movement
 
@@ -110,7 +110,7 @@
     on/off by repeating the command. Try that a couple of times.
 
 
-<a id="org68fbcc9"></a>
+<a id="org7a7f4a4"></a>
 
 # Splitting windows
 
@@ -129,7 +129,7 @@ You can split windows any way you like.
     ![img](../img/0_windows.png)
 
 
-<a id="org264ec09"></a>
+<a id="orgf4ad253"></a>
 
 # Indentation, lines, paragraphs, undo
 
@@ -168,7 +168,7 @@ You can split windows any way you like.
     file, enter `M->`.
 
 
-<a id="org4d38cd2"></a>
+<a id="org8b316d3"></a>
 
 # Delete, copy, kill/cut, yank/paste text
 
@@ -208,7 +208,7 @@ You can split windows any way you like.
     active, that is when a mark has been set or a region selected.
 
 
-<a id="orgeeb9e17"></a>
+<a id="org3cb868f"></a>
 
 # Searching up and down
 
@@ -237,7 +237,7 @@ You can split windows any way you like.
     appear.
 
 
-<a id="orga76bfea"></a>
+<a id="org31d4023"></a>
 
 # Directory and listing buffer
 
@@ -282,7 +282,7 @@ You can split windows any way you like.
     windows with `C-x 1`.
 
 
-<a id="org8245496"></a>
+<a id="org9439b7a"></a>
 
 # Open shell, write, export, time stamp file
 
@@ -334,7 +334,7 @@ be using them plenty later on:
 9.  Save the file with `C-x C-s` and submit it in Canvas.
 
 
-<a id="org1a586e4"></a>
+<a id="org1140cfa"></a>
 
 # Getting help
 
@@ -357,7 +357,7 @@ be using them plenty later on:
 7.  For psychological help, try `M-x doctor`.
 
 
-<a id="org03a4535"></a>
+<a id="org1503ce0"></a>
 
 # Looking up online help
 
@@ -375,7 +375,7 @@ be using them plenty later on:
        C-o`): <https://tinyurl.com/3j5ddtuk>
 
 
-<a id="orgb285720"></a>
+<a id="orgdfb3a45"></a>
 
 # More information: video, refcard, FAQs
 
@@ -388,7 +388,7 @@ be using them plenty later on:
     ![img](../img/0_github_search.png "Searching for headlines with "Emacs" in the FAQ file")
 
 
-<a id="org284754d"></a>
+<a id="org6ccfa65"></a>
 
 # Glossary / Emacs cheat sheet
 
@@ -599,13 +599,14 @@ Here is the [PDF version of the cheat sheet](https://github.com/birkenkrahe/cc/b
 </table>
 
 
-<a id="org19522fd"></a>
+<a id="org4037d21"></a>
 
 # Acknowledgements
 
 I'm indebted to Jacob Strickland and Jacob Wolfrom for testing the
 first version, for their careful reading and for many comments that
-helped improve this tutorial.
+helped improve this tutorial. Thanks to Natalie Packham for reminding
+me of Eliza in Emacs!
 
 
 # Footnotes
