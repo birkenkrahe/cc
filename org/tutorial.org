@@ -2,6 +2,8 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+STARTUP:overview indent
 * README
+#+attr_latex: :width 400px
+[[../img/0_gnuemacs.png]]
 
 - This is a makeshift Emacs tutorial for absolute beginners to enable
   you to do the most basic things with Emacs as your text editor.
