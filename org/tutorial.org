@@ -1,8 +1,14 @@
-#+TITLE:Emacs Beginner's Tutorial v1
-#+AUTHOR:Marcus Birkenkrahe
+#+TITLE: Emacs Beginner's Tutorial v1
+#+AUTHOR: Marcus Birkenkrahe
+#+SUBTITLE: Lyon College, Batesville, AR - Spring 2023
 #+STARTUP:overview indent
+#+attr_latex: :width 400px
+#+caption: xkcd: Real Programmers (https://xkcd.com/378/)
+[[../img/real_programmers.png]]
+
 * README
 #+attr_latex: :width 400px
+#+caption: Emacs logo https://www.gnu.org/software/emacs/
 [[../img/0_gnuemacs.png]]
 
 - This is a makeshift Emacs tutorial for absolute beginners to enable
@@ -42,14 +48,14 @@
 * The mode line - basic buffer movement
 
 1) Open a new file with ~C-x C-f~. At the prompt, enter the file name:
-   ~tutor.txt~.
+   ~tutor.txt~ and press ~<RET>~.
 
 2) Alternatively, you can also open the file directly from
-   the command line: ~emacs --file tutor.txt~.
+   the command line: ~emacs --file tutor.txt -nw -q~.
 
 3) The modeline shows (among other things):
    - A few dashes to indicate the edit status (~----~)
-   - A file name (~text.txt~)
+   - A file name (~tutor.txt~)
    - How far down in the file you've come (~All~ because it's empty)
    - The line number your cursor is on (e.g. ~L1~)
    - The file mode (~Text~)
@@ -99,7 +105,7 @@
    is enabled/disabled for the current buffer.
 
 3) Test that: go to the end of the current paragraph, enter a new
-   (empty) line and insert the text from ~text.txt~ once again.
+   (empty) line and insert the text from ~text.txt~ once again (~C-x i~).
 
 4) Enable ~auto-fill-mode~, go to the end of the new line you just
    inserted, and press ~<RET>~. The paragraph should be filled just so.
@@ -109,7 +115,7 @@
    will report ~Undo~.
 
 6) ~C-x~ commands can be repeated as often as you wish. For example, to
-   go back 4 words, enter ~C-u 4 M-x b~.
+   go back 4 words, enter ~C-u 4 M-b~.
 
 7) If you filled the lines, you should now have multiple lines. To go
    up and down them, use ~C-p~ (up/previous) and ~C-n~ (down/next). How
@@ -282,9 +288,9 @@ You can split windows any way you like.
     *Buffer List*):~ in the mini-buffer. If you press ~<RET>~, you get back
     to the ~*Buffer List*~.
 
-12) Enter ~C-x b~ again, but this time type ~C-p~ when the cursor is in the
+12) Enter ~C-x b~ again, but this time type ~M-p~ when the cursor is in the
     mini-buffer: the buffer you were in before that (the ~Dired~ buffer)
-    is suggested. With ~C-p~ you can get to previous, with ~C-n~ to the
+    is suggested. With ~M-p~ you can get to previous, with ~M-n~ to the
     next default until the list is at an end.
 
 13) Using ~C-x b~, return to the ~tutor.txt~ buffer and delete all other

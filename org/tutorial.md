@@ -1,28 +1,29 @@
 
 # Table of Contents
 
-1.  [README](#org21972fa)
-2.  [Buffer and key basics](#orge0bff05)
-3.  [The mode line - basic buffer movement](#org1b91874)
-4.  [Indentation, lines, paragraphs, undo](#org464ad9a)
-5.  [Splitting windows](#orge05b6b7)
-6.  [Delete, copy, kill/cut, yank/paste text](#org34b1af8)
-7.  [Searching up and down](#org3c7dadd)
-8.  [Directory and listing buffer](#orgafdcffd)
-9.  [Open shell, write, export, time stamp file](#orgd360be8)
-10. [Getting help](#org3eeb63e)
-11. [Looking up online help](#orgb532bc8)
-12. [More information: video, refcard, FAQs](#orge8305e0)
-13. [Glossary / Emacs cheat sheet](#orgd70db57)
-14. [Acknowledgements](#orgd776368)
+1.  [README](#org84c6df9)
+2.  [Buffer and key basics](#org139c417)
+3.  [The mode line - basic buffer movement](#org4745ef4)
+4.  [Indentation, lines, paragraphs, undo](#org302e7fc)
+5.  [Splitting windows](#org07ec1a2)
+6.  [Delete, copy, kill/cut, yank/paste text](#org36b6134)
+7.  [Searching up and down](#org8474ee8)
+8.  [Directory and listing buffer](#orgc9b9ad0)
+9.  [Open shell, write, export, time stamp file](#org1c85415)
+10. [Getting help](#org9aa59be)
+11. [Looking up online help](#org2b4d4d9)
+12. [More information: video, refcard, FAQs](#org0134805)
+13. [Glossary / Emacs cheat sheet](#org8e92d5d)
+14. [Acknowledgements](#org0712e0d)
+
+![img](../img/real_programmers.png "xkcd: Real Programmers (<https://xkcd.com/378/>)")
 
 
-
-<a id="org21972fa"></a>
+<a id="org84c6df9"></a>
 
 # README
 
-![img](../img/0_gnuemacs.png)
+![img](../img/0_gnuemacs.png "Emacs logo <https://www.gnu.org/software/emacs/>")
 
 -   This is a makeshift Emacs tutorial for absolute beginners to enable
     you to do the most basic things with Emacs as your text editor.
@@ -40,7 +41,7 @@
     download.
 
 
-<a id="orge0bff05"></a>
+<a id="org139c417"></a>
 
 # Buffer and key basics
 
@@ -61,19 +62,19 @@
     have compound commands like `C-x C-f`, you can check your progress.
 
 
-<a id="org1b91874"></a>
+<a id="org4745ef4"></a>
 
 # The mode line - basic buffer movement
 
 1.  Open a new file with `C-x C-f`. At the prompt, enter the file name:
-    `tutor.txt`.
+    `tutor.txt` and press `<RET>`.
 
 2.  Alternatively, you can also open the file directly from
-    the command line: `emacs --file tutor.txt`.
+    the command line: `emacs --file tutor.txt -nw -q`.
 
 3.  The modeline shows (among other things):
     -   A few dashes to indicate the edit status (`----`)
-    -   A file name (`text.txt`)
+    -   A file name (`tutor.txt`)
     -   How far down in the file you've come (`All` because it's empty)
     -   The line number your cursor is on (e.g. `L1`)
     -   The file mode (`Text`)
@@ -111,7 +112,7 @@
     on/off by repeating the command. Try that a couple of times.
 
 
-<a id="org464ad9a"></a>
+<a id="org302e7fc"></a>
 
 # Indentation, lines, paragraphs, undo
 
@@ -124,7 +125,7 @@
     is enabled/disabled for the current buffer.
 
 3.  Test that: go to the end of the current paragraph, enter a new
-    (empty) line and insert the text from `text.txt` once again.
+    (empty) line and insert the text from `text.txt` once again (`C-x i`).
 
 4.  Enable `auto-fill-mode`, go to the end of the new line you just
     inserted, and press `<RET>`. The paragraph should be filled just so.
@@ -134,7 +135,7 @@
     will report `Undo`.
 
 6.  `C-x` commands can be repeated as often as you wish. For example, to
-    go back 4 words, enter `C-u 4 M-x b`.
+    go back 4 words, enter `C-u 4 M-b`.
 
 7.  If you filled the lines, you should now have multiple lines. To go
     up and down them, use `C-p` (up/previous) and `C-n` (down/next). How
@@ -168,7 +169,7 @@
     -   Go back to the top of the buffer (`M-<`)
 
 
-<a id="orge05b6b7"></a>
+<a id="org07ec1a2"></a>
 
 # Splitting windows
 
@@ -191,7 +192,7 @@ You can split windows any way you like.
 7.  Delete all but the current window with `C-x 1`.
 
 
-<a id="org34b1af8"></a>
+<a id="org36b6134"></a>
 
 # Delete, copy, kill/cut, yank/paste text
 
@@ -232,7 +233,7 @@ You can split windows any way you like.
     active, that is when a mark has been set or a region selected.
 
 
-<a id="org3c7dadd"></a>
+<a id="org8474ee8"></a>
 
 # Searching up and down
 
@@ -263,7 +264,7 @@ You can split windows any way you like.
 7.  Stop the search with `C-g`.
 
 
-<a id="orgafdcffd"></a>
+<a id="orgc9b9ad0"></a>
 
 # Directory and listing buffer
 
@@ -315,16 +316,16 @@ You can split windows any way you like.
         *Buffer List*):` in the mini-buffer. If you press `<RET>`, you get back
     to the `*Buffer List*`.
 
-12. Enter `C-x b` again, but this time type `C-p` when the cursor is in the
+12. Enter `C-x b` again, but this time type `M-p` when the cursor is in the
     mini-buffer: the buffer you were in before that (the `Dired` buffer)
-    is suggested. With `C-p` you can get to previous, with `C-n` to the
+    is suggested. With `M-p` you can get to previous, with `M-n` to the
     next default until the list is at an end.
 
 13. Using `C-x b`, return to the `tutor.txt` buffer and delete all other
     windows with `C-x 1`.
 
 
-<a id="orgd360be8"></a>
+<a id="org1c85415"></a>
 
 # Open shell, write, export, time stamp file
 
@@ -377,7 +378,7 @@ be using them plenty later on:
 9.  Save the file with `C-x C-s` and submit it in Canvas.
 
 
-<a id="org3eeb63e"></a>
+<a id="org9aa59be"></a>
 
 # Getting help
 
@@ -400,7 +401,7 @@ be using them plenty later on:
 7.  For psychological help, try `M-x doctor`.
 
 
-<a id="orgb532bc8"></a>
+<a id="org2b4d4d9"></a>
 
 # Looking up online help
 
@@ -418,7 +419,7 @@ be using them plenty later on:
        C-o`): <https://tinyurl.com/3j5ddtuk>
 
 
-<a id="orge8305e0"></a>
+<a id="org0134805"></a>
 
 # More information: video, refcard, FAQs
 
@@ -431,7 +432,7 @@ be using them plenty later on:
     ![img](../img/0_github_search.png "Searching for headlines with "Emacs" in the FAQ file")
 
 
-<a id="orgd70db57"></a>
+<a id="org8e92d5d"></a>
 
 # Glossary / Emacs cheat sheet
 
@@ -642,7 +643,7 @@ Here is the [PDF version of the cheat sheet](https://github.com/birkenkrahe/cc/b
 </table>
 
 
-<a id="orgd776368"></a>
+<a id="org0712e0d"></a>
 
 # Acknowledgements
 
