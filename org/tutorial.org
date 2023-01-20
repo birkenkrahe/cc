@@ -13,7 +13,7 @@
 - You should be able to complete this tutorial in less than 1 hr -
   likely less than half the time of the more comprehensive Emacs
   onboard tutorial (reachable e.g. from the startup screen).
-
+  
 * Buffer and key basics
 
 - An Emacs *buffer* has three parts:
@@ -30,7 +30,7 @@
 * The mode line - basic buffer movement
 
 1) Open a new file with ~C-x C-f~. At the prompt, enter the file name:
-   ~tutor.txt~.
+   ~tutor.txt~ [fn:4].
 
 2) The modeline shows (among other things):
    - A few dashes to indicate the edit status (~----~)
@@ -378,6 +378,8 @@ first version, for their careful reading and for many comments that
 helped improve this tutorial.
 
 * Footnotes
+[fn:4] Alternatively, you can also open the file directly from the
+command line: ~emacs --file tutor.txt~.
 
 [fn:1] There are packages that make window movement easier - e.g. I
 use the ~ace-window~ package. You can install and update Emacs packages
