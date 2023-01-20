@@ -1,4 +1,4 @@
-#+TITLE:Emacs Beginner's Tutorial
+#+TITLE:Emacs Beginner's Tutorial v1
 #+AUTHOR:Marcus Birkenkrahe
 #+STARTUP:overview indent
 * README
@@ -7,26 +7,30 @@
   you to do the most basic things with Emacs as your text editor.
 
 - For the best gain from this tutorial, open Emacs on the terminal
-  (command line interface) with ~emacs -nw~ in non-graphics mode.
-  
+  (command line interface) with ~emacs -nw -q~ in non-graphics mode,
+  without loading a customization file (like ~.emacs~ or ~init.el~).
+
+- You should be able to complete this tutorial in less than 1 hr -
+  likely less than half the time of the more comprehensive Emacs
+  onboard tutorial (reachable e.g. from the startup screen).
+
 * Buffer and key basics
 
-- If you can read this, you're in an Emacs buffer - the basic editing
-  location for all text files.
+- An Emacs *buffer* has three parts:
+  - The main *editing* area at the top (to edit text)
+  - The *mode line* below it (file and buffer information)
+  - The *minibuffer* at the bottom (for messages and input)
 
-- The buffer has three parts:
-  - The main editing area at the top (to edit text)
-  - The mode line below it (file and buffer information)
-  - The minibuffer at the bottom (for messages and input)
+- Most commands are bound to keys beginning with ~C-~ (CTRL), or ~M~ (for
+  "Meta", which is the ~<ALT>~ key on most keyboards).
 
-- Most commands are bound to keys beginning with ~C-~ (CTRL), or ~M~
-  (Meta/ALT). E.g. ~C-x C-f~ means: hold down CTRL and press x and
-  f. ~M-<~ means: hold down ALT + SHIFT + <.
+- For example, ~C-x C-f~ means: hold down CTRL and press x and f. ~M-<~
+  means: hold down ALT + SHIFT + < all at the same time.
 
-* TODO The mode line - basic buffer movement
+* The mode line - basic buffer movement
 
 1) Open a new file with ~C-x C-f~. At the prompt, enter the file name:
-   ~test.txt~.
+   ~tutor.txt~.
 
 2) The modeline shows (among other things):
    - A few dashes to indicate the edit status (~----~)
@@ -38,7 +42,7 @@
 3) Open a browser, open at [[https://tinyurl.com/22rt7t2f][tinyurl.com/22rt7t2f]] and save the file as
    ~Downloads/text.txt~ - this directory is in ~c:/User/yourname/~
 
-4) In ~test.txt~, enter ~C-x i~ and insert the file ~text.txt~ from its
+4) In ~tutor.txt~, enter ~C-x i~ and insert the file ~text.txt~ from its
    location, ~Downloads~. If you mess up, type ~C-g~ to quit:
    #+attr_latex: :width 400px
    #+caption: Inserting a text file into buffer with C-x i
@@ -49,7 +53,7 @@
 6) Save the file with ~C-x C-s~. You should get a confirmation in the
    minibuffer, alongside the full path to the file, e.g.
    #+begin_example sh
-     Wrote c:/Users/birkenkrahe/test.txt
+     Wrote c:/Users/birkenkrahe/tutor.txt
    #+end_example
 
 7) The text is saved as one long line. Go to the start of the line
@@ -65,11 +69,27 @@
 10) This last command "toggles", which means that you can switch it
     on/off by repeating the command. Try that a couple of times.
 
-* TODO Indentation, lines, paragraphs, undo
+* Splitting windows
 
-1) To distribute the text over more than one line, enter ~M-q~, or
-   ~fill-paragraph~: this command will fill the text in lines (max 70
-   characters)[fn:1].
+You can split windows any way you like.
+
+1) Split the window horizontally with ~C-x 2~.
+
+2) Split the window you're in vertically with ~C-x 3~.
+
+3) Move between windows with ~C-x o~ [fn:1].
+
+4) Delete all but the current window with ~C-x 1~.
+
+5) Recreate the following window setup:
+   #+attr_latex: :width 400px
+   [[../img/0_windows.png]]   
+
+* Indentation, lines, paragraphs, undo
+
+1) To distribute the text over more than one line, enter ~M-q~, or ~M-x
+   fill-paragraph~: this command will fill the text in lines (max 70
+   characters)[fn:2].
 
 2) You can also toggle ~M-x auto-fill-mode~, which will fill the
    paragraph any time you're at the of a line.
@@ -80,8 +100,8 @@
 4) Enable ~auto-fill-mode~, go to the end of the new line you just
    inserted, and press ~<RET>~. The paragraph should be filled just so.
 
-5) You probably want to see this again! Type ~C-x u~ to undo the last
-   operation, then press ~<RET>~ again.
+5) You probably want to see this again! Type ~C-x u~ (or ~C-/~ or ~C-_~) to
+   undo the last operation, then press ~<RET>~ again.
 
 6) ~C-x~ commands can be repeated as often as you wish. For example, to
    go back 4 steps, enter ~C-u 4 C-x u~.
@@ -101,7 +121,7 @@
 10) To go to the top of the file, enter ~M-<~. To go to the end of the
     file, enter ~M->~.
 
-* TODO Delete, copy, kill/cut, yank/paste text
+* Delete, copy, kill/cut, yank/paste text
 
 1) You can delete the character under the cursor with ~C-d~. Go ahead
    and delete some characters anywhere in the text.
@@ -139,7 +159,7 @@
 10) However, ~cua-mode~ bindings will only be active when the mark is
     active, that is when a mark has been set or a region selected.
 
-* TODO Searching up and down
+* Searching up and down
 
 1) Emacs supports "incremental" search: start it with ~C-s~ followed by
    the search term:
@@ -166,23 +186,7 @@
    term but just type ~C-s~ or ~C-r~ again, the last search term will
    appear.
 
-* TODO Splitting windows
-
-You can split windows any way you like.
-
-1) Split the window horizontally with ~C-x 2~.
-
-2) Split the window you're in vertically with ~C-x 3~.
-
-3) Move between windows with ~C-x o~[fn:2].
-
-4) Delete all but the current window with ~C-x 1~.
-
-5) Recreate the following window setup:
-   #+attr_latex: :width 400px
-   [[../img/0_windows.png]]   
-
-* TODO Directory and listing buffer
+* Directory and listing buffer
 
 1) Remove all windows but one with ~C-x 1~.
 
@@ -203,7 +207,7 @@ You can split windows any way you like.
    - mark it for some other command with ~m~
 
 6) Now, you already have several buffers open, including the file
-   ~test.txt~, a ~Dired~ buffer, and others: display all open buffers in a
+   ~tutor.txt~, a ~Dired~ buffer, and others: display all open buffers in a
    separate window with ~C-x C-b~.
    #+attr_latex: :width 400px
    #+caption: C-x C-b opens the *Buffer List* in a separate buffer
@@ -212,7 +216,7 @@ You can split windows any way you like.
 7) Change to the ~*Buffer List*~ window with ~C-x o~. Move the cursor on
    the line with ~*scratch*~ and press ~<RET>~ to open the ~*scratch*~
    buffer.
-
+ 
 8) Now enter ~C-x b~ and you see the message ~Switch to buffer (default
    *Buffer List*):~ in the mini-buffer. If you press ~<RET>~, you get back
    to the ~*Buffer List*~.
@@ -222,22 +226,22 @@ You can split windows any way you like.
    is suggested. With ~C-p~ you can get to previous, with ~C-n~ to the
    next default until the list is at an end.
 
-10) Using ~C-x b~, return to the ~test.txt~ buffer and delete all other
+10) Using ~C-x b~, return to the ~tutor.txt~ buffer and delete all other
     windows with ~C-x 1~.
-   
-* TODO Open shell, write, export, time stamp file
+
+* Open shell, write, export, time stamp file
 
 To close, there are a few special environments worth noting - you'll
 be using them plenty later on:
 
 1) ~M-x eshell~ opens a Linux-style shell. In the shell, at the prompt
-   ~$~, enter ~pwd~ - the answer should be the location of your ~test.txt~
+   ~$~, enter ~pwd~ - the answer should be the location of your ~tutor.txt~
    file. You can also compile files in this shell.
 
-2) Return to ~test.txt~. Write the file to an Org-mode file ~test.org~
+2) Return to ~tutor.txt~. Write the file to an Org-mode file ~tutor.org~
    with ~C-x C-w~: at the prompt in the minibuffer enter this name. The
-   mode line will now list ~test.org~ and the mode ~(Org)~ instead of
-   ~test.txt~ and the mode ~(Text)~.
+   mode line will now list ~tutor.org~ and the mode ~(Org)~ instead of
+   ~tutor.txt~ and the mode ~(Text)~.
    #+attr_latex: :width 400px
    #+caption: Modeline changes after writing the file as Org-file
    [[../img/0_org.png]]   
@@ -280,23 +284,23 @@ be using them plenty later on:
 
 * Getting help
 
-- For the full tutorial experience, open the Emacs tutorial (link on
-  start page, or ~C-h t~). In class, we're going to start your home
-  assignment with a self-made tutorial.
+1) For the full tutorial experience, open the Emacs tutorial (link on
+   start page, or ~C-h t~). In class, we're going to start your home
+   assignment with a self-made tutorial.
 
-- There is also complete self-documentation in hypertext stored inside
-  Emacs. To access this system, enter ~C-x i~. Info files expand into
-  HTML files and are also [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Help.html][available on the Web]].
+2) There is also complete self-documentation in hypertext stored inside
+   Emacs. To access this system, enter ~C-x i~. Info files expand into
+   HTML files and are also [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Help.html][available on the Web]].
 
-- Note: you can open any Web page in Emacs with ~M-x eww URL~.
+3) Note: you can open any Web page in Emacs with ~M-x eww URL~.
 
-- To get help on a key binding, use ~C-h k~ and type the key
+4) To get help on a key binding, use ~C-h k~ and type the key.
 
-- To get help on a function, use ~C-h f~ and enter the function
+5) To get help on a function, use ~C-h f~ and enter the function.
 
-- To get fuzzy help on anything, use ~C-h a~ followed by the term
+6) To get fuzzy help on anything, use ~C-h a~ followed by the term.
 
-*TODO*
+* Looking up online help
 
 1) open the GNU Emacs home page in Emacs: ~M-x eww RET~ and give ~gnu
    emacs~ as the keyword.
@@ -308,8 +312,8 @@ be using them plenty later on:
 
 4) Look up the help for the ~undo~ function.
 
-5) Look up the help for ~url~ then open the browser on the URL
-   https://tinyurl.com/3j5ddtuk
+5) Look up the help for ~url~ then open the browser on the URL (with ~C-c
+   C-o~): https://tinyurl.com/3j5ddtuk
 
 * More information: video, refcard, FAQs
 
@@ -363,14 +367,22 @@ Here is the [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/emacs.pdf][PDF v
 |------------+-----------------------------|
 | ~M-x eshell~ | open (Linux-style) shell    |
 | ~C-c C-e~    | open Org export dispatch    |
-| ~C-c C-v t~  | ~org-babel-tangle~ file       |
+| ~C-c C-v t~  | ~org-babel-tangle~ file[fn:3] |
 | ~<F6>~, ~<F7>~ | display, hide inline files  |
 |------------+-----------------------------|
 
+* Acknowledgements
+
+I'm indebted to Jacob Strickland and Jacob Wolfrom for comments that
+helped improve this tutorial.
+
 * Footnotes
 
-[fn:1] You can change the ~fill-column~ value to any other value > 0.
-
-[fn:2] There are packages that make window movement easier - e.g. I
+[fn:1] There are packages that make window movement easier - e.g. I
 use the ~ace-window~ package. You can install and update Emacs packages
 with the package manager (~M-x package-list-packages~).
+
+[fn:2] You can change the ~fill-column~ value to any other value > 0.
+
+[fn:3] This operation refers to extracting source code from a code
+block. The header command ~:tangle yes~ has to be set.
