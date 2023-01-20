@@ -318,6 +318,8 @@ be using them plenty later on:
 
 6) To get fuzzy help on anything, use ~C-h a~ followed by the term.
 
+7) For psychological help, try ~M-x doctor~.
+   
 * Looking up online help
 
 1) open the GNU Emacs home page in Emacs: ~M-x eww RET~ and give ~gnu
