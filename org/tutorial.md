@@ -1,24 +1,24 @@
 
 # Table of Contents
 
-1.  [README](#org2bf7d09)
-2.  [Buffer and key basics](#org714d37b)
-3.  [The mode line - basic buffer movement](#org2453fbd)
-4.  [Splitting windows](#org62030bf)
-5.  [Indentation, lines, paragraphs, undo](#org379dcc7)
-6.  [Delete, copy, kill/cut, yank/paste text](#org1d75fee)
-7.  [Searching up and down](#org32aa4e0)
-8.  [Directory and listing buffer](#org6d8c3d9)
-9.  [Open shell, write, export, time stamp file](#orgffdf6f9)
-10. [Getting help](#orgc5d9ad6)
-11. [Looking up online help](#org0a359c9)
-12. [More information: video, refcard, FAQs](#orgd89127a)
-13. [Glossary / Emacs cheat sheet](#org85ad53d)
-14. [Acknowledgements](#org092302f)
+1.  [README](#org69a6e37)
+2.  [Buffer and key basics](#orgd7c5c07)
+3.  [The mode line - basic buffer movement](#orgc55ab68)
+4.  [Splitting windows](#org68fbcc9)
+5.  [Indentation, lines, paragraphs, undo](#org264ec09)
+6.  [Delete, copy, kill/cut, yank/paste text](#org4d38cd2)
+7.  [Searching up and down](#orgeeb9e17)
+8.  [Directory and listing buffer](#orga76bfea)
+9.  [Open shell, write, export, time stamp file](#org8245496)
+10. [Getting help](#org1a586e4)
+11. [Looking up online help](#org03a4535)
+12. [More information: video, refcard, FAQs](#orgb285720)
+13. [Glossary / Emacs cheat sheet](#org284754d)
+14. [Acknowledgements](#org19522fd)
 
 
 
-<a id="org2bf7d09"></a>
+<a id="org69a6e37"></a>
 
 # README
 
@@ -40,7 +40,7 @@
     download.
 
 
-<a id="org714d37b"></a>
+<a id="orgd7c5c07"></a>
 
 # Buffer and key basics
 
@@ -61,7 +61,7 @@
     have compound commands like `C-x C-f`, you can check your progress.
 
 
-<a id="org2453fbd"></a>
+<a id="orgc55ab68"></a>
 
 # The mode line - basic buffer movement
 
@@ -110,7 +110,7 @@
     on/off by repeating the command. Try that a couple of times.
 
 
-<a id="org62030bf"></a>
+<a id="org68fbcc9"></a>
 
 # Splitting windows
 
@@ -129,7 +129,7 @@ You can split windows any way you like.
     ![img](../img/0_windows.png)
 
 
-<a id="org379dcc7"></a>
+<a id="org264ec09"></a>
 
 # Indentation, lines, paragraphs, undo
 
@@ -168,7 +168,7 @@ You can split windows any way you like.
     file, enter `M->`.
 
 
-<a id="org1d75fee"></a>
+<a id="org4d38cd2"></a>
 
 # Delete, copy, kill/cut, yank/paste text
 
@@ -208,7 +208,7 @@ You can split windows any way you like.
     active, that is when a mark has been set or a region selected.
 
 
-<a id="org32aa4e0"></a>
+<a id="orgeeb9e17"></a>
 
 # Searching up and down
 
@@ -237,7 +237,7 @@ You can split windows any way you like.
     appear.
 
 
-<a id="org6d8c3d9"></a>
+<a id="orga76bfea"></a>
 
 # Directory and listing buffer
 
@@ -282,7 +282,7 @@ You can split windows any way you like.
     windows with `C-x 1`.
 
 
-<a id="orgffdf6f9"></a>
+<a id="org8245496"></a>
 
 # Open shell, write, export, time stamp file
 
@@ -334,7 +334,7 @@ be using them plenty later on:
 9.  Save the file with `C-x C-s` and submit it in Canvas.
 
 
-<a id="orgc5d9ad6"></a>
+<a id="org1a586e4"></a>
 
 # Getting help
 
@@ -354,8 +354,10 @@ be using them plenty later on:
 
 6.  To get fuzzy help on anything, use `C-h a` followed by the term.
 
+7.  For psychological help, try `M-x doctor`.
 
-<a id="org0a359c9"></a>
+
+<a id="org03a4535"></a>
 
 # Looking up online help
 
@@ -373,7 +375,7 @@ be using them plenty later on:
        C-o`): <https://tinyurl.com/3j5ddtuk>
 
 
-<a id="orgd89127a"></a>
+<a id="orgb285720"></a>
 
 # More information: video, refcard, FAQs
 
@@ -386,7 +388,7 @@ be using them plenty later on:
     ![img](../img/0_github_search.png "Searching for headlines with "Emacs" in the FAQ file")
 
 
-<a id="org85ad53d"></a>
+<a id="org284754d"></a>
 
 # Glossary / Emacs cheat sheet
 
@@ -597,7 +599,7 @@ Here is the [PDF version of the cheat sheet](https://github.com/birkenkrahe/cc/b
 </table>
 
 
-<a id="org092302f"></a>
+<a id="org19522fd"></a>
 
 # Acknowledgements
 
