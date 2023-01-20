@@ -139,7 +139,7 @@ Test:
   installation and use as a literate programming tool (total: 90 min).
 
 - Open the Tutorial [[https://github.com/birkenkrahe/cc/blob/piHome/org/tutorial.org][in GitHub]] and follow the instructions:
-  [[https://tinyurl.com/3j5ddtuk][tinyurl.com/3j5ddtuk]]
+  [[https://tinyurl.com/emacstutor][tinyurl.com/emacstutor]]
   
 - There is also a [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/tutorial.pdf][PDF version]] if you like to print things out.
 
