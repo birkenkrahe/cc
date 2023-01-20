@@ -1,24 +1,24 @@
 
 # Table of Contents
 
-1.  [README](#org55b6b1d)
-2.  [Buffer and key basics](#org5d893b5)
-3.  [The mode line - basic buffer movement](#orgb03f435)
-4.  [Splitting windows](#orgc3330c4)
-5.  [Indentation, lines, paragraphs, undo](#org5726f94)
-6.  [Delete, copy, kill/cut, yank/paste text](#org60d904b)
-7.  [Searching up and down](#orgbb413e9)
-8.  [Directory and listing buffer](#org7686069)
-9.  [Open shell, write, export, time stamp file](#org3e0207e)
-10. [Getting help](#org3813c29)
-11. [Looking up online help](#org048140e)
-12. [More information: video, refcard, FAQs](#orgadb2fe5)
-13. [Glossary / Emacs cheat sheet](#org2e7e262)
-14. [Acknowledgements](#org925dc43)
+1.  [README](#org51dbade)
+2.  [Buffer and key basics](#org8b8b271)
+3.  [The mode line - basic buffer movement](#orgf7b8f68)
+4.  [Splitting windows](#orgf4db362)
+5.  [Indentation, lines, paragraphs, undo](#org614bea8)
+6.  [Delete, copy, kill/cut, yank/paste text](#org83b65ba)
+7.  [Searching up and down](#org687c104)
+8.  [Directory and listing buffer](#org96be9c3)
+9.  [Open shell, write, export, time stamp file](#org69e087a)
+10. [Getting help](#orgf5d47e3)
+11. [Looking up online help](#org72830c8)
+12. [More information: video, refcard, FAQs](#org9eb0279)
+13. [Glossary / Emacs cheat sheet](#org6b36666)
+14. [Acknowledgements](#org98391ca)
 
 
 
-<a id="org55b6b1d"></a>
+<a id="org51dbade"></a>
 
 # README
 
@@ -34,7 +34,7 @@
     onboard tutorial (reachable e.g. from the startup screen).
 
 
-<a id="org5d893b5"></a>
+<a id="org8b8b271"></a>
 
 # Buffer and key basics
 
@@ -50,12 +50,12 @@
     means: hold down ALT + SHIFT + < all at the same time.
 
 
-<a id="orgb03f435"></a>
+<a id="orgf7b8f68"></a>
 
 # The mode line - basic buffer movement
 
 1.  Open a new file with `C-x C-f`. At the prompt, enter the file name:
-    `tutor.txt`.
+    `tutor.txt` <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
 
 2.  The modeline shows (among other things):
     -   A few dashes to indicate the edit status (`----`)
@@ -93,7 +93,7 @@
     on/off by repeating the command. Try that a couple of times.
 
 
-<a id="orgc3330c4"></a>
+<a id="orgf4db362"></a>
 
 # Splitting windows
 
@@ -103,7 +103,7 @@ You can split windows any way you like.
 
 2.  Split the window you're in vertically with `C-x 3`.
 
-3.  Move between windows with `C-x o` <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
+3.  Move between windows with `C-x o` <sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>.
 
 4.  Delete all but the current window with `C-x 1`.
 
@@ -112,13 +112,13 @@ You can split windows any way you like.
     ![img](../img/0_windows.png)
 
 
-<a id="org5726f94"></a>
+<a id="org614bea8"></a>
 
 # Indentation, lines, paragraphs, undo
 
 1.  To distribute the text over more than one line, enter `M-q`, or `M-x
        fill-paragraph`: this command will fill the text in lines (max 70
-    characters)<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>.
+    characters)<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup>.
 
 2.  You can also toggle `M-x auto-fill-mode`, which will fill the
     paragraph any time you're at the of a line.
@@ -151,7 +151,7 @@ You can split windows any way you like.
     file, enter `M->`.
 
 
-<a id="org60d904b"></a>
+<a id="org83b65ba"></a>
 
 # Delete, copy, kill/cut, yank/paste text
 
@@ -191,7 +191,7 @@ You can split windows any way you like.
     active, that is when a mark has been set or a region selected.
 
 
-<a id="orgbb413e9"></a>
+<a id="org687c104"></a>
 
 # Searching up and down
 
@@ -220,7 +220,7 @@ You can split windows any way you like.
     appear.
 
 
-<a id="org7686069"></a>
+<a id="org96be9c3"></a>
 
 # Directory and listing buffer
 
@@ -265,7 +265,7 @@ You can split windows any way you like.
     windows with `C-x 1`.
 
 
-<a id="org3e0207e"></a>
+<a id="org69e087a"></a>
 
 # Open shell, write, export, time stamp file
 
@@ -317,7 +317,7 @@ be using them plenty later on:
 9.  Save the file with `C-x C-s` and submit it in Canvas.
 
 
-<a id="org3813c29"></a>
+<a id="orgf5d47e3"></a>
 
 # Getting help
 
@@ -338,7 +338,7 @@ be using them plenty later on:
 6.  To get fuzzy help on anything, use `C-h a` followed by the term.
 
 
-<a id="org048140e"></a>
+<a id="org72830c8"></a>
 
 # Looking up online help
 
@@ -356,7 +356,7 @@ be using them plenty later on:
        C-o`): <https://tinyurl.com/3j5ddtuk>
 
 
-<a id="orgadb2fe5"></a>
+<a id="org9eb0279"></a>
 
 # More information: video, refcard, FAQs
 
@@ -369,7 +369,7 @@ be using them plenty later on:
     ![img](../img/0_github_search.png "Searching for headlines with "Emacs" in the FAQ file")
 
 
-<a id="org2e7e262"></a>
+<a id="org6b36666"></a>
 
 # Glossary / Emacs cheat sheet
 
@@ -568,7 +568,7 @@ Here is the [PDF version of the cheat sheet](https://github.com/birkenkrahe/cc/b
 
 <tr>
 <td class="org-left"><code>C-c C-v t</code></td>
-<td class="org-left"><code>org-babel-tangle</code> file<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup></td>
+<td class="org-left"><code>org-babel-tangle</code> file<sup><a id="fnr.4" class="footref" href="#fn.4" role="doc-backlink">4</a></sup></td>
 </tr>
 
 
@@ -580,7 +580,7 @@ Here is the [PDF version of the cheat sheet](https://github.com/birkenkrahe/cc/b
 </table>
 
 
-<a id="org925dc43"></a>
+<a id="org98391ca"></a>
 
 # Acknowledgements
 
@@ -591,11 +591,14 @@ helped improve this tutorial.
 
 # Footnotes
 
-<sup><a id="fn.1" href="#fnr.1">1</a></sup> There are packages that make window movement easier - e.g. I
+<sup><a id="fn.1" href="#fnr.1">1</a></sup> Alternatively, you can also open the file directly from the
+command line: `emacs --file tutor.txt`.
+
+<sup><a id="fn.2" href="#fnr.2">2</a></sup> There are packages that make window movement easier - e.g. I
 use the `ace-window` package. You can install and update Emacs packages
 with the package manager (`M-x package-list-packages`).
 
-<sup><a id="fn.2" href="#fnr.2">2</a></sup> You can change the `fill-column` value to any other value > 0.
+<sup><a id="fn.3" href="#fnr.3">3</a></sup> You can change the `fill-column` value to any other value > 0.
 
-<sup><a id="fn.3" href="#fnr.3">3</a></sup> This operation refers to extracting source code from a code
+<sup><a id="fn.4" href="#fnr.4">4</a></sup> This operation refers to extracting source code from a code
 block. The header command `:tangle yes` has to be set.
