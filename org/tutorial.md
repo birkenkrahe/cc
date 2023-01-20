@@ -1,24 +1,24 @@
 
 # Table of Contents
 
-1.  [README](#org4896604)
-2.  [Buffer and key basics](#org3a31b8e)
-3.  [The mode line - basic buffer movement](#org5e12353)
-4.  [Indentation, lines, paragraphs, undo](#orgb2ac440)
-5.  [Splitting windows](#orgd6e32bd)
-6.  [Delete, copy, kill/cut, yank/paste text](#org0a3aac0)
-7.  [Searching up and down](#org762dd4a)
-8.  [Directory and listing buffer](#orgc09350f)
-9.  [Open shell, write, export, time stamp file](#orgf8684c7)
-10. [Getting help](#org98d1c12)
-11. [Looking up online help](#orgce94873)
-12. [More information: video, refcard, FAQs](#orgb1117b8)
-13. [Glossary / Emacs cheat sheet](#org67ee150)
-14. [Acknowledgements](#orga70f66d)
+1.  [README](#org21972fa)
+2.  [Buffer and key basics](#orge0bff05)
+3.  [The mode line - basic buffer movement](#org1b91874)
+4.  [Indentation, lines, paragraphs, undo](#org464ad9a)
+5.  [Splitting windows](#orge05b6b7)
+6.  [Delete, copy, kill/cut, yank/paste text](#org34b1af8)
+7.  [Searching up and down](#org3c7dadd)
+8.  [Directory and listing buffer](#orgafdcffd)
+9.  [Open shell, write, export, time stamp file](#orgd360be8)
+10. [Getting help](#org3eeb63e)
+11. [Looking up online help](#orgb532bc8)
+12. [More information: video, refcard, FAQs](#orge8305e0)
+13. [Glossary / Emacs cheat sheet](#orgd70db57)
+14. [Acknowledgements](#orgd776368)
 
 
 
-<a id="org4896604"></a>
+<a id="org21972fa"></a>
 
 # README
 
@@ -40,7 +40,7 @@
     download.
 
 
-<a id="org3a31b8e"></a>
+<a id="orge0bff05"></a>
 
 # Buffer and key basics
 
@@ -61,7 +61,7 @@
     have compound commands like `C-x C-f`, you can check your progress.
 
 
-<a id="org5e12353"></a>
+<a id="org1b91874"></a>
 
 # The mode line - basic buffer movement
 
@@ -86,7 +86,7 @@
     location, `Downloads`. If you mess up (at any time), type `C-g` to
     quit any command sequence:
     
-    ![img](../img/0_text.png "Inserting a text file into buffer with C-x i")
+    ![img](../img/0_text.png "After inserting a text file into buffer with C-x i")
 
 6.  The mode line now indicates that the file has been changed: `**--`
 
@@ -111,7 +111,7 @@
     on/off by repeating the command. Try that a couple of times.
 
 
-<a id="orgb2ac440"></a>
+<a id="org464ad9a"></a>
 
 # Indentation, lines, paragraphs, undo
 
@@ -168,7 +168,7 @@
     -   Go back to the top of the buffer (`M-<`)
 
 
-<a id="orgd6e32bd"></a>
+<a id="orge05b6b7"></a>
 
 # Splitting windows
 
@@ -191,7 +191,7 @@ You can split windows any way you like.
 7.  Delete all but the current window with `C-x 1`.
 
 
-<a id="org0a3aac0"></a>
+<a id="org34b1af8"></a>
 
 # Delete, copy, kill/cut, yank/paste text
 
@@ -232,7 +232,7 @@ You can split windows any way you like.
     active, that is when a mark has been set or a region selected.
 
 
-<a id="org762dd4a"></a>
+<a id="org3c7dadd"></a>
 
 # Searching up and down
 
@@ -241,9 +241,9 @@ You can split windows any way you like.
     
     ![img](../img/0_search.png "Incremental search with C-s")
 
-2.  Search for `l`, and then add `o` for `lo`, backdelete and change it to
-    `lu`, then backdelete and change it to `labor`. Repeat `C-s` to move
-    through the found instances.
+2.  Search for `l`, and then add `o` for `lo`, `<backdelete>` (←) and change it
+    to `lu`, then `<backdelete>` again and change it to `labor`. Repeat `C-s`
+    to move through the found instances.
 
 3.  To end the search and get back where you started: `C-g` (quit). To
     stay where you found an instance: `C-f`.
@@ -263,7 +263,7 @@ You can split windows any way you like.
 7.  Stop the search with `C-g`.
 
 
-<a id="orgc09350f"></a>
+<a id="orgafdcffd"></a>
 
 # Directory and listing buffer
 
@@ -273,16 +273,16 @@ You can split windows any way you like.
     ("Directory editor") buffer, which is very powerful.
 
 3.  `Dired` has a bunch of single letter commands. One is `s` to sort the
-    files by name or time: Go to the top of the buffer (`M-<`), then
-    toggle this by pressing `s` twice.
+    files by *name* or by *time* (shown in mode line): Go to the top of the
+    buffer (`M-<`), then toggle this by pressing `s` twice.
 
 4.  In the directory list, `.` stands for the current directory (the name
     of which appears at the top), and `..` stands for the next upper
     level directory.
 
-5.  Go to the `..` line and press `<RET>` - this will get you to the `Users`
-    directory above your own. Find your name, go there with the cursor
-    and press `<RET>` to get back home.
+5.  Go to the `..` line and press `<RET>` - this will get you to the
+    directory above your own. Find `Downloads`, go to that line with the
+    cursor and press `<RET>` to get back to where you came from.
 
 6.  When the cursor is on the line for that file or directory, you can:
     -   rename it with `R`
@@ -290,30 +290,41 @@ You can split windows any way you like.
     -   compress it (zip it) with `c` (lower case)
     -   mark it for some other command with `m`
 
-7.  Now, you already have several buffers open, including the file
+7.  Split the screen horizontally, and in one of the two screens show
+    the directory one level up:
+    
+    ![img](../img/dired.png "C-x 2 splits horizontally to show 2 Dired buffers")
+
+8.  In the `Downloads` directory, find `text.txt` and copy it to the other
+    directory:
+    -   Go with the cursor to the file `text.txt` and type (upper case) `C`
+    -   In the minibuffer, delete `Downloads/` , then `<RET>`
+    -   The copy of the file appears in the other buffer
+
+9.  Now, you already have several buffers open, including the file
     `tutor.txt`, a `Dired` buffer, and others: display all open buffers in a
     separate window with `C-x C-b`.
     
     ![img](../img/0_bufferlist.png "C-x C-b opens the **Buffer List** in a separate buffer")
 
-8.  Change to the `*Buffer List*` window with `C-x o`. Move the cursor on
+10. Change to the `*Buffer List*` window with `C-x o`. Move the cursor on
     the line with `*scratch*` and press `<RET>` to open the `*scratch*`
     buffer.
 
-9.  Now enter `C-x b` and you see the message `Switch to buffer (default
-       *Buffer List*):` in the mini-buffer. If you press `<RET>`, you get back
+11. Now enter `C-x b` and you see the message `Switch to buffer (default
+        *Buffer List*):` in the mini-buffer. If you press `<RET>`, you get back
     to the `*Buffer List*`.
 
-10. Enter `C-x b` again, but this time type `C-p` when the cursor is in the
+12. Enter `C-x b` again, but this time type `C-p` when the cursor is in the
     mini-buffer: the buffer you were in before that (the `Dired` buffer)
     is suggested. With `C-p` you can get to previous, with `C-n` to the
     next default until the list is at an end.
 
-11. Using `C-x b`, return to the `tutor.txt` buffer and delete all other
+13. Using `C-x b`, return to the `tutor.txt` buffer and delete all other
     windows with `C-x 1`.
 
 
-<a id="orgf8684c7"></a>
+<a id="orgd360be8"></a>
 
 # Open shell, write, export, time stamp file
 
@@ -343,9 +354,10 @@ be using them plenty later on:
     
     ![img](../img/0_export.png "Top of Org-file dispatched as HTML with C-x C-e h o")
 
-5.  Remove all content from the file and save the empty file:
+5.  Go back to `tutor.org` in Emacs. Remove all content from the file and
+    save the empty file:
     -   Mark whole buffer with `C-x h`
-    -   Delete with `C-d` or the backdelete key
+    -   Delete with the `<backdelete>` key (←)
     -   Save file with `C-x C-s`
 
 6.  Insert these lines at the top of the buffer:
@@ -365,7 +377,7 @@ be using them plenty later on:
 9.  Save the file with `C-x C-s` and submit it in Canvas.
 
 
-<a id="org98d1c12"></a>
+<a id="org3eeb63e"></a>
 
 # Getting help
 
@@ -388,7 +400,7 @@ be using them plenty later on:
 7.  For psychological help, try `M-x doctor`.
 
 
-<a id="orgce94873"></a>
+<a id="orgb532bc8"></a>
 
 # Looking up online help
 
@@ -406,7 +418,7 @@ be using them plenty later on:
        C-o`): <https://tinyurl.com/3j5ddtuk>
 
 
-<a id="orgb1117b8"></a>
+<a id="orge8305e0"></a>
 
 # More information: video, refcard, FAQs
 
@@ -419,7 +431,7 @@ be using them plenty later on:
     ![img](../img/0_github_search.png "Searching for headlines with "Emacs" in the FAQ file")
 
 
-<a id="org67ee150"></a>
+<a id="orgd70db57"></a>
 
 # Glossary / Emacs cheat sheet
 
@@ -630,7 +642,7 @@ Here is the [PDF version of the cheat sheet](https://github.com/birkenkrahe/cc/b
 </table>
 
 
-<a id="orga70f66d"></a>
+<a id="orgd776368"></a>
 
 # Acknowledgements
 
