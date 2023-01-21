@@ -103,6 +103,17 @@ Test:
 #+caption: Command line interface (WSL on Windows with Ubuntu 22.04 LTS)
 [[../img/cli.png]]
 
+#+begin_quote ChatGPT
+"The command line interface (CLI) is a type of user interface that
+allows users to interact with a computer or device by typing commands,
+as opposed to using a graphical user interface (GUI) with a mouse or
+touchpad. These commands are entered into a terminal or command
+prompt, and the computer or device responds by performing the
+requested action or displaying the requested information. CLI is
+commonly used for tasks such as managing files, running programs, and
+configuring system settings." (ChatGPT)
+#+end_quote
+
 * What is literate programming?
 #+attr_html: :width 400px
 #+caption: Literate programming with C and Emacs Org-mode
