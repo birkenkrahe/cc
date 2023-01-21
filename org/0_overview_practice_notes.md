@@ -1,9 +1,11 @@
 
 # Review of `0_overview_practice.org`
 
+![img](../img/valhalla.png)
+
 On Friday, January 20, you wrote and ran our first C program in
-class. In the course of this fast-paced session, you encountered many
-important computing concepts.
+class. In the course of this fast-paced session based on [this practice
+file](https://github.com/birkenkrahe/cc/blob/piHome/org/0_overview_practice.org), you encountered many important computing concepts.
 
 Here, I'm giving you a bit of background on some of them - not to
 worry: we'll go over this in class again, and these concepts will
