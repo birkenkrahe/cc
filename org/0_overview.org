@@ -126,7 +126,7 @@ learning model created by OpenAI.
 #+caption: My GitHub dashboard
 [[../img/0_litprog.png]]
 
-* IN PROGRESS Practice: first "literate" C program!
+* DONE Practice: first "literate" C program!
 #+attr_latex: :width 400px
 #+caption: Books aren't the only way to be "literate" in programming!
 [[../img/0_books.png]]
@@ -191,14 +191,14 @@ Let's set Emacs up, write and run a first "literate" C program!
 [[../img/0_monks.png]]
 
 - The first in-class assignment (~first.org~, see Canvas) is due on
-  Friday, January 20. For late submissions, you lose 1 point per day
+  Friday, January 27. For late submissions, you lose 1 point per day
   (out of 10 possible points)
 
 - The first home assignment (~Emacs tutorial~, see Canvas) is due on
-  Monday, January 23. For late submissions, you lose 1 point per day
+  Monday, January 27. For late submissions, you lose 1 point per day
   (out of 10 possible points)
   
-- We'll write the first weekly multiple-choice test on January 20,
+- We'll write the first weekly multiple-choice test on January 23,
   covering all of the material that was covered until then.
 
 * What are you looking forward to?

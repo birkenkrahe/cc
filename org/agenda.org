@@ -121,7 +121,7 @@ Test:
 #+caption: GNU Emacs screen and properties
 [[../img/0_gnuemacs1.png]]
 
-* TODO (Home) Assignment: Emacs tutorial (due Jan 23)
+* TODO (Home) Assignment: Emacs tutorial
 #+attr_latex: :width 300px
 [[../img/0_gnuemacs.png]]
 
