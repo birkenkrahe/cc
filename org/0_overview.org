@@ -95,7 +95,7 @@ learning model created by OpenAI.
 
 - [[https://github.com/birkenkrahe/cc][GitHub repository]] (all course materials except tests)
 
-- [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][GNU Emacs + ESS + R]] (literate programming environment)
+- [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][GNU Emacs]] (literate programming environment)
 
 - [[https://en.wikipedia.org/wiki/Command-line_interface][Command line interface]] / interpreter - (shell / replit.com)
 
