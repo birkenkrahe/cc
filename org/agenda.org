@@ -119,6 +119,29 @@ configuring system settings." (ChatGPT)
 #+caption: Literate programming with C and Emacs Org-mode
 [[../img/0_litprog1.png]]
 
+- Documentation + code + output in one file
+- In the figure, the literate program (~foo.org~) is either tangled into
+  source code (~foo.c~) that can be compiled and run, or it is woven
+  into a HTML file that you can view in a browser.
+
+#+begin_quote
+"Literate programming is a programming paradigm in which a program's
+source code is written as an explanatory narrative, rather than just a
+sequence of commands. It combines human-readable documentation and
+source code into a single document, making the code more easily
+understandable and maintainable. The idea behind literate programming
+is that code should be written for people to read and understand, not
+just for machines to execute. Programs written in a literate
+programming style are often more readable and self-documenting, which
+can make them easier to understand and modify.
+
+Donald Knuth first coined the term "literate programming" in the early
+1980s, and he developed a tool called WEB to support this style of
+programming. Nowadays there are other tools like noweb, CWEB, and
+org-babel-tangle that can be used to create literate programming
+documents." (ChatGPT)
+#+end_quote
+
 * What is syntax highlighting?
 #+attr_html: :width 400px
 #+caption: Raw file without syntax highlighting
