@@ -1,4 +1,5 @@
-# Review of 0<sub>overview</sub><sub>practice.org</sub>
+
+# Review of `0_overview_practice.org`
 
 On Friday, January 20, you wrote and ran our first C program in
 class. In the course of this fast-paced session, you encountered many
@@ -21,6 +22,9 @@ accompany us for the duration of the course!
     -   when you are in `c:/Users/JohnSmith/` because your name is John
         Smith, then `cd Downloads` will bring you to
         `c:/Users/JohnSmith/Downloads`.
+    
+    The `eshell` buffer window that we opened at the end of session was
+    nothing but a command line inside Emacs.
 
 2.  **GCC**:We checked if the GCC compiler is installed or not: `gcc --version`
     tests that without any extra trouble. At the end, we used `gcc`
