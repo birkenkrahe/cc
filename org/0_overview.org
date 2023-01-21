@@ -97,7 +97,7 @@ learning model created by OpenAI.
 
 - [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][GNU Emacs]] (literate programming environment)
 
-- [[https://en.wikipedia.org/wiki/Command-line_interface][Command line interface]] / interpreter - (shell / replit.com)
+- [[https://en.wikipedia.org/wiki/Command-line_interface][Command line interface]] / interpreter - (shell / replit.com)[fn:1]
 
 * The (new) Canvas LMS
 #+attr_latex: :width 400px
@@ -245,3 +245,9 @@ Let's set Emacs up, write and run a first "literate" C program!
 * References
 
 - King K N (2008). C Programming - A Modern Approach. Norton.
+
+* Footnotes
+
+[fn:1] A command line prompt is the place in the CLI where you type
+commands for the computer. It typically includes text that indicates a
+location on your computer, e.g. ~c:/Users/birkenkrahe>~ 
