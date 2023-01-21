@@ -1,11 +1,3 @@
-
-# Table of Contents
-
-1.  [Review of 0<sub>overview</sub><sub>practice.org</sub>](#orgf97bab4)
-
-
-<a id="orgf97bab4"></a>
-
 # Review of 0<sub>overview</sub><sub>practice.org</sub>
 
 On Friday, January 20, you wrote and ran our first C program in
