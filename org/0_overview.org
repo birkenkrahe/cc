@@ -250,4 +250,4 @@ Let's set Emacs up, write and run a first "literate" C program!
 
 [fn:1] A command line prompt is the place in the CLI where you type
 commands for the computer. It typically includes text that indicates a
-location on your computer, e.g. ~c:/Users/birkenkrahe>~ 
+location on your computer, e.g. ~c:/Users/birkenkrahe>~
