@@ -155,7 +155,12 @@ documents." (ChatGPT)
 #+caption: GNU Emacs screen and properties
 [[../img/0_gnuemacs1.png]]
 
-* Week 3
+* Week 3 - Introducing C & Emacs tutorial
+#+attr_html: :width 400px
+[[../img/1_ccpp.png]]
+
+** [[https://lyon.instructure.com/courses/1014/discussion_topics/2070][Week 2 Session summary and test preparation]]
+
 * Preparing for a test (2.5% each)
 #+attr_latex: :width 400px
 #+caption: Medieval food preparation
