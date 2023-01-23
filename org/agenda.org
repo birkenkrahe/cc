@@ -159,6 +159,9 @@ documents." (ChatGPT)
 #+attr_html: :width 400px
 [[../img/1_ccpp.png]]
 
+** [[https://lyon.instructure.com/courses/1014/assignments/6701/edit?quiz_lti][Test 1]] (Online, Monday 23 January 3-3.15 pm)
+** Test 1 review (in class)
+** [[https://lyon.instructure.com/courses/1014/assignments/6463][Canvas file upload]] (~first.org~)
 ** [[https://lyon.instructure.com/courses/1014/discussion_topics/2070][Week 2 Session summary and test preparation]]
 
 * Preparing for a test (2.5% each)
