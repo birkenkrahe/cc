@@ -88,7 +88,7 @@ Practice:
 Test:
 - [ ] Test 1 on Monday, Jan-23 (on everything we've done so far)
   
-* Review week 1
+** Review week 1
 #+attr_html: :width 400px
 #+caption: Literate programming with CWEB
 [[../img/cweb.png]]
@@ -98,7 +98,7 @@ Test:
 - [X] What is syntax highlighting?
 - [X] What is Emacs?
 
-* What is the command line interface?
+** What is the command line interface?
 #+attr_html: :width 400px
 #+caption: Command line interface (WSL on Windows with Ubuntu 22.04 LTS)
 [[../img/cli.png]]
@@ -114,7 +114,7 @@ commonly used for tasks such as managing files, running programs, and
 configuring system settings." (ChatGPT)
 #+end_quote
 
-* What is literate programming?
+** What is literate programming?
 #+attr_html: :width 400px
 #+caption: Literate programming with C and Emacs Org-mode
 [[../img/0_litprog1.png]]
@@ -142,7 +142,7 @@ org-babel-tangle that can be used to create literate programming
 documents." (ChatGPT)
 #+end_quote
 
-* What is syntax highlighting?
+** What is syntax highlighting?
 #+attr_html: :width 400px
 #+caption: Raw file without syntax highlighting
 [[../img/0_raw.png]]
@@ -150,58 +150,19 @@ documents." (ChatGPT)
 #+caption: Syntax highlighting on GitHub (Emacs-Lisp file)
 [[../img/0_syntax.png]]
 
-* What is Emacs?
+** What is Emacs?
 #+attr_latex: :width 400px
 #+caption: GNU Emacs screen and properties
 [[../img/0_gnuemacs1.png]]
 
-* TODO (Home) Assignment: Emacs tutorial
-#+attr_latex: :width 300px
-[[../img/0_gnuemacs.png]]
-
-- We're going to begin this assignment together in class - but you may
-  need to finish it at home (or in the MAC or in one of the computer
-  labs, Lyon 104 or Derby 209) on your own.
-
-- To install Emacs on your computer, follow the instructions in the
-  [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][GitHub FAQ]]. When you're at it, you should also install a C compiler.
-
-- If you have trouble installing anything on your own computer, bring
-  it to class or come to my office hours (Mon-Fri, 4.15-4.45 PM).
-
-- Here is a [[https://www.youtube.com/playlist?list=PLwgb17bzeNygo8GU6SivwwjsQj9QabqAJ][YouTube playlist]] with 11 short video tutorials on Emacs
-  installation and use as a literate programming tool (total: 90 min).
-
-- Open the Tutorial [[https://github.com/birkenkrahe/cc/blob/piHome/org/tutorial.org][in GitHub]] and follow the instructions:
-  [[https://tinyurl.com/emacstutor][tinyurl.com/emacstutor]]
-  
-- There is also a [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/tutorial.pdf][PDF version]] if you like to print things out.
-
-- When you've completed the instructions, you should have a
-  time-stamped Org-mode file that you can [[https://lyon.instructure.com/courses/1014/assignments/6479][upload to Canvas]].
-
-* TODO REPL demo @replit.com
-#+attr_latex: :width 400px
-#+caption: C IDE at replit.com
-[[../img/cc_replit.png]]
-
-- You can open this program online at [[https://tinyurl.com/52p288p5][tinyurl.com/52p288p5]]
-
-- You will only see all parts of it if you register: follow the invite
-  link [[https://replit.com/join/xpersfuvad-marcusbirkenkra][replit.com/join/xpersfuvad-marcusbirkenkra]]
-
-- Then ~Continue with Google~ using your Lyon GMail account:
-  #+attr_latex: :width 400px
-  #+caption: C IDE at replit.com
-  [[../img/0_replit.png]]
-
-* TODO Preparing for a test (2.5% each)
+* Week 3
+* Preparing for a test (2.5% each)
 #+attr_latex: :width 400px
 #+caption: Medieval food preparation
 [[../img/preptest.jpg]]
 
 *How do you prepare for a test?*[fn:2]
-
+* Pros and cons: script vs. shell
 * References
 
 Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].
