@@ -42,7 +42,7 @@ Source:
 
 #+caption: TIOBE Index ranking 1-10 (tiobe.com)
 #+attr_latex: :width 400px
-[[../img/1_tiobe1.png]]
+_[[../img/1_tiobe1.png]]+
 
 - Of the top 10 languages, 7 are direct descendants of C - only Visual
   Basic, SQL and Assembly language are not C-type languages
