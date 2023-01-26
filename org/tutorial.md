@@ -1,25 +1,25 @@
 
 # Table of Contents
 
-1.  [README](#org81de026)
-2.  [Buffer and key basics](#org7d682a3)
-3.  [The mode line - basic buffer movement](#org6dc3e46)
-4.  [Indentation, lines, paragraphs, undo](#org124c3ec)
-5.  [Splitting windows](#org25de960)
-6.  [Delete, copy, kill/cut, yank/paste text](#org2628831)
-7.  [Searching up and down](#org0b21898)
-8.  [Directory and listing buffer](#org99613a2)
-9.  [Open shell, write, export, time stamp file](#org0c654a9)
-10. [Getting help](#org32f0391)
-11. [Looking up online help](#orgf030695)
-12. [More information: video, refcard, FAQs](#orgcca0324)
-13. [Glossary / Emacs cheat sheet](#org9332a31)
-14. [Acknowledgements](#orgdf5ca9d)
+1.  [README](#org8e151f0)
+2.  [Buffer and key basics](#org3fdf124)
+3.  [The mode line - basic buffer movement](#org0f0188e)
+4.  [Indentation, lines, paragraphs, undo](#org16824b6)
+5.  [Splitting windows](#orgc770ede)
+6.  [Delete, copy, kill/cut, yank/paste text](#org086929c)
+7.  [Searching up and down](#orgf33c8d4)
+8.  [Directory and listing buffer](#orgbe76fab)
+9.  [Open shell, write, export, time stamp file](#org80eb1e6)
+10. [Getting help](#orga1b7b37)
+11. [Looking up online help](#org0e2af44)
+12. [More information: video, refcard, FAQs](#org8bdefe2)
+13. [Glossary / Emacs cheat sheet](#org0333755)
+14. [Acknowledgements](#org5d695ff)
 
 ![img](../img/real_programmers.png "xkcd: Real Programmers (<https://xkcd.com/378/>)")
 
 
-<a id="org81de026"></a>
+<a id="org8e151f0"></a>
 
 # README
 
@@ -41,7 +41,7 @@
     download.
 
 
-<a id="org7d682a3"></a>
+<a id="org3fdf124"></a>
 
 # Buffer and key basics
 
@@ -62,7 +62,7 @@
     have compound commands like `C-x C-f`, you can check your progress.
 
 
-<a id="org6dc3e46"></a>
+<a id="org0f0188e"></a>
 
 # The mode line - basic buffer movement
 
@@ -112,7 +112,7 @@
     on/off by repeating the command. Try that a couple of times.
 
 
-<a id="org124c3ec"></a>
+<a id="org16824b6"></a>
 
 # Indentation, lines, paragraphs, undo
 
@@ -169,7 +169,7 @@
     -   Go back to the top of the buffer (`M-<`)
 
 
-<a id="org25de960"></a>
+<a id="orgc770ede"></a>
 
 # Splitting windows
 
@@ -192,7 +192,7 @@ You can split windows any way you like.
 7.  Delete all but the current window with `C-x 1`.
 
 
-<a id="org2628831"></a>
+<a id="org086929c"></a>
 
 # Delete, copy, kill/cut, yank/paste text
 
@@ -233,7 +233,7 @@ You can split windows any way you like.
     active, that is when a mark has been set or a region selected.
 
 
-<a id="org0b21898"></a>
+<a id="orgf33c8d4"></a>
 
 # Searching up and down
 
@@ -264,7 +264,7 @@ You can split windows any way you like.
 7.  Stop the search with `C-g`.
 
 
-<a id="org99613a2"></a>
+<a id="orgbe76fab"></a>
 
 # Directory and listing buffer
 
@@ -325,7 +325,7 @@ You can split windows any way you like.
     windows with `C-x 1`.
 
 
-<a id="org0c654a9"></a>
+<a id="org80eb1e6"></a>
 
 # Open shell, write, export, time stamp file
 
@@ -378,7 +378,7 @@ be using them plenty later on:
 9.  Save the file with `C-x C-s` and submit it in Canvas.
 
 
-<a id="org32f0391"></a>
+<a id="orga1b7b37"></a>
 
 # Getting help
 
@@ -401,7 +401,7 @@ be using them plenty later on:
 7.  For psychological help, try `M-x doctor`.
 
 
-<a id="orgf030695"></a>
+<a id="org0e2af44"></a>
 
 # Looking up online help
 
@@ -419,7 +419,7 @@ be using them plenty later on:
        C-o`): <https://tinyurl.com/3j5ddtuk>
 
 
-<a id="orgcca0324"></a>
+<a id="org8bdefe2"></a>
 
 # More information: video, refcard, FAQs
 
@@ -427,12 +427,12 @@ be using them plenty later on:
 
 -   [GNU Emacs reference card (PDF)](https://github.com/birkenkrahe/org/blob/master/emacs/refcard.pdf)
 
--   My FAQ: enter `emacs` in the search field
+-   [My FAQ](https://github.com/birkenkrahe/org/blob/master/FAQ.org): enter `emacs` in the search field
     
     ![img](../img/0_github_search.png "Searching for headlines with "Emacs" in the FAQ file")
 
 
-<a id="org9332a31"></a>
+<a id="org0333755"></a>
 
 # Glossary / Emacs cheat sheet
 
@@ -643,7 +643,7 @@ Here is the [PDF version of the cheat sheet](https://github.com/birkenkrahe/cc/b
 </table>
 
 
-<a id="orgdf5ca9d"></a>
+<a id="org5d695ff"></a>
 
 # Acknowledgements
 
