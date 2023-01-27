@@ -1,5 +1,29 @@
+
+# Table of Contents
+
+1.  [Who is your lecturer?](#orgbcdad92)
+2.  [My first programming languages](#orgafd3e71)
+3.  [The importance of infrastructure](#org7dfd949)
+4.  [What do you expect from this course?](#org90954b5)
+5.  [What careers do our students have?](#org519e568)
+6.  [What will you do in this course?](#orge9d1137)
+7.  [GCC installation on MacOS](#org03239ba)
+8.  [How will you be evaluated?](#org035e67c)
+9.  [Which tools are you going to use?](#org9524da3)
+10. [The (new) Canvas LMS](#org17cca38)
+11. [The (popular) GitHub platform](#org29312eb)
+12. [The (feared) Emacs editor](#orgb44e5fb)
+13. [Practice: first "literate" C program!](#orgeef3b68)
+14. [When is the first assignment due?](#org52fbd12)
+15. [What are you looking forward to?](#org200801c)
+16. [Next](#org4b3357e)
+17. [Glossary](#orgb7ec60d)
+18. [References](#orga709892)
+
 ![img](../img/cover.jpg "Dashboard of a sportscar of the 1970s")
 
+
+<a id="orgbcdad92"></a>
 
 # Who is your lecturer?
 
@@ -11,6 +35,8 @@
 -   Data scientist by choice ([making sense of this](https://media.wired.com/photos/601c6246898afb612573ad4c/master/w_960,c_limit/BLACK%20SUN%20#34.jpg))
 -   Lyon College since 2021 ([from Berlin, Germany](https://www.visitberlin.de/system/files/styles/visitberlin_hero_visitberlin_desktop_2x/private/image/eberswalderstrasse26_c_visitBerlin_Foto_Dagmar_Schwelle_web.jpg?h=1c9b88c9&itok=xMVdiKwM))
 
+
+<a id="orgafd3e71"></a>
 
 # My first programming languages
 
@@ -24,6 +50,8 @@
 -   [X] How many programming languages are there today?
 
 
+<a id="org7dfd949"></a>
+
 # The importance of infrastructure
 
 ![img](../img/0_infrastructure.jpg "Layers between you and a document on your computer")
@@ -32,6 +60,8 @@ The image shows eight layers that your computing infrastructure has to
 manage (there are more in fact) - most of the software enabling you to
 do this (without you noticing) is written in C.
 
+
+<a id="org90954b5"></a>
 
 # What do you expect from this course?
 
@@ -46,10 +76,14 @@ do this (without you noticing) is written in C.
 -   I want to see if computing may be in my future
 
 
+<a id="org519e568"></a>
+
 # What careers do our students have?
 
 ![img](../img/0_careers.png "Careers of recent computer and data science graduates from Lyon College")
 
+
+<a id="orge9d1137"></a>
 
 # What will you do in this course?
 
@@ -61,6 +95,8 @@ do this (without you noticing) is written in C.
 -   We have a **compiler** - GCC ([also on a Mac](https://raw.githubusercontent.com/birkenkrahe/cc/piHome/img/0_gcc_mac.png))
 
 
+<a id="org03239ba"></a>
+
 # GCC installation on MacOS
 
 The following two answers came from ChatGPT, a conversational machine
@@ -70,6 +106,8 @@ learning model created by OpenAI.
 
 ![img](../img/0_gcc_mac_new.png "Second answer on how to install GCC on MacOS")
 
+
+<a id="org035e67c"></a>
 
 # How will you be evaluated?
 
@@ -81,6 +119,8 @@ learning model created by OpenAI.
 -   Programming assignments are home assignments
 -   In-class practices are "literate programming" exercises
 
+
+<a id="org9524da3"></a>
 
 # Which tools are you going to use?
 
@@ -95,6 +135,8 @@ learning model created by OpenAI.
 -   [Command line interface](https://en.wikipedia.org/wiki/Command-line_interface) / interpreter - (shell / replit.com)<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
 
 
+<a id="org17cca38"></a>
+
 # The (new) Canvas LMS
 
 ![img](../img/0_canvas.png "Canvas")
@@ -105,6 +147,8 @@ learning model created by OpenAI.
 -   Course links (GitHub, Whiteboard)
 -   Gradebook
 
+
+<a id="org29312eb"></a>
 
 # The (popular) GitHub platform
 
@@ -117,10 +161,14 @@ learning model created by OpenAI.
 -   Here for you: all course materials, and the course FAQ
 
 
+<a id="orgb44e5fb"></a>
+
 # The (feared) Emacs editor
 
 ![img](../img/0_litprog.png "My GitHub dashboard")
 
+
+<a id="orgeef3b68"></a>
 
 # DONE Practice: first "literate" C program!
 
@@ -180,6 +228,8 @@ Let's set Emacs up, write and run a first "literate" C program!
 22. Upload `first.org` as your first in-class assignment [to Canvas!](https://lyon.instructure.com/courses/1041/assignments/5889)
 
 
+<a id="org52fbd12"></a>
+
 # When is the first assignment due?
 
 ![img](../img/0_monks.png "Four monks by Claudio Rinaldi (1852-1909)")
@@ -196,10 +246,14 @@ Let's set Emacs up, write and run a first "literate" C program!
     covering all of the material that was covered until then.
 
 
+<a id="org200801c"></a>
+
 # What are you looking forward to?
 
 ![img](../img/0_package.jpg)
 
+
+<a id="org4b3357e"></a>
 
 # Next
 
@@ -207,6 +261,8 @@ Let's set Emacs up, write and run a first "literate" C program!
 
 ![img](../img/0_cprogramming.png "Introduction to C programming")
 
+
+<a id="orgb7ec60d"></a>
 
 # Glossary
 
@@ -365,6 +421,8 @@ Let's set Emacs up, write and run a first "literate" C program!
 </tbody>
 </table>
 
+
+<a id="orga709892"></a>
 
 # References
 
