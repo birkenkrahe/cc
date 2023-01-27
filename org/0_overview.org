@@ -2,7 +2,6 @@
 #+AUTHOR: Marcus Birkenkrahe
 #+SUBTITLE: CSC 100 - Introduction to programming - Spring 2023
 #+STARTUP: overview hideblocks indent
-#+OPTIONS: toc:nil num:nil ^:nil
 #+attr_latex: :width 400px
 #+caption: Dashboard of a sportscar of the 1970s
 [[../img/cover.jpg]]
