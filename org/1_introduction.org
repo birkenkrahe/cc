@@ -327,56 +327,40 @@ properties.
 
 * References
 
-Big Think (Jun 13, 2011). Bjarne Stroustrup: Why the Programming
-Language C Is Obsolete | Big Think [video]. [[https://youtu.be/KlPC3O1DVcg][URL:
-youtu.be/KlPC3O1DVcg]].
-
-pBrock (October 17, 2019). The Earliest Unix Code: An Anniversary
-Source Code Release [Blog]. URL: [[https://computerhistory.org/blog/the-earliest-unix-code-an-anniversary-source-code-release/][computerhistory.org]].
-
-Cass (6 Sept 2019). The Top Programming Languages 2019 > Python
-remains the big kahuna, but specialist languages hold their
-own. IEEE Spectrum. [[https://spectrum.ieee.org/the-top-programming-languages-2019][URL: spectrum.ieee.org]].
-
-Chatley R., Donaldson A., Mycroft A. (2019) The Next 7000 Programming
-Languages. In: Steffen B., Woeginger G. (eds) Computing and Software
-Science. Lecture Notes in Computer Science, vol 10000. Springer,
-Cham. https://doi.org/10.1007/978-3-319-91908-9_15
-
-Data Flair (n.d.). Applications of C Programming That Will Make
-You Fall In Love With C [Tutorial]. URL: d[[https://data-flair.training/blogs/applications-of-c/][ata-flair.training.]]
-
-DESY (Oct 25, 1995). The C++ Virtual Library. URL: [[https://www.desy.de/user/projects/C++.html][desy.de]]
-
-Gustedt (2019). Modern C. Manning.
-
-Hock-Chuan (2018). GCC and Make: Compiling, Linking and Building
-C/C++ Applications [website]. [[https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html][URL: ntu.edu.sg]].
-
-Kernighan/Ritchie (1978). The C Programming Language. Prentice
-Hall. [[https://en.wikipedia.org/wiki/The_C_Programming_Language][Online: wikipedia.org]].
-
-King (2008). C Programming - A Modern Approach. Norton. [[http://knking.com/books/c2/index.html][Online:
-knking.com]].
-
-Kirsh (September 13, 2021). Rust vs C++ and Is It Good for
-Enterprise? [blog]. [[https://www.incredibuild.com/blog/rust-vs-c-and-is-it-good-for-enterprise][URL: www.incredibuild.com]].
-
-Lemonaki, Dionysia (November 4, 2021). C vs. C++ - What's The
-Difference [blog]. URL: [[https://www.freecodecamp.org/news/c-vs-cpp-whats-the-difference/][freecodecamp.org.]]
-
-Neilsen (Aug 14, 2020). Quora. URL: [[https://qr.ae/pGzZ9z][qr.ae/pGzZ9z]].
-
-Steinhart (2019). The Secret Life of Programs. NoStarch Press. [[https://nostarch.com/foundationsofcomp][URL:
-nostarch.com.]]
-
-TIOBE (Jan 2022). TIOBE Index for January 2022 [website]. [[https://www.tiobe.com/tiobe-index/][URL:
-tiobe.com]].
-
-Torvalds (6 Sep 2007). Linus Torvalds on C++ [blog]. [[http://harmful.cat-v.org/software/c++/linus][URL:
-harmful.cat-v.org]].
-
-xkcd(n.d.) Purity [cartoon]. [[https://xkcd.com/435/][URL: xkcd.com/]].
+- Big Think (Jun 13, 2011). Bjarne Stroustrup: Why the Programming
+  Language C Is Obsolete | Big Think
+  [video]. [[https://youtu.be/KlPC3O1DVcg][URL:youtu.be/KlPC3O1DVcg]].
+- Brock (October 17, 2019). The Earliest Unix Code: An Anniversary
+  Source Code Release [Blog]. URL: [[https://computerhistory.org/blog/the-earliest-unix-code-an-anniversary-source-code-release/][computerhistory.org]].
+- Cass (6 Sept 2019). The Top Programming Languages 2019 > Python
+  remains the big kahuna, but specialist languages hold their
+  own. IEEE Spectrum. [[https://spectrum.ieee.org/the-top-programming-languages-2019][URL: spectrum.ieee.org]].
+- Chatley R., Donaldson A., Mycroft A. (2019) The Next 7000
+  Programming Languages. In: Steffen B., Woeginger G. (eds) Computing
+  and Software Science. Lecture Notes in Computer Science,
+  vol 10000. Springer,
+  Cham. https://doi.org/10.1007/978-3-319-91908-9_15
+- Data Flair (n.d.). Applications of C Programming That Will Make You
+  Fall In Love With C [Tutorial]. URL: d[[https://data-flair.training/blogs/applications-of-c/][ata-flair.training.]]
+- DESY (Oct 25, 1995). The C++ Virtual Library. URL: [[https://www.desy.de/user/projects/C++.html][desy.de]]
+- Gustedt (2019). Modern C. Manning.
+- Hock-Chuan (2018). GCC and Make: Compiling, Linking and Building
+  C/C++ Applications [website]. [[https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html][URL: ntu.edu.sg]].
+- Kernighan/Ritchie (1978). The C Programming Language. Prentice
+  Hall. [[https://en.wikipedia.org/wiki/The_C_Programming_Language][Online: wikipedia.org]].
+- King (2008). C Programming - A Modern Approach. Norton. [[http://knking.com/books/c2/index.html][Online:knking.com]].
+- Kirsh (September 13, 2021). Rust vs C++ and Is It Good for
+  Enterprise? [blog]. [[https://www.incredibuild.com/blog/rust-vs-c-and-is-it-good-for-enterprise][URL: www.incredibuild.com]].
+- Lemonaki, Dionysia (November 4, 2021). C vs. C++ - What's The
+  Difference [blog]. URL: [[https://www.freecodecamp.org/news/c-vs-cpp-whats-the-difference/][freecodecamp.org.]]
+- Neilsen (Aug 14, 2020). Quora. URL: [[https://qr.ae/pGzZ9z][qr.ae/pGzZ9z]].
+- Steinhart (2019). The Secret Life of Programs. NoStarch
+  Press. [[https://nostarch.com/foundationsofcomp][URL:nostarch.com.]]
+- TIOBE (Jan 2022). TIOBE Index for January 2022
+  [website]. [[https://www.tiobe.com/tiobe-index/][URL:tiobe.com]].
+- Torvalds (6 Sep 2007). Linus Torvalds on C++
+  [blog]. [[http://harmful.cat-v.org/software/c++/linus][URL:harmful.cat-v.org]].
+- xkcd(n.d.) Purity [cartoon]. [[https://xkcd.com/435/][URL: xkcd.com/]].
 
 * Footnotes
 
