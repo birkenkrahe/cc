@@ -155,7 +155,7 @@ documents." (ChatGPT)
 #+caption: GNU Emacs screen and properties
 [[../img/0_gnuemacs1.png]]
 
-* Week 3 - Introducing C & Emacs tutorial
+* Week 3 - Introducing C
 #+attr_html: :width 400px
 [[../img/1_ccpp.png]]
 
@@ -164,16 +164,7 @@ documents." (ChatGPT)
 ** [[https://lyon.instructure.com/courses/1014/assignments/6463][Canvas file upload]] (~first.org~)
 ** [[https://lyon.instructure.com/courses/1014/discussion_topics/2070][Week 2 Session summary and test preparation]]
 ** Introduction to C
-** Emacs tutorial (start in class, finish @home)
-
-* Preparing for a test (2.5% each)
-#+attr_latex: :width 400px
-#+caption: Medieval food preparation
-[[../img/preptest.jpg]]
-
-*How do you prepare for a test?*[fn:2]
-
-* Condition for repeating tests
+** Condition for repeating tests
 #+attr_latex: :width 400px
 #+caption: Late or missed the test? Talk to me!
 [[../img/late.jpg]]
@@ -182,9 +173,19 @@ documents." (ChatGPT)
   test, we can make arrangements for you to take the test outside of
   class.
 
-* Pros and cons: script vs. shell
+** Preparing for a test (2.5% each)
+#+attr_latex: :width 400px
+#+caption: Medieval food preparation
+[[../img/preptest.jpg]]
 
-* TODO [[https://blog.rwhitedwarf.com/post/use_emacs_for_r/][Using Emacs for R]]
+*How do you prepare for a test?*[fn:2]
+* Week 4
+** Pros and cons: script vs. shell
+
+** Emacs tutorial (start in class, finish @home)
+
+
+** TODO [[https://blog.rwhitedwarf.com/post/use_emacs_for_r/][Using Emacs for R]]
 #+attr_latex: :width 400px
 [[../img/learning-editors.jpg]]
 * References
