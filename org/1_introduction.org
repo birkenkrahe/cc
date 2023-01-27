@@ -1,7 +1,7 @@
 #+TITLE: Introduction to C
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 Introduction to programming in C/C++ Spring 2023
-#+STARTUP:overview hideblocks indent
+#+STARTUP:overview hideblocks indent inlineimages
 #+OPTIONS: toc:1
 #+OPTIONS:hideblocks
 * What will you learn?
@@ -121,6 +121,7 @@ See also: [[https://youtu.be/G1-wse8nsxY][C Programming Language | Brian Kernigh
 
 Details: see [[https://blog.ansi.org/2018/11/c-language-standard-iso-iec-9899-2018-c18/#gref][ANSI]] (American National Standards Institute)
 
+Python 3 was not "backwards compatible" with Python 2.7
 * How computers work
 
 Well, at least this is one way of looking at it.
@@ -136,11 +137,11 @@ the power goes out.
 * How programs are processed
 **  Simplified process
 
-1) *WRITE* source code in an editor (NVM)
-2) *COMPILE* source code to machine code (RAM)
-3) *RUN* program (CPU)
-4) *DISPLAY* results (RAM)
-5) *SAVE* result (NVM)
+1) *WRITE* source code in an editor (NVM = harddisk)
+2) *COMPILE* source code to machine code (RAM = memory)
+3) *RUN* program (CPU = Central Processing Unit)
+4) *DISPLAY* results (RAM = Memory)
+5) *SAVE* result (NVM = harddisk)
 
 ** Complete process
 
@@ -204,6 +205,14 @@ languages." (Anonymous)
 | Flexibility           |                              |
 | Standard library      |                              |
 | Integration with UNIX |                              |
+
+- Efficiency: do a lot with little effort (small programs)
+- Portability: it works everywhere, on anything
+- "Power": you can do brain surgery with a pencil
+- Flexbility: you can do the same thing in many different ways
+- "Standard library": pre-defined functions/tasks; "stdio.h", a
+  standard library for "I/O" (Input/output)
+- Integration with UNIX (because UNIX is the motherlobe)
 
 * What is the difference between C and C++?
 
