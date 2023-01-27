@@ -1,25 +1,27 @@
 
 # Table of Contents
 
-1.  [README](#org8e151f0)
-2.  [Buffer and key basics](#org3fdf124)
-3.  [The mode line - basic buffer movement](#org0f0188e)
-4.  [Indentation, lines, paragraphs, undo](#org16824b6)
-5.  [Splitting windows](#orgc770ede)
-6.  [Delete, copy, kill/cut, yank/paste text](#org086929c)
-7.  [Searching up and down](#orgf33c8d4)
-8.  [Directory and listing buffer](#orgbe76fab)
-9.  [Open shell, write, export, time stamp file](#org80eb1e6)
-10. [Getting help](#orga1b7b37)
-11. [Looking up online help](#org0e2af44)
-12. [More information: video, refcard, FAQs](#org8bdefe2)
-13. [Glossary / Emacs cheat sheet](#org0333755)
-14. [Acknowledgements](#org5d695ff)
+1.  [README](#org8388fba)
+2.  [Buffer and key basics](#orgb8f0483)
+3.  [The mode line - basic buffer movement](#orgb552367)
+4.  [Indentation, lines, paragraphs, undo](#org3d4b38e)
+5.  [Splitting windows](#org0b09f3d)
+6.  [Delete, copy, kill/cut, yank/paste text](#orgaed1aa6)
+7.  [Searching up and down](#orgef71a36)
+8.  [Directory and listing buffer](#org88a4ce4)
+9.  [Open shell, write, export, time stamp file](#org7113f65)
+10. [Getting help](#org1f020aa)
+11. [Looking up online help](#org76a86d5)
+12. [More information: video, refcard, FAQs](#orgbe6120f)
+13. [Glossary / Emacs cheat sheet](#org977a2e8)
+14. [Acknowledgements](#org4122357)
 
 ![img](../img/real_programmers.png "xkcd: Real Programmers (<https://xkcd.com/378/>)")
 
+Image source: <https://xkcd.com/378/>
 
-<a id="org8e151f0"></a>
+
+<a id="org8388fba"></a>
 
 # README
 
@@ -40,8 +42,11 @@
     do the editing in a separate text file whose content you will
     download.
 
+-   Here are links to the videos ( 2 x 30 min) in which I go through the
+    tutorial step by step: [Part 1](https://youtu.be/RdRbm1wG1Gc) and [Part 2](https://youtu.be/VhsEMIjAaEk).
 
-<a id="org3fdf124"></a>
+
+<a id="orgb8f0483"></a>
 
 # Buffer and key basics
 
@@ -62,7 +67,7 @@
     have compound commands like `C-x C-f`, you can check your progress.
 
 
-<a id="org0f0188e"></a>
+<a id="orgb552367"></a>
 
 # The mode line - basic buffer movement
 
@@ -112,7 +117,7 @@
     on/off by repeating the command. Try that a couple of times.
 
 
-<a id="org16824b6"></a>
+<a id="org3d4b38e"></a>
 
 # Indentation, lines, paragraphs, undo
 
@@ -169,7 +174,7 @@
     -   Go back to the top of the buffer (`M-<`)
 
 
-<a id="orgc770ede"></a>
+<a id="org0b09f3d"></a>
 
 # Splitting windows
 
@@ -192,7 +197,7 @@ You can split windows any way you like.
 7.  Delete all but the current window with `C-x 1`.
 
 
-<a id="org086929c"></a>
+<a id="orgaed1aa6"></a>
 
 # Delete, copy, kill/cut, yank/paste text
 
@@ -233,7 +238,7 @@ You can split windows any way you like.
     active, that is when a mark has been set or a region selected.
 
 
-<a id="orgf33c8d4"></a>
+<a id="orgef71a36"></a>
 
 # Searching up and down
 
@@ -264,7 +269,7 @@ You can split windows any way you like.
 7.  Stop the search with `C-g`.
 
 
-<a id="orgbe76fab"></a>
+<a id="org88a4ce4"></a>
 
 # Directory and listing buffer
 
@@ -325,7 +330,7 @@ You can split windows any way you like.
     windows with `C-x 1`.
 
 
-<a id="org80eb1e6"></a>
+<a id="org7113f65"></a>
 
 # Open shell, write, export, time stamp file
 
@@ -378,7 +383,7 @@ be using them plenty later on:
 9.  Save the file with `C-x C-s` and submit it in Canvas.
 
 
-<a id="orga1b7b37"></a>
+<a id="org1f020aa"></a>
 
 # Getting help
 
@@ -401,7 +406,7 @@ be using them plenty later on:
 7.  For psychological help, try `M-x doctor`.
 
 
-<a id="org0e2af44"></a>
+<a id="org76a86d5"></a>
 
 # Looking up online help
 
@@ -419,7 +424,7 @@ be using them plenty later on:
        C-o`): <https://tinyurl.com/3j5ddtuk>
 
 
-<a id="org8bdefe2"></a>
+<a id="orgbe6120f"></a>
 
 # More information: video, refcard, FAQs
 
@@ -432,7 +437,7 @@ be using them plenty later on:
     ![img](../img/0_github_search.png "Searching for headlines with "Emacs" in the FAQ file")
 
 
-<a id="org0333755"></a>
+<a id="org977a2e8"></a>
 
 # Glossary / Emacs cheat sheet
 
@@ -643,14 +648,14 @@ Here is the [PDF version of the cheat sheet](https://github.com/birkenkrahe/cc/b
 </table>
 
 
-<a id="org5d695ff"></a>
+<a id="org4122357"></a>
 
 # Acknowledgements
 
 I'm indebted to Jacob Strickland and Jacob Wolfrom for testing the
 first version, for their careful reading and for many comments that
 helped improve this tutorial. Thanks to Natalie Packham for reminding
-me of Eliza in Emacs!
+me of Eliza in Emacs (`M-x doctor`)!
 
 
 # Footnotes
