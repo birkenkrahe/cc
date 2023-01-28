@@ -191,11 +191,34 @@ documents." (ChatGPT)
 - [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][Emacs + Org-mode tutorial]]
 - [[https://linuxreviews.org/GNU_typing_tutor][GNU typing tutor (Linux or WSL)]]
 
+** TODO Hello World all over again
+
+** TODO Online test 2: intro to C, hello Emacs
 ** TODO [[https://blog.rwhitedwarf.com/post/use_emacs_for_r/][Using Emacs for R]]
 #+attr_latex: :width 400px
 [[../img/learning-editors.jpg]]
+
 ** TODO Pros and cons: script vs. shell
 
+** TODO Test preview
+
+*This is a test for the upcoming online test.*
+
+1) [ ] How can you run a code block in an Org-mode file?
+2) [ ] Which header arguments does a code block need?
+3) [ ] The code block name allows you to link to the code block
+4) [ ] Where are Emacs error messages shown?
+5) [ ] What does the Emacs modeline show?
+6) [ ] How can you save an Emacs buffer?
+7) [ ] How can you tangle an Emacs Org-mode code block?
+8) [ ] What's the architecture of a computer?
+9) [ ] How are programs written and processed?
+10) [ ] What commands split the Emacs window?
+11) [ ] How do you name an executable file when compiling it with ~gcc~?
+12) [ ] How does a minimal C program look like?
+
+* Week 5
+** TODO Programming assignment 1: your height in light-years
 * References
 
 Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].
