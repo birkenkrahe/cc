@@ -1,5 +1,6 @@
 #+TITLE: C Fundamentals practice - hello world
 #+AUTHOR: [yourName] (pledged)
+#+STARTUP: overview hideblocks indent 
 #+PROPERTY: header-args:C :main yes :includes <stdio.h> :results output :exports both :comments both
 * READ README
 
@@ -21,10 +22,10 @@
     
 * TODO Identify yourself
 
-  - replace ~[yourName]~ in the header of this file by your name
-  - add ~(pledged)~ next to your name (as in "I obey the honor code")
-  - Change the "TODO" in the headline to "DONE" (~S-<right>~)
-  - save the file (~C-x C-s~). 
+  1) replace ~[yourName]~ in the header of this file by your name
+  2) add ~(pledged)~ next to your name (as in "I obey the honor code")
+  3) Change the "TODO" in the headline to "DONE" (~S-<right>~)
+  4) save the file (~C-x C-s~). 
 
 * TODO Syntax highlighting
 
@@ -74,6 +75,9 @@
    part of the program does (guess if you don't know for sure) -
    comment at least whenever you see ~WRITE COMMENT HERE~.
 
+   The program contains so-called /inline/ comments ~//~ and /multi-line/
+   comments: ~/* ... */.~
+
    #+name: pgm:comment2
    #+begin_src C
      #include <stdio.h> // WRITE COMMENT HERE
@@ -93,9 +97,11 @@
 
    #+RESULTS: pgm:comment2
    : 1
-
-   The program contains so-called /inline/ comments ~//~ and /multi-line/
-   comments: ~/* ... */.~
-
+  
 * TODO Upload completed file to Canvas
 
+1) Open the [[https://lyon.instructure.com/courses/1014/assignments/6994][Class practice assignment]] on Canvas
+
+2) Upload this Org-mode file
+
+3) Submit assignment
