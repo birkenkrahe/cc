@@ -14,8 +14,14 @@
 # ignore javascript
 reveal.js
 
-# ignore .tex files
+# ignore .tex files and auxiliary files
 *.tex
+*.aux
+*.fls
+*.fdb_latexmk
+*.out
+*.toc
+*.log
 
 # ignore dvi
 *.dvi
