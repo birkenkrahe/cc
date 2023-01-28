@@ -23,7 +23,7 @@
   find a "Class practice" assignment named ~2_hello_practice.org~.
 
 * Program structure
-#+attr_latex: :width 400px
+#+attr_latex: :width 300px
 #+caption: main function structure (Collingbourne, 2017)
 [[../img/2_structure.png]]
 
@@ -50,7 +50,7 @@ Org-mode - with a few new /literate programming/ features:
   add a ~:tangle FILENAME~ statement to the header
 
 - To create the tangled (source code) file from a block, use the keys
-  ~C-c C-v t~ (~org-babel-tangle~)[fn:1]
+  ~C-c C-v t~ (~org-babel-tangle~) [fn:1]
 
 - To create the tangled (source code) from a file (all blocks), use
   the keys ~C-c C-v f~ (~org-babel-tangle-file~)
@@ -60,7 +60,7 @@ Org-mode - with a few new /literate programming/ features:
   comment
 
 - The workflow of "tangling" and "weaving"[fn:2] looks like this:
-  #+attr_latex: :width 400px
+  #+attr_latex: :width 300px
   #+caption: A file is woven into a document or tangled into a source file
   [[../img/2_cweb.png]]
 
@@ -111,7 +111,7 @@ The program could also have been written much simpler:
       main()
       ^~~~
   #+end_example
-  
+
 * Hello World Version 3 (long)
 
 The program could also have been written more complicated:
@@ -165,7 +165,7 @@ Windows. Compare the two executables - what do you notice?
 - You can compile the source files on the command line terminal or in
   the Emacs shell. Here is the workflow:
 
-#+name: tab:compile2  
+#+name: tab:compile2
 | COMMAND              | ACTION                                     |
 |----------------------+--------------------------------------------|
 | ~C-x C-f hello.c~      | Create C file ~hello.c~                      |
@@ -178,28 +178,27 @@ Windows. Compare the two executables - what do you notice?
 
 - The /eshell/ is an Emacs Lisp simulation of a Linux shell (~bash~)
 
-- On Windows, ~PowerShell~ works as well as the CMD shell: 
-  #+attr_latex: :width 400px
+- On Windows, ~PowerShell~ works as well as the CMD shell:
+  #+attr_latex: :width 300px
   [[../img/2_powershell.png]]
 
 * Syntax highlighting in Emacs
 
 - Notice the slight syntax highlighting difference to an online REPL
-  ~repl.it~[fn:4]:
-
-  #+attr_latex: :width 350px
+  ~repl.it~ [fn:4]:
+  #+attr_latex: :width 200px
   [[../img/2_replit.png]]
-  #+attr_latex: :width 350px
+  #+attr_latex: :width 200px
   [[../img/2_org.png]]
-  
+
 - There is no highlighting standard - you should experiment with
-  different themes[fn:5]
+  different themes[fn:5].
 
 - Display line numbers with ~display-line-numbers-mode~, and highlight
-  lines with ~hl-line-mode~[fn:6] - you can toggle these, and you can
+  lines with ~hl-line-mode~ [fn:6] - you can toggle these, and you can
   go through the minibuffer history with ~M-x M-p~ and ~M-n~:
 
-  #+attr_latex: :width 400px
+  #+attr_latex: :width 200px
   [[../img/2_pun.png]]
 
 * Comments
@@ -230,12 +229,12 @@ Let's fix this:
 
 * Let's practice!
 
-Go to the [[https://tinyurl.com/yckuhh2f][Org-mode practice file]] and complete the first few exercises:
+Save the [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/2_hello_practice.org][practice file]] as ~1_hello_practice.org~ and complete it:
 
 1) understand and change syntax highlighting
 2) understanding and using comments in C
 
-   #+attr_latex: :width 400px
+   #+attr_latex: :width 200px
    [[../img/2_practice1.gif]]
 
 * Summary
@@ -260,44 +259,21 @@ Go to the [[https://tinyurl.com/yckuhh2f][Org-mode practice file]] and complete 
 | ~printf~                      | printing function                   |
 | ~\n~                          | escape character (new-line)         |
 | ~/* ... */~  ~//...~            | comments                            |
-| ~scanf~                       | input pattern function              |
 | ~main(void)~                  | main function without argument      |
 
 * Glossary
 
-| CONCEPT          | EXPLANATION                                               |
-|------------------+-----------------------------------------------------------|
-| Compiler         | translates source code to object code                     |
-| Linker           | translates object code to machine code                    |
-| Syntax           | language rules                                            |
-| Debugger         | checks syntax                                             |
-| Directive        | starts with ~#~, one line only, no delimiter                |
-| Preprocessor     | processes directives                                      |
-| Statement        | command to be executed, e.g. ~return~                       |
-| Delimiter        | ends a statement (in C: semicolon - ;)                    |
-| Function         | a rule to compute something with arguments                |
-| String           | Sequence of /character/ values like ~hello~                   |
-| String literal   | Unchangeable, like the numbe ~8~ or the string ~hello~        |
-| Constant         | Set value that is not changed                             |
-| Variable         | A named memory placeholder for a value, e.g. ~int i~        |
-| Data type        | A memory storage instruction like ~int~ for integer         |
-| Comment          | Region of code that is not executed                       |
-| Format specifier | Formatting symbol like ~%d%~ or ~%f%~                         |
-| Data type        | Tells the computer to reserve memory,                     |
-|                  | e.g. ~int~ for integer numbers                              |
-| Type declaration | Combination of type and variable name - e.g. ~int height;~  |
-| ~int~              | C type for integer numbers, e.g. 2                        |
-| ~float~            | C type for floating point numbers, e.g. 3.14              |
-| ~char~             | C type for characters, like "joey"                        |
-| Formatting       | Tells the computer how to print, e.g. ~%d~ for ~int~ types    |
-| ~%d~               | Format for integers                                       |
-| ~%f~ and ~%.pf~      | Format for floating point numbers                         |
-|                  | (with ~p~ digits after the point)                           |
-| ~#define~          | Define a constant with the preprocessor,                  |
-|                  | e.g. ~#define PI 3.14~                                      |
-| ~math.h~           | Math library, contains mathematical constants & functions |
-| ~stdio.h~          | Input/Output library, enables ~printf~ and ~scanf~            |
-| ~const~            | Constant identifier, e.g. ~const double PI = 3.14;~         |
+| CONCEPT      | EXPLANATION                                |
+|--------------+--------------------------------------------|
+| Compiler     | translates source code to object code      |
+| Linker       | translates object code to machine code     |
+| Syntax       | language rules                             |
+| Debugger     | checks syntax                              |
+| Directive    | starts with ~#~, one line only, no delimiter |
+| Preprocessor | processes directives                       |
+| Statement    | command to be executed, e.g. ~return~        |
+| Delimiter    | ends a statement (in C: semicolon - ~;~)     |
+| Function     | a rule to compute something with arguments |
 
 * References
 
@@ -309,8 +285,8 @@ Go to the [[https://tinyurl.com/yckuhh2f][Org-mode practice file]] and complete 
 * Footnotes
 
 [fn:1] To tangle only the currently selected block, use
-  ~org-babel-tangle~ with a prefix argument: ~C-u C-c C-v t~ or ~C-u M-x
-  org-bable-tangle~.
+~org-babel-tangle~ with a prefix argument: ~C-u C-c C-v t~ or ~C-u M-x
+org-bable-tangle~.
 
 [fn:2] In our case, instead of weaving TeX files (~.tex~) to print, we
 weave Markdown files (~.md~), or WORD (~*.odt~) files, or we dispense with
@@ -334,11 +310,6 @@ them using ~M-x package-list-packages~. To see the differences, enter
 automatically for future sessions.
 
 [fn:6]If you always want to have line numbers and highlight the line
-under the cursor, put these lines in your ~.emacs~ file: and restart
-Emacs:
-#+begin_example emacs-lisp
-  ;; always display line numbers
-  (global-display-line-numbers-mode)
-  ;; enable global highlighting
-  (global-hl-line-mode 1)
-#+end_example
+under the cursor, put these lines in your ~.emacs~ file:
+ #+attr_latex: :width 100px
+ [[../img/2_lisp.png]]
