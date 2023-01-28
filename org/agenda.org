@@ -179,15 +179,23 @@ documents." (ChatGPT)
 [[../img/preptest.jpg]]
 
 *How do you prepare for a test?*[fn:2]
-* Week 4
-** Pros and cons: script vs. shell
+* Week 4 - Emacs tutor 
+** TODO Emacs tutorial (start in class, finish @home)
+#+attr_latex: :width 400px
+#+caption: GNU gtypist menu (GNU typing tutor)
+[[../img/gtypist.png]]
 
-** Emacs tutorial (start in class, finish @home)
-
+- Emacs tutorial ([[https://github.com/birkenkrahe/org/blob/master/emacs/tutorial.md#readme][markdown]], [[https://github.com/birkenkrahe/org/blob/master/emacs/tutorial.org][org-mode]], [[https://github.com/birkenkrahe/org/blob/master/emacs/tutorial.pdf][pdf]])
+- [[https://youtu.be/RdRbm1wG1Gc][Video emacstutor Part 1]]
+- [[https://youtu.be/VhsEMIjAaEk][Video emacstutor Part 2]]
+- [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][Emacs + Org-mode tutorial]]
+- [[https://linuxreviews.org/GNU_typing_tutor][GNU typing tutor (Linux or WSL)]]
 
 ** TODO [[https://blog.rwhitedwarf.com/post/use_emacs_for_r/][Using Emacs for R]]
 #+attr_latex: :width 400px
 [[../img/learning-editors.jpg]]
+** TODO Pros and cons: script vs. shell
+
 * References
 
 Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].
