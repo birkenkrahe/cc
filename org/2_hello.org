@@ -33,7 +33,6 @@
 
 - There can be /pre-processor/ /directives/ - ~#include~ or ~#define~.
 
-* Hello world program
 * "What a Tangled Web We Weave..."
 
 #+begin_quote
@@ -67,7 +66,7 @@ Org-mode - with a few new /literate programming/ features:
 
   [[https://orgmode.org/manual/Extracting-Source-Code.html][Learn more about extracting source code from Org files.]]
 
-* Hello World Version 1
+* Hello World Version 1 (medium)
 #+NAME: hello1
 #+begin_src C :exports both :tangle ../src/hello1.c
   #include <stdio.h>
@@ -78,7 +77,7 @@ Org-mode - with a few new /literate programming/ features:
   }
 #+end_src
 
-What happens in [[hello1]]:
+What happens in this code block:
 - A /header/ file (~stdio.h~) is included for input/output
 - A /function/ (~main~) without arguments (~void~) is defined
 - The function returns /integer/ data (~int~)
@@ -86,12 +85,12 @@ What happens in [[hello1]]:
 - A /new-line/ is added at the end (~\n~)
 - If successful, the program /returns/ the value ~0~
 
-* Hello World Version 2
+* Hello World Version 2 (short)
 
 The program could also have been written much simpler:
 
-- In [[hello2]],the function ~main~ is missing the ~void~ argument, and the
-  ~int~ (indicating the type of variable returned - an integer).
+- In this code block, the function ~main~ is missing the ~void~ argument,
+  and the ~int~ (indicating the type of variable returned - an integer).
   #+NAME: hello2
   #+begin_src C :exports both :tangle ../src/hello2.c :main no
     #include <stdio.h>
@@ -104,8 +103,8 @@ The program could also have been written much simpler:
 - It is the job of the /compiler/, ~gcc~, which acts behind the scenes as
   it were, to resolve issues like "missing ~int~" or "missing ~return~"
 
-- If you /tangle/ [[hello2]] and compile the source file ~hello2.c~ in a
-  shell, you get a warning:
+- If you /tangle/ the code block and compile the source file ~hello2.c~ in
+  a shell, you get a warning:
   #+begin_example sh
     $ gcc hello2.c
       hello2.c:2:1: warning: return type defaults to 'int' [-Wimplicit-int]
@@ -113,7 +112,7 @@ The program could also have been written much simpler:
       ^~~~
   #+end_example
   
-* Hello World Version 3
+* Hello World Version 3 (long)
 
 The program could also have been written more complicated:
 - ~int argc~ is an integer, or single number - the number of arguments
@@ -218,9 +217,6 @@ in the editor will tip you off:
 
 #+end_src
 
-#+RESULTS:
-: My fleas
-
 Let's fix this:
 
 #+begin_src C :exports both :main yes :includes stdio.h
@@ -304,7 +300,9 @@ Go to the [[https://tinyurl.com/yckuhh2f][Org-mode practice file]] and complete 
 | ~const~            | Constant identifier, e.g. ~const double PI = 3.14;~         |
 
 * References
+
 - Collingbourne (2019). The Little Book of C (Rev. 1.2). Dark Neon.
+
 - King (2008). C Programming - A Modern Approach. Norton. [[http://knking.com/books/c2/index.html][Online:
   knking.com]].
 

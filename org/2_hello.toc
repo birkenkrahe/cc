@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}README}{1}{section.1}%
+\contentsline {section}{\numberline {2}Program structure}{1}{section.2}%
+\contentsline {section}{\numberline {3}"What a Tangled Web We Weave\ldots {}"}{3}{section.3}%
+\contentsline {section}{\numberline {4}Hello World Version 1 (medium)}{3}{section.4}%
+\contentsline {section}{\numberline {5}Hello World Version 2 (short)}{4}{section.5}%
+\contentsline {section}{\numberline {6}Hello World Version 3 (long)}{5}{section.6}%
+\contentsline {section}{\numberline {7}Compiler workflow}{5}{section.7}%
+\contentsline {section}{\numberline {8}Shell execution}{6}{section.8}%
+\contentsline {section}{\numberline {9}Syntax highlighting in Emacs}{7}{section.9}%
