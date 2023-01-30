@@ -125,8 +125,8 @@ have inline links, which the Org-files don't have).
 - You can [[https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github/viewing-your-subscriptions][watch]] the [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][cc]] repository - and set [[https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications][Notifications]] to
   ~Participating and @mentions~ so that you see my comments (see
   image below).
-
   #+attr_latex: :width 300px
+  #+caption: GitHub notifications setting
   [[../img/2_watch.png]]
   /Image: Notifications settings when watching a repository/
 
@@ -139,9 +139,8 @@ have inline links, which the Org-files don't have).
   - You can use it as a platform for [[https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects][projects]] or [[https://github.com/features/codespaces][coding]]
   - You can download the [[https://desktop.github.com/][desktop client]] to manage repos on your PC
     (see image below).
-
-    /Image: GitHub desktop client commit/
-    #+attr_latex: :width 400px
+    #+caption: GitHub desktop client commit
+    #+attr_latex: :width 300px
     [[../img/2_gh.png]]
 
 * Install GNU CC
@@ -151,7 +150,7 @@ have inline links, which the Org-files don't have).
 - [[https://www.mingw-w64.org/][MinGW]] ("Minimalist GNU for Windows") is a port of ~GNU gcc~ to
   Windows
   #+Caption: Shameless plug for the Free Software Foundation - [[https://www.fsf.org/][fsf.org]]
-  #+attr_latex: :width 400px
+  #+attr_latex: :width 300px
   [[../img/2_fsf.png]]
 
 * Install GCC on Windows
@@ -164,23 +163,25 @@ have inline links, which the Org-files don't have).
 
 4) Search for ~PATH~ and open the menu ~System Properties~
    #+attr_latex: :width 200px
+   #+caption: Setting the PATH
    [[../img/2_systemproperties.png]]
 
 5) Open the menu ~Environment Variables~, click on the ~PATH~ variable
    and choose ~Edit~
    #+attr_latex: :width 200px
+   #+caption: Setting the PATH
    [[../img/2_path.png]]
 
    1) Click on ~New~ and paste the path into the empty line. Confirm
       three times with ~OK~ to close all menus.
       #+attr_latex: :width 200px
+      #+caption: Setting the PATH
       [[../img/2_environmentvariable.png]]
 
    2) To test, search for ~CMD~, open a terminal and enter ~gcc
-      --version~ - you should get the output shown below (or
-      similar). Close the window.
-
+      --version~. Close the window.
       #+attr_latex: :width 300px
+      #+caption: Setting the PATH
       [[../img/2_gcc.png]]
 
 * Install Clang on MacOS
@@ -193,17 +194,17 @@ free [[https://clang.llvm.org/][Clang]] compiler as part of the [[https://develo
 - If no compiler is found, download it by entering ~xcode-select
   --install~
 - Test it by typing ~cc -v~.
-
+  #+attr_latex: :width 300px
+  #+caption: Checking Clang compiler exists on a Mac
   [[../img/2_cc.png]]
 
 * Install GCC on Linux
 
 Under Linux, the installation of a binary (executable) for that
-distribution and computer architecture, is done with a simple
-command from the command line, usually using the package manager,
-e.g. ~apt~ for Ubuntu 20.04: ~sudo apt install
-build-essential~. This will install ~gcc~, ~g++~, and the powerful
-[[https://www.gnu.org/software/make/][GNU ~make~ program]].
+distribution and computer architecture, is done with a simple command
+from the command line, usually using the package manager, e.g. ~apt~ for
+Ubuntu 20.04: ~sudo apt install build-essential~. This will install ~gcc~,
+~g++~, and the powerful [[https://www.gnu.org/software/make/][GNU ~make~ program]].
 
 * Emacs for C programming
 
@@ -214,8 +215,8 @@ inside Emacs works like a REPL (Read-Evaluate-Print-Loop).
 A resource to look at, and use (for free, at first) that uses the
 REPL concept, is [[https://repl.it][repl.it]]. See image below for the "hello world"
 program in C.
-
-#+attr_latex: :width 600px
+#+attr_latex: :width 350px
+#+caption: Replit.com C template
 [[../img/2_replit.png]]
 
 * What is Emacs ?
@@ -227,38 +228,36 @@ program in C.
 | Ancient software             | Written 1976, released in 1985[fn:6]                 |
 | Ca. 1.5M lines of code       | By comparison: Windows ca. 50M; Linux kernel ca. 30M |
 
-#+attr_latex: :width 500px
+#+attr_latex: :width 400px
+#+caption: Emacs 27.1 showing Org, Magit and Dired
 [[../img/2_panels.png]]
-/Image: "Emacs 27.1 showing Org, Magit and Dired
-buffers with the modus-operandi theme, without window titlebar or
-borders." Source: [[https://en.wikipedia.org/wiki/Emacs#/media/File:Emacs27_showing_Org,_Magit,_and_Dired_with_the_modus-operandi_theme.png][Wikipedia]]/
 
-|Challenge: which Emacs properties can you deduce from this image alone?[fn:7] |
+Challenge: which Emacs properties can you deduce from this image
+alone?[fn:7]
 
 * How do you use Emacs?
 
-See [[https://github.com/birkenkrahe/org/blob/master/FAQ.md#which-editor-and-ide-do-you-use][FAQ]]. I use Emacs for most of my computing needs:
+See [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#which-editor-and-ide-do-you-use][FAQ]]. I use Emacs for most of my computing needs:
 
 - Writing (teaching, research)
 - Planning (Calendar, ToDo)
 - Organizing (Files)
 
-  See also the article "[[https://opensource.com/article/20/3/getting-started-emacs][Getting started with Emacs"]] (Kenlon, 2020),
-  and the video "[[https://youtu.be/48JlgiBpw_I][The Absolute Beginner's Guide to Emacs]]" (System
-  Crafters, 2020) with [[https://github.com/birkenkrahe/org/blob/master/emacs/emacs_beginner.org][my notes]].
+See also the article "[[https://opensource.com/article/20/3/getting-started-emacs][Getting started with Emacs"]] (Kenlon, 2020), and
+the video "[[https://youtu.be/48JlgiBpw_I][The Absolute Beginner's Guide to Emacs]]" (System
+Crafters, 2020) with [[https://github.com/birkenkrahe/org/blob/master/emacs/emacs_beginner.org][my notes]].
+#+attr_latex: :width 300px
+#+caption: DESY APE research group (1994). Can you find me?
+[[../img/2_desy.jpg]]
 
-  #+attr_latex: :width 400px
-  [[../img/2_desy.jpg]]
-  /Image: DESY APE research group (1994). Can you find me?/
-
-  Other uses:
-  - As [[https://youtu.be/Wcjmx_U5alY][window manager]] (only under Linux)
-  - As [[http://www.mycpu.org/read-email-in-emacs/][email client]]
-  - Remote access (with [[https://www.gnu.org/software/tramp/][GNU Tramp]])
+Other uses:
+- As [[https://youtu.be/Wcjmx_U5alY][window manager]] (only under Linux)
+- As [[http://www.mycpu.org/read-email-in-emacs/][email client]]
+- Remote access (with [[https://www.gnu.org/software/tramp/][GNU Tramp]])
 
 * How will we use Emacs?
-
-#+attr_latex: :width 500px
+#+attr_latex: :width 300px
+#+caption: Neal Stephenson
 [[../img/2_neal.jpg]]
 
 We'll use it as:
@@ -267,37 +266,38 @@ We'll use it as:
 - NOTEBOOK to write literate programs, and
 - SHELL to build and run code.
 
-  #+begin_quote
-  "Emacs outshines all other editing software in approximately the same
-  way that the noonday sun does the stars. It is not just bigger and
-  brighter; it simply makes everything else vanish." – Neal Stephenson,
-  In the Beginning was the Command Line (1998)[fn:8]
-  #+end_quote
+#+begin_quote
+"Emacs outshines all other editing software in approximately the same
+way that the noonday sun does the stars. It is not just bigger and
+brighter; it simply makes everything else vanish." – Neal Stephenson,
+In the Beginning was the Command Line (1998)[fn:8]
+#+end_quote
 
-  We will not use Emacs as a substitute for religion even though
-  there is a [[https://www.emacswiki.org/emacs/ChurchOfEmacs]["Church of Emacs"]] (EmacsWiki)! Huh?! What?!
-
-  /Image: Notre Dame de Paris. Source: Wikipedia./
-  #+attr_latex: :width 500px
-  [[../img/2_notredame.png]]
+We will not use Emacs as a substitute for religion even though
+there is a [[https://www.emacswiki.org/emacs/ChurchOfEmacs]["Church of Emacs"]] (EmacsWiki)! Huh?! What?!
+#+attr_latex: :width 300px
+#+caption: The real Church: Notre Dame de Paris. Source: Wikipedia.
+[[../img/2_notredame.png]]
 
 * Does it really have to be Emacs?
+#+attr_html: :width 200px
+[[../img/2_carryon.jpg]]
 
 You'll handle it. Keep calm and carry on coding.
 
-If you look around, you'll see a lot of discussion on different
-source code editors and IDEs. Currently [[https://code.visualstudio.com/][Microsoft's Visual Studio
-(VS) Code]] seems to be the most popular contender. However, as one
-developer said:
+If you look around, you'll see a lot of discussion on different source
+code editors and IDEs. Currently [[https://code.visualstudio.com/][Microsoft's Visual Studio (VS) Code]]
+seems to be the most popular contender. However, as one developer
+said:
 
 #+begin_quote
-"One thing that cannot be replaced by any extension in VS code, VIM
-or any other editor: Emacs' Org mode. Org mode is for sure one of
-the most amazing pieces of software I have ever seen or worked
-with. It does things that no other text-based word processor can
-do, even if you are writing complex scientific reports. VS code has
-an extension which brings less than 5% of Org mode functionality,
-tops and that is mostly the code highlighting." ([[https://hadi.timachi.com/2019/12/07/Why_I_switched_from_VScode_to_Emacs][Timachi, 2019]])
+"One thing that cannot be replaced by any extension in VS code, VIM or
+any other editor: Emacs' Org mode. Org mode is for sure one of the
+most amazing pieces of software I have ever seen or worked with. It
+does things that no other text-based word processor can do, even if
+you are writing complex scientific reports. VS code has an extension
+which brings less than 5% of Org mode functionality, tops and that is
+mostly the code highlighting." ([[https://hadi.timachi.com/2019/12/07/Why_I_switched_from_VScode_to_Emacs][Timachi, 2019]])
 #+end_quote
 
 * What about Emacs' famously "steep learning curve" ?
@@ -313,8 +313,8 @@ or mouse + keyboard) but takes getting used to. During the writing
 of this paragraph, I used the following keystrokes (with the
 command behind the keys, which your fingers will learn):
 
-| KEY     | COMMAND                   |
-|---------+---------------------------|
+| KEY     | COMMAND                 |
+|---------+-------------------------|
 | <q RET  | ~org-self-insert-command~ |
 | C-M-\   | ~indent-region~           |
 | M-q     | ~org-fill-paragraph~      |
@@ -337,7 +337,7 @@ improving your *meta skills*[fn:9] in this area.
 - Run the installer - accept all presets.
 - Check out the [[https://www.gnu.org/software/emacs/tour/][guided tour]].
 - Open Emacs, type ~CTRL-h t~ (~C-h t~) and complete the tutorial.
-- Alternatively, check out my new tutorial at GitHub (with videos)
+- Alternatively, check out my [[https://github.com/birkenkrahe/org/blob/master/emacs/tutorial.md][new tutorial]] at GitHub (with videos)
 
 * Download and Installation for MacOS
 
@@ -346,32 +346,29 @@ improving your *meta skills*[fn:9] in this area.
 - Check out the [[https://www.gnu.org/software/emacs/tour/][guided tour]].
 - Open Emacs, type ~CTRL-h t~ (~C-h t~) and complete the tutorial.
 
-  | Note: the next quiz will include material from the Emacs tutorial! |
-
 * Customize GNU Emacs
 
-GNU Emacs is much more than a text editor and an IDE. It's more like
-an operating system inside your operating system. Among the many
-things that Emacs is capable of, we only need one for this class:
-the ability to create and run interactive notebooks.
+- GNU Emacs is much more than a text editor and an IDE. It's more like
+  an operating system inside your operating system. Among the many
+  things that Emacs is capable of, we only need one for this class:
+  the ability to create and run interactive notebooks.
 
-This will give you the power of [[https://jupyter.org/][Jupyter notebooks]] or [[https://colab.research.google.com/][Colaboratory]] on
-your computer, without language limitations, and you can share
-notebooks with anyone, who has Emacs (or Markdown, for reading
-only).
+- This will give you the power of [[https://jupyter.org/][Jupyter notebooks]] or [[https://colab.research.google.com/][Colaboratory]] on
+  your computer, without language limitations, and you can share
+  notebooks with anyone, who has Emacs (or Markdown, for reading
+  only).
 
-The central package for many day to day tasks is ~Org-mode~. Here is
-a set of [[https://orgmode.org/worg/org-tutorials/][Org-mode tutorials]] (with videos) covering many interesting
-applications. Org-mode is especially popular among scientists, and
-among these, physicists (my original tribe), who developed it.
+- The central package for many day to day tasks is ~Org-mode~. Here is a
+  set of [[https://orgmode.org/worg/org-tutorials/][Org-mode tutorials]] (with videos) covering many interesting
+  applications. Org-mode is especially popular among scientists, and
+  among these, physicists (my original tribe), who developed it.
 
-And here is an excellent video tutorial by someone who is also
-getting started with Emacs for the first time like you:
+- And here is an excellent video tutorial by someone who is also
+  getting started with Emacs for the first time like you: [[https://youtu.be/48JlgiBpw_I][The Absolute
+  Beginner's Guide to Emacs]] (System Crafters, 2021) - 1hr11min long -
+  time well invested ([[https://github.com/birkenkrahe/org/blob/master/emacs/emacs_beginner.org][I made some notes]]).
 
-- [[https://youtu.be/48JlgiBpw_I][The Absolute Beginner's Guide to Emacs]] (System Crafters, 2021) -
-  1hr11min long - time well invested ([[https://github.com/birkenkrahe/org/blob/master/emacs/emacs_beginner.org][I made some notes]]).
-
-** Create configuration file
+* Create Emacs configuration file (~.emacs~)
 
 - To create interactive computing notebooks in Emacs, we use the
   [[https://orgmode.org/][Org-mode]] and [[https://orgmode.org/worg/org-contrib/babel/intro.html][Babel]] packages. Both are already installed in your
@@ -383,234 +380,53 @@ getting started with Emacs for the first time like you:
   is actually located on your computer depends on your operating
   system[fn:10].
 
-- Download the configuration file [[https://github.com/birkenkrahe/cc100/blob/main/2_installation/.emacs][from GitHub]] and copy and paste it
-  into a ~.emacs~ file.
+- Download the configuration file [[https://raw.githubusercontent.com/birkenkrahe/org/master/emacs/.emacs][from GitHub]] and copy and paste it
+  into a ~.emacs~ file or save it as ~emacs.txt~ and rename it to ~.emacs~.
 
 - Once you've created the ~.emacs~ file, you can start Emacs and code
   away "literarily". The customizations below are optional. But even
   just by using Emacs as your editor for assignments, you'll become
   quite an expert, [[https://hackernoon.com/8-reasons-why-emacs-is-the-best-text-editor-for-programming-0w4o37ld][almost a "hacker"]] (Wulff, 2021).
 
-** Create sample notebook
+* Create sample notebook
 
-To create a notebook using Org-mode, create an ~.org~ file. Then
-type ~C-c C-,~ and select your chunk from the list. You can also
-abbreviate this by entering ~<s~ on any line.
+- To create a notebook using Org-mode, create an ~.org~ file. Then type
+  ~C-c C-,~ and select your chunk from the list. You can also abbreviate
+  this by entering ~<s~ on any line.
+- You can [[https://orgmode.org/manual/Working-with-Source-Code.html][work with source code]] in Emacs for a number of different
+  languages:
+  1) To run a code chunk as a whole, type ~C-c C-c~. The result will
+     appear immediately below the chunk.[fn:1]
+  2) look at the code in a separate buffer and run them in parts. To
+     open a buffer with the code, type ~C-c '~.
+  3) To print an org-mode file, type ~C-c C-e~ and choose a print format
+     from the list.
 
-Check out [[./babel_c.org]] for examples with C code blocks[fn:11].
+- Running chunks will only work if Emacs can find the respective
+  programs[fn:2], and if a compiler (for C), or an interpreter (for R
+  and SQLite) were installed.
 
-** Layout changes
+- The code block needs to be named as shown. If you want the result
+  and the code shown in the printout, you need to specify ~:exports
+  both~.
 
-You can completely change anything about the way Emacs looks, feels
-and behaves. Here are a few suggestions with code snippets based on
-my own customizations.
+  #+begin_src C :exports both
+    #include <stdio.h>
 
-If you change your ~~/.emacs~ file, you need to evaluate the file
-(~M-x h evaluate-region~) or restart Emacs to see the changes.
+    int main(void) {
+      puts("hello world");
+      return 0;
+    }
+  #+end_src
 
-Emacs Lisp is a fun language to learn, because through Emacs you
-can play around with it and see what it does much more easily than
-with other languages. Here is a [[https://www.gnu.org/software/emacs/manual/html_node/eintr/][complete tutorial for
-non-programmers]]. Lisp (and Emacs Lisp) is a functional programming
-language (like R).
+  In the second version, both the header and the function definition
+  are preset so that you can see the inside of the function only.
 
-*** Customize theme and font
+  #+begin_src C :exports both :includes <stdio.h> :main yes
 
-To change the theme, enter ~M-x custom-themes~. Activate ~Save
-theme settings~ if you want the settings to become permanent. This
-will modify your ~.emacs~ configuration file.
+    puts("hello world");
 
-You can also upload fonts and change fonts. You can do this
-easiest by opening the ~Options~ menu at the top of the Emacs
-screen and selecting ~Set default font~ from the list.
-
-If you don't have the menu bar, enter ~M-x menu-bar-mode~ - this
-will toggle the menu bar, i.e. you can make it appear or disappear
-with this command. If you don't have a mouse, you can open the
-menus with ~<F10>~. I don't tend to use it at all, since one of
-the advantages of Emacs is that everything can be done with the
-keyboard (which is way faster than the mouse).
-
-If you want to get into this for whatever reason, [[https://zzamboni.org/post/beautifying-org-mode-in-emacs/][check this out]]
-(Zamboni, 2018).
-
-** Installing additional packages
-
-There are hundreds of useful packages available for instant
-installation. To see them, enter ~M-x package-list-packages~.
-
-The screenshot shows part of the listing, with ~available~,
-~installed~ (by me), and ~built-in~ (by GNU Emacs) files.
-
-#+attr_latex: :width 400px
-[[../img/2_packages.png]]
-
-To install a package
-* search and find it (forward search with ~C-s~ or backward search
-with ~C-r~)
-* enter ~i~ to mark the package for installation
-* enter ~x~ to install it.
-
-** Presenting in Emacs
-
-I often present in Emacs, especially when I use interactive
-notebooks. I use ~org-slide-tree-mode~ for that ([[https://github.com/takaxp/org-tree-slide][see
-documentation]]). You need to install the package ~org-tree-slide~
-and put the code below into your ~/.emacs~ file.
-
-#+attr_latex: :width 400px
-[[../img/2_orgtreeslide.png]]
-
-#+begin_src emacs-lisp :exports both
-
-  ;; org-tree-slide: https://github.com/takaxp/org-tree-slide
-  ;; to activate: M-x org-tree-slide-mode or <f9> - stop S-<f9>
-  (require 'org-tree-slide)
-  (with-eval-after-load "org-tree-slide"
-    (global-set-key (kbd "<f9>") 'org-tree-slide-mode)
-    (global-set-key (kbd "S-<f9>") 'org-tree-slide-skip-done-toggle)
-    (define-key org-tree-slide-mode-map (kbd "<f8>") 'org-tree-slide-move-previous-tree) ;; move forwards
-    (define-key org-tree-slide-mode-map (kbd "S-<f8>") 'org-tree-slide-move-next-tree)  ;; move backwards
-    )
-  (setq org-image-actual-width nil)
-  (setq org-tree-slide-skip-outline-level 0)
-  (setq org-tree-slide-slide-effect t)
-  (org-tree-slide-simple-profile) ;; no headers
-
-#+end_src
-
-#+RESULTS:
-: simple profile: ON
-
-In the code, ~<f9>~ is used to switch the mode on or off (~SHIFT +
-<f9>~), and ~<f8>~ to move one slide forward or backward (~SHIFT +
-<f8>~). Slide headers have been removed. If you want slide
-headers, comment the last line by putting ~;;~ in front of it like
-this:
-
-#+begin_src emacs-lisp
-
-  ;; (org-tree-slide-simple-profile) ;; no headers
-
-#+end_src
-
-** Definitions and functions
-
-You can use ~M-Q~ to fill a region (wrap the text and cut it off
-after 70 characters, a value set in ~fill-column~). Sometimes it
-is useful to unfill a region (put it on one line, for example to
-copy it into an email). If you put the following definition into
-your ~~/.emacs~ file, you can use ~M-x unfill-region~ to achieve
-that.
-
-#+begin_src emacs-lisp
-
-  ;; unfill region
-  (defun unfill-region (beg end)
-    "Unfill the region, joining text paragraphs into a single
-      logical line.  This is useful, e.g., for use with
-      `visual-line-mode'."
-    (interactive "*r")
-    (let ((fill-column (point-max)))
-      (fill-region beg end)))
-
-#+end_src
-
-#+RESULTS:
-: unfill-region
-
-If you like to bind the function to a key sequence, you can use
-this code - now ~C-M-Q~ will invoke the function:
-
-#+begin_src emacs-lisp
-
-  ;; bind unfill-region to C-M-Q
-  (define-key global-map "\C-\M-Q" 'unfill-region)
-
-#+end_src
-
-#+RESULTS:
-: unfill-region
-
-** Adding images and links to Org-mode files
-
-My lecture scripts and notebooks often contain images and
-links. It is easy to add image and links (internal to Emacs or
-Internet URLs) to an Org-mode file.
-
-Images can be named and given captions. Here is an example with
-figure [[fig:trend]] below. To show/hide images, use ~C-c C-x C-v~
-(~org-toggle-inline-images~). The ~#+ATTR_LATEX:~ line sets the
-display size of the image (both in Emacs and in the HTML export).
-
-#+begin_example
-
-#+CAPTION: Google search trends for popular editors
-#+NAME: fig:trend
-#+ATTR_LATEX: :width 400px
-[[../img/2_trend.png]]
-
-#+end_example
-
-#+CAPTION: Google search trends for popular editors
-#+NAME: fig:trend
-#+ATTR_LATEX: :width 600px
-[[../img/2_trend.png]]
-
-And here is the link to the image - when viewing ~setup.org~ in
-Emacs, you can open links with ~C-c C-o~ (~org-open-at-point~).
-
-https://github.com/birkenkrahe/cc100/raw/main/2_installation/img/trend.png
-
-** Tables
-
-Org-mode has powerful table manipulation capabilities. I don't use
-Excel, I use active tables in Org-mode for my spreadsheet needs
-(e.g. computation of grades). There is too much to learn here - I
-suggest working through this short [[https://orgmode.org/worg/org-tutorials/tables.html][tutorial]]. For using tables as
-spreadsheets, see this short [[https://orgmode.org/worg/org-tutorials/org-spreadsheet-intro.html][tutorial]].
-
-** Export
-
-You can see the different export options for any Emacs buffer with
-~C-c C-e~ (~org-export-dispatch~). This command requires you to
-pick an option and enter the corresponding code in the mini
-buffer - see image.
-
-#+attr_latex: :width 500px
-[[../img/2_export.png]]
-
-However, if an export is successful depends on the availability of
-programs in the background. For example, you need some extras to
-generate a PDF file straight from a LaTeX file. ~.odt~ files are
-Apache [[https://www.openoffice.org/][OpenOffice]] files (XML formatted) that can also be opened in
-Google Docs[fn:12].
-
-What always works is HTML (~.html~) export, and Markdown (~.md~)
-export. Markdown is the standard format for GitHub text
-files. However, to get the markdown export option with ~C-c C-e~
-you need to export once per Emacs session manually by entering ~M-x
-org-export-to-markdown~.
-
-The HTML export is displayed using your default browser and looks
-as shown below for this file. You can print it from the browser if
-you need a paper print version.
-
-#+attr_latex: :width 500px
-[[../img/2_html.png]]
-
-What works really well in HTML are mathematical formulae. This
-LaTeX equation for example only renders well in HTML (see image):
-
-#+begin_quote
-\begin{equation}
- Q^\pi = E[\sum_{\tau=1}^{\infty}
-         \gamma^{\tau-1}r_\tau|s_t = s, a_t = 1]
-\end{equation}
-#+end_quote
-
-#+attr_latex: :width 600px
-[[../img/2_render.png]]
+  #+end_src
 
 * Summary
 
@@ -638,11 +454,6 @@ LaTeX equation for example only renders well in HTML (see image):
 | GNU/Linux        | Free, open source operating system                |
 | Richard Stallman | Creator of the GNU project and Emacs              |
 | Org-mode         | Emacs package for literate programming (and more) |
-
-* What's next
-
-- First C program (revisited)
-- GNU Emacs Org-mode assignment
 
 * References
 - Biggs/Donovan (November 9, 2020). Modern IDEs are magic. Why are
@@ -680,17 +491,10 @@ LaTeX equation for example only renders well in HTML (see image):
 
 * Footnotes
 
-[fn:1]Code::Blocks, CodeLite, Netbeans, Microsoft Visual Studio (VS),
-are all free IDEs for C/C++, with VS being the most popular one right
-now.
+[fn:1]Provided the block has been formatted correctly.
 
-[fn:2] When I began to use GitHub, some students were complaining
-about the extra platform - however, it should be clear by now, that
-Schoology/Canvas cannot substitute for GitHub. The latter is a
-software engineering platform, well suited for computer science
-teaching and code development, the former is a learning management
-system focused on distributing material, creating tests and computing
-grades.
+[fn:2]This is why we changed the Windows ~PATH~ variable during the
+installation of the programs ~R~ and ~GNU gcc~ ([[./setup.org][here]]).
 
 [fn:3] Only Markdown (~.md~) files are rendering in the mobile
 app. Org-mode files (~.org~) do not. Since you have Emacs, feel free
@@ -701,17 +505,8 @@ use the mobile version a lot.
 function ~iwb~ to indent a whole buffer according to the buffer's
 mode - something that can also be done with the key sequence ~C-x h
 C-M-\~ (~mark-whole-buffer + indent-region~).
-
-#+begin_src emacs-lisp
-  ;; re-indenting of whole buffer according to mode
-  (defun iwb ()
-    "indent whole buffer"
-    (interactive)
-    (delete-trailing-whitespace)
-    (indent-region (point-min) (point-max) nil)
-    (untabify (point-min) (point-max))
-    )
-#+end_src
+#+attr_latex: :width 100px
+[[../img/2_iwb.png]]
 
 [fn:5]Emacs Lisp is a Lisp dialect. Lisp was one of the first
 languages used for Artificial Intelligence research (cp. [[https://hci.stanford.edu/~winograd/shrdlu/][SHRDLU]], an
@@ -723,7 +518,7 @@ contenders, along with ~vi~, of the famous editor wars of the UNIX
 culture. UNIX is the "mother" of all operating systems, the systems
 that make computer run and do stuff.
 
-[fn:7](1) Emacs has versions (at the time the screenshot was taken:
+[fn:7] (1) Emacs has versions (at the time the screenshot was taken:
 27.1); (2) Emacs has named "buffers", and you can open several
 simultaneously [the names correspond to Emacs plugins or packages for
 organization (org), Git (magit) and file management (dired); (3) Emacs
@@ -744,17 +539,10 @@ can use them for every new special skill learning project.
 [fn:10]On my Windows machine, ~$HOME~ is ~C:\Users\birkenkrahe\~. On
 my Linux box, it is ~/home/marcus/~.
 
-[fn:11]This link also shows you how to link notebooks. You can set a
-link anywhere (inside Emacs or Internet) with ~C-c C-l~. If the target
-is another file, that file needs to be found (the path must be
-correct), and an anchor with the link name must be put into the file,
-in this case, the link is ~~/.babel.org~, and the anchor is
-~<<babel.org>>~
-
-[fn:12]However, on my Windows 10 PC, WORD refuses to open OpenOffice
+[fn:11]However, on my Windows 10 PC, WORD refuses to open OpenOffice
 files (perhaps because the package is only available as a 32-bit
 version from [[https://www.openoffice.org/][Apache OpenOffice]]?).
 
-[fn:13]The best way is to find the folder in the file explorer and copy
+[fn:12]The best way is to find the folder in the file explorer and copy
 the address as text:
 [[../img/2_address.png]]
