@@ -180,6 +180,12 @@ documents." (ChatGPT)
 
 *How do you prepare for a test?*[fn:2]
 * Week 4 - Emacs tutor 
+#+attr_latex: :width 400px
+[[../img/notre_dame_de_paris.jpg]]
+
+** Emacs & GCC Home Installations
+
+
 ** TODO Emacs tutorial (start in class, finish @home)
 #+attr_latex: :width 400px
 #+caption: GNU gtypist menu (GNU typing tutor)
