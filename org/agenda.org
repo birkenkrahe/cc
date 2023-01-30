@@ -185,6 +185,21 @@ documents." (ChatGPT)
 
 ** Emacs & GCC Home Installations
 
+- There are [[https://github.com/birkenkrahe/org/blob/master/emacs/install.pdf][very short installation instructions on GitHub]] (PDF)
+
+- Today, I will showcase the installations:
+  1) GCC as MinGW on Windows
+  2) Clang on MacOS
+  3) GNU Emacs on Windows and MacOS
+  4) Testing the installation
+
+- The whole process usually won't take more than 15 minutes but I'm
+  open to your questions and issues during installation (share via
+  Zoom).
+
+- There is a much longer lecture with many bells and whistles
+  available (most of which you won't hear from me but it might still
+  be nice to browse through it).
 
 ** TODO Emacs tutorial (start in class, finish @home)
 #+attr_latex: :width 400px

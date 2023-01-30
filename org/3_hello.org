@@ -25,7 +25,7 @@
 * Program structure
 #+attr_latex: :width 300px
 #+caption: main function structure (Collingbourne, 2017)
-[[../img/2_structure.png]]
+[[../img/3_structure.png]]
 
 - All C program statements must be included in a ~main~ function
 
@@ -62,7 +62,7 @@ Org-mode - with a few new /literate programming/ features:
 - The workflow of "tangling" and "weaving"[fn:2] looks like this:
   #+attr_latex: :width 300px
   #+caption: A file is woven into a document or tangled into a source file
-  [[../img/2_cweb.png]]
+  [[../img/3_cweb.png]]
 
   [[https://orgmode.org/manual/Extracting-Source-Code.html][Learn more about extracting source code from Org files.]]
 
@@ -152,7 +152,7 @@ I compiled the ~hello.c~ program on a Linux box - the executable is
 called ~hello.out~. The other binary is ~hello.exe~ compiled on
 Windows. Compare the two executables - what do you notice?
 
-[[../img/2_files.png]]
+[[../img/3_files.png]]
 
 *Question: are these executables portable?*[fn:3]
 
@@ -180,16 +180,16 @@ Windows. Compare the two executables - what do you notice?
 
 - On Windows, ~PowerShell~ works as well as the CMD shell:
   #+attr_latex: :width 300px
-  [[../img/2_powershell.png]]
+  [[../img/3_powershell.png]]
 
 * Syntax highlighting in Emacs
 
 - Notice the slight syntax highlighting difference to an online REPL
   ~repl.it~ [fn:4]:
   #+attr_latex: :width 200px
-  [[../img/2_replit.png]]
+  [[../img/3_replit.png]]
   #+attr_latex: :width 200px
-  [[../img/2_org.png]]
+  [[../img/3_org.png]]
 
 - There is no highlighting standard - you should experiment with
   different themes[fn:5].
@@ -199,7 +199,7 @@ Windows. Compare the two executables - what do you notice?
   go through the minibuffer history with ~M-x M-p~ and ~M-n~:
 
   #+attr_latex: :width 200px
-  [[../img/2_pun.png]]
+  [[../img/3_pun.png]]
 
 * Comments
 
@@ -235,7 +235,7 @@ Save the [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/2_hello_p
 2) understanding and using comments in C
 
    #+attr_latex: :width 200px
-   [[../img/2_practice1.gif]]
+   [[../img/3_practice1.gif]]
 
 * Summary
 
@@ -312,4 +312,4 @@ automatically for future sessions.
 [fn:6]If you always want to have line numbers and highlight the line
 under the cursor, put these lines in your ~.emacs~ file:
  #+attr_latex: :width 100px
- [[../img/2_lisp.png]]
+ [[../img/3_lisp.png]]
