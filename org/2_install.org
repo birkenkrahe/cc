@@ -2,7 +2,6 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 Introduction to programming in C/C++
 #+STARTUP:overview indent hideblocks inlineimages
-#+OPTIONS: toc:1 num:1
 * What are you going to learn?
 
 - Why we don't just get coding
@@ -154,40 +153,20 @@ have inline links, which the Org-files don't have).
   [[../img/2_fsf.png]]
 
 * Install GCC on Windows
-1) Download the installer [[https://sourceforge.net/projects/mingw-w64/][from sourceforge]].
 
-2) Run the installer - accept all presets.
+1)  Download the ~64bit~ installer from ~strawberryperl.com~:
+   ~strawberry-perl-5.32.1.1-64bit.msi.~
 
-3) Add the location of the executable file ~gcc~ to the Windows ~PATH~
-   (you can find it in ~C:\Program Files(x86)\mingw-w64\~):
+2) Run the installer - accept all presets. This program will
+   automatically update the ~PATH~ to ~gcc~.
 
-4) Search for ~PATH~ and open the menu ~System Properties~
-   #+attr_latex: :width 200px
-   #+caption: Setting the PATH
-   [[../img/2_systemproperties.png]]
-
-5) Open the menu ~Environment Variables~, click on the ~PATH~ variable
-   and choose ~Edit~
-   #+attr_latex: :width 200px
-   #+caption: Setting the PATH
-   [[../img/2_path.png]]
-
-   1) Click on ~New~ and paste the path into the empty line. Confirm
-      three times with ~OK~ to close all menus.
-      #+attr_latex: :width 200px
-      #+caption: Setting the PATH
-      [[../img/2_environmentvariable.png]]
-
-   2) To test, search for ~CMD~, open a terminal and enter ~gcc
-      --version~. Close the window.
-      #+attr_latex: :width 300px
-      #+caption: Setting the PATH
-      [[../img/2_gcc.png]]
-
+3) Open a command line terminal and check that installation is
+   complete with ~gcc --version~
+   
 * Install Clang on MacOS
 
-Apple no longer allows GNU tools - instead, you can install the
-free [[https://clang.llvm.org/][Clang]] compiler as part of the [[https://developer.apple.com/documentation/xcode][~Xcode~]] development suite.
+Apple no longer allows GNU tools - instead, you can install the free
+[[https://clang.llvm.org/][Clang]] compiler as part of the [[https://developer.apple.com/documentation/xcode][Xcode]] development suite.
 
 - Check if you already have a C compiler: open a terminal (search
   for ~terminal~ app) and enter ~cc -v~.
@@ -331,21 +310,39 @@ improving your *meta skills*[fn:9] in this area.
 #+caption: GNU Emacs creator, Richard M Stallman (MIT)
 [[../img/2_rms.jpg]]
 
-* Download and Installation for Windows
+* Emacs download and Installation for Windows
 
 - Download GNU Emacs + ESS as a modified version for [[https://vigou3.gitlab.io/emacs-modified-windows/][Windows]].
 - Run the installer - accept all presets.
-- Check out the [[https://www.gnu.org/software/emacs/tour/][guided tour]].
-- Open Emacs, type ~CTRL-h t~ (~C-h t~) and complete the tutorial.
-- Alternatively, check out my [[https://github.com/birkenkrahe/org/blob/master/emacs/tutorial.md][new tutorial]] at GitHub (with videos)
+- Once you're done, you can open Emacs from the desktop with a
+  shortcut. If you also want to open it in the command line terminal
+  as ~emacs -nw~, you need to update the ~PATH~ variable for Windows:
+  1) Find the ~bin~ directory for Emacs in the File explorer - if you
+     followed the standard instructions, it is in ~c:\Program
+     Files\Emacs\emacs-28.2\bin~ - copy this address as text
+  2) search for ~PATH~ in the Windows search bar
+  3) in ~System Properties~, select ~Environment Variables~
+  4) in ~Environment Variables~, select the lower screen, ~System
+     variables~, then select the line with ~PATH~ on it, and select
+     ~Edit...~
+  5) In ~Edit environment variable~, select ~New~
+  6) Paste the address as text on a new line
+  7) Select ~OK~ three times until all screen dialogues are gone.
+  8) Open a Windows command line terminal
+  9) Enter ~emacs -nw~ on the terminal
+  10) If successful, leave Emacs with ~C-x C-c~
 
-* Download and Installation for MacOS
+- Check out my [[https://github.com/birkenkrahe/org/blob/master/emacs/tutorial.md][new tutorial]] at GitHub (with videos)
 
-- Download GNU Emacs + ESS as a modified version for [[https://vigou3.gitlab.io/emacs-modified-macos/][MacOS]].
+* Emacs download and Installation for MacOS
+
+- Download [[https://emacsformacosx.com/][Emacs for MacOS from here]] (currently version 28.2)
 - Run the installer - accept all presets.
-- Check out the [[https://www.gnu.org/software/emacs/tour/][guided tour]].
-- Open Emacs, type ~CTRL-h t~ (~C-h t~) and complete the tutorial.
-
+- Drag the Emacs icon into your Applications icon
+- Ignore the warning
+- In a terminal, type ~emacs --version~ to see if it worked, and start
+  emacs with ~emacs~.
+  
 * Customize GNU Emacs
 
 - GNU Emacs is much more than a text editor and an IDE. It's more like
@@ -388,7 +385,7 @@ improving your *meta skills*[fn:9] in this area.
   just by using Emacs as your editor for assignments, you'll become
   quite an expert, [[https://hackernoon.com/8-reasons-why-emacs-is-the-best-text-editor-for-programming-0w4o37ld][almost a "hacker"]] (Wulff, 2021).
 
-* Create sample notebook
+* Create sample notebook for C
 
 - To create a notebook using Org-mode, create an ~.org~ file. Then type
   ~C-c C-,~ and select your chunk from the list. You can also abbreviate
@@ -419,6 +416,9 @@ improving your *meta skills*[fn:9] in this area.
     }
   #+end_src
 
+  #+RESULTS:
+  : hello world
+
   In the second version, both the header and the function definition
   are preset so that you can see the inside of the function only.
 
@@ -427,6 +427,9 @@ improving your *meta skills*[fn:9] in this area.
     puts("hello world");
 
   #+end_src
+
+  #+RESULTS:
+  : hello world
 
 * Summary
 
