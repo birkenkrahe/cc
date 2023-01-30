@@ -9,18 +9,18 @@
   chapter 2, C Fundamentals - see also [[https://docs.google.com/presentation/d/14qvh00aVb_R09_hrQY0EDEK_JLAkgZ0S/edit?usp=sharing&ouid=102963037093118135110&rtpof=true&sd=true][slides (GDrive)]].
 
 - There is a separate Org-mode file available for practice. Download
-  ~2_hello_practice.org~ from GitHub: [[https://tinyurl.com/yckuhh2f][tinyurl.com/yckuhh2f]]
+  ~3_hello_practice.org~ from GitHub.
 
 - Open a command line terminal and change (~cd~) to the Downloads
   directory
 
-- Open the file in Emacs with ~emacs -nw --file 2_hello_practice.org~
+- Open the file in Emacs with ~emacs -nw --file 3_hello_practice.org~
 
 - When you leave class without having completed the file, save a
   copy to GDrive as a backup and/or to work on it from home
 
 - When you've completed the file, upload it to Canvas where you'll
-  find a "Class practice" assignment named ~2_hello_practice.org~.
+  find a "Class practice" assignment named ~3_hello_practice.org~.
 
 * Program structure
 #+attr_latex: :width 300px
