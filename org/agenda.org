@@ -198,8 +198,8 @@ documents." (ChatGPT)
   Zoom).
 
 - There is a much longer lecture with many bells and whistles
-  available - HTML or PDF (most of which you won't hear from me but it might still
-  be nice to browse through it).
+  available as [[https://github.com/birkenkrahe/cc/blob/piHome/org/2_install.org][HTML]] or [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/2_install.pdf][PDF]] (most of which you won't hear from me but
+  it might still be nice to browse through it).
 
 ** TODO Emacs tutorial (start in class, finish @home)
 #+attr_latex: :width 400px
