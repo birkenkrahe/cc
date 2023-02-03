@@ -13,7 +13,7 @@ Image source: https://xkcd.com/378/
 #+caption: Emacs logo https://www.gnu.org/software/emacs/
 [[../img/0_gnuemacs.png]]
 
-- This is a makeshift Emacs tutorial for absolute beginners to enable
+- Thisc is a makeshift Emacs tutorial for absolute beginners to enable
   you to do the most basic things with Emacs as your text editor.
 
 - For the best gain from this tutorial, open Emacs on the terminal
@@ -353,7 +353,7 @@ be using them plenty later on:
    #+caption: Inserting a time stamp in the Org-file with M-x time-stamp
    [[../img/tutorial.png]]
 
-9) Save the file with ~C-x C-s~ and submit it in Canvas.
+9) Save the file with ~C-x C-s~ and [[https://lyon.instructure.com/courses/1014/assignments/6479][submit it in Canvas]].
 
 * Getting help
 

@@ -1,7 +1,7 @@
 #+TITLE: Agenda - Introduction to programming in C++
 #+AUTHOR: Marcus Birkenkrahe
 #+SUBTITLE: Lyon College, Spring 2023
-#+STARTUP:overview hideblocks indent
+#+STARTUP:overview hideblocks indent inlineimages
 #+OPTIONS: toc:nil num:nil ^:nil
 #+attr_html: :width 400px
 [[../img/cover.jpg]]
@@ -183,7 +183,7 @@ documents." (ChatGPT)
 #+attr_latex: :width 400px
 [[../img/notre_dame_de_paris.jpg]]
 
-** Emacs & GCC Home Installations
+** DONE Emacs & GCC Home Installations
 
 - There are [[https://github.com/birkenkrahe/org/blob/master/emacs/install.pdf][very short installation instructions on GitHub]] (PDF)
 
@@ -201,6 +201,27 @@ documents." (ChatGPT)
   available as [[https://github.com/birkenkrahe/cc/blob/piHome/org/2_install.org][HTML]] or [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/2_install.pdf][PDF]] (most of which you won't hear from me but
   it might still be nice to browse through it).
 
+** TODO Test 2 preview (more next week)
+
+*This is a test for the upcoming online test.*
+
+1) [ ] What's the architecture of a computer?
+   #+begin_quote
+   CPU + Volatile memory + Non-volatile memory
+   #+end_quote
+2) [ ] How are programs written and processed?
+   #+begin_quote
+    1. *WRITE* source code in an editor (NVM = harddisk)
+    2. *COMPILE* source code to machine code (RAM = memory)
+    3. *RUN* program (CPU = Central Processing Unit)
+    4. *DISPLAY* results (RAM = Memory)
+    5. *SAVE* result (NVM = harddisk)
+   #+end_quote
+3) [ ] How do you name an executable file when compiling it with ~gcc~?
+   #+begin_quote sh
+   $ gcc file.c -o hello # to name the executable file "hello"
+   #+end_quote
+
 ** TODO Emacs tutorial (start in class, finish @home)
 #+attr_latex: :width 400px
 #+caption: GNU gtypist menu (GNU typing tutor)
@@ -212,34 +233,10 @@ documents." (ChatGPT)
 - [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][Emacs + Org-mode tutorial]]
 - [[https://linuxreviews.org/GNU_typing_tutor][GNU typing tutor (Linux or WSL)]]
 
-** TODO Hello World all over again
-
-** TODO Online test 2: intro to C, hello Emacs
-** TODO [[https://blog.rwhitedwarf.com/post/use_emacs_for_r/][Using Emacs for R]]
-#+attr_latex: :width 400px
-[[../img/learning-editors.jpg]]
-
-** TODO Pros and cons: script vs. shell
-
-** TODO Test preview
-
-*This is a test for the upcoming online test.*
-
-1) [ ] How can you run a code block in an Org-mode file?
-2) [ ] Which header arguments does a code block need?
-3) [ ] The code block name allows you to link to the code block
-4) [ ] Where are Emacs error messages shown?
-5) [ ] What does the Emacs modeline show?
-6) [ ] How can you save an Emacs buffer?
-7) [ ] How can you tangle an Emacs Org-mode code block?
-8) [ ] What's the architecture of a computer?
-9) [ ] How are programs written and processed?
-10) [ ] What commands split the Emacs window?
-11) [ ] How do you name an executable file when compiling it with ~gcc~?
-12) [ ] How does a minimal C program look like?
-
 * Week 5
+** TODO Hello World all over again
 ** TODO Programming assignment 1: your height in light-years
+** NEW Online test 2: intro to C, hello Emacs
 * References
 
 Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].
