@@ -201,13 +201,15 @@ documents." (ChatGPT)
   available as [[https://github.com/birkenkrahe/cc/blob/piHome/org/2_install.org][HTML]] or [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/2_install.pdf][PDF]] (most of which you won't hear from me but
   it might still be nice to browse through it).
 
-** TODO Test 2 preview (more next week)
+** IN PROGRESS Test 2 preview (more next week)
 
 *This is a test for the upcoming online test.*
 
 1) [ ] What's the architecture of a computer?
    #+begin_quote
-   CPU + Volatile memory + Non-volatile memory
+   1) CPU (e.g. ~x86-64~, ~ARM~)
+   2) Volatile memory (RAM, e.g. ~4GB RAM~)
+   3) Non-volatile memory (NVM, e.g. ~500GB SSD~)
    #+end_quote
 2) [ ] How are programs written and processed?
    #+begin_quote
@@ -232,6 +234,16 @@ documents." (ChatGPT)
 - [[https://youtu.be/VhsEMIjAaEk][Video emacstutor Part 2]]
 - [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][Emacs + Org-mode tutorial]]
 - [[https://linuxreviews.org/GNU_typing_tutor][GNU typing tutor (Linux or WSL)]]
+
+Done:
+1) Downloaded a text file
+2) Opened a no window Emacs on that file
+3) Learnt how to insert files into a buffer
+4) Understood editing buffer, the modeline and the minibuffer
+5) Learnt how to auto-fill lines
+6) Learnt how to add column mode
+7) Learnt how to move forward, backward in the file
+8) Learnt how to save a file
 
 * Week 5
 ** TODO Hello World all over again
