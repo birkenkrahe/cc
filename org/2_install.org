@@ -79,8 +79,8 @@ have inline links, which the Org-files don't have).
 
 * GitHub - What is it?
 
-- Software development platform
-- Built around Git by Linus Torvalds
+- Largest software development platform ([[https://github.blog/2023-01-25-100-million-developers-and-counting/][2023: 100 mio developers]])
+- Built around the version control system Git by Linus Torvalds
 - Bought by Microsoft in 2018
 - AI support (e.g. [[https://copilot.github.com/][GitHub Copilot]])
 
