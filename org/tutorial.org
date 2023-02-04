@@ -301,6 +301,11 @@ You can split windows any way you like.
 13) Using ~C-x b~, return to the ~tutor.txt~ buffer and delete all other
     windows with ~C-x 1~.
 
+14) An attractive alternative to ~Dired~ is the ~treemacs~ package. It
+    looks like this on my PC (and also works for the terminal Emacs):
+    #+attr_latex: :width 400px
+    [[../img/t_treemacs.png]]
+
 * Open shell, write, export, time stamp file
 
 To close, there are a few special environments worth noting - you'll
