@@ -179,7 +179,7 @@ documents." (ChatGPT)
 [[../img/preptest.jpg]]
 
 *How do you prepare for a test?*[fn:2]
-* Week 4 - Emacs tutor
+* Week 4 - Installation: GCC, Emacs
 #+attr_latex: :width 400px
 [[../img/notre_dame_de_paris.jpg]]
 
@@ -245,13 +245,22 @@ documents." (ChatGPT)
 8) Learnt how to move forward, backward in buffer (~C-f~, ~C-b~, ~M-f~, ~M-b~)
 9) Learnt how to save a buffer to file (~C-x C-s~)
 
-* Week 5
+* Week 5 - Emacs tutor
 ** Test 2 preview II
 
 1) [ ] Where are Emacs error messages shown?
 2) [ ] What does the Emacs modeline show?
 3) [ ] How can you save an Emacs buffer? (how)
 4) [ ] What do these abbreviations mean: ~<TAB>~ ~<RET>~ ~C-x~ ~M-q~
+** IN PROGRESS Continue with the Emacs tutorial
+#+attr_latex: :width 400px
+[[../img/recover.png]]
+
+- File recovery? Run ~recover-file~.
+  
+- Let's get on with the tutorial
+
+- Finish it at home by Wednesday and upload it
 
 ** TODO Hello World all over again
 ** TODO Programming assignment 1: your height in light-years
