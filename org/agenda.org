@@ -246,12 +246,33 @@ documents." (ChatGPT)
 9) Learnt how to save a buffer to file (~C-x C-s~)
 
 * Week 5 - Emacs tutor
-** Test 2 preview II
+** Test 2 review II
 
-1) [ ] Where are Emacs error messages shown?
-2) [ ] What does the Emacs modeline show?
-3) [ ] How can you save an Emacs buffer? (how)
-4) [ ] What do these abbreviations mean: ~<TAB>~ ~<RET>~ ~C-x~ ~M-q~
+1) [X] Where are Emacs error messages shown?
+
+   Emacs minibuffer/echo area & ~*Messages* system buffer
+
+2) [X] What does the Emacs modeline show?
+
+   - Line number (column number optional) e.g. ~L1~
+   - Type or mode of buffer (e.g. ~Text~
+   - Name of buffer e.g. ~*Messages*~
+   - Upon save, file name (same place)
+   - If the file has been changed (~**~) or not (~--~)
+   - How much of the file you can see / where you are
+   
+3) [X] How can you save an Emacs buffer? (how)
+
+   - ~C-x C-s~
+   - ~M-x save-buffer~
+   
+4) [X] What do these abbreviations mean: ~<TAB>~ ~<RET>~ ~C-x~ ~M-q~
+
+   - TAB key
+   - RET = RETURN ENTER
+   - C-x  CTRL + x (STRG + x)
+   - M-q  ALT + q (Mac: Options + q)
+
 ** IN PROGRESS Continue with the Emacs tutorial
 #+attr_latex: :width 400px
 [[../img/recover.png]]
@@ -263,7 +284,7 @@ documents." (ChatGPT)
 - Finish it at home by Wednesday and upload it
 
 ** TODO Hello World all over again
-** TODO Programming assignment 1: your height in light-years
+** TODO Assignment 2: your height in light-years
 ** NEW Online test 2: intro to C, hello Emacs
 * References
 
