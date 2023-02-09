@@ -3,13 +3,16 @@
 #+SUBTITLE:CSC100 Introduction to programming in C/C++ Spring 2023
 #+DATE: Time-stamp: <2023-01-27 17:24:49 Birkenkrahe>
 #+STARTUP: overview hideblocks indent inlineimages
+#+attr_latex: :width 400px
+[[../img/helloworld.png]]
 * README
 
 - This script summarizes and adds to the treatment by King (2008),
   chapter 2, C Fundamentals - see also [[https://docs.google.com/presentation/d/14qvh00aVb_R09_hrQY0EDEK_JLAkgZ0S/edit?usp=sharing&ouid=102963037093118135110&rtpof=true&sd=true][slides (GDrive)]].
 
-- There is a separate Org-mode file available for practice. Download
-  ~3_hello_practice.org~ from GitHub.
+- There is an Org-mode file available for practice. Download
+  ~3_hello_practice.org~ as a raw file from GitHub
+  ([[https://tinyurl.com/y32yd3ax][tinyurl.com/y32yd3ax]])
 
 - Open a command line terminal and change (~cd~) to the Downloads
   directory
@@ -33,6 +36,15 @@
 
 - There can be /pre-processor/ /directives/ - ~#include~ or ~#define~.
 
+- ~main()~ is similar to ~f(x)~ in mathematics - () means "no argument"
+
+- ~printf()~ prints its argument: ~"hello world"~ which is a 'string'
+
+- ~\n~ means "go to the next line" - 'escape character'
+
+- ~;~ ends every command - the computer waits for the next one!
+
+- The computer (aka compiler) ignores "white space"
 * "What a Tangled Web We Weave..."
 
 #+begin_quote
@@ -92,7 +104,7 @@ The program could also have been written much simpler:
 - In this code block, the function ~main~ is missing the ~void~ argument,
   and the ~int~ (indicating the type of variable returned - an integer).
   #+NAME: hello2
-  #+begin_src C :exports both :tangle ../src/hello2.c :main no
+  #+begin_src C :exports both :tangle hello.c :main no
     #include <stdio.h>
     main()
     {
@@ -111,7 +123,7 @@ The program could also have been written much simpler:
       main()
       ^~~~
   #+end_example
-
+  
 * Hello World Version 3 (long)
 
 The program could also have been written more complicated:
@@ -174,7 +186,7 @@ Windows. Compare the two executables - what do you notice?
 | ~M-x eshell~           | start a Linux shell in an Emacs buffer     |
 | ~gcc hello.c -o hello~ | compile program and create executable      |
 | ~ls -l hello*~         | list files - you should see ~hello~, ~hello.c~ |
-| ~/.hello~              | execute program                            |
+| ~./hello~              | execute program                            |
 
 - The /eshell/ is an Emacs Lisp simulation of a Linux shell (~bash~)
 
@@ -216,16 +228,22 @@ in the editor will tip you off:
 
 #+end_src
 
+#+RESULTS:
+: My fleas
+
 Let's fix this:
 
 #+begin_src C :exports both :main yes :includes stdio.h
 
   printf("My "); /* forgot to close this comment */
   printf("cat ");
-  printf("has ");  /* so it ends here */
+  printf("has no ");  /* so it ends here */
   printf("fleas");
 
 #+end_src
+
+#+RESULTS:
+: My cat has no fleas
 
 * Let's practice!
 
