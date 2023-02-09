@@ -245,8 +245,8 @@ documents." (ChatGPT)
 8) Learnt how to move forward, backward in buffer (~C-f~, ~C-b~, ~M-f~, ~M-b~)
 9) Learnt how to save a buffer to file (~C-x C-s~)
 
-* Week 5 - Emacs tutor
-** Test 2 review II
+* Week 5 - Emacs tutor & Hello C
+** DONE Test 2 review II
 
 1) [X] Where are Emacs error messages shown?
 
@@ -268,12 +268,12 @@ documents." (ChatGPT)
    
 4) [X] What do these abbreviations mean: ~<TAB>~ ~<RET>~ ~C-x~ ~M-q~
 
-   - TAB key
-   - RET = RETURN ENTER
-   - C-x  CTRL + x (STRG + x)
-   - M-q  ALT + q (Mac: Options + q)
-
-** IN PROGRESS Continue with the Emacs tutorial
+   - ~<TAB>~ = TAB key
+   - ~<RET>~ = RETURN or ENTER key
+   - ~C-x~ = CTRL + x (STRG + x on a German keyboard)
+   - ~M-q~ = ALT + q (Mac: Options + q)
+     
+** DONE Continue with the Emacs tutorial
 #+attr_latex: :width 400px
 [[../img/recover.png]]
 
@@ -283,9 +283,24 @@ documents." (ChatGPT)
 
 - Finish it at home by Wednesday and upload it
 
-** TODO Hello World all over again
+** DONE Hello World all over again
+** TODO Test 2 review III
+
+  - [ ] Which commands split the Emacs window?
+  - [ ] Which command saves the Emacs buffer?
+  - [ ] What kind of file is ~.emacs~?
+  - [ ] 
+  - [ ] What does "tangling" of an Org-mode file mean?
+  - [ ] How does a minimal C program look like?
+  - [ ] Can you explain this line of code?
+    #+begin_example C
+      printf("Hello again\n");
+    #+end_example
+  - [ ] What do ~#~, ~{~ and ~/*~ in source code mean?
+    
+** TODO Online test 2: intro to C, hello Emacs
+* Week 6 - C fundamentals
 ** TODO Assignment 2: your height in light-years
-** NEW Online test 2: intro to C, hello Emacs
 * References
 
 Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].

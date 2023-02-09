@@ -94,9 +94,6 @@
        return 0;
      }
    #+end_src
-
-   #+RESULTS: pgm:comment2
-   : 1
   
 * TODO Upload completed file to Canvas
 
