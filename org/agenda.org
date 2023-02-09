@@ -245,29 +245,22 @@ documents." (ChatGPT)
 8) Learnt how to move forward, backward in buffer (~C-f~, ~C-b~, ~M-f~, ~M-b~)
 9) Learnt how to save a buffer to file (~C-x C-s~)
 
-* Week 5 - Emacs tutor & Hello C
+* Week 5 - Emacs tutor & Hello C, again
 ** DONE Test 2 review II
 
 1) [X] Where are Emacs error messages shown?
-
-   Emacs minibuffer/echo area & ~*Messages* system buffer
-
+   - Emacs minibuffer/echo area & ~*Messages* system buffer
 2) [X] What does the Emacs modeline show?
-
    - Line number (column number optional) e.g. ~L1~
    - Type or mode of buffer (e.g. ~Text~
    - Name of buffer e.g. ~*Messages*~
    - Upon save, file name (same place)
    - If the file has been changed (~**~) or not (~--~)
    - How much of the file you can see / where you are
-   
 3) [X] How can you save an Emacs buffer? (how)
-
    - ~C-x C-s~
    - ~M-x save-buffer~
-   
 4) [X] What do these abbreviations mean: ~<TAB>~ ~<RET>~ ~C-x~ ~M-q~
-
    - ~<TAB>~ = TAB key
    - ~<RET>~ = RETURN or ENTER key
    - ~C-x~ = CTRL + x (STRG + x on a German keyboard)
@@ -286,19 +279,81 @@ documents." (ChatGPT)
 ** DONE Hello World all over again
 ** TODO Test 2 review III
 
-  - [ ] Which commands split the Emacs window?
-  - [ ] Which command saves the Emacs buffer?
-  - [ ] What kind of file is ~.emacs~?
-  - [ ] 
-  - [ ] What does "tangling" of an Org-mode file mean?
-  - [ ] How does a minimal C program look like?
-  - [ ] Can you explain this line of code?
-    #+begin_example C
-      printf("Hello again\n");
-    #+end_example
-  - [ ] What do ~#~, ~{~ and ~/*~ in source code mean?
+1) [ ] Emacs? Org-mode? C-x C-s? Code block? eshell? gcc? -Wall? PATH?
+   #+begin_notes
+   - Emacs: a text editor, and a literate pgm environment
+   - Org-mode: an Emacs package to customize Emacs' behavior
+   - ~C-x C-s~: a keybinding to save an Emacs buffer to file
+   - A code block: source code in an Emacs Org-mode buffer, between
+     the ~#+begin_src~ and ~#+end_src~ meta data
+   - The ~eshell~: a (Linux-type) command line that runs in Emacs
+   - ~gcc~: the GNU C compiler
+   - ~-Wall~: a ~gcc~ option to generate all possible warnings
+   - The ~PATH~: the locations that the computer searches for
+     executable programs (like ~emacs~ or ~gcc~)
+   #+end_notes
+2) [ ] Which commands un/split the Emacs window?
+   #+begin_quote
+   - ~C-x 2~ to split in 2 horizontal windows
+   - ~C-x 3~ to split in 2 vertical windows
+   - ~C-x 1~ to remove all but the current window
+   - ~C-x 0~ to remove the current window
+   #+end_quote
+3) [ ] What kind of file is ~.emacs~?
+   #+begin_quote
+    A (hidden) configuration file to customize Emacs, (e.g. fonts,
+    themes, functions and packages loaded, etc. - the function ~M-x
+    custom-themes~ e.g. allows you to select a theme that is then
+    stored in ~.emacs~ for the next time you open Emacs.
+   #+end_quote
+4) [ ] What does "tangling" of an Org-mode file mean?
+   #+begin_quote
+    Extracting the source code, e.g. a ~.c~ file from a ~C~ code block
+   #+end_quote
+5) [ ] How does a minimal C program look like?
+   #+begin_quote
+   - Header (e.g. ~#include <stdio.h>~)
+   - ~main~ function (delimited by ~{...}~)
+   - Code inside ~main~ function (e.g. ~printf~)
+   #+end_quote
+6) [ ] Can you explain this line of code?
+   #+begin_example C
+     printf("Hello again\n");
+   #+end_example
+   #+begin_quote
+   - ~printf~ is a function to print its arguments (formatted)
+   - ~()~ is the boundary for the argument
+   - ~"Hello again\n"~ is a string (sequence of characters)
+   - ~\n~ is an escape character to move to a new line
+   #+end_quote
+7) [ ] What do ~#~, ~{~ and ~/*~ in source code mean?
+   #+begin_quote
+   - ~#~ tells the computer to pre-process something, e.g. ~#include~
+   - ~{..}~ code delimiters, e.g. ~main() {...}~
+   - ~/*...*/~ comment sign, e.g. any information not for the computer
+   #+end_quote
+8) [ ] What is the advantage of using C code blocks in Emacs?
+   #+begin_quote
+   - Fast and convenient: you can run code directly, change and run
+     it again without having to save the file, go to the shell,
+     compile and run it - as if C was an interactive language like
+     Python
+   - You can put the standard stuff like ~main~ and ~#include~ into the
+     meta header of the code block and focus on the code
+   #+end_quote
+   #+begin_src C :main yes :includes <stdio.h>
+     char hello[] = "Hello again!";
+     printf("%s\n",hello);
+   #+end_src
+9) [ ] What is computer programming good used for?
+   #+attr_latex: :width 400px
+   [[../img/programming.png]]
+10) [ ] 
     
-** TODO Online test 2: intro to C, hello Emacs
+** TODO Online test 2: intro to C, hello Emacs (Canvas)
+** READ Home assignment: programming purpose (Canvas)
+
+  
 * Week 6 - C fundamentals
 ** TODO Assignment 2: your height in light-years
 * References
