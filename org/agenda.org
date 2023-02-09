@@ -345,14 +345,20 @@ documents." (ChatGPT)
      char hello[] = "Hello again!";
      printf("%s\n",hello);
    #+end_src
-9) [ ] What is computer programming good used for?
+9) [ ] What is computer programming used for?
    #+attr_latex: :width 400px
    [[../img/programming.png]]
+   #+begin_quote
+   Things that programming cannot be used for (so far):
+   1) replace humans (it can only replace some of us)
+   2) improve humans (it can be used to support only)
+   3) talk like humans (it cannot really talk like us)
+   #+end_quote
 10) [ ] 
+
     
 ** TODO Online test 2: intro to C, hello Emacs (Canvas)
 ** READ Home assignment: programming purpose (Canvas)
-
   
 * Week 6 - C fundamentals
 ** TODO Assignment 2: your height in light-years
