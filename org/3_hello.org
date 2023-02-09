@@ -1,4 +1,4 @@
-#+TITLE:C Basics - Hello world program
+ #+TITLE:C Basics - Hello world program
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 Introduction to programming in C/C++ Spring 2023
 #+DATE: Time-stamp: <2023-01-27 17:24:49 Birkenkrahe>
