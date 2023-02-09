@@ -280,7 +280,7 @@ documents." (ChatGPT)
 ** TODO Test 2 review III
 
 1) [ ] Emacs? Org-mode? C-x C-s? Code block? eshell? gcc? -Wall? PATH?
-   #+begin_notes
+   #+begin_quote
    - Emacs: a text editor, and a literate pgm environment
    - Org-mode: an Emacs package to customize Emacs' behavior
    - ~C-x C-s~: a keybinding to save an Emacs buffer to file
@@ -291,7 +291,7 @@ documents." (ChatGPT)
    - ~-Wall~: a ~gcc~ option to generate all possible warnings
    - The ~PATH~: the locations that the computer searches for
      executable programs (like ~emacs~ or ~gcc~)
-   #+end_notes
+   #+end_quote
 2) [ ] Which commands un/split the Emacs window?
    #+begin_quote
    - ~C-x 2~ to split in 2 horizontal windows
