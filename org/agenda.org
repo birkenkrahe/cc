@@ -246,6 +246,10 @@ documents." (ChatGPT)
 9) Learnt how to save a buffer to file (~C-x C-s~)
 
 * Week 5 - Emacs tutor & Hello C, again
+#+attr_latex: :width 400px
+#+caption: Sandro Botticelli (1470)
+[[../img/botticelli.jpg]]
+
 ** DONE Test 2 review II
 
 1) [X] Where are Emacs error messages shown?
@@ -355,12 +359,16 @@ documents." (ChatGPT)
    #+end_quote
 10) [ ] 
 
-    
 ** TODO Online test 2: intro to C, hello Emacs (Canvas)
-** READ Home assignment: programming purpose (Canvas)
-  
+
 * Week 6 - C fundamentals
+#+attr_latex: :width 400px
+#+caption: Elephant (Source: Wikipedia)
+[[../img/elephant.png]]
+
+** TODO Variables (lecture, practice and exercises)
 ** TODO Assignment 2: your height in light-years
+
 * References
 
 Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].
