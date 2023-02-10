@@ -292,13 +292,12 @@ documents." (ChatGPT)
    - The ~PATH~: the locations that the computer searches for
      executable programs (like ~emacs~ or ~gcc~)
    #+end_quote
-2) [ ] Which commands un/split the Emacs window?
-   #+begin_quote
-   - ~C-x 2~ to split in 2 horizontal windows
-   - ~C-x 3~ to split in 2 vertical windows
-   - ~C-x 1~ to remove all but the current window
-   - ~C-x 0~ to remove the current window
-   #+end_quote
+2) [ ] How do you navigate in Emacs:
+   - to the top/bottom of a buffer?
+   - to the start or end of a line?
+   - to the next or previous page?
+   - to the next or previous line?
+   - how do you exit Emacs?
 3) [ ] What kind of file is ~.emacs~?
    #+begin_quote
     A (hidden) configuration file to customize Emacs, (e.g. fonts,

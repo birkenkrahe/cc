@@ -316,7 +316,7 @@ be using them plenty later on:
    file. You can also compile files in this shell.
 
 2) Return to ~tutor.txt~. Write the file to an Org-mode file ~tutor.org~
-   with ~C-x C-w~: at the prompt in the minibuffer enter this name. The
+   with ~C-x C-w~ at the prompt in the minibuffer enter this name. The
    mode line will now list ~tutor.org~ and the mode ~(Org)~ instead of
    ~tutor.txt~ and the mode ~(Text)~.
    #+attr_latex: :width 400px
