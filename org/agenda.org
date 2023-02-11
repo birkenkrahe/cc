@@ -283,7 +283,7 @@ documents." (ChatGPT)
 ** DONE Hello World all over again
 ** TODO Test 2 review III
 
-1) [ ] Emacs? Org-mode? C-x C-s? Code block? eshell? gcc? -Wall? PATH?
+1) [X] Emacs? Org-mode? C-x C-s? Code block? eshell? gcc? -Wall? PATH?
    #+begin_quote
    - Emacs: a text editor, and a literate pgm environment
    - Org-mode: an Emacs package to customize Emacs' behavior
@@ -296,30 +296,31 @@ documents." (ChatGPT)
    - The ~PATH~: the locations that the computer searches for
      executable programs (like ~emacs~ or ~gcc~)
    #+end_quote
-2) [ ] How do you navigate in Emacs:
-   - to the top/bottom of a buffer?
-   - to the start or end of a line?
-   - to the next or previous page?
-   - to the next or previous line?
-   - how do you exit Emacs?
-3) [ ] What kind of file is ~.emacs~?
+2) [X] How do you navigate in Emacs:
+   - to the top/bottom of a buffer? M-<  M->
+   - to the start or end of a line? C-a C-e
+   - to the next or previous page? C-v M-v
+   - to the next or previous line? C-n C-p
+   - how do you exit Emacs? C-x C-c
+3) [X] What kind of file is ~.emacs~?
    #+begin_quote
     A (hidden) configuration file to customize Emacs, (e.g. fonts,
     themes, functions and packages loaded, etc. - the function ~M-x
     custom-themes~ e.g. allows you to select a theme that is then
     stored in ~.emacs~ for the next time you open Emacs.
    #+end_quote
-4) [ ] What does "tangling" of an Org-mode file mean?
+4) [X] What does "tangling" of an Org-mode file mean?
    #+begin_quote
     Extracting the source code, e.g. a ~.c~ file from a ~C~ code block
    #+end_quote
-5) [ ] How does a minimal C program look like?
+5) [X] How does a minimal C program look like?
    #+begin_quote
+   - You only need this: ~main~ function (delimited by ~{...}~)
+     Optional:
    - Header (e.g. ~#include <stdio.h>~)
-   - ~main~ function (delimited by ~{...}~)
    - Code inside ~main~ function (e.g. ~printf~)
    #+end_quote
-6) [ ] Can you explain this line of code?
+6) [X] Can you explain this line of code?
    #+begin_example C
      printf("Hello again\n");
    #+end_example
@@ -329,26 +330,13 @@ documents." (ChatGPT)
    - ~"Hello again\n"~ is a string (sequence of characters)
    - ~\n~ is an escape character to move to a new line
    #+end_quote
-7) [ ] What do ~#~, ~{~ and ~/*~ in source code mean?
+7) [X] What do ~#~, ~{~ and ~/*~ in C source code mean?
    #+begin_quote
    - ~#~ tells the computer to pre-process something, e.g. ~#include~
    - ~{..}~ code delimiters, e.g. ~main() {...}~
    - ~/*...*/~ comment sign, e.g. any information not for the computer
    #+end_quote
-8) [ ] What is the advantage of using C code blocks in Emacs?
-   #+begin_quote
-   - Fast and convenient: you can run code directly, change and run
-     it again without having to save the file, go to the shell,
-     compile and run it - as if C was an interactive language like
-     Python
-   - You can put the standard stuff like ~main~ and ~#include~ into the
-     meta header of the code block and focus on the code
-   #+end_quote
-   #+begin_src C :main yes :includes <stdio.h>
-     char hello[] = "Hello again!";
-     printf("%s\n",hello);
-   #+end_src
-9) [ ] What is computer programming used for?
+8) [X] What is computer programming used for?
    #+attr_latex: :width 400px
    [[../img/programming.png]]
    #+begin_quote
@@ -357,7 +345,7 @@ documents." (ChatGPT)
    2) improve humans (it can be used to support only)
    3) talk like humans (it cannot really talk like us)
    #+end_quote
-10) [ ] 
+9) [X] Do you need the ~PATH~ when you install software? Why (not)?
 
 ** TODO Online test 2: intro to C, hello Emacs (Canvas)
 
