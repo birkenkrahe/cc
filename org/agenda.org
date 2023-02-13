@@ -354,6 +354,7 @@ documents." (ChatGPT)
 #+caption: Elephant (Source: Wikipedia)
 [[../img/elephant.png]]
 
+** NEXT Practice ~hello, world~ (file in GitHub)
 ** TODO Variables (lecture, practice and exercises)
 ** TODO Assignment 2: your height in light-years
 
