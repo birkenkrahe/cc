@@ -1,7 +1,7 @@
 #+TITLE: C FUNDAMENTALS
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 Introduction to programming in C/C++ Summer 2022
-#+DATE: <2022-05-26 Thu>
+#+DATE: Time-stamp: <2023-02-15 11:08:49 Birkenkrahe>
 #+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :tangle yes
 #+STARTUP: overview hideblocks indent inlineimages
 #+OPTIONS: toc:1 ^:nil
@@ -14,13 +14,21 @@
 - This script summarizes and adds to the treatment by King (2008),
   chapter 2, C Fundamentals - see also [[https://docs.google.com/presentation/d/14qvh00aVb_R09_hrQY0EDEK_JLAkgZ0S/edit?usp=sharing&ouid=102963037093118135110&rtpof=true&sd=true][slides (GDrive)]].
 
-- To *code along during the lecture* using Emacs and Org-mode,
-  download it from here and open it in Emacs with ~emacs --file~:
-  [[https://tinyurl.com/4pe74kf9][tinyurl.com/4pe74kf9]].
+- To *code along during the lecture* using Emacs and Org-mode, download
+  *the raw file* [[https://github.com/birkenkrahe/cc/tree/piHome/org][from GitHub]] and open it in Emacs with:
+  #+begin_example sh
+    emacs --file 4_variables_codealong.org
+  #+end_example
 
 - There is a separate Org-mode file available for *practice after the
-  lecture*. Download it from here and open it in Emacs with ~emacs
-  --file~: [[https://tinyurl.com/y44epjdc][tinyurl.com/y44epjdc]].
+  lecture*. Download *the raw file* [[https://github.com/birkenkrahe/cc/tree/piHome/org][from GitHub]] and open it in Emacs 
+  #+begin_example sh
+    emacs --file 4_variables_practice.org
+  #+end_example
+
+- Recall that Windows will try to download Org-mode files as ~.txt~ -
+  you can see that in Emacs because /syntax highlighting/ will not
+  work. You then have to write the file to a ~.org~ file with ~C-x C-w~.
 
 * VARIABLE TYPES AND DECLARATIONS
 
