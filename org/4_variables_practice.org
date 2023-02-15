@@ -1,4 +1,4 @@
-#+TITLE: C Fundamentals practice
+#+TITLE: C FUNDAMENTALS PRACTICE - VARIABLES
 #+AUTHOR: [yourName] (pledged)
 #+PROPERTY: header-args:C :main yes :includes <stdio.h> :results output :exports both :comments both
 * READ README
