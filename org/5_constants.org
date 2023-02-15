@@ -31,7 +31,7 @@
 * Constants
 ** Macro definition with ~#define~
 
-   * If you don't want a value to change, you can define a
+   - If you don't want a value to change, you can define a
      ~constant~. There are different ways of doing that. The code in
      [[define]] shows a declarative constant definition for the
      pre-processor that blindly substitutes the value everywhere in
@@ -46,7 +46,7 @@
      #+RESULTS: define
      : PI is 3.141593
 
-   * [X] Can you see what mistake I made in [[constant_err_1]]? 
+   - [X] Can you see what mistake I made in [[constant_err_1]]? 
      
      #+name: constant_err_1
      #+begin_example C
@@ -59,7 +59,7 @@
      ~PI~ everywhere - the program will not compile.
      #+end_quote
    
-   * [ ] Can you see what went wrong in [[constant_err_2]] ? If you don't
+   - [ ] Can you see what went wrong in [[constant_err_2]] ? If you don't
      see it at once, check the compiler error output!
 
      #+name: constant_err_2
@@ -68,11 +68,11 @@
        printf("PI is %f\n", PI);
      #+end_example
 
-   * It's easy to make mistakes with user-defined constants. For one
+   - It's easy to make mistakes with user-defined constants. For one
      thing, "constants" declared with ~#define~ can be redefined (so
      they aren't really constant at all).
 
-   * [ ] The program [[redefined]] demonstrates how a constant declared
+   - [ ] The program [[redefined]] demonstrates how a constant declared
      with ~#define~ can be redefined later with a second ~#define~
      declaration. 
 
@@ -91,7 +91,7 @@
    
 ** Library definitions with ~#include~
 
-   * Since mathematical constants are so important in scientific
+   - Since mathematical constants are so important in scientific
      computing, there is a library that contains them, ~math.h~. In
      [[math]], it is included at the start to give us the value of Pi as
      the constant ~M_PI~ with much greater precision than before.
@@ -106,17 +106,17 @@
      : PI is 3.141593
      : PI is 3.1415926535897931
 
-   * If you write source code outside of Emacs Org-mode, you have to
+   - If you write source code outside of Emacs Org-mode, you have to
      include this library file explicitly like this:
 
      #+begin_example C
        #include <math.h>
      #+end_example
 
-   * Here is more information on [[https://www.w3schools.in/c-tutorial/c-header-files/][C header files]] and on how ~#include~
+   - Here is more information on [[https://www.w3schools.in/c-tutorial/c-header-files/][C header files]] and on how ~#include~
      works.
 
-   * In Linux, ~math.h~ and the other header files sit in
+   - In Linux, ~math.h~ and the other header files sit in
      ~/usr/include/~. The screenshot shows the math constant section
      of ~math.h~.
 
@@ -124,7 +124,7 @@
      #+caption: Mathematical constants in /usr/include/math.h
      [[./img/math.png]]
 
-   * [ ] Where is ~math.h~ in Windows[fn:13]? Where in MacOS? Find the
+   - [ ] Where is ~math.h~ in Windows[fn:13]? Where in MacOS? Find the
      file, open and look at it in Emacs (the file is read-only).
 
      #+begin_src C
@@ -138,7 +138,7 @@
    
 ** Type definition with ~const~
 
-   * Modern C has the ~const~ identifier to protect constants. [[const]]
+   - Modern C has the ~const~ identifier to protect constants. [[const]]
      shows an example. Here, ~double~ is a higher precision floating
      point number type.
 
@@ -156,7 +156,7 @@
      #+RESULTS: const
      : Tax on revenue 200.00 is 35.00
 
-   * [ ] What happens if you try to redefine the constant ~taxrate~
+   - [ ] What happens if you try to redefine the constant ~taxrate~
      after the type declaration? Modify [[const]] accordingly and run it.
 
      #+name: const_err
@@ -173,14 +173,14 @@
 
 * Reading input
 
-  * Before you can print output with ~printf~, you need to tell the
+  - Before you can print output with ~printf~, you need to tell the
     computer, which format it should prepare for.
 
-  * Just like ~printf~, the input function ~scanf~ needs to know what
+  - Just like ~printf~, the input function ~scanf~ needs to know what
     format the input data will come in, otherwise it will print
     nonsense (or rather, memory fragments from God knows where).
 
-  * The following statement reads an ~int~ value and stores it in the
+  - The following statement reads an ~int~ value and stores it in the
     variable ~i~.[fn:14]. The input comes from the file ~./data/input~.
 
     #+name: iscan
@@ -195,7 +195,7 @@
     : Enter an integer!
     : You entered 5
 
-  * To input a floating-point (~float~) variable, you need to specify
+  - To input a floating-point (~float~) variable, you need to specify
     the format with ~%f~ both in the ~scanf~ and in the ~printf~
     statement. We'll learn more about format specifiers soon.
   
@@ -205,29 +205,29 @@
    (The code blocks in this section are all silent - will give no
    output - but because they're only snippets, they will not compile.)
 
-   * Use upper case letters for CONSTANTS
+   - Use upper case letters for CONSTANTS
      #+begin_src C :results silent
        const double TAXRATE;
      #+end_src
 
-   * Use lower case letters for variables
+   - Use lower case letters for variables
      #+begin_src C :results silent
        int tax;
      #+end_src
 
-   * Use lower case letters for function names
+   - Use lower case letters for function names
      #+begin_src C :results silent
        hello();
      #+end_src
 
-   * If names consist of more than one word, separate with ~_~ or
+   - If names consist of more than one word, separate with ~_~ or
      insert capital letters:
      #+begin_src C :results silent
        hello_world();
        helloWorld();
      #+end_src
 
-   * Name according to function! In [[naming_example]], both functions are
+   - Name according to function! In [[naming_example]], both functions are
      identical from the point of view of the compiler, but one can be
      understood, the other one cannot.
      #+name: naming_example
@@ -250,16 +250,16 @@
 
 ** Naming rules
 
-   * What about rules? The compiler will tell you if one of your names
+   - What about rules? The compiler will tell you if one of your names
      is a mistake! However, why waste the time, and the rules are
      interesting, too, at least syntactically, to a nerd.
 
-   * Names are sensitive towards spelling and capitalization:
+   - Names are sensitive towards spelling and capitalization:
      ~helloWorld~ is different from ~HELLOWORLD~ or
      ~Helloworld~. Confusingly, you could use all three in the same
      program, and the compiler would distinguish them.
 
-   * Names cannot begin with a number, and they may not contain
+   - Names cannot begin with a number, and they may not contain
      dashes/minus signs. These are all illegal:
      #+begin_example
        10times  get-net-char
@@ -269,13 +269,13 @@
        times10    get_next_char
      #+end_example
 
-   * There is no limit to the length of an identifier, so this name,
+   - There is no limit to the length of an identifier, so this name,
      presumably by a German programmer, is okay:
      #+begin_example
      Voreingenommenheit_bedeutet_bias_auf_Deutsch
      #+end_example
 
-   * The keywords in the table have special significance to the
+   - The keywords in the table have special significance to the
      compiler and cannot be used as identifiers:
 
      | auto       | enum    | restrict | unsigned | break  | extern   |
@@ -285,12 +285,12 @@
      | _Imaginary | default | union    | struct   | do     | int      |
      | switch     | double  | long     | typedef  | else   | register |
 
-   * Your turn: name some illegal identifiers and see what the
+   - Your turn: name some illegal identifiers and see what the
      compiler says!
 
 * Program Layout
 
-   * You can think of a program statement as a series of tokens[fn:15]:
+   - You can think of a program statement as a series of tokens[fn:15]:
 
      #+name: tokenization
      #+begin_example
@@ -308,10 +308,10 @@
      | 6 | punctuation    | function call ends                   |
      | 7 | punctuation    | statement closure                    |
 
-   * You can have any amount of white (empty) space between program
+   - You can have any amount of white (empty) space between program
      tokens (this is not so for all programming languages[fn:16]).
 
-   * [ ] As an example, here is a version of ~dweight.c~ that works just
+   - [ ] As an example, here is a version of ~dweight.c~ that works just
      as well, on one line, with almost all whitespace deleted. Only in
      one place, the space is needed. Can you see where?
 
@@ -325,7 +325,7 @@
      | Volume      | (cubic  | inches):  | 960 |
      | Dimensional | weight  | (pounds): |   6 |
 
-   * Another exception are the preprocessor directives - they need to
+   - Another exception are the preprocessor directives - they need to
      be on a line of their own[fn:17].
 
      #+name: preprocessor
@@ -334,7 +334,7 @@
        #define  CONSTANT 5
      #+end_src
 
-   * You can divide statements over any number of lines as long as you
+   - You can divide statements over any number of lines as long as you
      don't divide keywords or tokens. This works:
 
      #+begin_src C
@@ -352,7 +352,7 @@
      #+RESULTS:
      : height 5
 
-   * But this does not:
+   - But this does not:
 
      #+begin_example C 
        int
@@ -371,12 +371,12 @@
      - The ~printf~ function is not recognized
      - The string literal is not complete
 
-   * Good practice:
+   - Good practice:
      - Space between tokens makes identification easier
      - Indentation makes nesting easier to spot
      - Blank lines can divide a program into logical units
 
-   * [ ] Practice: improve the layout of this program ([[https://drive.google.com/file/d/1FSc4gQVBf6f62qiAsJ81rGdHHkf5Tff2/view?usp=sharing][get it from
+   - [ ] Practice: improve the layout of this program ([[https://drive.google.com/file/d/1FSc4gQVBf6f62qiAsJ81rGdHHkf5Tff2/view?usp=sharing][get it from
      GDrive]]), then run it.
 
      #+name: layout
@@ -409,13 +409,13 @@
     
 * Summary
 
-  * C programs must be compiled and linked
-  * Programs consist of directives, functions, and statements
-  * C directives begin with a hash mark (~#~)
-  * C statements end with a semicolon (~;~)
-  * C functions begin and end with parentheses ~{~ and ~}~
-  * C programs should be readable
-  * Input and output has to be formatted correctly
+  - C programs must be compiled and linked
+  - Programs consist of directives, functions, and statements
+  - C directives begin with a hash mark (~#~)
+  - C statements end with a semicolon (~;~)
+  - C functions begin and end with parentheses ~{~ and ~}~
+  - C programs should be readable
+  - Input and output has to be formatted correctly
 
 * Code summary
 
@@ -469,9 +469,10 @@
   | ~const~            | Constant identifier, e.g. ~const double PI = 3.14;~         |
 
 * References
-  * Collingbourne (2019). The Little Book of C (Rev. 1.2). Dark Neon.
-  * King (2008). C Programming - A Modern Approach. Norton. [[http://knking.com/books/c2/index.html][Online:
-    knking.com]].
+
+  - Collingbourne (2019). The Little Book of C (Rev. 1.2). Dark Neon.
+
+  - King (2008). C Programming. Norton. [[http://knking.com/books/c2/index.html][URL: knking.com]].
 
 * Footnotes
 
