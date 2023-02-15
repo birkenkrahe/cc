@@ -1,4 +1,4 @@
-#+TITLE:C Basics
+#+TITLE:C FUNDAMENTALS - CONSTANTS
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 Introduction to programming in C/C++ Summer 2022
 #+DATE: <2022-05-26 Thu>

@@ -1,4 +1,4 @@
-#+TITLE: C FUNDAMENTALS
+#+TITLE: C FUNDAMENTALS - VARIABLES
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 Introduction to programming in C/C++ Summer 2022
 #+DATE: Time-stamp: <2023-02-15 11:08:49 Birkenkrahe>
@@ -9,6 +9,7 @@
 [[../img/4_foundation.png]]
 * README
 #+attr_latex: :width 400px
+#+caption: Raw file to code along in GitHub
 [[../img/4_practice.png]]
 
 - This script summarizes and adds to the treatment by King (2008),
@@ -104,7 +105,7 @@
     profit = 2150;  // Don't do this!
   #+end_src
 
-- [ ] Variables with values can be used to compute other values:
+- [X] Variables with values can be used to compute other values:
   #+begin_src C :results silent
     int height, length, width, volume;
 
@@ -114,7 +115,7 @@
     volume = height * length * width;
   #+end_src
 
-- [ ] How many things does this last little program have to do[fn:5]?
+- [X] How many things does this last little program have to do[fn:5]?
 
 - You can also initiate and declare several variables at once. Here,
   the ~volume~ from before is computed inside ~printf~:
