@@ -349,15 +349,35 @@ documents." (ChatGPT)
 
 ** TODO Online test 2: intro to C, hello Emacs (Canvas)
 
-* Week 6 - C fundamentals
+* Week 6 - C fundamentals: variables
 #+attr_latex: :width 400px
 #+caption: Elephant (Source: Wikipedia)
 [[../img/elephant.png]]
 
-** CANCELLED Practice ~hello, world~ (file in GitHub)
-** TODO Variables (lecture, practice and exercises)
-** TODO Assignment 2: your height in light-years
+** Review - variables:
 
+- [X] Declaring variables to the PC means "give me memory"
+- [X] To declare floating point numbers, add ~f~: ~1.5f~
+- [X] Example command: ~int x;~ declares ~x~ to be ~integer~
+- [X] Assign a value to the declared variable: ~x=8;~
+- [X] Printing with the ~printf~ function
+- [X] ~printf("hello world");~ to print a string
+- [X] To print ~x=8;~ use ~printf("%d\n",x)~
+- [X] To print floating point numbers: ~%f~
+
+#+begin_src C :main yes :includes <stdio.h> :results output
+  int x=8; float y=3.14;
+  printf("This is my number %d\n",x);
+  printf("This is my other number %f\n",y);
+#+end_src
+
+** DONE Practice ~hello, world~ (file in GitHub)
+** IN PROGRESS Variables (lecture + practice)
+** TODO New test coming soon (deadline 24 Feb)
+** TODO Don't forget to upload completed practice files
+
+* Week 7 - C fundamentals: constants and I/O
+** TODO Assignment 2: your height in light-years
 * References
 
 Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].

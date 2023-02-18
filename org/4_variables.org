@@ -259,9 +259,6 @@
     printf("The dimensional weight is %d\n",weight); // print result
   #+end_src
 
-  #+RESULTS: dweight
-  : The dimensional weight is 6
-
 - [ ] Now for the final program. I have set it up so that this can be
   tangled as a file ~dweight.c~:
   #+begin_src C :results output :tangle dweight.c
@@ -276,10 +273,15 @@
     weight = (volume + 165) / 166;
 
     // print results
-    printf("Dimensions: %dx%dx%d\n", length, width, height);
+    printf("Dimensions: %d times %d times %d\n", length, width, height);
     printf("Volume (cubic inches): %d\n", volume);
     printf("Dimensional weight (pounds): %d\n", weight);
   #+end_src
+
+  #+RESULTS:
+  : Dimensions: 12 times 10 times 8
+  : Volume (cubic inches): 960
+  : Dimensional weight (pounds): 6
 
 * LET'S PRACTICE!
 

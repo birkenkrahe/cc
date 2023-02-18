@@ -22,7 +22,7 @@
    - When you leave class without having completed the file, save a
     copy to GDrive as a backup and/or to work on it from home
 
-  - When you've completed the file, upload it to Canvasx
+  - When you've completed the file, upload it to Canvas
     
 * TODO Identify yourself
 
