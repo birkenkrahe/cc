@@ -160,7 +160,6 @@ documents." (ChatGPT)
 [[../img/1_ccpp.png]]
 
 ** [[https://lyon.instructure.com/courses/1014/assignments/6701/edit?quiz_lti][Test 1]] (Online, Monday 23 January 3-3.15 pm)
-** Test 1 review (in class)
 ** [[https://lyon.instructure.com/courses/1014/assignments/6463][Canvas file upload]] (~first.org~)
 ** [[https://lyon.instructure.com/courses/1014/discussion_topics/2070][Week 2 Session summary and test preparation]]
 ** Introduction to C
@@ -250,7 +249,7 @@ documents." (ChatGPT)
 #+caption: Sandro Botticelli (1470)
 [[../img/botticelli.jpg]]
 
-** DONE Test 2 review II
+** DONE Test 2 preview II
 
 1) [X] Where are Emacs error messages shown?
    - Emacs minibuffer/echo area & ~*Messages* system buffer
@@ -356,14 +355,14 @@ documents." (ChatGPT)
 
 ** Review - variables:
 
-- [X] Declaring variables to the PC means "give me memory"
-- [X] To declare floating point numbers, add ~f~: ~1.5f~
-- [X] Example command: ~int x;~ declares ~x~ to be ~integer~
-- [X] Assign a value to the declared variable: ~x=8;~
-- [X] Printing with the ~printf~ function
-- [X] ~printf("hello world");~ to print a string
-- [X] To print ~x=8;~ use ~printf("%d\n",x)~
-- [X] To print floating point numbers: ~%f~
+1. [X] Declaring variables to the PC means "give me memory"
+2. [X] To declare floating point numbers, add ~f~: ~1.5f~
+3. [X] Example command: ~int x;~ declares ~x~ to be ~integer~
+4. [X] Assign a value to the declared variable: ~x=8;~
+5. [X] Printing with the ~printf~ function
+6. [X] ~printf("hello world");~ to print a string
+7. [X] To print ~x=8;~ use ~printf("%d\n",x)~
+8. [X] To print floating point numbers: ~%f~
 
 #+begin_src C :main yes :includes <stdio.h> :results output
   int x=8; float y=3.14;
@@ -377,6 +376,8 @@ documents." (ChatGPT)
 ** TODO Don't forget to upload completed practice files
 
 * Week 7 - C fundamentals: constants and I/O
+** TODO PRACTICE variable declarations, assignment, formatting
+** TODO Constants, input, naming and program layout
 ** TODO Assignment 2: your height in light-years
 * References
 

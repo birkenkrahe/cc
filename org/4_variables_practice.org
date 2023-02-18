@@ -5,21 +5,10 @@
 
   - This file is a practice file for C fundamentals.
 
-  - You will learn how to:
-    1) understand and change *syntax highlighting*
-    2) understand and use *comments* in C
-    3) type, declare and initialize variables
-    4) format printout and fix formatting errors
-    5) read and store input from the command line
-    6) name identifiers correctly
-    7) structure programs efficiently
-
-  - Time: approx. 30-60 min.
-
   - When you're done with a section move the cursor on the section
     heading and type ~S-<right>~ (or SHIFT+<right-arrow>).
 
-   - When you leave class without having completed the file, save a
+  - When you leave class without having completed the file, save a
     copy to GDrive as a backup and/or to work on it from home
 
   - When you've completed the file, upload it to Canvas
@@ -170,7 +159,7 @@
     printf("Speed of light (m/s): c = %f\n", c);
     printf("Euler number: e = %d\n", e);
   #+end_src
-
+  
 * Footnotes
 
 [fn:1]With ~:results silent~ in the header, the Org-mode code block will
