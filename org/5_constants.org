@@ -1,11 +1,11 @@
 #+TITLE:C FUNDAMENTALS - CONSTANTS
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 Introduction to programming in C/C++ Summer 2022
-#+DATE: <2022-05-26 Thu>
+#+DATE: Time-stamp: <2023-02-18 14:05:42 Birkenkrahe>
 #+STARTUP: overview hideblocks indent
 #+OPTIONS: toc:1 ^:nil
 :PROPERTIES:
-#+PROPERTY: header-args:C :main yes 
+#+PROPERTY: header-args:C :main yes
 #+PROPERTY: header-args:C :includes <stdio.h>
 #+PROPERTY: header-args:C :exports both
 #+PROPERTY: header-args:C :results output
@@ -17,405 +17,409 @@
 :END:
 * README
 
-  - This script summarizes and adds to the treatment by King (2008),
-    chapter 2, C Fundamentals - see also [[https://docs.google.com/presentation/d/14qvh00aVb_R09_hrQY0EDEK_JLAkgZ0S/edit?usp=sharing&ouid=102963037093118135110&rtpof=true&sd=true][slides (GDrive)]].
+- This script summarizes and adds to the treatment by King (2008),
+  chapter 2, C Fundamentals - see also [[https://docs.google.com/presentation/d/14qvh00aVb_R09_hrQY0EDEK_JLAkgZ0S/edit?usp=sharing&ouid=102963037093118135110&rtpof=true&sd=true][slides (GDrive)]].
 
-  - There is a separate Org-mode file available for practice. Download
-    [[https://raw.githubusercontent.com/birkenkrahe/cc101/piHome/3_fundamentals/org/practice.org][practice.org]] using ~wget~ from GitHub as ~practice3.org~:
+- To *code along during the lecture* using Emacs and Org-mode, download
+  *the raw file* [[https://github.com/birkenkrahe/cc/tree/piHome/org][from GitHub]] and open it in Emacs with:
+  #+begin_example sh
+    emacs --file 5_constants_codealong.org
+  #+end_example
 
-    #+name: ex:wget
-    #+begin_example sh
-    wget tinyurl.com/yckuhh2f -O practice3.org -o log
-    #+end_example
-      
+- There is a separate Org-mode file available for *practice after the
+  lecture*. Download *the raw file* [[https://github.com/birkenkrahe/cc/tree/piHome/org][from GitHub]] and open it in Emacs
+  #+begin_example sh
+    emacs --file 5_constants_practice.org
+  #+end_example
+
 * Constants
-** Macro definition with ~#define~
+* Macro definition with ~#define~
 
-   - If you don't want a value to change, you can define a
-     ~constant~. There are different ways of doing that. The code in
-     [[define]] shows a declarative constant definition for the
-     pre-processor that blindly substitutes the value everywhere in
-     the program. This is also called a *macro definition*.
+- If you don't want a value to change, you can define a
+  ~constant~. There are different ways of doing that. The code in
+  [[define]] shows a declarative constant definition for the
+  pre-processor that blindly substitutes the value everywhere in
+  the program. This is also called a *macro definition*.
 
-     #+name: define
-     #+begin_src C :main yes :includes <stdio.h>
-       #define PI 3.141593
-       printf("PI is %f\n",PI);
-     #+end_src
+  #+name: define
+  #+begin_src C :main yes :includes <stdio.h>
+    #define PI 3.141593
+    printf("PI is %f\n",PI);
+  #+end_src
 
-     #+RESULTS: define
-     : PI is 3.141593
+  #+RESULTS: define
+  : PI is 3.141593
 
-   - [X] Can you see what mistake I made in [[constant_err_1]]? 
-     
-     #+name: constant_err_1
-     #+begin_example C
-       #define PI = 3.141593
-       printf("PI is %f\n", PI);
-     #+end_example
+- [X] Can you see what mistake I made in [[constant_err_1]]?
 
-     #+begin_quote Answer
-     Instead of "~3.141593~", the expression "~= 3.141593~" is substituted for
-     ~PI~ everywhere - the program will not compile.
-     #+end_quote
-   
-   - [ ] Can you see what went wrong in [[constant_err_2]] ? If you don't
-     see it at once, check the compiler error output!
+  #+name: constant_err_1
+  #+begin_example C
+    #define PI = 3.141593
+    printf("PI is %f\n", PI);
+  #+end_example
 
-     #+name: constant_err_2
-     #+begin_example C
-       #define PI 3.141593;
-       printf("PI is %f\n", PI);
-     #+end_example
+  #+begin_quote Answer
+  Instead of "~3.141593~", the expression "~= 3.141593~" is substituted for
+  ~PI~ everywhere - the program will not compile.
+  #+end_quote
 
-   - It's easy to make mistakes with user-defined constants. For one
-     thing, "constants" declared with ~#define~ can be redefined (so
-     they aren't really constant at all).
+- [ ] Can you see what went wrong in [[constant_err_2]] ? If you don't
+  see it at once, check the compiler error output!
 
-   - [ ] The program [[redefined]] demonstrates how a constant declared
-     with ~#define~ can be redefined later with a second ~#define~
-     declaration. 
+  #+name: constant_err_2
+  #+begin_example C
+    #define PI 3.141593;
+    printf("PI is %f\n", PI);
+  #+end_example
 
-     #+name: redefined
-     #+begin_src C :exports both :results output
-       #define WERT 1.0
-       printf("Constant is %.2f\n", WERT);
+- It's easy to make mistakes with user-defined constants. For one
+  thing, "constants" declared with ~#define~ can be redefined (so
+  they aren't really constant at all).
 
-       #define WERT 2.0
-       printf("Constant is %.2f\n", WERT);
-     #+end_src
+- [ ] The program [[redefined]] demonstrates how a constant declared
+  with ~#define~ can be redefined later with a second ~#define~
+  declaration.
 
-     #+RESULTS: redefined
-     : Constant is 1.00
-     : Constant is 2.00
-   
-** Library definitions with ~#include~
+  #+name: redefined
+  #+begin_src C :exports both :results output
+    #define WERT 1.0
+    printf("Constant is %.2f\n", WERT);
 
-   - Since mathematical constants are so important in scientific
-     computing, there is a library that contains them, ~math.h~. In
-     [[math]], it is included at the start to give us the value of Pi as
-     the constant ~M_PI~ with much greater precision than before.
+    #define WERT 2.0
+    printf("Constant is %.2f\n", WERT);
+  #+end_src
 
-     #+name: math
-     #+begin_src C :includes <math.h> :exports both :results output
-       printf("PI is %f\n",M_PI);
-       printf("PI is %.16f\n",M_PI);
-     #+end_src
+  #+RESULTS: redefined
+  : Constant is 1.00
+  : Constant is 2.00
 
-     #+RESULTS: math
-     : PI is 3.141593
-     : PI is 3.1415926535897931
+* Library definitions with ~#include~
 
-   - If you write source code outside of Emacs Org-mode, you have to
-     include this library file explicitly like this:
+- Since mathematical constants are so important in scientific
+  computing, there is a library that contains them, ~math.h~. In
+  [[math]], it is included at the start to give us the value of Pi as
+  the constant ~M_PI~ with much greater precision than before.
 
-     #+begin_example C
-       #include <math.h>
-     #+end_example
+  #+name: math
+  #+begin_src C :includes <math.h> :exports both :results output
+    printf("PI is %f\n",M_PI);
+    printf("PI is %.16f\n",M_PI);
+  #+end_src
 
-   - Here is more information on [[https://www.w3schools.in/c-tutorial/c-header-files/][C header files]] and on how ~#include~
-     works.
+  #+RESULTS: math
+  : PI is 3.141593
+  : PI is 3.1415926535897931
 
-   - In Linux, ~math.h~ and the other header files sit in
-     ~/usr/include/~. The screenshot shows the math constant section
-     of ~math.h~.
+- If you write source code outside of Emacs Org-mode, you have to
+  include this library file explicitly like this:
 
-     #+attr_html: :width 500px
-     #+caption: Mathematical constants in /usr/include/math.h
-     [[./img/math.png]]
+  #+begin_example C
+    #include <math.h>
+  #+end_example
 
-   - [ ] Where is ~math.h~ in Windows[fn:13]? Where in MacOS? Find the
-     file, open and look at it in Emacs (the file is read-only).
+- Here is more information on [[https://www.w3schools.in/c-tutorial/c-header-files/][C header files]] and on how ~#include~
+  works.
 
-     #+begin_src C
-       #include <math.h>
-       #define e M_E
-       printf("%.16f\n", e);
-     #+end_src
+- In Linux, ~math.h~ and the other header files sit in
+  ~/usr/include/~. The screenshot shows the math constant section
+  of ~math.h~.
 
-     #+RESULTS:
-     : 2.718281828459045
-   
-** Type definition with ~const~
+  #+attr_html: :width 500px
+  #+caption: Mathematical constants in /usr/include/math.h
+  [[./img/math.png]]
 
-   - Modern C has the ~const~ identifier to protect constants. [[const]]
-     shows an example. Here, ~double~ is a higher precision floating
-     point number type.
+- [ ] Where is ~math.h~ in Windows[fn:13]? Where in MacOS? Find the
+  file, open and look at it in Emacs (the file is read-only).
 
-     #+name: const
-     #+begin_src C
-       const double TAXRATE_CONST = 0.175f;
-       double revenue = 200.0f;
-       double tax;
+  #+begin_src C
+    #include <math.h>
+    #define e M_E
+    printf("%.16f\n", e);
+  #+end_src
 
-       tax = revenue * TAXRATE_CONST;
+  #+RESULTS:
+  : 2.718281828459045
 
-       printf("Tax on revenue %.2f is %.2f", revenue, tax);
-     #+end_src
+* Type definition with ~const~
 
-     #+RESULTS: const
-     : Tax on revenue 200.00 is 35.00
+- Modern C has the ~const~ identifier to protect constants. [[const]]
+  shows an example. Here, ~double~ is a higher precision floating
+  point number type.
 
-   - [ ] What happens if you try to redefine the constant ~taxrate~
-     after the type declaration? Modify [[const]] accordingly and run it.
+  #+name: const
+  #+begin_src C
+    const double TAXRATE_CONST = 0.175f;
+    double revenue = 200.0f;
+    double tax;
 
-     #+name: const_err
-     #+begin_example C
-       const double TAXRATE_CONST = 0.175f;
-       double revenue = 200.0f;
-       double tax;
+    tax = revenue * TAXRATE_CONST;
 
-       TAXRATE_CONST = 0.2f;
-       tax = revenue * TAXRATE_CONST;
+    printf("Tax on revenue %.2f is %.2f", revenue, tax);
+  #+end_src
 
-       printf("Tax on revenue %.2f is %.2f", revenue, tax);
-     #+end_example
+  #+RESULTS: const
+  : Tax on revenue 200.00 is 35.00
+
+- [ ] What happens if you try to redefine the constant ~taxrate~
+  after the type declaration? Modify [[const]] accordingly and run it.
+
+  #+name: const_err
+  #+begin_example C
+    const double TAXRATE_CONST = 0.175f;
+    double revenue = 200.0f;
+    double tax;
+
+    TAXRATE_CONST = 0.2f;
+    tax = revenue * TAXRATE_CONST;
+
+    printf("Tax on revenue %.2f is %.2f", revenue, tax);
+  #+end_example
 
 * Reading input
 
-  - Before you can print output with ~printf~, you need to tell the
-    computer, which format it should prepare for.
+- Before you can print output with ~printf~, you need to tell the
+  computer, which format it should prepare for.
 
-  - Just like ~printf~, the input function ~scanf~ needs to know what
-    format the input data will come in, otherwise it will print
-    nonsense (or rather, memory fragments from God knows where).
+- Just like ~printf~, the input function ~scanf~ needs to know what
+  format the input data will come in, otherwise it will print
+  nonsense (or rather, memory fragments from God knows where).
 
-  - The following statement reads an ~int~ value and stores it in the
-    variable ~i~.[fn:14]. The input comes from the file ~./data/input~.
+- The following statement reads an ~int~ value and stores it in the
+  variable ~i~.[fn:14]. The input comes from the file ~./data/input~.
 
-    #+name: iscan
-    #+begin_src C :tangle iscan.c :cmdline < ./data/input
-      int i;
-      puts("Enter an integer!");
-      scanf("%d", &i);
-      printf("You entered %d\n", i);
-    #+end_src
+  #+name: iscan
+  #+begin_src C :tangle iscan.c :cmdline < ./data/input
+    int i;
+    puts("Enter an integer!");
+    scanf("%d", &i);
+    printf("You entered %d\n", i);
+  #+end_src
 
-    #+RESULTS: iscan
-    : Enter an integer!
-    : You entered 5
+  #+RESULTS: iscan
+  : Enter an integer!
+  : You entered 5
 
-  - To input a floating-point (~float~) variable, you need to specify
-    the format with ~%f~ both in the ~scanf~ and in the ~printf~
-    statement. We'll learn more about format specifiers soon.
-  
+- To input a floating-point (~float~) variable, you need to specify
+  the format with ~%f~ both in the ~scanf~ and in the ~printf~
+  statement. We'll learn more about format specifiers soon.
+
 * Naming identifiers
 ** Naming conventions
 
-   (The code blocks in this section are all silent - will give no
-   output - but because they're only snippets, they will not compile.)
+(The code blocks in this section are all silent - will give no
+output - but because they're only snippets, they will not compile.)
 
-   - Use upper case letters for CONSTANTS
-     #+begin_src C :results silent
-       const double TAXRATE;
-     #+end_src
+- Use upper case letters for CONSTANTS
+  #+begin_src C :results silent
+    const double TAXRATE;
+  #+end_src
 
-   - Use lower case letters for variables
-     #+begin_src C :results silent
-       int tax;
-     #+end_src
+- Use lower case letters for variables
+  #+begin_src C :results silent
+    int tax;
+  #+end_src
 
-   - Use lower case letters for function names
-     #+begin_src C :results silent
-       hello();
-     #+end_src
+- Use lower case letters for function names
+  #+begin_src C :results silent
+    hello();
+  #+end_src
 
-   - If names consist of more than one word, separate with ~_~ or
-     insert capital letters:
-     #+begin_src C :results silent
-       hello_world();
-       helloWorld();
-     #+end_src
+- If names consist of more than one word, separate with ~_~ or
+  insert capital letters:
+  #+begin_src C :results silent
+    hello_world();
+    helloWorld();
+  #+end_src
 
-   - Name according to function! In [[naming_example]], both functions are
-     identical from the point of view of the compiler, but one can be
-     understood, the other one cannot.
-     #+name: naming_example
-     #+begin_src C :results silent
-       const int SERVICE_CHARGE;
-       int v;
+- Name according to function! In [[naming_example]], both functions are
+  identical from the point of view of the compiler, but one can be
+  understood, the other one cannot.
+  #+name: naming_example
+  #+begin_src C :results silent
+    const int SERVICE_CHARGE;
+    int v;
 
-       int myfunc(int z) {
-         int t;
-         t = z + v;
-         return t;
-       }
+    int myfunc(int z) {
+      int t;
+      t = z + v;
+      return t;
+    }
 
-       int calculate_grand_total(int subtotal) {
-         int grand_total;
-         grand_total = subtotal + SERVICE_CHARGE;
-         return grand_total;
-       }
-     #+end_src
+    int calculate_grand_total(int subtotal) {
+      int grand_total;
+      grand_total = subtotal + SERVICE_CHARGE;
+      return grand_total;
+    }
+  #+end_src
 
 ** Naming rules
 
-   - What about rules? The compiler will tell you if one of your names
-     is a mistake! However, why waste the time, and the rules are
-     interesting, too, at least syntactically, to a nerd.
+- What about rules? The compiler will tell you if one of your names
+  is a mistake! However, why waste the time, and the rules are
+  interesting, too, at least syntactically, to a nerd.
 
-   - Names are sensitive towards spelling and capitalization:
-     ~helloWorld~ is different from ~HELLOWORLD~ or
-     ~Helloworld~. Confusingly, you could use all three in the same
-     program, and the compiler would distinguish them.
+- Names are sensitive towards spelling and capitalization:
+  ~helloWorld~ is different from ~HELLOWORLD~ or
+  ~Helloworld~. Confusingly, you could use all three in the same
+  program, and the compiler would distinguish them.
 
-   - Names cannot begin with a number, and they may not contain
-     dashes/minus signs. These are all illegal:
-     #+begin_example
-       10times  get-net-char
-     #+end_example
-     These are good:
-     #+begin_example
-       times10    get_next_char
-     #+end_example
+- Names cannot begin with a number, and they may not contain
+  dashes/minus signs. These are all illegal:
+  #+begin_example
+    10times  get-net-char
+  #+end_example
+  These are good:
+  #+begin_example
+    times10    get_next_char
+  #+end_example
 
-   - There is no limit to the length of an identifier, so this name,
-     presumably by a German programmer, is okay:
-     #+begin_example
-     Voreingenommenheit_bedeutet_bias_auf_Deutsch
-     #+end_example
+- There is no limit to the length of an identifier, so this name,
+  presumably by a German programmer, is okay:
+  #+begin_example
+  Voreingenommenheit_bedeutet_bias_auf_Deutsch
+  #+end_example
 
-   - The keywords in the table have special significance to the
-     compiler and cannot be used as identifiers:
+- The keywords in the table have special significance to the
+  compiler and cannot be used as identifiers:
 
-     | auto       | enum    | restrict | unsigned | break  | extern   |
-     | return     | void    | case     | float    | short  | volatile |
-     | char       | for     | signed   | while    | const  | goto     |
-     | sizeof     | _Bool   | continue | if       | static | _Complex |
-     | _Imaginary | default | union    | struct   | do     | int      |
-     | switch     | double  | long     | typedef  | else   | register |
+  | auto       | enum    | restrict | unsigned | break  | extern   |
+  | return     | void    | case     | float    | short  | volatile |
+  | char       | for     | signed   | while    | const  | goto     |
+  | sizeof     | _Bool   | continue | if       | static | _Complex |
+  | _Imaginary | default | union    | struct   | do     | int      |
+  | switch     | double  | long     | typedef  | else   | register |
 
-   - Your turn: name some illegal identifiers and see what the
-     compiler says!
+- Your turn: name some illegal identifiers and see what the
+  compiler says!
 
 * Program Layout
 
-   - You can think of a program statement as a series of tokens[fn:15]:
+- You can think of a program statement as a series of tokens[fn:15]:
 
-     #+name: tokenization
-     #+begin_example
-      printf ( "Height: %d\n"   ,   height )  ;
-	1      2        3         2     5    6  7
-     #+end_example
+  #+name: tokenization
+  #+begin_example
+   printf ( "Height: %d\n"   ,   height )  ;
+     1      2        3         2     5    6  7
+  #+end_example
 
-     |   | TOKEN          | MEANING                              |
-     |---+----------------+--------------------------------------|
-     | 1 | identifier     | protected C keyword  (function)      |
-     | 2 | punctuation    | function call begins                 |
-     | 3 | string literal | text + formatting + escape character |
-     | 4 | punctuation    | separator                            |
-     | 5 | identifier     | integer variable                     |
-     | 6 | punctuation    | function call ends                   |
-     | 7 | punctuation    | statement closure                    |
+  |   | TOKEN          | MEANING                              |
+  |---+----------------+--------------------------------------|
+  | 1 | identifier     | protected C keyword  (function)      |
+  | 2 | punctuation    | function call begins                 |
+  | 3 | string literal | text + formatting + escape character |
+  | 4 | punctuation    | separator                            |
+  | 5 | identifier     | integer variable                     |
+  | 6 | punctuation    | function call ends                   |
+  | 7 | punctuation    | statement closure                    |
 
-   - You can have any amount of white (empty) space between program
-     tokens (this is not so for all programming languages[fn:16]).
+- You can have any amount of white (empty) space between program
+  tokens (this is not so for all programming languages[fn:16]).
 
-   - [ ] As an example, here is a version of ~dweight.c~ that works just
-     as well, on one line, with almost all whitespace deleted. Only in
-     one place, the space is needed. Can you see where?
+- [ ] As an example, here is a version of ~dweight.c~ that works just
+  as well, on one line, with almost all whitespace deleted. Only in
+  one place, the space is needed. Can you see where?
 
-     #+name: dweight_one_line :results org
-     #+begin_src C
-       int height,length,width,volume,weight;height=8;length=12;width=10;volume=height*length*width;weight=(volume+165)/166;printf("Dimensions: %dx%dx%d\n",length,width,height);printf("Volume (cubic inches): %d\n",volume);printf("Dimensional weight (pounds): %d\n",weight);
-     #+end_src
+  #+name: dweight_one_line :results org
+  #+begin_src C
+    int height,length,width,volume,weight;height=8;length=12;width=10;volume=height*length*width;weight=(volume+165)/166;printf("Dimensions: %dx%dx%d\n",length,width,height);printf("Volume (cubic inches): %d\n",volume);printf("Dimensional weight (pounds): %d\n",weight);
+  #+end_src
 
-     #+RESULTS: dweight_one_line
-     | Dimensions: | 12x10x8 |           |     |
-     | Volume      | (cubic  | inches):  | 960 |
-     | Dimensional | weight  | (pounds): |   6 |
+  #+RESULTS: dweight_one_line
+  | Dimensions: | 12x10x8 |           |     |
+  | Volume      | (cubic  | inches):  | 960 |
+  | Dimensional | weight  | (pounds): |   6 |
 
-   - Another exception are the preprocessor directives - they need to
-     be on a line of their own[fn:17].
+- Another exception are the preprocessor directives - they need to
+  be on a line of their own[fn:17].
 
-     #+name: preprocessor
-     #+begin_src C :results silent
-       #include <stdio.h>
-       #define  CONSTANT 5
-     #+end_src
+  #+name: preprocessor
+  #+begin_src C :results silent
+    #include <stdio.h>
+    #define  CONSTANT 5
+  #+end_src
 
-   - You can divide statements over any number of lines as long as you
-     don't divide keywords or tokens. This works:
+- You can divide statements over any number of lines as long as you
+  don't divide keywords or tokens. This works:
 
-     #+begin_src C
-       int
-       height
-       = 5
-         ;
-       printf
-       (
-        "height %d\n" ,
-        height)
-       ;
-     #+end_src
+  #+begin_src C
+    int
+    height
+    = 5
+      ;
+    printf
+    (
+     "height %d\n" ,
+     height)
+    ;
+  #+end_src
 
-     #+RESULTS:
-     : height 5
+  #+RESULTS:
+  : height 5
 
-   - But this does not:
+- But this does not:
 
-     #+begin_example C 
-       int
-       hei ght
-       = 5
-         ;
-       print f
-       (
-	"height
-	%d\n" ,
-	height)
-         ;
-     #+end_example
+  #+begin_example C
+    int
+    hei ght
+    = 5
+      ;
+    print f
+    (
+     "height
+     %d\n" ,
+     height)
+      ;
+  #+end_example
 
-     - The variable ~height~ is not declared
-     - The ~printf~ function is not recognized
-     - The string literal is not complete
+  - The variable ~height~ is not declared
+  - The ~printf~ function is not recognized
+  - The string literal is not complete
 
-   - Good practice:
-     - Space between tokens makes identification easier
-     - Indentation makes nesting easier to spot
-     - Blank lines can divide a program into logical units
+- Good practice:
+  - Space between tokens makes identification easier
+  - Indentation makes nesting easier to spot
+  - Blank lines can divide a program into logical units
 
-   - [ ] Practice: improve the layout of this program ([[https://drive.google.com/file/d/1FSc4gQVBf6f62qiAsJ81rGdHHkf5Tff2/view?usp=sharing][get it from
-     GDrive]]), then run it.
+- [ ] Practice: improve the layout of this program ([[https://drive.google.com/file/d/1FSc4gQVBf6f62qiAsJ81rGdHHkf5Tff2/view?usp=sharing][get it from
+  GDrive]]), then run it.
 
-     #+name: layout
-     #+begin_src C :tangle src/layout.c :results output
-       int var1=1;int var2;var2=
-                             var1
-                             ,*100;
-       printf (      "Variable1=%d,variable2=%d\n",
-                     var1,
+  #+name: layout
+  #+begin_src C :tangle src/layout.c :results output
+    int var1=1;int var2;var2=
+                          var1
+                          ,*100;
+    printf (      "Variable1=%d,variable2=%d\n",
+                  var1,
 
-                     var2
-                     );
-     #+end_src
+                  var2
+                  );
+  #+end_src
 
-     #+RESULTS: layout
-     : Variable1=1,variable2=100
+  #+RESULTS: layout
+  : Variable1=1,variable2=100
 
 * Let's practice!
 
- Go to the [[https://tinyurl.com/yckuhh2f][Org-mode practice file]] and complete the second batch of exercises:
+Go to the [[https://tinyurl.com/yckuhh2f][Org-mode practice file]] and complete the second batch of exercises:
 
-    1) Defining constants
-    2) Standard math library
-    3) Reading input with ~scanf~
-    4) Naming identifiers
-    5) Program layout
+1) Defining constants
+2) Standard math library
+3) Reading input with ~scanf~
+4) Naming identifiers
+5) Program layout
 
-    #+attr_html: :width 300px
-    [[./img/practice1.gif]]
-    
+   #+attr_html: :width 300px
+   [[./img/practice1.gif]]
+
 * Summary
 
-  - C programs must be compiled and linked
-  - Programs consist of directives, functions, and statements
-  - C directives begin with a hash mark (~#~)
-  - C statements end with a semicolon (~;~)
-  - C functions begin and end with parentheses ~{~ and ~}~
-  - C programs should be readable
-  - Input and output has to be formatted correctly
+- C programs must be compiled and linked
+- Programs consist of directives, functions, and statements
+- C directives begin with a hash mark (~#~)
+- C statements end with a semicolon (~;~)
+- C functions begin and end with parentheses ~{~ and ~}~
+- C programs should be readable
+- Input and output has to be formatted correctly
 
 * Code summary
 
@@ -434,45 +438,45 @@
 
 * Glossary
 
-  | CONCEPT          | EXPLANATION                                               |
-  |------------------+-----------------------------------------------------------|
-  | Compiler         | translates source code to object code                     |
-  | Linker           | translates object code to machine code                    |
-  | Syntax           | language rules                                            |
-  | Debugger         | checks syntax                                             |
-  | Directive        | starts with ~#~, one line only, no delimiter                |
-  | Preprocessor     | processes directives                                      |
-  | Statement        | command to be executed, e.g. ~return~                       |
-  | Delimiter        | ends a statement (in C: semicolon - ;)                    |
-  | Function         | a rule to compute something with arguments                |
-  | String           | Sequence of /character/ values like ~hello~                   |
-  | String literal   | Unchangeable, like the numbe ~8~ or the string ~hello~        |
-  | Constant         | Set value that is not changed                             |
-  | Variable         | A named memory placeholder for a value, e.g. ~int i~        |
-  | Data type        | A memory storage instruction like ~int~ for integer         |
-  | Comment          | Region of code that is not executed                       |
-  | Format specifier | Formatting symbol like ~%d%~ or ~%f%~                         |
-  | Data type        | Tells the computer to reserve memory,                     |
-  |                  | e.g. ~int~ for integer numbers                              |
-  | Type declaration | Combination of type and variable name - e.g. ~int height;~  |
-  | ~int~              | C type for integer numbers, e.g. 2                        |
-  | ~float~            | C type for floating point numbers, e.g. 3.14              |
-  | ~char~             | C type for characters, like "joey"                        |
-  | Formatting       | Tells the computer how to print, e.g. ~%d~ for ~int~ types    |
-  | ~%d~               | Format for integers                                       |
-  | ~%f~ and ~%.pf~      | Format for floating point numbers                         |
-  |                  | (with ~p~ digits after the point)                           |
-  | ~#define~          | Define a constant with the preprocessor,                  |
-  |                  | e.g. ~#define PI 3.14~                                      |
-  | ~math.h~           | Math library, contains mathematical constants & functions |
-  | ~stdio.h~          | Input/Output library, enables ~printf~ and ~scanf~            |
-  | ~const~            | Constant identifier, e.g. ~const double PI = 3.14;~         |
+| CONCEPT          | EXPLANATION                                               |
+|------------------+-----------------------------------------------------------|
+| Compiler         | translates source code to object code                     |
+| Linker           | translates object code to machine code                    |
+| Syntax           | language rules                                            |
+| Debugger         | checks syntax                                             |
+| Directive        | starts with ~#~, one line only, no delimiter                |
+| Preprocessor     | processes directives                                      |
+| Statement        | command to be executed, e.g. ~return~                       |
+| Delimiter        | ends a statement (in C: semicolon - ;)                    |
+| Function         | a rule to compute something with arguments                |
+| String           | Sequence of /character/ values like ~hello~                   |
+| String literal   | Unchangeable, like the numbe ~8~ or the string ~hello~        |
+| Constant         | Set value that is not changed                             |
+| Variable         | A named memory placeholder for a value, e.g. ~int i~        |
+| Data type        | A memory storage instruction like ~int~ for integer         |
+| Comment          | Region of code that is not executed                       |
+| Format specifier | Formatting symbol like ~%d%~ or ~%f%~                         |
+| Data type        | Tells the computer to reserve memory,                     |
+|                  | e.g. ~int~ for integer numbers                              |
+| Type declaration | Combination of type and variable name - e.g. ~int height;~  |
+| ~int~              | C type for integer numbers, e.g. 2                        |
+| ~float~            | C type for floating point numbers, e.g. 3.14              |
+| ~char~             | C type for characters, like "joey"                        |
+| Formatting       | Tells the computer how to print, e.g. ~%d~ for ~int~ types    |
+| ~%d~               | Format for integers                                       |
+| ~%f~ and ~%.pf~      | Format for floating point numbers                         |
+|                  | (with ~p~ digits after the point)                           |
+| ~#define~          | Define a constant with the preprocessor,                  |
+|                  | e.g. ~#define PI 3.14~                                      |
+| ~math.h~           | Math library, contains mathematical constants & functions |
+| ~stdio.h~          | Input/Output library, enables ~printf~ and ~scanf~            |
+| ~const~            | Constant identifier, e.g. ~const double PI = 3.14;~         |
 
 * References
 
-  - Collingbourne (2019). The Little Book of C (Rev. 1.2). Dark Neon.
+- Collingbourne (2019). The Little Book of C (Rev. 1.2). Dark Neon.
 
-  - King (2008). C Programming. Norton. [[http://knking.com/books/c2/index.html][URL: knking.com]].
+- King (2008). C Programming. Norton. [[http://knking.com/books/c2/index.html][URL: knking.com]].
 
 * Footnotes
 

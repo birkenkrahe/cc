@@ -171,14 +171,17 @@
 
 * PUTTING IT ALL TOGETHER (EXTENDED EXAMPLE)
 
+- Compute the ~volume~ by multiplying 12, 10 and 8
 - Compute the dimensional ~weight~ by dividing ~volume~ by 166
-  #+begin_example C
-    volume = 12 * 10 * 8   // volume = height * width * length
+- Print ~volume~, ~weight~ and the squared ~weight~, and run the code block
+  #+begin_src C
+    ...   // volume = height * width * length
     ...  // dimensional weight
-  #+end_example
+  #+end_src
 
 - Now for the final program. I have set it up so that this can be
-  tangled as a file ~dweight.c~: create the C file!
+  tangled as a file ~dweight.c~: create the C file and run it on the
+  command line shell.
   #+begin_src C :results output :tangle dweight.c
     // declare variable types
     int height, length, width, volume, weight;
