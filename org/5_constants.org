@@ -1,20 +1,10 @@
-#+TITLE:C FUNDAMENTALS - CONSTANTS
+#+TITLE:C FUNDAMENTALS - CONSTANTS - LECTURE
 #+AUTHOR:Marcus Birkenkrahe
-#+SUBTITLE:CSC100 Introduction to programming in C/C++ Summer 2022
+#+SUBTITLE:CSC100 Introduction to programming in C/C++ Spring 2023
 #+DATE: Time-stamp: <2023-02-18 14:05:42 Birkenkrahe>
 #+STARTUP: overview hideblocks indent
 #+OPTIONS: toc:1 ^:nil
-:PROPERTIES:
-#+PROPERTY: header-args:C :main yes
-#+PROPERTY: header-args:C :includes <stdio.h>
-#+PROPERTY: header-args:C :exports both
-#+PROPERTY: header-args:C :results output
-#+PROPERTY: header-args:C :comments both
-:END:
-:REVEAL_PROPERTIES:
-#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
-#+REVEAL_REVEAL_JS_VERSION: 4
-:END:
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output
 * README
 
 - This script summarizes and adds to the treatment by King (2008),
@@ -33,54 +23,42 @@
   #+end_example
 
 * Constants
+#+attr_latex: :width 400px
+[[../img/5_rock.jpg]]
+
+- Constants are values that do not change (ever?)
+- In C, you can define them with: macros, libraries, or as ~const~ type
+- They have different degrees of permanency
+
 * Macro definition with ~#define~
 
 - If you don't want a value to change, you can define a
-  ~constant~. There are different ways of doing that. The code in
-  [[define]] shows a declarative constant definition for the
-  pre-processor that blindly substitutes the value everywhere in
-  the program. This is also called a *macro definition*.
+  ~constant~. There are different ways of doing that.
 
-  #+name: define
+- The code below shows a declarative constant definition for the
+  pre-processor that blindly substitutes the value everywhere in the
+  program. This is also called a *macro definition*[fn:1].
   #+begin_src C :main yes :includes <stdio.h>
     #define PI 3.141593
     printf("PI is %f\n",PI);
   #+end_src
-
-  #+RESULTS: define
-  : PI is 3.141593
-
-- [X] Can you see what mistake I made in [[constant_err_1]]?
-
-  #+name: constant_err_1
+- Can you see what mistake I made in the next code block?[fn:2]
   #+begin_example C
     #define PI = 3.141593
     printf("PI is %f\n", PI);
   #+end_example
-
-  #+begin_quote Answer
-  Instead of "~3.141593~", the expression "~= 3.141593~" is substituted for
-  ~PI~ everywhere - the program will not compile.
-  #+end_quote
-
-- [ ] Can you see what went wrong in [[constant_err_2]] ? If you don't
+- Can you see what went wrong in the next code block? If you don't
   see it at once, check the compiler error output!
-
-  #+name: constant_err_2
   #+begin_example C
     #define PI 3.141593;
     printf("PI is %f\n", PI);
   #+end_example
-
 - It's easy to make mistakes with user-defined constants. For one
-  thing, "constants" declared with ~#define~ can be redefined (so
-  they aren't really constant at all).
+  thing, "constants" declared with ~#define~ can be redefined (so they
+  aren't really constant at all).
 
-- [ ] The program [[redefined]] demonstrates how a constant declared
-  with ~#define~ can be redefined later with a second ~#define~
-  declaration.
-
-  #+name: redefined
+- The next program demonstrates how a constant declared with ~#define~
+  can be redefined later with a second ~#define~ declaration.
   #+begin_src C :exports both :results output
     #define WERT 1.0
     printf("Constant is %.2f\n", WERT);
@@ -89,64 +67,62 @@
     printf("Constant is %.2f\n", WERT);
   #+end_src
 
-  #+RESULTS: redefined
-  : Constant is 1.00
-  : Constant is 2.00
+- However, ~gcc~ is warning us about it!
 
 * Library definitions with ~#include~
 
 - Since mathematical constants are so important in scientific
-  computing, there is a library that contains them, ~math.h~. In
-  [[math]], it is included at the start to give us the value of Pi as
-  the constant ~M_PI~ with much greater precision than before.
+  computing, there is a library that contains them, ~math.h~.
 
-  #+name: math
-  #+begin_src C :includes <math.h> :exports both :results output
+- Below, it is included at the start to give us the value of Pi as the
+  constant ~M_PI~ with much greater precision than before[fn:3]:
+  #+begin_src C
+    #include <stdio.h>
+    #include <math.h>
+    int main(void) {
+      printf("PI is %f\n",M_PI);
+      printf("PI is %.16f\n",M_PI);
+      return 0;
+    }
+  #+end_src
+- Inside Emacs with Org-mode, you can include the math header file
+  ~math.h~ as a code block header argument:
+  #+begin_src C :includes <stdio.h> <math.h>
     printf("PI is %f\n",M_PI);
     printf("PI is %.16f\n",M_PI);
   #+end_src
 
-  #+RESULTS: math
+  #+RESULTS:
   : PI is 3.141593
   : PI is 3.1415926535897931
 
-- If you write source code outside of Emacs Org-mode, you have to
-  include this library file explicitly like this:
-
-  #+begin_example C
-    #include <math.h>
-  #+end_example
-
 - Here is more information on [[https://www.w3schools.in/c-tutorial/c-header-files/][C header files]] and on how ~#include~
-  works.
+  works. This online tutorial isn't half bad by the way, if you can
+  ignore the flood of ads.
 
 - In Linux, ~math.h~ and the other header files sit in
   ~/usr/include/~. The screenshot shows the math constant section
   of ~math.h~.
-
-  #+attr_html: :width 500px
+  #+attr_latex: :width 500px
   #+caption: Mathematical constants in /usr/include/math.h
-  [[./img/math.png]]
+  [[../img/5_math.png]]
 
-- [ ] Where is ~math.h~ in Windows[fn:13]? Where in MacOS? Find the
+- Where is ~math.h~ in Windows[fn:4]? Where in MacOS? Find the
   file, open and look at it in Emacs (the file is read-only).
 
+- In the file, look for ~M_PI~ (using the incremental search ~C-s~). You
+  also find the definition of the Euler number e there. Use it in a
+  ~#define~ statement to define ~e~ and print ~e~ with 16-digit precision.
   #+begin_src C
     #include <math.h>
     #define e M_E
     printf("%.16f\n", e);
   #+end_src
 
-  #+RESULTS:
-  : 2.718281828459045
-
 * Type definition with ~const~
 
-- Modern C has the ~const~ identifier to protect constants. [[const]]
-  shows an example. Here, ~double~ is a higher precision floating
-  point number type.
-
-  #+name: const
+- Modern C has the ~const~ identifier to protect constants. In the code,
+  ~double~ is a higher precision floating point number type.
   #+begin_src C
     const double TAXRATE_CONST = 0.175f;
     double revenue = 200.0f;
@@ -157,14 +133,10 @@
     printf("Tax on revenue %.2f is %.2f", revenue, tax);
   #+end_src
 
-  #+RESULTS: const
-  : Tax on revenue 200.00 is 35.00
-
-- [ ] What happens if you try to redefine the constant ~taxrate~
-  after the type declaration? Modify [[const]] accordingly and run it.
-
-  #+name: const_err
-  #+begin_example C
+- What happens if you try to redefine the constant ~TAXRATE_CONST~ after
+  the type declaration? Modify the previous code block accordingly and
+  run it.
+  #+begin_src C :results silent
     const double TAXRATE_CONST = 0.175f;
     double revenue = 200.0f;
     double tax;
@@ -173,7 +145,7 @@
     tax = revenue * TAXRATE_CONST;
 
     printf("Tax on revenue %.2f is %.2f", revenue, tax);
-  #+end_example
+  #+end_src
 
 * Reading input
 
@@ -185,29 +157,27 @@
   nonsense (or rather, memory fragments from God knows where).
 
 - The following statement reads an ~int~ value and stores it in the
-  variable ~i~.[fn:14]. The input comes from the file ~./data/input~.
-
-  #+name: iscan
-  #+begin_src C :tangle iscan.c :cmdline < ./data/input
+  variable ~i~. The input comes from the file ~./data/input~ [fn:5].
+  #+begin_src C :tangle iscan.c :cmdline < ../data/input
     int i;
     puts("Enter an integer!");
-    scanf("%d", &i);
+    scanf("%d", &i);  // note the strange symbol &i
     printf("You entered %d\n", i);
   #+end_src
 
-  #+RESULTS: iscan
-  : Enter an integer!
-  : You entered 5
-
 - To input a floating-point (~float~) variable, you need to specify
-  the format with ~%f~ both in the ~scanf~ and in the ~printf~
+  the format with ~%f~ *both* in the ~scanf~ *and* in the ~printf~
   statement. We'll learn more about format specifiers soon.
 
-* Naming identifiers
-** Naming conventions
+- To see how input works on the command line, *tangle* the code above as
+  ~scanf.c~ (add ~:tangle scan.c~ in the code block header), and run the
+  file on the command line:
+  #+begin_example sh
+  gcc scan.c -o iscan
+  iscan < input
+  #+end_example
 
-(The code blocks in this section are all silent - will give no
-output - but because they're only snippets, they will not compile.)
+* Naming conventions
 
 - Use upper case letters for CONSTANTS
   #+begin_src C :results silent
@@ -220,21 +190,20 @@ output - but because they're only snippets, they will not compile.)
   #+end_src
 
 - Use lower case letters for function names
-  #+begin_src C :results silent
+  #+begin_example C
     hello();
-  #+end_src
+  #+end_example
 
 - If names consist of more than one word, separate with ~_~ or
   insert capital letters:
-  #+begin_src C :results silent
+  #+begin_example C
     hello_world();
     helloWorld();
-  #+end_src
+  #+end_example
 
-- Name according to function! In [[naming_example]], both functions are
-  identical from the point of view of the compiler, but one can be
+- Name according to function! In the next code block, both functions
+  are identical from the point of view of the compiler, but one can be
   understood, the other one cannot.
-  #+name: naming_example
   #+begin_src C :results silent
     const int SERVICE_CHARGE;
     int v;
@@ -252,7 +221,7 @@ output - but because they're only snippets, they will not compile.)
     }
   #+end_src
 
-** Naming rules
+* Naming rules
 
 - What about rules? The compiler will tell you if one of your names
   is a mistake! However, why waste the time, and the rules are
@@ -265,23 +234,23 @@ output - but because they're only snippets, they will not compile.)
 
 - Names cannot begin with a number, and they may not contain
   dashes/minus signs. These are all illegal:
-  #+begin_example
+  #+begin_example C
     10times  get-net-char
   #+end_example
   These are good:
-  #+begin_example
+  #+begin_example C
     times10    get_next_char
   #+end_example
 
 - There is no limit to the length of an identifier, so this name,
   presumably by a German programmer, is okay:
-  #+begin_example
-  Voreingenommenheit_bedeutet_bias_auf_Deutsch
+  #+begin_example C
+  Voreingenommenheit_bedeutet_bias_auf_Deutsch  // allowed crazy German identifier
   #+end_example
 
 - The keywords in the table have special significance to the
   compiler and cannot be used as identifiers:
-
+  #+name: tab:keywords
   | auto       | enum    | restrict | unsigned | break  | extern   |
   | return     | void    | case     | float    | short  | volatile |
   | char       | for     | signed   | while    | const  | goto     |
@@ -289,19 +258,29 @@ output - but because they're only snippets, they will not compile.)
   | _Imaginary | default | union    | struct   | do     | int      |
   | switch     | double  | long     | typedef  | else   | register |
 
-- Your turn: name some illegal identifiers and see what the
-  compiler says!
+- Your turn: name some illegal identifiers and see what the compiler
+  says!
+  #+begin_src C :results silent
+    int void = 1;
+    float float = 3.14;
+  #+end_src
+
+- If Windows complains about the app, close the screen dialog to see the debugger:
+  #+attr_latex: :width 400px
+  #+caption: Windows screen dialog
+  [[../img/5_windows.png]]
+  #+attr_latex: :width 400px
+  #+caption: Org-babel error output buffer
+  [[../img/5_debug.png]]
 
 * Program Layout
 
-- You can think of a program statement as a series of tokens[fn:15]:
-
-  #+name: tokenization
+- You can think of a program statement as a series of tokens[fn:6]:
   #+begin_example
    printf ( "Height: %d\n"   ,   height )  ;
      1      2        3         2     5    6  7
   #+end_example
-
+  #+name: tab:tokens
   |   | TOKEN          | MEANING                              |
   |---+----------------+--------------------------------------|
   | 1 | identifier     | protected C keyword  (function)      |
@@ -313,26 +292,17 @@ output - but because they're only snippets, they will not compile.)
   | 7 | punctuation    | statement closure                    |
 
 - You can have any amount of white (empty) space between program
-  tokens (this is not so for all programming languages[fn:16]).
+  tokens (this is not so for all programming languages[fn:7]).
 
-- [ ] As an example, here is a version of ~dweight.c~ that works just
-  as well, on one line, with almost all whitespace deleted. Only in
-  one place, the space is needed. Can you see where?
-
-  #+name: dweight_one_line :results org
+- As an example, here is a version of ~dweight.c~ that works just as
+  well, on one line, with almost all whitespace deleted. Only in one
+  place, the space is needed. Can you see where?
   #+begin_src C
     int height,length,width,volume,weight;height=8;length=12;width=10;volume=height*length*width;weight=(volume+165)/166;printf("Dimensions: %dx%dx%d\n",length,width,height);printf("Volume (cubic inches): %d\n",volume);printf("Dimensional weight (pounds): %d\n",weight);
   #+end_src
 
-  #+RESULTS: dweight_one_line
-  | Dimensions: | 12x10x8 |           |     |
-  | Volume      | (cubic  | inches):  | 960 |
-  | Dimensional | weight  | (pounds): |   6 |
-
-- Another exception are the preprocessor directives - they need to
-  be on a line of their own[fn:17].
-
-  #+name: preprocessor
+- Another exception are the preprocessor directives (beginning with
+  ~#~): they need to be on a line of their own[fn:8].
   #+begin_src C :results silent
     #include <stdio.h>
     #define  CONSTANT 5
@@ -340,7 +310,6 @@ output - but because they're only snippets, they will not compile.)
 
 - You can divide statements over any number of lines as long as you
   don't divide keywords or tokens. This works:
-
   #+begin_src C
     int
     height
@@ -352,12 +321,7 @@ output - but because they're only snippets, they will not compile.)
      height)
     ;
   #+end_src
-
-  #+RESULTS:
-  : height 5
-
 - But this does not:
-
   #+begin_example C
     int
     hei ght
@@ -370,20 +334,16 @@ output - but because they're only snippets, they will not compile.)
      height)
       ;
   #+end_example
-
-  - The variable ~height~ is not declared
-  - The ~printf~ function is not recognized
-  - The string literal is not complete
+  1) The variable ~height~ is not declared
+  2) The ~printf~ function is not recognized
+  3) The string literal is not complete
 
 - Good practice:
-  - Space between tokens makes identification easier
-  - Indentation makes nesting easier to spot
-  - Blank lines can divide a program into logical units
+  + Space between tokens makes identification easier
+  + Indentation makes nesting easier to spot
+  + Blank lines can divide a program into logical units
 
-- [ ] Practice: improve the layout of this program ([[https://drive.google.com/file/d/1FSc4gQVBf6f62qiAsJ81rGdHHkf5Tff2/view?usp=sharing][get it from
-  GDrive]]), then run it.
-
-  #+name: layout
+- Practice: improve the layout of this program then run it:
   #+begin_src C :tangle src/layout.c :results output
     int var1=1;int var2;var2=
                           var1
@@ -395,12 +355,10 @@ output - but because they're only snippets, they will not compile.)
                   );
   #+end_src
 
-  #+RESULTS: layout
-  : Variable1=1,variable2=100
-
 * Let's practice!
 
-Go to the [[https://tinyurl.com/yckuhh2f][Org-mode practice file]] and complete the second batch of exercises:
+Download the raw Org-mode practice file, complete the second batch
+of exercises, then upload the completed file to Canvas:
 
 1) Defining constants
 2) Standard math library
@@ -408,8 +366,8 @@ Go to the [[https://tinyurl.com/yckuhh2f][Org-mode practice file]] and complete 
 4) Naming identifiers
 5) Program layout
 
-   #+attr_html: :width 300px
-   [[./img/practice1.gif]]
+#+attr_latex: :width 300px
+[[../img/3_practice1.gif]]
 
 * Summary
 
@@ -480,28 +438,62 @@ Go to the [[https://tinyurl.com/yckuhh2f][Org-mode practice file]] and complete 
 
 * Footnotes
 
-[fn:1] In our case, instead of weaving TeX files (~.tex~) to print, we
+[fn:1]As an aside, "Emacs" was originally named EMACS as an akronym
+for "Editor MACroS" because of its extensibility through macros - the
+word comes from the Greek meaning "large" or "prominent", as in
+"macroscopic" or "macro economy".
+
+[fn:2] Instead of "~3.141593~", the expression "~= 3.141593~" is
+substituted for ~PI~ everywhere - the program will not compile.
+
+[fn:3]In the tangled ~.C~ file, you can see that this ~#include~
+statement is inside the ~main~ bracketed area!
+
+[fn:4]If you installed the MinGW compiler (GCC for Windows), look for
+it in the MinGW directory - there's an ~/include~ subdirectory that
+contains many header/library files ~.h~. If you have Cygwin, you'll find
+it in ~c:/Cygwin/usr/include/~.
+
+[fn:5]Alas, you cannot enter input in an Org-mode file
+interactively. You either have to tangle the code and compile/run it
+on the command line, or redirect the input using the ~:cmdline < file~
+header argument, where ~file~ contains the input.
+
+[fn:6]The tokenization is an important sub-process of natural language
+processing, a data science discipline that is responsible for language
+assistants like Siri, robotic calls, auto-coding and machine
+translation (like Google translate), and bots like ChatGPT.
+
+[fn:7]Python e.g. is white-space sensitive: the indentation level is
+significant, it denotes code blocks, and needs to be consistent. The
+same goes for Org-mode markdown and code blocks.
+
+[fn:8]The ~<..>~ brackets indicate that the file in between the
+brackets can be found in the system ~PATH~. If a local file is included,
+use double apostrophes ~".."~.
+
+[fn:9] In our case, instead of weaving TeX files (~.tex~) to print, we
 weave Markdown files (~.md~), or WORD (~*.odt~) files, or we dispense with
 the weaving altogether because Org-mode files (equivalent of the ~*.w~
 or "web" files) look fine on GitHub.  GitHub.
 
-[fn:2]Executables are the result of compilation for a specific
+[fn:10]Executables are the result of compilation for a specific
 computer architecture and OS. The ~.exe~ program was compiled for
 Windows, the ~.out~ program was compiled for Linux. They will only run
 on these OS.
 
-[fn:3][[https://replit.com][replit.com]] is an online Read-Eval-Print-Loop (REPL) that looks
+[fn:11][[https://replit.com][replit.com]] is an online Read-Eval-Print-Loop (REPL) that looks
 like a Linux installation (in fact, it is a so-called Docker
 container, an emulated, customized Linux installation). When
 registering (for free) you can use many different programming
 languages - here is a [[https://replit.com/@birkenkrahe/DiscreteDearObjectdatabase#main.c][link to my container]].
 
-[fn:4]You can find different [[https://emacsthemes.com/][themes for GNU Emacs]] here, and install
+[fn:12]You can find different [[https://emacsthemes.com/][themes for GNU Emacs]] here, and install
 them using ~M-x package-list-packages~. To see the differences, enter
 ~M-x custom-themes~ and pick another theme now. You can save it
 automatically for future sessions.
 
-[fn:5]If you always want to have line numbers and highlight the line
+[fn:13]If you always want to have line numbers and highlight the line
 under the cursor, put these lines in your ~.emacs~ file: and restart
 Emacs:
 #+begin_example emacs-lisp
@@ -511,20 +503,20 @@ Emacs:
   (global-hl-line-mode 1)
 #+end_example
 
-[fn:6]In the C99 standard, declarations don't have to come before
+[fn:14]In the C99 standard, declarations don't have to come before
 statements.
 
-[fn:7]Assignment is variable use. Variable types must be declared
+[fn:15]Assignment is variable use. Variable types must be declared
 before they can be used.
 
-[fn:8]The declaration must precede the use of the variable.
+[fn:16]The declaration must precede the use of the variable.
 
-[fn:9] Answer: (1) memory allocation for four integer variables; (2)
+[fn:17] Answer: (1) memory allocation for four integer variables; (2)
 assignments for four variables; (3) multiplication of three integers.
 
-[fn:10][[https://www.geeksforgeeks.org/puts-vs-printf-for-printing-a-string/][See here]] for a comparison of ~printf()~ vs. ~puts()~.
+[fn:18][[https://www.geeksforgeeks.org/puts-vs-printf-for-printing-a-string/][See here]] for a comparison of ~printf()~ vs. ~puts()~.
 
-[fn:11]
+[fn:19]
 #+begin_quote
 "Cargo space has physical limits based on the volume of the cargo and
 the weight. The reason why both volume & weight are evaluated can be
@@ -540,27 +532,5 @@ the transportation costs. The greater of the two weights is also
 commonly referred to as ‘chargeable weight’." (UniRelo 2020)
 #+end_quote
 
-[fn:12]165/166 is 0.9939759, so we've just messed with the actual
+[fn:20]165/166 is 0.9939759, so we've just messed with the actual
 volume.
-
-[fn:13]If you installed the MinGW compiler (GCC for Windows), look for
-it in the MinGW directory - there's an ~/include~ subdirectory that
-contains many header/library files ~.h~.
-
-[fn:14]You cannot enter input in an Org-mode file interactively. You
-either have to tangle the code and compile/run it on the command line,
-or redirect the input using the ~:cmdline < file~ header argument,
-where ~file~ contains the input.
-
-[fn:15]The tokenization is an important sub-process of natural language
-processing, a data science discipline that is responsible for language
-assistants like Siri, robotic calls, auto-coding and machine
-translation (like Google translate).
-
-[fn:16]Python e.g. is white-space sensitive: the indentation level is
-significant, it denotes code blocks, and needs to be consistent. The
-same goes for Org-mode markdown and code blocks.
-
-[fn:17]The ~<..>~ brackets indicate that the file in between the
-brackets can be found in the system ~PATH~. If a local file is included,
-use double apostrophes ~".."~.

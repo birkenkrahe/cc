@@ -11,7 +11,7 @@
   - When you leave class without having completed the file, save a
     copy to GDrive as a backup and/or to work on it from home
 
-  - When you've completed the file, upload it to Canvasx
+  - When you've completed the file, upload it to Canvas
     
 * TODO Identify yourself
 
@@ -44,9 +44,11 @@
 
 * TODO Standard math library
 
-  Open the file ~/usr/include/math.h~ and search for the definition of
-  ~M_PI~. What is the last non-zero digit?
+  Open the file ~math.h~ on your computer and search for the definition
+  of ~M_PI~. What is the last non-zero digit?
 
+  Answer:
+  
 * TODO Reading input
 
   1) Copy the code block [[pgm:iscan]] below into a code block [[pgm:fscan]]
