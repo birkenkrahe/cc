@@ -1,0 +1,57 @@
+#+TITLE: ...
+#+AUTHOR: ...
+#+SUBTITLE:Bonus programming assignment 1 - Intro to Programming in C, Spring 2023
+...
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both
+
+* Preamble[fn:1]
+
+The numerical value of many physical quantities depends on the unit
+one chooses to measure them. My height is 1.8 m or 180 cm, or 1.90e-16
+light-years.
+
+The use of light-years as a unit of distance is weird but common in
+physics: since 1983, the speed of light is defined to be exactly c =
+299,792,458 m/s, and this serves as a definition of the meter given
+the unit of time.
+
+* Problem
+
+Write a C program that computes three heights in light-years:
+
+| HEIGHT [m] | WHO                |
+|------------+--------------------|
+|        1.8 | Marcus Birkenkrahe |
+|       1.98 | Michael Jordan     |
+|       1.67 | Napoleon Bonaparte |
+
+Not considering leap years, a year is 31,536,000 seconds long.
+
+* Submission
+
+- Add the following meta data as a new line at the top of your
+  Org-mode file:
+  #+begin_example
+  #+STARTUP:overview hideblocks indent
+  #+end_example
+
+- The Org-mode file should also contain the output for the three test
+  cases after the code block:
+  #+begin_example
+  : Marcus Birkenkrahe's height: 1.80 m = ... light-years
+  : Michael Jordan's height:     1.98 m = ... light-years
+  : Napoleon Bonaparte's height: 1.67 m = ... light-years
+  #+end_example
+
+- Submit your solution as an Emacs Org-mode file including the usual
+  header information (title, author, pledged) [[https://lyon.instructure.com/courses/1014/assignments/8275/][in Canvas.]]
+
+* TODO Solution
+
+
+* Footnotes
+
+[fn:1]The idea for this program came from a new book that I'm reading
+now, [[https://www.amazon.com/Quantum-Field-Theory-Michel-Talagrand-ebook/dp/B09SV9GNDN]["Quantum Field Theory? A first introduction for mathematicians"
+(Talagrand, 2022)]].
