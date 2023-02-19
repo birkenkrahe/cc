@@ -377,7 +377,7 @@ documents." (ChatGPT)
 
 * Week 7 - C fundamentals: constants and I/O
 #+attr_latex: :400px
-[[../img/ccTestSP23box.png]]
+[[../img/ccSP23test1_2.png]]
 
 ** TODO PRACTICE variable declarations, assignment, formatting
 ** TODO Constants, input, naming and program layout

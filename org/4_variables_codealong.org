@@ -1,5 +1,5 @@
-#+TITLE:C Basics
-#+AUTHOR:Marcus Birkenkrahe
+#+TITLE:C Basics - Variables - Code along
+#+AUTHOR: [yourname]
 #+SUBTITLE:CSC100 Introduction to programming in C/C++ Summer 2022
 #+DATE: <2022-05-26 Thu>
 #+STARTUP: overview hideblocks indent
@@ -7,23 +7,18 @@
 #+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :tangle yes
 * README
 
-  - This script summarizes and adds to the treatment by King (2008),
-    chapter 2, C Fundamentals - see also [[https://docs.google.com/presentation/d/14qvh00aVb_R09_hrQY0EDEK_JLAkgZ0S/edit?usp=sharing&ouid=102963037093118135110&rtpof=true&sd=true][slides (GDrive)]].
+This file contains code blocks and small exercises to code along
+during a lecture. Upload it to Canvas once you've completed it. If you
+missed a class session, you can work through this file on your own and
+submit it within a week for full points.
 
-  - To code along during the lecture using Emacs and Org-mode,
-    download ~4_variables_codealong.org~ from and open it in Emacs.
+* TODO Identify yourself
 
-  - There is a separate Org-mode file available for practice *after the
-    lecture*. Download [[https://tinyurl.com/yckuhh2f][tinyurl.com/yckuhh2f]]
+  - replace ~[yourName]~ in the header of this file by your name
+  - add ~(pledged)~ next to your name (as in "I obey the honor code")
+  - Change the "TODO" in the headline to "DONE" (~S-<right>~)
+  - save the file (~C-x C-s~). 
 
-    
-    [[https://raw.githubusercontent.com/birkenkrahe/cc101/piHome/3_fundamentals/org/practice.org][practice.org]] using ~wget~ from GitHub as ~practice3.org~:
-
-    #+name: ex:wget
-    #+begin_example sh
-    wget tinyurl.com/yckuhh2f -O practice3.org -o log
-    #+end_example
-      
 * VARIABLE TYPES AND DECLARATIONS
 
 - Variables must be *declared* before they can be used: define an

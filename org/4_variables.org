@@ -1,6 +1,6 @@
 #+TITLE: C FUNDAMENTALS - VARIABLES
 #+AUTHOR:Marcus Birkenkrahe
-#+SUBTITLE:CSC100 Introduction to programming in C/C++ Summer 2022
+#+SUBTITLE:CSC100 Introduction to programming in C/C++ Spring 2023
 #+DATE: Time-stamp: <2023-02-15 11:08:49 Birkenkrahe>
 #+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :tangle yes
 #+STARTUP: overview hideblocks indent inlineimages
