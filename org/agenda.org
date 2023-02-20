@@ -381,7 +381,15 @@ documents." (ChatGPT)
 
 ** TODO PRACTICE variable declarations, assignment, formatting
 ** TODO Constants, input, naming and program layout
-** TODO Assignment 2: your height in light-years
+** TODO Assignment overview
+#+attr_latex: :width 400px
+[[../img/assignments.png]]
+
+1) Class practice: start/finish/upload in class
+2) Multiple-choice tests: full points on time / partial credit if late (60%)
+3) Practice/programming assignments: start in class/finish at home
+4) Bonus assignments: complete programs at home
+  
 * References
 
 Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].
