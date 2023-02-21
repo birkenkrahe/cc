@@ -223,15 +223,15 @@
   the actual weight, the shipping fee is based on the "dimensional
   weight"[fn:7].
 
-- [ ] We write a program to compute the dimensional ~weight~ of a box of
-  given ~volume~ - we use ~/~ for division. Let's say the box is
-  12'' x 10'' x 8 ''. How can we compute this in C?
+- We write a program to compute the dimensional ~weight~ of a box of
+  given ~volume~ - we use ~/~ for division. Let's say the box is 12'' x
+  10'' x 8 ''. How can we compute this in C?
   #+begin_example C
     volume = 12 * 10 * 8   // volume = height * width * length
     weight = volume / 166  // dimensional weight
   #+end_example
 
-- [ ] Fixed the errors in the block below. The compiler no longer
+- Fixed the errors in the block below. The compiler no longer
   complains, but we don't get any output. How can we print the result?
   #+begin_src C :results silent
     int weight, volume;
@@ -239,7 +239,7 @@
     weight = volume / 166;
   #+end_src
 
-- [ ] This code prints the result of the computation using the format
+- This code prints the result of the computation using the format
   specifier for integer values:
   #+begin_src C
     int weight, volume;     // declare variable types
@@ -247,6 +247,9 @@
     weight = volume / 166;  // assign and compute values
     printf("The dimensional weight is %d\n",weight); // print result
   #+end_src
+
+  #+RESULTS:
+  : The dimensional weight is 5
 
 - This is not what we need. When dividing one integer by another, C
   "truncates" the answer - the result is rounded down, but the
@@ -258,6 +261,9 @@
     weight = (volume + 165) / 166;  // assign and compute values
     printf("The dimensional weight is %d\n",weight); // print result
   #+end_src
+
+  #+RESULTS:
+  : The dimensional weight is 6
 
 - [ ] Now for the final program. I have set it up so that this can be
   tangled as a file ~dweight.c~:

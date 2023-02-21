@@ -74,14 +74,14 @@
      degrees Fahrenheit (equivalent to 26.7 degrees Celsius).
 
   #+name: pgm:formula
-  #+begin_example
+  #+begin_src C
     celsius = (fahrenheit - freezing) * factor
-  #+end_example
+  #+end_src
        
   #+name: pgm:conversion
   #+begin_src C :noweb yes
-    <<pgm:declarations>>
-    <<pgm:assignments>>
+    <<pgm:declarations>>  // declares fahrenheit and celsius
+    <<pgm:assignments>> // assigns values to freezing and factor
     ...
     ...
     printf("Fahrenheit: %g\nCelsius equivalent: %.1f\n", 
