@@ -3,6 +3,7 @@
 #+SUBTITLE: Lyon College, Spring 2023
 #+STARTUP:overview hideblocks indent inlineimages
 #+OPTIONS: toc:nil num:nil ^:nil
+#+property: header-args:C :main yes :includes <stdio.h> :results output :noweb yes
 #+attr_html: :width 400px
 [[../img/cover.jpg]]
 * Week 1 - Course overview & introduction
@@ -234,7 +235,7 @@ documents." (ChatGPT)
 - [[https://github.com/birkenkrahe/org/blob/master/emacs/tutor.org][Emacs + Org-mode tutorial]]
 - [[https://linuxreviews.org/GNU_typing_tutor][GNU typing tutor (Linux or WSL)]]
 
-1) Downloaded a text file from the web & find the file location (~cd~) 
+1) Downloaded a text file from the web & find the file location (~cd~)
 2) Opened a no window Emacs on that file (~emacs -nw --file~)
 3) Learnt how to insert files into a buffer (~C-x i~)
 4) Learnt how to write a buffer to file (~C-x C-w~)
@@ -268,13 +269,13 @@ documents." (ChatGPT)
    - ~<RET>~ = RETURN or ENTER key
    - ~C-x~ = CTRL + x (STRG + x on a German keyboard)
    - ~M-q~ = ALT + q (Mac: Options + q)
-     
+
 ** DONE Continue with the Emacs tutorial
 #+attr_latex: :width 400px
 [[../img/recover.png]]
 
 - File recovery? Run ~recover-file~.
-  
+
 - Let's get on with the tutorial
 
 - Finish it at home by Wednesday and upload it
@@ -303,14 +304,14 @@ documents." (ChatGPT)
    - how do you exit Emacs? C-x C-c
 3) [X] What kind of file is ~.emacs~?
    #+begin_quote
-    A (hidden) configuration file to customize Emacs, (e.g. fonts,
-    themes, functions and packages loaded, etc. - the function ~M-x
-    custom-themes~ e.g. allows you to select a theme that is then
-    stored in ~.emacs~ for the next time you open Emacs.
+   A (hidden) configuration file to customize Emacs, (e.g. fonts,
+   themes, functions and packages loaded, etc. - the function ~M-x
+   custom-themes~ e.g. allows you to select a theme that is then
+   stored in ~.emacs~ for the next time you open Emacs.
    #+end_quote
 4) [X] What does "tangling" of an Org-mode file mean?
    #+begin_quote
-    Extracting the source code, e.g. a ~.c~ file from a ~C~ code block
+   Extracting the source code, e.g. a ~.c~ file from a ~C~ code block
    #+end_quote
 5) [X] How does a minimal C program look like?
    #+begin_quote
@@ -370,18 +371,41 @@ documents." (ChatGPT)
   printf("This is my other number %f\n",y);
 #+end_src
 
-** DONE Practice ~hello, world~ (file in GitHub)
-** IN PROGRESS Variables (lecture + practice)
-** TODO New test coming soon (deadline 24 Feb)
-** TODO Don't forget to upload completed practice files
+** Practice ~hello, world~ (file in GitHub)
+** Variables (lecture + practice)
+** New test coming soon (deadline 24 Feb)
+** Don't forget to upload completed practice files
 
 * Week 7 - C fundamentals: constants and I/O
 #+attr_latex: :400px
 [[../img/ccSP23test1_2.png]]
 
-** TODO PRACTICE variable declarations, assignment, formatting
-** TODO Constants, input, naming and program layout
-** TODO Assignment overview
+* IN PROGRESS REVIEW: variables PRACTICE
+
+- [ ] How would you initialize a floating-point variable foo = 5/9
+  #+begin_src C
+    float foo = 5.0f/9.0f;
+    float bar = 5/9;
+    printf("%f\n",foo);
+    printf("%f\n",bar);
+  #+end_src
+- [ ] How can I include a code block named [[baz]] in another code block?
+  #+name: baz
+  #+begin_src C
+    int baz = 5;
+  #+end_src
+
+    Include [[pgm]] in the next code block between << and >>:
+  #+begin_src C 
+    <<baz>>
+    printf("baz is %d\n",baz);
+  #+end_src
+
+  #+RESULTS:
+  : baz is 5
+
+* NEXT Constants, input, naming and program layout
+* DONE Assignment overview ([[https://lyon.instructure.com/courses/1014][Canvas]])
 #+attr_latex: :width 400px
 [[../img/assignments.png]]
 
@@ -389,7 +413,7 @@ documents." (ChatGPT)
 2) Multiple-choice tests: full points on time / partial credit if late (60%)
 3) Practice/programming assignments: start in class/finish at home
 4) Bonus assignments: complete programs at home
-  
+
 * References
 
 Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].

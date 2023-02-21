@@ -32,7 +32,7 @@ Not considering leap years, a year is 31,536,000 seconds long.
 
 - Add the following meta data as a new line at the top of your
   Org-mode file:
-  #+begin_example
+  #+begin_example org
   #+STARTUP:overview hideblocks indent
   #+end_example
 
