@@ -405,6 +405,7 @@ documents." (ChatGPT)
   : baz is 5
 
 * NEXT Constants, input, naming and program layout
+* TODO [[https://youtu.be/U3aXWizDbQ4][C in 100 seconds for the holidays]]
 * DONE Assignment overview ([[https://lyon.instructure.com/courses/1014][Canvas]])
 #+attr_latex: :width 400px
 [[../img/assignments.png]]
