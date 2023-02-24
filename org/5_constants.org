@@ -2,7 +2,7 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 Introduction to programming in C/C++ Spring 2023
 #+DATE: Time-stamp: <2023-02-18 14:05:42 Birkenkrahe>
-#+STARTUP: overview hideblocks indent
+#+STARTUP: overview hideblocks indent inlineimages
 #+OPTIONS: toc:1 ^:nil
 #+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output
 * README

@@ -1,5 +1,6 @@
 #+startup: overview hideblocks indent
 #+property: header-args:R :results output :noweb yes :session *R* :exports both
+#+options: toc:nil num:nil ^:nil
 * Constants (in scientific numeric notation):
 #+name: constants
 #+begin_src R
