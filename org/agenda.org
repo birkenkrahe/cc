@@ -381,7 +381,7 @@ documents." (ChatGPT)
 #+attr_latex: :400px
 [[../img/ccSP23test1_2.png]]
 
-* IN PROGRESS REVIEW: variables PRACTICE
+* DONE REVIEW: variables PRACTICE
 
 - [ ] How would you initialize a floating-point variable foo = 5/9
   #+begin_src C
@@ -396,8 +396,8 @@ documents." (ChatGPT)
     int baz = 5;
   #+end_src
 
-    Include [[pgm]] in the next code block between << and >>:
-  #+begin_src C 
+  Include [[pgm]] in the next code block between << and >>:
+  #+begin_src C
     <<baz>>
     printf("baz is %d\n",baz);
   #+end_src
@@ -405,8 +405,6 @@ documents." (ChatGPT)
   #+RESULTS:
   : baz is 5
 
-* NEXT Constants, input, naming and program layout
-* TODO [[https://youtu.be/U3aXWizDbQ4][C in 100 seconds for the holidays]]
 * DONE Assignment overview ([[https://lyon.instructure.com/courses/1014][Canvas]])
 #+attr_latex: :width 400px
 [[../img/assignments.png]]
@@ -416,39 +414,157 @@ documents." (ChatGPT)
 3) Practice/programming assignments: start in class/finish at home
 4) Bonus assignments: complete programs at home
 
-* TODO Computing in light-years (a review with R)
+* TODO [[https://youtu.be/U3aXWizDbQ4][C in 100 seconds]] - review and preview
+#+attr_latex: :width 400px
+[[../img/spheres.png]]
+
+- Write down any term you know already!
+- Write down any term you haven't heard yet!
+  
+* TODO Computing in light-years & learn R!
 #+attr_latex: :width 400px
 [[../img/empirestatebuilding.jpg]]
-- The constants (in scientific numeric notation):
-  #+name: constants
-  #+begin_src R
-    299792458 -> SPEED_OF_LIGHT # in meter/second
-    paste("Speed of light [m/s] =",format(SPEED_OF_LIGHT,sci=T), "[m/s]")
-    31536000 -> YEAR_IN_SECONDS # in seconds
-    paste("Year in seconds =",format(YEAR_IN_SECONDS, sci=T),"[s]")
-  #+end_src
+
+- Save ~convertR.org~ from GitHub in your ~Downloads~ directory
+
+- Open it in Emacs: ~cd Downloads~ => ~emacs --file convertR.org~
+
+** Constants (in scientific numeric notation):
+#+name: constants
+#+begin_src R
+  299792458 -> SPEED_OF_LIGHT # in meter/second
+  paste("Speed of light [m/s] =",format(SPEED_OF_LIGHT,sci=T), "[m/s]")
+  31536000 -> YEAR_IN_SECONDS # in seconds
+  paste("Year in seconds =",format(YEAR_IN_SECONDS, sci=T),"[s]")
+#+end_src
+
 - Recall: speed [m/s] * time [s] = distance*[m]
-- Compute: How far does light travel in one year? (A derived constant)
-  #+name: lightyear
-  #+begin_src R
-    SPEED_OF_LIGHT * YEAR_IN_SECONDS -> ly
-    paste("1 light-year [LY] =",format(ly,sci=T), "[m]")
-  #+end_src
+
+** How far does light travel in one year?
+#+name: lightyear
+#+begin_src R
+  SPEED_OF_LIGHT * YEAR_IN_SECONDS -> ly
+  paste("1 light-year [LY] =",format(ly,sci=T), "[m]")
+#+end_src
+
 - Conversion: x [m] = y * ly [m] => y = x/ly
-- Compute: How high is the Empire State Building (380m) in
-  light-years?
-  #+name: conversion
-  #+begin_src R
-    380 -> x # height in [m] is given, y = x/ly is sought
-    paste(x,"[m] =",x/ly,"light-years.")
-  #+end_src
-  The whole script can be tangled as ~convert.R~ and run on a shell like
-  a C program with ~Rscript~ instead of the ~gcc~ compiler:
-  #+begin_src R :tangle convert.R
-    <<constants>>
-    <<lightyear>>
-    <<conversion>>
-  #+end_src
+
+** How high is the Empire State Building in light-years?
+
+#+name: conversion
+#+begin_src R
+  380 -> x # height in [m] is given, y = x/ly is sought
+  paste(x,"[m] =",x/ly,"light-years.")
+#+end_src
+
+- Now, the complete script can be tangled as ~convert.R~ and run on a
+  shell like a C program with ~Rscript~ instead of the ~gcc~ compiler.
+
+** The complete R script
+- Tangle the code below (~C-c C-v t~) to a file ~convert.R~
+- Open a shell (~M-x eshell~) and run ~Rscript convert.R~
+#+begin_src R :tangle convert.R
+  <<constants>>
+  <<lightyear>>
+  <<conversion>>
+#+end_src
+#+end_src
+* NEXT Constants, input, naming and program layout
+#+attr_latex: :width 400px
+[[../img/5_rock.jpg]]
+
+- Lecture + codealong file
+- Practice
+- Test
+
+* READ AWESOME! WHAT YOU ALREADY LEARNT IN ONLY 6 WEEKS!
+
+- Copied from the glossary sections of the first 5 lectures (handout).
+- Not on the list are more infrastructure and development details.
+- Not printable are the skills that you did not only hear about but
+  practiced at limited personal cost!
+
+| TERM                    | MEANING                                             |
+|-------------------------+-----------------------------------------------------|
+| Meta data               | Data about data (e.g. layout instructions)          |
+| Infrastructure          | Computing roadworks: hardware and software          |
+| Editor                  | Program to write programs in                        |
+| Compiler                | Program to turn source into machine code            |
+| ~gcc~                     | The GNU C compiler                                  |
+| Source code             | Code for humans to read and edit (~.c~)               |
+| Machine code            | Code for machines to execute (~.exe~)                 |
+| [[https://en.wikipedia.org/wiki/Git][Git]]                     | Software version control system (2005)              |
+| [[https://www.gnu.org/software/emacs/][Emacs]]                   | Extensible editor written in Lisp (1985)            |
+| FOSS                    | Free and Open Source Software                       |
+| [[https://en.wikipedia.org/wiki/Linux][Linux]]                   | FOSS operating system (1991)                        |
+| Windows, MacOS          | Commercial OS (Microsoft, Apple)                    |
+| Android                 | Linux for smartphones (Google)                      |
+| iOS                     | MacOS for Apple smartphones                         |
+| Command line            | Terminal, shell program to talk to the OS           |
+| Prompt                  | Location on your computer, e.g. ~C:\User\~            |
+| Raw file                | No control characters for syntax highlighting       |
+| Syntax highlighting     | Making programming language visible                 |
+| ~DIR~                     | Windows command to list files                       |
+| ~cd~                      | Command to change directory                         |
+| Literate pgm            | Doc + code + output for humans and machines         |
+| Org-mode                | Plugin for Emacs to edit Org files (~.org~)           |
+| Dunning-Kruger effect   | Illustrating ignorance of your own ignorance        |
+|-------------------------+-----------------------------------------------------|
+| DEC PDP-11              | 1970s mainframe computer                            |
+| UNIX                    | Operating system (ca. 1969)                         |
+| ANSI                    | American National Standard Institute                |
+| Assembler               | Machine code (hard to write/read)                   |
+| Algorithm               | Fixed process or set of rules                       |
+| Linux                   | Operating system (ca. 1991)                         |
+| C                       | Imperative, procedural programming language         |
+| C++                     | Object-oriented (OO) superset of C                  |
+| Clang                   | C/C++ compiler                                      |
+| gcc                     | GNU compiler bundle (incl. C/C++)                   |
+| Java,C#                 | OO programming language                             |
+| Perl                    | Scripting language                                  |
+| Git                     | Software version control system                     |
+| GitHub                  | Developer's platform (owned by Microsoft)           |
+| Library                 | Bundle of useful functions and routines             |
+| Portability             | Ability of software to run on different hardwares   |
+| Efficiency              | Software speed of execution and memory requirements |
+| Permissiveness          | Degree to which a language tolerates ambiguities    |
+| Object-orientation      | Ability to define abstractions                      |
+| System programming      | Programming close to the machine                    |
+| Application programming | Programming close to the user                       |
+|-------------------------+-----------------------------------------------------|
+
+| TERM                    | MEANING                                                   |
+|-------------------------+-----------------------------------------------------------|
+| Linker                  | translates object code to machine code                    |
+| Syntax                  | language rules                                            |
+| Debugger                | checks syntax                                             |
+| Directive               | starts with ~#~, one line only, no delimiter                |
+| Preprocessor            | processes directives                                      |
+| Statement               | command to be executed, e.g. ~return~                       |
+| Delimiter               | ends a statement (in C: semicolon - ~;~)                    |
+| Function                | a rule to compute something with arguments                |
+| String                  | Sequence of /character/ values like ~hello~                   |
+| String literal          | Unchangeable, like the numbe ~8~ or the string ~hello~        |
+| Constant                | Set value that is not changed                             |
+| Variable                | A named memory placeholder for a value, e.g. ~int i~        |
+| Data type               | A memory storage instruction like ~int~ for integer         |
+| Comment                 | Region of code that is not executed                       |
+| Format specifier        | Formatting symbol like ~%d%~ or ~%f%~                         |
+| Data type declaration   | Combination of type and variable name - e.g. ~int height;~  |
+| ~int~                     | C type for integer numbers, e.g. 2                        |
+| ~float~                   | C type for floating point numbers, e.g. 3.14              |
+| ~char~                    | C type for characters, like "joey"                        |
+| Formatting              | Tells the computer how to print, e.g. ~%d~ for ~int~ types    |
+| ~%d~                      | Format for integers                                       |
+| ~%f~ and ~%.pf~             | Format for floating point numbers                         |
+|                         | (with ~p~ digits after the point)                           |
+| ~#define~                 | Define a constant with the preprocessor,                  |
+|                         | e.g. ~#define PI 3.14~                                      |
+| ~math.h~                  | Math library, contains mathematical constants & functions |
+| ~stdio.h~                 | Input/Output library, enables ~printf~ and ~scanf~            |
+| ~const~                   | Constant identifier, e.g. ~const double PI = 3.14;~         |
+|-------------------------+-----------------------------------------------------------|
+
 * References
 
 Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].
