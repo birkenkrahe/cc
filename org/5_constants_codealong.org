@@ -1,5 +1,5 @@
 #+TITLE:C FUNDAMENTALS - CONSTANTS - CODE ALONG WITH LECTURE
-#+AUTHOR: [yourname]
+#+AUTHOR: Marcus Birkenkrahe (pledged)
 #+SUBTITLE:CSC100 Introduction to programming in C/C++ Spring 2023
 #+DATE: Time-stamp: <2023-02-18 14:05:42 Birkenkrahe>
 #+STARTUP: overview hideblocks indent
@@ -12,43 +12,52 @@ during a lecture. Upload it to Canvas once you've completed it. If you
 missed a class session, you can work through this file on your own and
 submit it within a week for full points.
 
-* TODO Identify yourself
+* DONE Identify yourself
 
   - replace ~[yourName]~ in the header of this file by your name
   - add ~(pledged)~ next to your name (as in "I obey the honor code")
   - Change the "TODO" in the headline to "DONE" (~S-<right>~)
   - save the file (~C-x C-s~). 
-* Macro definition with ~#define~
+* DONE Macro definition with ~#define~
 
 - This declarative constant definition for the pre-processor blindly
   substitutes the defined value everywhere in the program.
   #+begin_src C :main yes :includes <stdio.h>
+    #define PI 3.14159
 
+    printf("PI is %f\n",PI);
   #+end_src
+
+  #+RESULTS:
+  : PI is 3.141590
 
 - Can you see what mistake I made in the next code block? Fix it and
   run the block.
   #+begin_example C
-    #define PI = 3.141593
+    #define PI = 3.141593   // no assignment operator!
     printf("PI is %f\n", PI);
   #+end_example
 
 - Can you see what went wrong in the next code block? If you don't
   see it at once, check the compiler error output! Fix it and run the block!
   #+begin_example C
-    #define PI 3.141593;
+    #define PI 3.141593;  // no C command! no ; at end
     printf("PI is %f\n", PI);
   #+end_example
 
 - The next program demonstrates how a constant declared with ~#define~
   can be redefined later with a second ~#define~ declaration.
-  #+begin_src C :exports both :results output
-    #define ...
-    printf("Constant is %.2f\n", ...);
+  #+begin_src C :exports both :results output :tangle ex.c
+    #define WERT 1.0
+    printf("Constant is %.2f\n", WERT);
 
-    #define ...
-    printf("Constant is %.2f\n", ...);
+    #define WERT 2.0
+    printf("Constant is %.2f\n", WERT);
   #+end_src
+
+  #+RESULTS:
+  : Constant is 1.00
+  : Constant is 2.00
 
 * Library definitions with ~#include~
 

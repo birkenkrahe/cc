@@ -69,7 +69,7 @@
 
 - However, ~gcc~ is warning us about it!
 
-* Library definitions with ~#include~
+* NEXT Library definitions with ~#include~
 
 - Since mathematical constants are so important in scientific
   computing, there is a library that contains them, ~math.h~.
