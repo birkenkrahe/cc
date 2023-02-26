@@ -381,7 +381,7 @@ documents." (ChatGPT)
 #+attr_latex: :400px
 [[../img/ccSP23test1_2.png]]
 
-* DONE REVIEW: variables PRACTICE
+** REVIEW: variables PRACTICE
 
 - [ ] How would you initialize a floating-point variable foo = 5/9
   #+begin_src C
@@ -405,7 +405,7 @@ documents." (ChatGPT)
   #+RESULTS:
   : baz is 5
 
-* DONE Assignment overview ([[https://lyon.instructure.com/courses/1014][Canvas]])
+** Assignment overview ([[https://lyon.instructure.com/courses/1014][Canvas]])
 #+attr_latex: :width 400px
 [[../img/assignments.png]]
 
@@ -414,14 +414,18 @@ documents." (ChatGPT)
 3) Practice/programming assignments: start in class/finish at home
 4) Bonus assignments: complete programs at home
 
-* TODO [[https://youtu.be/U3aXWizDbQ4][C in 100 seconds]] - review and preview
+** WATCH [[https://youtu.be/U3aXWizDbQ4][C in 100 seconds]] - review and preview
 #+attr_latex: :width 400px
 [[../img/spheres.png]]
 
 - Write down any term you know already!
 - Write down any term you haven't heard yet!
-  
-* TODO Computing in light-years & learn R!
+
+#+begin_notes
+
+#+end_notes
+
+** Computing in light-years & learn R!
 #+attr_latex: :width 400px
 [[../img/empirestatebuilding.jpg]]
 
@@ -429,7 +433,7 @@ documents." (ChatGPT)
 
 - Open it in Emacs: ~cd Downloads~ => ~emacs --file convertR.org~
 
-** Constants (in scientific numeric notation):
+*** Constants (in scientific numeric notation):
 #+name: constants
 #+begin_src R
   299792458 -> SPEED_OF_LIGHT # in meter/second
@@ -440,7 +444,7 @@ documents." (ChatGPT)
 
 - Recall: speed [m/s] * time [s] = distance*[m]
 
-** How far does light travel in one year?
+*** How far does light travel in one year?
 #+name: lightyear
 #+begin_src R
   SPEED_OF_LIGHT * YEAR_IN_SECONDS -> ly
@@ -449,7 +453,7 @@ documents." (ChatGPT)
 
 - Conversion: x [m] = y * ly [m] => y = x/ly
 
-** How high is the Empire State Building in light-years?
+*** How high is the Empire State Building in light-years?
 
 #+name: conversion
 #+begin_src R
@@ -460,7 +464,7 @@ documents." (ChatGPT)
 - Now, the complete script can be tangled as ~convert.R~ and run on a
   shell like a C program with ~Rscript~ instead of the ~gcc~ compiler.
 
-** The complete R script
+*** The complete R script
 - Tangle the code below (~C-c C-v t~) to a file ~convert.R~
 - Open a shell (~M-x eshell~) and run ~Rscript convert.R~
 #+begin_src R :tangle convert.R
@@ -469,7 +473,7 @@ documents." (ChatGPT)
   <<conversion>>
 #+end_src
 #+end_src
-* NEXT Constants, input, naming and program layout
+** Constants, input, naming and program layout
 #+attr_latex: :width 400px
 [[../img/5_rock.jpg]]
 
@@ -477,7 +481,7 @@ documents." (ChatGPT)
 - Practice
 - Test
 
-* READ AWESOME! WHAT YOU ALREADY LEARNT IN ONLY 6 WEEKS!
+** AWESOME! WHAT YOU ALREADY LEARNT IN ONLY 6 WEEKS!
 
 - Copied from the glossary sections of the first 5 lectures (handout).
 - Not on the list are more infrastructure and development details.
@@ -565,6 +569,17 @@ documents." (ChatGPT)
 | ~const~                   | Constant identifier, e.g. ~const double PI = 3.14;~         |
 |-------------------------+-----------------------------------------------------------|
 
+* TODO Week 8 - C fundamentals: naming and program layout
+* TODO Week 9 - C input/output
+* TODO Week 10 - Conditional statements 
+* TODO Week 11 - Loops
+* TODO Week 12 - Arrays
+* TODO Week 13 - Functions
+* TODO Week 14 - Pointers
+* TODO Week 15 - Pointers and arrays
+* TODO Week 16 - C++
+- [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: whaddayaknow?
+* TODO What next?
 * References
 
 Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].
