@@ -33,6 +33,7 @@ Not considering leap years, a year is 31,536,000 seconds long.
 - Add the following meta data as a new line at the top of your
   Org-mode file: ~#+STARTUP:overview hideblocks indent~
 
+
 - The Org-mode file should also contain the output for the three test
   cases after the code block:
   #+begin_example
@@ -50,5 +51,5 @@ Not considering leap years, a year is 31,536,000 seconds long.
 * Footnotes
 
 [fn:1]The idea for this program came from a new book that I'm reading
-now, [[https://www.amazon.com/Quantum-Field-Theory-Michel-Talagrand-ebook/dp/B09SV9GNDN]["Quantum Field Theory? A first introduction for mathematicians"
+now, [[https://www.math.columbia.edu/~woit/wordpress/?p=12819]["Quantum Field Theory? A first introduction for mathematicians"
 (Talagrand, 2022)]].
