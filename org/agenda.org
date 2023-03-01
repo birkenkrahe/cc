@@ -573,11 +573,16 @@ documents." (ChatGPT)
 #+attr_latex: :width 400px
 [[../img/midterm.png]]
 
-- The great mid-term grade inflation extrapolation: extra points for
-  codealong and practice files!
+- The great /mid-term grade inflation extrapolation/: extra points for
+  codealong and practice files! Points for breathing/staying alive!
 
-- This week: finish constants, naming, program layout
+- Alas, generosity could not save everyone - what to do?
+  1) Drill the quizzes until you faint
+  2) Turn assignments in when they are ready and requested
+  3) Look at the GitHub stuff before/after class
 
+- *Recap:* constants are important because? In C, there are 3 ways to
+  define constants: with ~#define~ and with ~#include~ and with ~const~
 * TODO Test 3 results - a mixed affair
 #+attr_latex: :width 400px
 [[../img/ccSP23test1_2_3.png]]

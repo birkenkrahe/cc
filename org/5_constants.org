@@ -79,12 +79,18 @@
   #+begin_src C
     #include <stdio.h>
     #include <math.h>
+    #define Donna M_PI   // from now on, M_PI is called Donna
     int main(void) {
-      printf("PI is %f\n",M_PI);
-      printf("PI is %.16f\n",M_PI);
+      printf("PI is %f\n", Donna);
+      printf("PI is %.16f\n",Donna);
       return 0;
     }
   #+end_src
+
+  #+RESULTS:
+  : PI is 3.141593
+  : PI is 3.1415926535897931
+
 - Inside Emacs with Org-mode, you can include the math header file
   ~math.h~ as a code block header argument:
   #+begin_src C :includes <stdio.h> <math.h>
@@ -147,7 +153,7 @@
     printf("Tax on revenue %.2f is %.2f", revenue, tax);
   #+end_src
 
-* Reading input
+* IN PROGRESS Reading input
 
 - Before you can print output with ~printf~, you need to tell the
   computer, which format it should prepare for.
