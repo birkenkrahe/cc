@@ -350,7 +350,7 @@ documents." (ChatGPT)
 
 ** TODO Online test 2: intro to C, hello Emacs (Canvas)
 
-* Week 6 - C fundamentals: variables
+* Week 6 - C basics: variables
 #+attr_latex: :width 400px
 #+caption: Elephant (Source: Wikipedia)
 [[../img/elephant.png]]
@@ -377,7 +377,7 @@ documents." (ChatGPT)
 ** New test coming soon (deadline 24 Feb)
 ** Don't forget to upload completed practice files
 
-* Week 7 - C fundamentals: constants and I/O
+* Week 7 - C basics: constants and I/O
 #+attr_latex: :400px
 [[../img/ccSP23test1_2.png]]
 
@@ -569,13 +569,29 @@ documents." (ChatGPT)
 | ~const~                   | Constant identifier, e.g. ~const double PI = 3.14;~         |
 |-------------------------+-----------------------------------------------------------|
 
-* TODO Week 8 - C fundamentals: naming and program layout
+* TODO Week 8 - C basics: naming/program layout
 #+attr_latex: :width 400px
 [[../img/midterm.png]]
 
 - The great mid-term grade inflation extrapolation: extra points for
   codealong and practice files!
-  
+
+- This week: finish constants, naming, program layout
+
+* TODO Test 3 results - a mixed affair
+#+attr_latex: :width 400px
+[[../img/ccSP23test1_2_3.png]]
+
+- Median is moving up (good), average is stable (ok)
+- Maximum is moving up (good), range is wide (not good)
+- If you got < 10 points (75%) you need to keep at it
+
+* TODO You're lucky that this is only C
+#+attr_latex: :width 400px
+[[../img/java.png]]
+
+Image: Java OOP program (Sedgewick/Wayne, Algorithms)
+
 * TODO Week 9 - C input/output
 * TODO Week 10 - Conditional statements 
 * TODO Week 11 - Loops
