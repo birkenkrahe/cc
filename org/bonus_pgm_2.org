@@ -1,7 +1,6 @@
 #+TITLE: ...
 #+AUTHOR: ...
 #+SUBTITLE:Bonus programming assignment 2 - Intro to Programming in C, Spring 2023
-...
 #+OPTIONS: toc:nil num:nil ^:nil
 #+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both
 #+STARTUP:overview hideblocks indent
@@ -11,7 +10,7 @@
    meters to light-years to compute the light-year equivalent of any
    height value in meters passed to the program as input.
 
-   You can find the solution here.
+   [[https://github.com/birkenkrahe/cc/blob/piHome/org/bonus_pgm_1.org#solution][You can find the solution here.]]
 
 2) Enter the three heights from the first program as test cases as
    *command line input*. To do this in Emacs, use the ~:cmdline < input~
@@ -22,8 +21,8 @@
 Submit your solution as an Emacs Org-mode file including the usual
 header information (title, author, pledged), in Canvas.
 
-The solution should contain the output after the code block.
-
+The solution should contain the output after the code block. It looks
+like this:
 #+begin_example
   : A height of 1.80 m is equivalent to 1.9039e-16 light-years
 #+end_example
