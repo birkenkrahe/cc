@@ -44,8 +44,8 @@
 
 * TODO Standard math library
 
-  Open the file ~math.h~ on your computer and search for the definition
-  of ~M_PI~. What is the last non-zero digit?
+  Open the file [[https://github.com/birkenkrahe/cc/blob/piHome/data/math.h][math.h]] (from GitHub) and search for the definition of
+  ~M_PI~. What is the last non-zero digit?
 
   Answer:
   
@@ -61,7 +61,11 @@
   3) Create an input file named ~finput~ in ~$PWD~ and put the number
      ~3.141593~ into it.
 
-  4) Run [[pgm:fscan]]
+  4) Run [[pgm:fscan]]. You should get the result:
+     #+begin_example org
+     : Enter a floating-point number!
+     : You entered 3.141593
+     #+end_example
 
   #+name: pgm:iscan
   #+begin_src C :cmdline < ./data/input
