@@ -1,10 +1,9 @@
 #+TITLE: ...
 #+AUTHOR: ...
 #+SUBTITLE:Bonus programming assignment 1 - Intro to Programming in C, Spring 2023
-...
+#+STARTUP:overview hideblocks indent
 #+OPTIONS: toc:nil num:nil ^:nil
 #+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both
-
 * Preamble[fn:1]
 
 The numerical value of many physical quantities depends on the unit
@@ -45,8 +44,29 @@ Not considering leap years, a year is 31,536,000 seconds long.
 - Submit your solution as an Emacs Org-mode file including the usual
   header information (title, author, pledged) [[https://lyon.instructure.com/courses/1014/assignments/8275/][in Canvas.]]
 
-* TODO Solution
+* Solution
 
+    - Constants: ~SPEED_OF_LIGHT = 299792458.f~, ~YEAR_IN_SECONDS = 31536000.f~
+    - Variables: h1 = 1.8f, h2 = 1.98f, h3 = 1.67f
+
+    #+name: lightyears
+    #+begin_src C :results output
+      const float  SPEED_OF_LIGHT = 299792458.f;
+      const float  YEAR_IN_SECONDS = 31536000.f;
+      float h1 = 1.8f, h2 = 1.98f, h3 = 1.67f;
+
+      printf("Marcus Birkenkrahe's height:%.2f m = %.2e light-years\n",
+             h1, h1/SPEED_OF_LIGHT / YEAR_IN_SECONDS);
+      printf("Michael Jordan's height:\t%.2f m = %.2e light-years\n",
+             h2, h2/SPEED_OF_LIGHT / YEAR_IN_SECONDS);
+      printf("Napoleon Bonaparte's height:%.2f m = %.2e light-years\n",
+             h3, h3/SPEED_OF_LIGHT / YEAR_IN_SECONDS);
+    #+end_src
+
+    #+RESULTS: lightyears
+    : Marcus Birkenkrahe's height:1.80 m = 1.90e-16 light-years
+    : Michael Jordan's height:  1.98 m = 2.09e-16 light-years
+    : Napoleon Bonaparte's height:1.67 m = 1.77e-16 light-years
 
 * Footnotes
 
