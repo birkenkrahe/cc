@@ -1,5 +1,5 @@
-#+TITLE: ...
-#+AUTHOR: ...
+#+TITLE: Convert Meters to Light-Years
+#+AUTHOR: Marcus Birkenkrahe (pledged)
 #+SUBTITLE:Bonus programming assignment 1 - Intro to Programming in C, Spring 2023
 #+STARTUP:overview hideblocks indent
 #+OPTIONS: toc:nil num:nil ^:nil
