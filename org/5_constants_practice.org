@@ -44,10 +44,14 @@
 
 * TODO Standard math library
 
-  Open the file [[https://github.com/birkenkrahe/cc/blob/piHome/data/math.h][math.h]] (from GitHub) and search for the definition of
-  ~M_PI~. What is the last non-zero digit?
+  - Open the file [[https://github.com/birkenkrahe/cc/blob/piHome/data/math.h][math.h]] (from GitHub) and search for the definition
+    of ~M_PI~. What is the last non-zero digit? What's the precision?
 
-  Answer:
+  - Answer:
+
+  - Can you also print it using ~math.h~? Write a quick 2-line program
+    to print this value!
+  
   
 * TODO Reading input
 
@@ -68,16 +72,12 @@
      #+end_example
 
   #+name: pgm:iscan
-  #+begin_src C :cmdline < ./data/input
+  #+begin_src C :cmdline < input
     int i;
     puts("Enter an integer!");
     scanf("%d", &i);
     printf("You entered %d\n", i);
   #+end_src
-
-  #+RESULTS: pgm:iscan
-  : Enter an integer!
-  : You entered 5
 
 * TODO Naming identifiers
 
