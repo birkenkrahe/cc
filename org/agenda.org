@@ -569,7 +569,7 @@ documents." (ChatGPT)
 | ~const~                   | Constant identifier, e.g. ~const double PI = 3.14;~         |
 |-------------------------+-----------------------------------------------------------|
 
-* IN PROGRESS Week 8 - C basics: naming/program layout
+* Week 8 - C basics: naming/program layout
 #+attr_latex: :width 400px
 [[../img/midterm.png]]
 
@@ -591,7 +591,7 @@ documents." (ChatGPT)
   tells the computer to put your input in a specific place.
 
 - The ~puts~ function can only print one string (including a new line)
-* DONE Test 3 results - a mixed affair
+** Test 3 results - a mixed affair
 #+attr_latex: :width 400px
 [[../img/ccSP23test1_2_3.png]]
 
@@ -599,13 +599,13 @@ documents." (ChatGPT)
 - Maximum is moving up (good), range is wide (not good)
 - If you got < 10 points (75%) you need to keep at it
 
-* DONE You're lucky that this is only C
+** You're lucky that this is only C
 #+attr_latex: :width 400px
 [[../img/java.png]]
 
 Image: Java OOP program (Sedgewick/Wayne, Algorithms)
 
-* TODO Bonus program 2 - Height in light-years "reloaded"
+** Bonus program 2 - Height in light-years "reloaded"
 #+attr_latex: :width 400px
 #+caption: guardian angel
 [[../img/guardianangel.jpg]]
@@ -619,7 +619,7 @@ Image: Java OOP program (Sedgewick/Wayne, Algorithms)
 Tip: to do this inside Emacs Org-mode, you need to add the header
 argument ~:cmdline < input~, and the input should be in the file ~input~.
 
-* TODO Home assignment: constants/naming/layout
+** Home assignment: constants/naming/layout
 #+attr_latex: :width 400px
 #+caption: Library of Congress - Sports Illustrated, Zermatt story, July 1954
 [[../img/home.jpg]]
@@ -633,6 +633,13 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
 
 
 * TODO Week 9 - C input/output
+#+attr_latex: :width 400px
+[[../img/scanner.jpg]]
+
+- Complete TEST 4 in Canvas by Friday, March 10!
+- Practice constants, naming, layout (~5_constants_practice.org~)
+- Next topic: input and output - ~printf~ and ~scanf~
+
 * TODO Week 10 - Conditional statements 
 * TODO Week 11 - Loops
 * TODO Week 12 - Arrays
