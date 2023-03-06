@@ -1,4 +1,4 @@
-#+TITLE:C FUNDAMENTALS - CONSTANTS - LECTURE
+#+TITLE:C FUNDAMENTALS - CONSTANTS / INPUT / NAMING / LAYOUT - LECTURE
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:CSC100 Introduction to programming in C/C++ Spring 2023
 #+DATE: Time-stamp: <2023-02-18 14:05:42 Birkenkrahe>
@@ -69,7 +69,7 @@
 
 - However, ~gcc~ is warning us about it!
 
-* NEXT Library definitions with ~#include~
+* Library definitions with ~#include~
 
 - Since mathematical constants are so important in scientific
   computing, there is a library that contains them, ~math.h~.
@@ -153,7 +153,7 @@
     printf("Tax on revenue %.2f is %.2f", revenue, tax);
   #+end_src
 
-* IN PROGRESS Reading input
+* Reading input
 
 - Before you can print output with ~printf~, you need to tell the
   computer, which format it should prepare for.
@@ -177,10 +177,10 @@
 
 - To see how input works on the command line, *tangle* the code above as
   ~scanf.c~ (add ~:tangle scan.c~ in the code block header), and run the
-  file on the command line:
+  file on the command line: ~C-u C-c C-v t~
   #+begin_example sh
-  gcc scan.c -o iscan
-  iscan < input
+  gcc scan.c -o iscan   ## compiles source code to executable
+  iscan < input  ## feed input to the executable
   #+end_example
 
 * Naming conventions
@@ -204,7 +204,7 @@
   insert capital letters:
   #+begin_example C
     hello_world();
-    helloWorld();
+    helloWorld();  // this is C++ style "camelCase"
   #+end_example
 
 - Name according to function! In the next code block, both functions
@@ -284,7 +284,7 @@
 - You can think of a program statement as a series of tokens[fn:6]:
   #+begin_example
    printf ( "Height: %d\n"   ,   height )  ;
-     1      2        3         2     5    6  7
+     1    2        3         2     5    6  7
   #+end_example
   #+name: tab:tokens
   |   | TOKEN          | MEANING                              |

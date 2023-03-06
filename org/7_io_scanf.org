@@ -1,0 +1,175 @@
+#+TITLE:Formatted I/O: scanf
+#+AUTHOR:Marcus Birkenkrahe
+#+Source: KN King C Programming
+#+SUBTITLE:CSC 100 Introduction to programming in C/C++, Summer 2022
+#+STARTUP: overview hideblocks indent
+#+OPTIONS: toc:1 num:1 ^:nil
+#+PROPERTY: header-args:C :main yes :includes <stdio.h>
+#+PROPERTY: header-args:C :exports both :comments both
+* README
+
+- There is much more to ~scanf~ and ~printf~ than we've seen
+
+- I/O is where the pedal hits the metal - where man meets machine
+
+- In this notebook: conversion specifications for scanf
+
+- Practice workbooks, input files and PDF solution files in GitHub
+
+* scanf
+
+- A ~scanf~ *format string* may contain ordinary characters and
+conversion specifications like ~d~, ~e~, ~f~, ~g~
+
+- *The *conversions* allowed with ~scanf~ are essentially the same as
+  those used with ~printf~
+
+- The ~scanf~ format string tends to contain *only* conversion specs
+
+* First example
+
+- Example input:
+  #+begin_example
+  1  -20  .3   -4.0e3
+  #+end_example
+
+  Example program to read this input:
+  #+name: pgm:tscanf
+  #+begin_src C :cmdline < ./data/io_scanf_input :results output
+    int i, j;
+    float x, y;
+
+    scanf("%d%d%f%f", &i, &j, &x, &y);
+
+    printf("|%5d|%5d|%5.1f|%10.1f|\n", i, j, x, y);
+  #+end_src
+
+  #+RESULTS: pgm:tscanf
+  : |    1|  -20|  0.3|   -4000.0|
+
+  Create the input file:
+  #+name: pgm:io_scanf_input
+  #+begin_src bash :results silent
+    echo "1  -20 .3 -4.0e+3" > ./data/io_scanf_input
+  #+end_src
+
+* Main traps
+
+- The compiler will not check that specs and input match
+
+- The ~&~ symbol may not miss in front of the input variable
+
+* How scanf works
+
+- ~scanf~ is a pattern-matching function: it tries to math input groups
+  with conversion specifications in the format string
+
+- For each spec, it tries to locate an item in input
+
+- It reads the item, and stops when it can't match
+
+- If an item is not read successfully, ~scanf~ aborts
+
+#+caption: How scanf works (Event-controlled Process Chain diagram)
+#+attr_html: :width 400px
+[[./img/scanf.png]]
+
+- White-space characters are ignored: space, TAB (~\t~), new-line (~\n~)
+
+- In [[pgm:tscanf]] above, the lines can be on one line or spread over
+several lines:
+
+#+caption: Input file for tscanf
+#+attr_html: :width 300px
+[[./img/input.png]]
+
+- ~scanf~ sees a character stream (~¤~ = new-line, ~s~ = skip'd, ~r~ = read):
+
+  #+begin_example
+  ••1¤-20•••.3¤•••-4.0e3¤
+  ssrsrrrsssrrssssrrrrrr
+  #+end_example
+
+  - When asked to read an *integer* (~%d~ or ~%i~), ~scanf~ searches for a
+    digit, or a +/- sign, then reads until it encounters a non-digit
+
+  - When asked to read a *float* (~%f~, ~%g~, ~%e~), ~scanf~ looks for +/- sign,
+    digits, decimal point, or an exponent (~e+02~, ~e-02~)
+
+  - When used with ~scanf~, ~%e~, ~%f~, ~%g~ are interchangeable
+
+  - When it finds a character that cannot be part of the current item,
+    the character is returned to be read again during the scanning of
+    the next input item or the next call of ~scanf~
+
+* Walk through example
+
+The extended example below has the same spec as [[pgm:tscanf]] -
+~"%d%d%f%f",&i,&j&x&y~
+
+#+name: ex:sampleInput
+#+begin_example
+  1-20.3-4.0e3¤
+#+end_example
+
+1) Expects ~%d~. Stores ~1~ in ~i~, returns ~-~
+
+2) Expects ~%d~. Stores ~-20~ in ~j~, returns ~.~
+
+3) Expects ~%f~. Stores ~0.3~ in ~x~, returns ~-~
+
+4) Expects ~%f~. Stores ~-4.0 x 10^3~ in ~y~, returns ~¤~ and finishes.
+
+* Ordinary characters in format strings
+
+- ~scanf~ reads white-space until it reaches a symbol
+
+- When it reaches a symbol, it tries to match to next input
+
+- It now either continues processing or aborts
+
+* Example with ordinary characters
+
+- If the format string is ~"%d/%d"~ and the input is ~•5/•96~, ~scanf~
+  succeeds.
+
+- If the input is ~•5•/•96~ , ~scanf~ fails, because the ~/~ in the format
+  string doesn’t match the space in the input.
+
+- Upon encountering the ~/~ in ~•5•/•96~, ~scanf~ will abort, since it
+  expects a digit or a +/- sign. The resulting value in the second
+  variable is not ~96~ but some other random number or memory address.
+
+- To allow spaces after the first number, use ~"%d /%d"~ instead.
+
+* Common mistakes:
+
+1. putting ~&~ in front of variables in a ~printf~ call
+
+   #+name: pointer
+   #+begin_example
+    printf("%d %d\n", &i, &j);  /*** WRONG ***/
+   #+end_example
+
+2. assuming that ~scanf~ should resemble ~printf~ formats
+
+   #+name: notPrintf
+   #+begin_example
+    scanf("%d, %d", &i, &j);
+   #+end_example
+
+   - After storing ~i~, ~scanf~ will try to match a comma with the
+     next input character. If it's a space, it will abort.
+
+   - Only this input will work: ~100, 100~ but not ~100 100~
+
+3. putting a ~\n~ character at the end of ~scanf~ string
+
+   #+name: noNewline
+   #+begin_example
+    scanf("%d\n", &i);
+   #+end_example
+
+   - To ~scanf~, the new-line is /white-space/. It will advance to the
+     next white-space character and not finding one will hang forever
+

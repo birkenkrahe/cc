@@ -581,8 +581,16 @@ documents." (ChatGPT)
   2) Turn assignments in when they are ready and requested
   3) Look at the GitHub stuff before/after class
 
-- *Recap:* constants are important because? In C, there are 3 ways to
-  define constants: with ~#define~ and with ~#include~ and with ~const~
+- *Recap (Wed):* constants are important because? In C, there are 3 ways
+  to define constants: with ~#define~ and with ~#include~ and with ~const~
+
+- *Recap (Fri)*: the ~scanf~ function takes (formatted) input from the
+  command line (or from an input file), e.g. ~scanf("%d", &i);~
+
+- Note the ~&~ before the variable ~i~: that's a memory "pointer" - it
+  tells the computer to put your input in a specific place.
+
+- The ~puts~ function can only print one string (including a new line)
 * DONE Test 3 results - a mixed affair
 #+attr_latex: :width 400px
 [[../img/ccSP23test1_2_3.png]]
@@ -603,7 +611,8 @@ Image: Java OOP program (Sedgewick/Wayne, Algorithms)
 [[../img/guardianangel.jpg]]
 
 - [[https://lyon.instructure.com/courses/1014/assignments/8879][Download the raw Org-mode file from GitHub and open it in Emacs]]
-- Alter the last bonus program ([[https://github.com/birkenkrahe/cc/blob/piHome/org/bonus_pgm_1.org#solution][solution here]]) to accept height as input
+- Alter the last bonus program ([[https://github.com/birkenkrahe/cc/blob/piHome/org/bonus_pgm_1.org#solution][solution here]]) to accept height as
+  input
 - Create an ~input~ file and put the input height (in meters) in there
 - Run the code and produce the height in light-years as output
 
