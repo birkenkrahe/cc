@@ -639,8 +639,34 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
 - Complete TEST 4 in Canvas by Friday, March 10!
 - Practice constants, naming, layout (~5_constants_practice.org~)
 - Next topic: input and output - ~printf~ and ~scanf~
+- Bonus exercise is open for completion
 
-* TODO Week 10 - Conditional statements 
+* TODO Floating-point arithmetic enigma
+
+- [[https://github.com/birkenkrahe/cc/issues/8][Floating point arithmetic (Goldberg, 1991)]] and [[https://lemire.me/blog/2020/06/26/gcc-not-nearest/][Lemire, 2020]]
+
+- The closest possible representation to the long number is the
+  printed number (due to rounding errors)- the ~double~ data type is
+  used.
+  #+begin_src C :tangle ../src/prec.c
+    printf("%.18f\n",3.141592653589793116);
+    printf("%.20f\n",3.14159265358979323846);
+  #+end_src
+
+- The ~double~ data type has a fixed number of bits to represent a
+  value: it uses 64 bits to represent the value, with 52 bits used for
+  the mantissa, and 11 bits used for the exponent.
+
+- Some GCC flags that ChatGPT suggested:
+  #+begin_example
+   -flong-double-128
+   -fexcess-precision-standard
+   -frounding-math
+   -mpc64
+  #+end_example
+
+
+* TODO Week 10 - Conditional statements
 * TODO Week 11 - Loops
 * TODO Week 12 - Arrays
 * TODO Week 13 - Functions
