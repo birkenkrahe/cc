@@ -1,0 +1,273 @@
+#+TITLE: C FUNDAMENTALS PRACTICE - SCANF
+#+AUTHOR: [yourName] (pledged)
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :results output :exports both :comments both
+#+STARTUP: hideblocks overview indent
+* READ README
+
+- This file is a practice file for C input functions ~printf~.
+
+- Time: approx. 30 min.
+
+- When you're done with a section move the cursor on the section
+  heading and type ~S-<right>~ (or SHIFT+<right-arrow>).
+
+* TODO Identify yourself
+
+- replace the placeholder ~[yourName]~ in the header of this file by
+  your name, add ~(pledged)~, and save the file (~C-x C-s~).
+
+* Scan integer and floating-point input
+
+1) Use the code block [[pgm:scanf]] below for practice
+
+2) Define two /integer/ variables ~k~, ~l~, and two /floating-point/ variables
+   ~u~ and ~v~
+
+3) Complete the ~scanf~ /format string/ and enter the variables list to
+   scan these variables
+
+4) Run the code block [[pgm:input]] below to generate an input file
+   ~scanf_input~ (the input should *not* contain the ~f~ character).
+
+   #+name: pgm:input
+   #+begin_src bash :results silent
+     echo "100 -1000 .456 -9.34e2" > scanf_input
+     cat scanf_input
+   #+end_src
+
+5) Run the code block [[pgm:scanf]] to get the output:
+
+   #+name: pgm:scanf_out
+   #+begin_example
+   : |  100|-1000|0.456| -934|
+   #+end_example
+
+
+#+name: pgm:scanf
+#+begin_src C :cmdline < scanf_input
+  // declare variables
+  ...
+
+  // scan input
+  scanf("...", ...);
+
+  // print scanned input
+  printf("|...|...|...|...|\n", ...);
+#+end_src
+
+----- SOLUTION -----
+#+name: pgm:scanf_solution
+#+begin_src C :cmdline < ./data/scanf_input :tangle scanf.c
+  // declare variables
+  int k, l;
+  float u, v;
+
+  // scan input
+  scanf("%d%d%f%f", &k, &l, &u, &v);
+
+  // print scanned input
+  printf("|%5d|%5d|%5.3f|%5.f|\n", k, l, u, v);
+#+end_src
+
+#+RESULTS: pgm:scanf_solution
+: |  100|-1000|0.456| -934|
+
+* Scanning ordinary characters
+
+1) Run the C code block below with two input files, ~ord1~ and ~ord2~.
+
+2) Create the input files here:
+   - the input file ~ord1~ contains ~•5/•96~ and should succeed
+   - the input file ~ord2~ contains ~•5 /•96~ and should fail
+
+   Create input file ~ord1~:
+   #+name: ord1
+   #+begin_src bash :results silent
+     echo "..." > ord1
+   #+end_src
+
+   Create input file ~ord2~:
+   #+name: ord2
+   #+begin_src bash :results silent
+     echo "..." > ord2
+   #+end_src
+
+3) Run program the program twice:
+   - ~ord1~ as input file
+   - ~ord2~ as input file
+
+   Change the ~#+name~ of the program accordingly so that you can see
+   both outputs next to each other (from ~pgm:ordTest1~ to
+   ~pgm:ordTest2~).
+
+#+name: pgm:ordTest1
+#+begin_src C :cmdline < ord1
+  int i,j;
+
+  scanf("%d/%d", &i, &j);
+
+  printf("|%5d|%5d|\n", i, j);
+#+end_src
+
+
+----- SOLUTION -----
+#+name: ord1
+#+begin_src bash :results silent
+  echo " 5/ 96" > ./data/ord1
+#+end_src
+
+#+name: ord2
+#+begin_src bash :results silent
+  echo " 5 / 96" > ./data/ord2
+#+end_src
+
+#+name: ordTest_solution1
+#+begin_src C :cmdline < ./data/ord1
+  int i,j;
+
+  scanf("%d/%d", &i, &j);
+
+  printf("|%5d|%5d|\n", i, j);
+#+end_src
+
+#+RESULTS: ordTest_solution1
+: |    5|   96|
+
+#+name: ordTest_solution2
+#+begin_src C :cmdline < ./data/ord2
+  int i,j;
+
+  scanf("%d/%d", &i, &j);
+
+  printf("|%5d|%5d|\n", i, j);
+#+end_src
+
+#+RESULTS: ordTest_solution2
+: |    5|   67|
+
+* Match input patterns exactly
+
+1) Run the code [[pgm:numbers]] below. It creates an input file ~numbers~
+   that contains: ~444==++//555~
+
+   #+name: pgm:numbers
+   #+begin_src bash
+     echo "444==++//555" > numbers
+     cat numbers
+   #+end_src
+
+2) Complete the code [[pgm:scanf1]] below to pick up only the numbers in
+   the input file.
+
+   #+name: pgm:scanf1
+   #+begin_src C :cmdline < numbers
+     int foo, bar;
+
+     scanf(...)
+     printf("%d %d", foo,  bar);
+   #+end_src
+
+   ----- SOLUTION -----
+
+   #+name: pgm:scanf1_solution
+   #+begin_src C :cmdline < ./data/numbers
+     int foo, bar;
+
+     scanf("%d==++//%d", &foo, &bar);
+     printf("%d %d", foo,  bar);
+   #+end_src
+
+   #+RESULTS: pgm:scanf1_solution
+   : 444 555
+
+* Add fractions
+
+1) The program [[pgm:addFrac]] prompts the user to add two fractions and
+   then display their sum.
+
+   Sample output for the input 5/6 and 3/4:
+   #+name: addFracOut
+   #+begin_example
+   5/6 + 3/4 = 38/24
+   #+end_example
+
+2) Run the code block [[pgm:addFracIn]] to create the input file with the
+   sample numbers.
+
+   #+name: pgm:addFracIn
+   #+begin_src bash :results output
+     echo "5/6" > addFrac_input
+     echo "3/4" >> addFrac_input
+     cat addFrac_input
+   #+end_src
+
+2) Complete the format strings below so that the program runs as
+   intended!
+
+   #+name: pgm:addFrac
+   #+begin_src C :cmdline < addFrac_input :results output
+     // declare variables
+     int num1, denom1, num2, denom2, result_num, result_denom;
+
+     // scan input
+     scanf("...", &num1, &denom1);
+     scanf("...", &num2, &denom2);
+
+     // compute numerator and denominator
+     result_num = num1 * denom2 + num2 *denom1;
+     result_denom = denom1 * denom2;
+
+     // print result
+     printf("%d/%d + %d/%d = %d/%d\n",
+            num1, denom1, num2, denom2,
+            result_num, result_denom);
+   #+end_src
+
+   3) Modify the program [[pgm:addFrac]] so that there is only *on* ~scanf~
+      statement. Make sure that the modified program yields the same
+      result as before.
+
+----- SOLUTION -----
+#+name: pgm:addFrac_solution1
+#+begin_src C :cmdline < ./data/addFrac_input :results output
+  // declare variables
+  int num1, denom1, num2, denom2, result_num, result_denom;
+
+  // scan input
+  scanf("%d/%d", &num1, &denom1);
+  scanf("%d/%d", &num2, &denom2);
+
+  // compute numerator and denominator
+  result_num = num1 * denom2 + num2 *denom1;
+  result_denom = denom1 * denom2;
+
+  // print result
+  printf("%d/%d + %d/%d = %d/%d\n",
+         num1, denom1, num2, denom2,
+         result_num, result_denom);
+#+end_src
+
+#+RESULTS: pgm:addFrac_solution
+: 5/6 + 3/4 = 38/24
+
+#+name: pgm:addFrac_solution2
+#+begin_src C :cmdline < ./data/addFrac_input :results output
+  // declare variables
+  int num1, denom1, num2, denom2, result_num, result_denom;
+
+  // scan input
+  scanf("%d/%d%d/%d",
+        &num1, &denom1, &num2, &denom2);
+
+  // compute numerator and denominator
+  result_num = num1 * denom2 + num2 *denom1;
+  result_denom = denom1 * denom2;
+
+  // print result
+  printf("%d/%d + %d/%d = %d/%d\n",
+         num1, denom1, num2, denom2,
+         result_num, result_denom);
+#+end_src
+
+#+RESULTS: pgm:addFrac_solution2
+: 5/6 + 3/4 = 38/24

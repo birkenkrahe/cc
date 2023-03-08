@@ -41,7 +41,6 @@ When it is called, ~printf~ must be supplied with:
 | X | conversion specifier  | ~d~, ~e~, ~f~, ~g~                  |
 
 * Examples:
-
 #+name: mpx
 #+begin_src C :results output
   printf("....|....|....|\n");
@@ -50,13 +49,6 @@ When it is called, ~printf~ must be supplied with:
   printf("%10.3f\n", 3.141593); // print 3 decimals on 10 places (right)
   printf("%-10.3f\n", 3.141593); // print 3 decimals on 10 places (left)
 #+end_src
-
-#+RESULTS: mpx
-: ....|....|....|
-:      123
-: 123
-:      3.142
-: 3.142
 
 * Integer decimal "d"
 
@@ -80,13 +72,6 @@ When it is called, ~printf~ must be supplied with:
     printf("%5.4d\n",i); // on 5 characters, at least 3 digits
   #+end_src
 
-  #+RESULTS: spec
-  : ....|....|
-  : 40
-  :    40
-  : 40
-  :  0040
-
 * Floating point exponential "e"
 
 - ~e~ displays a floating-point number in exponential ("scientific")
@@ -105,13 +90,6 @@ What went wrong in the first two statements?
   printf("%15.e\n", 1000000000000000.);
 #+end_src
 
-#+RESULTS:
-: ....|....|....|
-: 1e+000
-:                                                                                           1.000e+003
-: 1.000000e+015
-:          1e+015
-
 * Floating point fixed decimal "f"
 
 That's ~f~ as we already know it from many other examples. The
@@ -122,10 +100,6 @@ precision p is defined as for ~e~. Trailing zeroes are shown.
   printf("....|....|\n");
   printf("%10.3f\n", 100.1);
 #+end_src
-
-#+RESULTS: floatexample
-: ....|....|
-:    100.100
 
 * Variable floating point "g"
 
@@ -140,9 +114,4 @@ precision p is defined as for ~e~. Trailing zeroes are shown.
 #+begin_src C :results output
   printf("%g\n%g\n%g\n", 299792458., 1.45e+03, 8000);
 #+end_src
-
-#+RESULTS: gfactor :results output
-: 2.99792e+008
-: 1450
-: 1.42174e-312
 
