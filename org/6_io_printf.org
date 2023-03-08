@@ -50,7 +50,7 @@ When it is called, ~printf~ must be supplied with:
   printf("%-10.3f\n", 3.141593); // print 3 decimals on 10 places (left)
 #+end_src
 
-* Integer decimal "d"
+* Integer decimal ~d~
 
 - ~d~ displays an integer in decimal (= base 10) form. ~p~ is the minimum
   number of digits to display the integer. Default is ~p=1~.

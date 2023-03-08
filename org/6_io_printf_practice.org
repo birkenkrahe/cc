@@ -1,6 +1,6 @@
 #+TITLE: C FUNDAMENTALS PRACTICE - PRINTF
 #+AUTHOR: [yourName] (pledged)
-#+PROPERTY: header-args:C :main yes :includes <stdio.h> :results output :exports both :comments both
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :results output :exports both
 #+STARTUP: hideblocks overview indent
 * READ README
 
@@ -16,7 +16,7 @@
 - replace the placeholder ~[yourName]~ in the header of this file by
   your name, add ~(pledged)~, and save the file (~C-x C-s~).
 
-* DONE Conversion specification
+* TODO Conversion specification
 
 Recreate the output below exactly, using only format specifiers (no
 extra white space).
@@ -29,45 +29,24 @@ extra white space).
 : 3.141593
 #+end_example
 
------ SOLUTION -----
-
 #+begin_src C
   printf("....|....|....|\n");
-  printf("%8d\n", 100100);
-  printf("%-10d\n", 200200);
-  printf("%13.4f\n", 3.141593);
-  printf("%-.6f\n", 3.141593);
+  printf(...)
 #+end_src
 
-#+RESULTS:
-: ....|....|....|
-:   100100
-: 200200
-:        3.1416
-: 3.141593
-
-* DONE Integer decimal ~d~"
+* TODO Integer decimal ~d~
 
 Show that the default for ~d~ is p=1. Print the numbers 1, 1, 100 and
 10000 with the specifiers ~%d~, ~%.1d~, ~%.5d~, ~%.2d~. Print each expression
 on its own line, but use only ONE ~printf~ statement.
 
------ SOLUTION -----
-
 #+name: spec
 #+begin_src C :results output
   printf("....|....|....|\n");
-  printf("%d\n%.1d\n%.5d\n%.2d\n", 1, 1, 100, 10000);
+  printf(...)
 #+end_src
 
-#+RESULTS: spec
-: ....|....|....|
-: 1
-: 1
-: 00100
-: 10000
-
-* DONE Integer decimal precision ~p~
+* TODO Integer decimal precision ~p~
 
 Print the number 42 on a space of 10 characters with precision 5.
 
@@ -77,19 +56,13 @@ The result should look like this:
 :      00042
 #+end_example
 
-
------ SOLUTION -----
-
 #+name spec1
 #+begin_src C :results output
   printf("....|....|....|\n");
-  printf("%10.5d\n", 42);
+  printf(...);
 #+end_src
 
-#+RESULTS:
-: ....|....|....|
-:      00042
-* DONE Scientific notation ~e~
+* TODO Scientific notation ~e~
 
 - Print 1, 1000.100, and 1,000,000,000,000,000 using ~%e~.
 - Provide for the required number of decimal positions (but not more)
@@ -102,23 +75,16 @@ Desired output:
     : 1.0001e+03
     : 1e+15
 #+end_example
------ SOLUTION -----
 
 #+name: scientific
 #+begin_src C :results output
-  printf("%1.e\n", 1.);
-  printf("%.4e\n", 1000.1);
-  printf("%.e\n", 1000000000000000.);
+
 #+end_src
 
-#+RESULTS: scientific
-: 1e+00
-: 1.0001e+03
-: 1e+15
-* DONE Variable floating point ~g~
+* TODO Variable floating point ~g~
 
 - Use the format specifier ~g~ to display the following numbers: ~200~,
-  ~3.142574654~ with p=8, ~2.71~, and ~!5~.
+  ~3.142574654~ with ~p=8~, ~2.71~, and ~!5~.
 
 - print each on a line of its own, but use only *one* ~printf~
   statement to do it!
@@ -132,17 +98,4 @@ Desired output:
   printf("....|....|....|\n");
   ...
 #+end_src
-
------ SOLUTION -----
-
-#+begin_src C :results output
-  printf("....|....|\n");
-  printf("%g\n%.8g\n%g\n%g\n", 200., 3.142574654, 2.71, 5.*4.*3.*2.*1.);
-#+end_src
-
-#+RESULTS:
-: ....|....|
-: 200
-: 3.1425747
-: 2.71
-: 120
+* TODO Upload the completed file to Canvas now!
