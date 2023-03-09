@@ -631,16 +631,21 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
 - Re-submit as many times as you like
 - Solutions to in-class practice can be found as PDF files in GitHub
 
-* TODO Week 9 - C input/output
+* IN PROGRESS Week 9 - C input/output
 #+attr_latex: :width 400px
 [[../img/scanner.jpg]]
 
 - Complete TEST 4 in Canvas by Friday, March 10!
-- Practice constants, naming, layout (~5_constants_practice.org~)
+- Practice constants, naming, layout (~5_constants_practice.org~) 
 - Next topic: input and output - ~printf~ and ~scanf~
+- Practice ~printf~ (~6_printf_practice.org~): on GitHub
+- Practice ~scanf~ (~7_scanf_practice.org~): on GitHub
 - Bonus exercise is open for completion
 
 * TODO Floating-point arithmetic enigma
+#+attr_latex: :width 400px
+#+caption: Photo by Joe Calata on Unsplash
+[[../img/floating.jpg]]
 
 - [[https://github.com/birkenkrahe/cc/issues/8][Floating point arithmetic (Goldberg, 1991)]] and [[https://lemire.me/blog/2020/06/26/gcc-not-nearest/][Lemire, 2020]]
 
@@ -651,6 +656,10 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
     printf("%.18f\n",3.141592653589793116);
     printf("%.20f\n",3.14159265358979323846);
   #+end_src
+
+  #+RESULTS:
+  : 3.141592653589793116
+  : 3.14159265358979311600
 
 - The ~double~ data type has a fixed number of bits to represent a
   value: it uses 64 bits to represent the value, with 52 bits used for
@@ -663,6 +672,50 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
    -frounding-math
    -mpc64
   #+end_example
+
+* TODO Assignment: phone number conversion
+#+attr_latex: :width 400px
+#+caption: Photo by Quino Al on Unsplash
+[[../img/phone.jpg]]
+
+*Submit your solution no later than Monday, 27-March, 3 pm!*
+
+1) Write a program that prompts the user to enter a telephone number
+   in the form ~(xxx) xxx-xxxx~, and then displays the number in the
+   form ~xxx.xxx.xxxx~.
+
+2) Example input/output of the first program, ~phone1.c~:
+   #+begin_example
+   Enter phone number [(xxx) xxx-xxxx]: (870) 456-7890
+   You entered: 870.456.7890
+   #+end_example
+
+3) Write another program that asks for the input format in the form
+   ~xxx\xxx\xxxx~, and then displays the number in the form
+   ~(xxx)xxx-xxx~.
+
+4) Example input/output of the second program, ~phone2.c~:
+   #+begin_example
+   Enter phone number [xxx\xxx\xxxx]: 870\456\7890
+   You entered: (870) 456-7890
+   #+end_example
+
+5) Submit one Emacs Org-mode file ~phone.org~ with both programs in
+   it as code blocks that can be *tangled* as ~phone1.c~ and
+   ~phone2.c~, resp.
+
+6) The header information of your Org-mode file should look like this:
+   #+begin_example
+     #+TITLE: Phone number conversion
+     #+AUTHOR: [your name]
+     #+HONOR: pledged
+     #+PROPERTY: header-args:C :main yes :includes <stdio.h> :results output :tangle yes
+   #+end_example
+
+7) Tip: some characters, like ~\~ are protected because they are part
+   of the file ~PATH~. If you want to use them, you have to "escape"
+   them with an extra ~\~, like the newline character ~\n~. So to
+   print (or to scan) the character ~\~, you use ~\\~.
 
 * TODO Week 10 - Conditional statements
 * TODO Week 11 - Loops
