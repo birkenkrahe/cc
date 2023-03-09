@@ -4,15 +4,14 @@
 #+SUBTITLE:CSC 100 Introduction to programming in C/C++, Summer 2022
 #+STARTUP: overview hideblocks indent
 #+OPTIONS: toc:1 num:1 ^:nil
-#+PROPERTY: header-args:C :main yes :includes <stdio.h>
-#+PROPERTY: header-args:C :exports both :comments both
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :comments both
 * README
 
 - There is much more to ~scanf~ and ~printf~ than we've seen
 
 - I/O is where the pedal hits the metal - where man meets machine
 
-- In this notebook: conversion specifications for printf
+- In this notebook: conversion specifications for ~printf~
 
 - Practice workbooks, input files and PDF solution files in GitHub
 
@@ -20,11 +19,11 @@
 
 When it is called, ~printf~ must be supplied with:
 
-1) a format string, like ~"The output is: %d\n~
+1) a format string, like ~"The output is: %d\n"~ (actually only "%d")
 
 2) any number of values to be inserted into the string at printing
 
-3) the values can also be computed
+3) the values can also be computed and assigned
 
 * Conversion specification
 
@@ -34,21 +33,32 @@ When it is called, ~printf~ must be supplied with:
 
 - General form: ~%m.pX~ where
 
-|   | WHAT                  | EXAMPLE                             |
-|---+-----------------------+-------------------------------------|
+|   | WHAT                  | EXAMPLE                       |
+|---+-----------------------+-------------------------------|
 | m | minimum field width   | ~%4d~ prints ~123~ as ~_123~        |
 | p | precision after point | ~%.3f~ prints ~3.141593~ as ~3.142~ |
-| X | conversion specifier  | ~d~, ~e~, ~f~, ~g~                  |
+| X | conversion specifier  | ~d~, ~e~, ~f~, ~g~                    |
 
 * Examples:
 #+name: mpx
 #+begin_src C :results output
   printf("....|....|....|\n");
+
   printf("%8d\n", 123); // print 123 on 8 places (right-aligned)
+
   printf("%-8d\n", 123); // print 123 on 8 places (left-aligned)
+
   printf("%10.3f\n", 3.141593); // print 3 decimals on 10 places (right)
+
   printf("%-10.3f\n", 3.141593); // print 3 decimals on 10 places (left)
 #+end_src
+
+#+RESULTS: mpx
+: ....|....|....|
+:      123
+: 123     
+:      3.142
+: 3.142     
 
 * Integer decimal ~d~
 
@@ -71,6 +81,13 @@ When it is called, ~printf~ must be supplied with:
     printf("%-5d\n",i); // on 5 characters, left-justified
     printf("%5.4d\n",i); // on 5 characters, at least 3 digits
   #+end_src
+
+  #+RESULTS: spec
+  : ....|....|
+  : 40
+  :    40
+  : 40   
+  :  0040
 
 * Floating point exponential "e"
 

@@ -42,7 +42,6 @@
    : |  100|-1000|0.456| -934|
    #+end_example
 
-
 #+name: pgm:scanf
 #+begin_src C :cmdline < scanf_input
   // declare variables
@@ -54,23 +53,6 @@
   // print scanned input
   printf("|...|...|...|...|\n", ...);
 #+end_src
-
------ SOLUTION -----
-#+name: pgm:scanf_solution
-#+begin_src C :cmdline < ./data/scanf_input :tangle scanf.c
-  // declare variables
-  int k, l;
-  float u, v;
-
-  // scan input
-  scanf("%d%d%f%f", &k, &l, &u, &v);
-
-  // print scanned input
-  printf("|%5d|%5d|%5.3f|%5.f|\n", k, l, u, v);
-#+end_src
-
-#+RESULTS: pgm:scanf_solution
-: |  100|-1000|0.456| -934|
 
 * Scanning ordinary characters
 
@@ -109,42 +91,6 @@
   printf("|%5d|%5d|\n", i, j);
 #+end_src
 
-
------ SOLUTION -----
-#+name: ord1
-#+begin_src bash :results silent
-  echo " 5/ 96" > ./data/ord1
-#+end_src
-
-#+name: ord2
-#+begin_src bash :results silent
-  echo " 5 / 96" > ./data/ord2
-#+end_src
-
-#+name: ordTest_solution1
-#+begin_src C :cmdline < ./data/ord1
-  int i,j;
-
-  scanf("%d/%d", &i, &j);
-
-  printf("|%5d|%5d|\n", i, j);
-#+end_src
-
-#+RESULTS: ordTest_solution1
-: |    5|   96|
-
-#+name: ordTest_solution2
-#+begin_src C :cmdline < ./data/ord2
-  int i,j;
-
-  scanf("%d/%d", &i, &j);
-
-  printf("|%5d|%5d|\n", i, j);
-#+end_src
-
-#+RESULTS: ordTest_solution2
-: |    5|   67|
-
 * Match input patterns exactly
 
 1) Run the code [[pgm:numbers]] below. It creates an input file ~numbers~
@@ -166,19 +112,6 @@
      scanf(...)
      printf("%d %d", foo,  bar);
    #+end_src
-
-   ----- SOLUTION -----
-
-   #+name: pgm:scanf1_solution
-   #+begin_src C :cmdline < ./data/numbers
-     int foo, bar;
-
-     scanf("%d==++//%d", &foo, &bar);
-     printf("%d %d", foo,  bar);
-   #+end_src
-
-   #+RESULTS: pgm:scanf1_solution
-   : 444 555
 
 * Add fractions
 
@@ -226,48 +159,3 @@
    3) Modify the program [[pgm:addFrac]] so that there is only *on* ~scanf~
       statement. Make sure that the modified program yields the same
       result as before.
-
------ SOLUTION -----
-#+name: pgm:addFrac_solution1
-#+begin_src C :cmdline < ./data/addFrac_input :results output
-  // declare variables
-  int num1, denom1, num2, denom2, result_num, result_denom;
-
-  // scan input
-  scanf("%d/%d", &num1, &denom1);
-  scanf("%d/%d", &num2, &denom2);
-
-  // compute numerator and denominator
-  result_num = num1 * denom2 + num2 *denom1;
-  result_denom = denom1 * denom2;
-
-  // print result
-  printf("%d/%d + %d/%d = %d/%d\n",
-         num1, denom1, num2, denom2,
-         result_num, result_denom);
-#+end_src
-
-#+RESULTS: pgm:addFrac_solution
-: 5/6 + 3/4 = 38/24
-
-#+name: pgm:addFrac_solution2
-#+begin_src C :cmdline < ./data/addFrac_input :results output
-  // declare variables
-  int num1, denom1, num2, denom2, result_num, result_denom;
-
-  // scan input
-  scanf("%d/%d%d/%d",
-        &num1, &denom1, &num2, &denom2);
-
-  // compute numerator and denominator
-  result_num = num1 * denom2 + num2 *denom1;
-  result_denom = denom1 * denom2;
-
-  // print result
-  printf("%d/%d + %d/%d = %d/%d\n",
-         num1, denom1, num2, denom2,
-         result_num, result_denom);
-#+end_src
-
-#+RESULTS: pgm:addFrac_solution2
-: 5/6 + 3/4 = 38/24
