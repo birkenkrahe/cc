@@ -640,7 +640,7 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
 - Next topic: input and output - ~printf~ and ~scanf~
 - Practice ~printf~ (~6_printf_practice.org~): on GitHub
 - Practice ~scanf~ (~7_scanf_practice.org~): on GitHub
-- Bonus exercise is open for completion
+- Bonus exercise "height to light-years reloaded" open for completion
 
 * TODO Floating-point arithmetic enigma
 #+attr_latex: :width 400px
@@ -718,6 +718,21 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
    print (or to scan) the character ~\~, you use ~\\~.
 
 * TODO Week 10 - Conditional statements
+* TODO Mildly therapeutic reading for spring break
+
+*Don't be naive: of course this course is also a recruiting event for
+computer/data science. It's the academic game of musical chairs.*
+
+- Computational Thinking by Jeannette M. Wing (Columbia U.) - In: CACM
+  49(3) 2006: 33-35. URL: [[https://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf][cs.cmu.edu]].
+  #+begin_quote
+  "One can major in computer science and do anything.  One can major
+  in English or mathematics and go on to a multitude of different
+  careers. Ditto computer science. One can major in computer science
+  and go on to a career in medicine, law, business, politics, any type
+  of science or engineering, and even the arts."
+  #+end_quote
+
 * TODO Week 11 - Loops
 * TODO Week 12 - Arrays
 * TODO Week 13 - Functions
