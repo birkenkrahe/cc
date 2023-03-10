@@ -16,7 +16,7 @@
 - replace the placeholder ~[yourName]~ in the header of this file by
   your name, add ~(pledged)~, and save the file (~C-x C-s~).
 
-* Scan integer and floating-point input
+* TODO Scan integer and floating-point input
 
 1) Use the code block [[pgm:scanf]] below for practice
 
@@ -54,7 +54,7 @@
   printf("|...|...|...|...|\n", ...);
 #+end_src
 
-* Scanning ordinary characters
+* TODO Scanning ordinary characters
 
 1) Run the C code block below with two input files, ~ord1~ and ~ord2~.
 
@@ -91,7 +91,7 @@
   printf("|%5d|%5d|\n", i, j);
 #+end_src
 
-* Match input patterns exactly
+* TODO Match input patterns exactly
 
 1) Run the code [[pgm:numbers]] below. It creates an input file ~numbers~
    that contains: ~444==++//555~
@@ -113,7 +113,7 @@
      printf("%d %d", foo,  bar);
    #+end_src
 
-* Add fractions
+* TODO Add fractions
 
 1) The program [[pgm:addFrac]] prompts the user to add two fractions and
    then display their sum.
@@ -134,7 +134,7 @@
      cat addFrac_input
    #+end_src
 
-2) Complete the format strings below so that the program runs as
+3) Complete the format strings below so that the program runs as
    intended!
 
    #+name: pgm:addFrac
@@ -156,6 +156,6 @@
             result_num, result_denom);
    #+end_src
 
-   3) Modify the program [[pgm:addFrac]] so that there is only *on* ~scanf~
+4) Modify the program [[pgm:addFrac]] so that there is only *on* ~scanf~
       statement. Make sure that the modified program yields the same
       result as before.
