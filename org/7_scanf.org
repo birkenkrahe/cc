@@ -33,7 +33,7 @@ conversion specifications like ~d~, ~e~, ~f~, ~g~
   1  -20  .3   -4.0e3
   #+end_example
 
-  Example program to read this input:
+- Example program to read this input:
   #+name: pgm:tscanf
   #+begin_src C :cmdline < ./data/io_scanf_input :results output
     int i, j;
@@ -44,7 +44,7 @@ conversion specifications like ~d~, ~e~, ~f~, ~g~
     printf("|%5d|%5d|%5.1f|%10.1f|\n", i, j, x, y);
   #+end_src
 
-  Create the input file under Linux (or Emacs with ~M-x eshell~):
+- Create the input file under Linux (or Emacs with ~M-x eshell~):
   #+name: pgm:io_scanf_input
   #+begin_src bash :results silent
     echo "1  -20 .3 -4.0e+3" > ./data/io_scanf_input
