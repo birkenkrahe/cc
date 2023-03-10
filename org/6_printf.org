@@ -101,8 +101,8 @@ What went wrong in the first two statements?
 
 #+begin_src C :results output
   printf("....|....|....|\n");
-  printf("%.e\n", 1.);  // the 1 must be a floating-point value
-  printf("%100.3e\n", 1000.);
+  printf("%.e\n", 1);
+  printf("%1000.3e\n", 1000.);
   printf("%e\n", 1000000000000000.);
   printf("%15.e\n", 1000000000000000.);
 #+end_src
@@ -120,15 +120,19 @@ precision p is defined as for ~e~. Trailing zeroes are shown.
 
 * Variable floating point "g"
 
-- ~g~ displays a floating point number in either exponential format or
-  fixed decimal format depending on the number's size.
-- ~p~ is the maximum number of *significant* digits (*not* digits after the
-  decimal point!) to be displayed.
-- No trailing zeroes are shown. If there are no decimal digits after
-  the decimal point, no decimal point is shown.
+  - ~g~ displays a floating point number in either exponential format or
+    fixed decimal format depending on the number's size.
 
-#+name: gfactor :results output
-#+begin_src C :results output
-  printf("%g\n%g\n%g\n", 299792458., 1.45e+03, 8000);
-#+end_src
+  - ~p~ is the maximum number of *significant* digits (*not* digits after the
+    decimal point!) to be displayed.
+
+  - No trailing zeroes are shown. If there are no decimal digits after
+    the decimal point, no decimal point is shown.
+
+  - How many lines and number are you expecting?
+    #+name: gfactor :results output
+    #+begin_src C :results output
+      printf("%g\n%g\n%g\n", 299792458., 1.45e+03, 8000);
+    #+end_src
+
 

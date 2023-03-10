@@ -4,15 +4,14 @@
 #+SUBTITLE:CSC 100 Introduction to programming in C/C++, Summer 2022
 #+STARTUP: overview hideblocks indent
 #+OPTIONS: toc:1 num:1 ^:nil
-#+PROPERTY: header-args:C :main yes :includes <stdio.h>
-#+PROPERTY: header-args:C :exports both :comments both
+#+PROPERTY: header-args:C :main yes :includes <stdio.h>  :exports both
 * README
 
 - There is much more to ~scanf~ and ~printf~ than we've seen
 
 - I/O is where the pedal hits the metal - where man meets machine
 
-- In this notebook: conversion specifications for scanf
+- In this notebook: conversion specifications for ~scanf~
 
 - Practice workbooks, input files and PDF solution files in GitHub
 
@@ -35,7 +34,7 @@ conversion specifications like ~d~, ~e~, ~f~, ~g~
 
 - Example program to read this input:
   #+name: pgm:tscanf
-  #+begin_src C :cmdline < ./data/io_scanf_input :results output
+  #+begin_src C :cmdline < ../data/io_scanf_input :results output
     int i, j;
     float x, y;
 
@@ -46,8 +45,8 @@ conversion specifications like ~d~, ~e~, ~f~, ~g~
 
 - Create the input file under Linux (or Emacs with ~M-x eshell~):
   #+name: pgm:io_scanf_input
-  #+begin_src bash :results silent
-    echo "1  -20 .3 -4.0e+3" > ./data/io_scanf_input
+  #+begin_src bash 
+    echo "1  -20 .3 -4.0e+3" > io_scanf_input | ls io_scanf_input
   #+end_src
 
 * Main traps
