@@ -101,11 +101,18 @@ What went wrong in the first two statements?
 
 #+begin_src C :results output
   printf("....|....|....|\n");
-  printf("%.e\n", 1);
-  printf("%1000.3e\n", 1000.);
+  printf("%.e\n", 1.);
+  printf("%-15.3e\n", 1000.);
   printf("%e\n", 1000000000000000.);
   printf("%15.e\n", 1000000000000000.);
 #+end_src
+
+#+RESULTS:
+: ....|....|....|
+: 1e+00
+: 1.000e+03      
+: 1.000000e+15
+:           1e+15
 
 * Floating point fixed decimal "f"
 
@@ -132,7 +139,12 @@ precision p is defined as for ~e~. Trailing zeroes are shown.
   - How many lines and number are you expecting?
     #+name: gfactor :results output
     #+begin_src C :results output
-      printf("%g\n%g\n%g\n", 299792458., 1.45e+03, 8000);
+      printf("%g\n%g\n%g\n", 299792458., 1.45e+03, 8000.);
     #+end_src
+
+    #+RESULTS: gfactor :results output
+    : 2.99792e+08
+    : 1450
+    : 8000
 
 
