@@ -631,7 +631,7 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
 - Re-submit as many times as you like
 - Solutions to in-class practice can be found as PDF files in GitHub
 
-* IN PROGRESS Week 9 - C input/output
+* Week 9 - C input/output
 #+attr_latex: :width 400px
 [[../img/scanner.jpg]]
 
@@ -642,7 +642,7 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
 - Practice ~scanf~ (~7_scanf_practice.org~): on GitHub
 - Bonus exercise "height to light-years reloaded" open for completion
 
-* TODO Floating-point arithmetic enigma
+** Floating-point arithmetic enigma
 #+attr_latex: :width 400px
 #+caption: Photo by Joe Calata on Unsplash
 [[../img/floating.jpg]]
@@ -673,7 +673,20 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
    -mpc64
   #+end_example
 
-* TODO Assignment: phone number conversion
+* NEXT Week 10 - Conditional statements
+#+attr_latex: :width 400px
+[[../img/ccTestDensity.png]] [[../img/ccTestBoxplot.png]]
+
+[[https://github.com/birkenkrahe/grades/blob/main/spring23.org#introduction-to-programming-csc-100][R code: see GitHub.]]
+
+- Test 4: the good, the bad and the ugly:
+  1) The test average is still a passing grade and the upper quartile
+     is > 80%! (a quarter of the class is B or better)
+  2) The test average went down by 6.8% and the lower quartile is 26%
+     (a quarter of the class is only half way to passing)
+  3) Three students didn't even try, and the lower quartile is 40%
+
+* Assignment: phone number conversion
 #+attr_latex: :width 400px
 #+caption: Photo by Quino Al on Unsplash
 [[../img/phone.jpg]]
@@ -717,7 +730,6 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
    them with an extra ~\~, like the newline character ~\n~. So to
    print (or to scan) the character ~\~, you use ~\\~.
 
-* TODO Week 10 - Conditional statements
 * TODO Mildly therapeutic reading for spring break
 
 *Don't be naive: of course this course is also a recruiting event for
