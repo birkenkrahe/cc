@@ -5,11 +5,9 @@
 #+OPTIONS: toc:nil num:nil ^:nil
 #+property: header-args:C :main yes :includes <stdio.h> :results output :noweb yes
 #+property: header-args:R :results output :noweb yes :session *R* :exports both
-#+attr_html: :width 400px
-[[../img/cover.jpg]]
 * Week 1 - Course overview & introduction
 #+attr_html: :width 400px
-[[../img/week1.png]]
+[[../img/cover.jpg]]
 
 1) [X] Entry *survey* - [[https://docs.google.com/forms/d/1yz2EtuSin3r54zMG1d_JCnnVAGb0XI8cP-Yvr7FmZbo/edit#responses][review of your responses]]
 2) [X] Course *overview* - assignments, grading, topics, platforms
@@ -636,7 +634,7 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
 [[../img/scanner.jpg]]
 
 - Complete TEST 4 in Canvas by Friday, March 10!
-- Practice constants, naming, layout (~5_constants_practice.org~) 
+- Practice constants, naming, layout (~5_constants_practice.org~)
 - Next topic: input and output - ~printf~ and ~scanf~
 - Practice ~printf~ (~6_printf_practice.org~): on GitHub
 - Practice ~scanf~ (~7_scanf_practice.org~): on GitHub
@@ -685,6 +683,14 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
   2) The test average went down by 6.8% and the lower quartile is 26%
      (a quarter of the class is only half way to passing)
   3) Three students didn't even try, and the lower quartile is 40%
+* TODO Practice assignments - check your submissions!
+#+attr_latex: :width 400px
+#+caption: Photo by Caleb Woods on Unsplash
+[[../img/guilt.jpg]]
+
+- This course used to only have home programming assignments
+- Now we do a lot of the work in the class (easier for you)
+- Don't let yourself (or me) down by submitting shoddy work
 
 * TODO Assignment: phone number conversion
 #+attr_latex: :width 400px
@@ -732,6 +738,7 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
 
 * TODO The ~scanf~ function - lecture & practice
 #+attr_latex: :width 400px
+#+caption: Scanning computer
 [[../img/scanning.jpg]]
 
 - How to format ~scanf~ for keyboard input
@@ -739,19 +746,25 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
 - Difficulties when using ~scanf~
 
 * TODO Mildly therapeutic reading for spring break
+#+attr_latex: :width 400px
+#+caption: Photo by William Felipe on Unsplash
+[[../img/compthinking.jpg]]
+
+#+begin_quote
+"One can major in computer science and do anything.  One can major
+in English or mathematics and go on to a multitude of different
+careers. Ditto computer science. One can major in computer science
+and go on to a career in medicine, law, business, politics, any type
+of science or engineering, and even the arts."
+#+end_quote
 
 *Don't be naive: of course this course is also a recruiting event for
 computer/data science. It's the academic game of musical chairs.*
 
+- Letter luxury: you'll get a printed copy of this article from me.
+
 - Computational Thinking by Jeannette M. Wing (Columbia U.) - In: CACM
   49(3) 2006: 33-35. URL: [[https://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf][cs.cmu.edu]].
-  #+begin_quote
-  "One can major in computer science and do anything.  One can major
-  in English or mathematics and go on to a multitude of different
-  careers. Ditto computer science. One can major in computer science
-  and go on to a career in medicine, law, business, politics, any type
-  of science or engineering, and even the arts."
-  #+end_quote
 
 * TODO Week 11 - Loops
 * TODO Week 12 - Arrays

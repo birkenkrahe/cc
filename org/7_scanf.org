@@ -2,7 +2,7 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+Source: KN King C Programming
 #+SUBTITLE:CSC 100 Introduction to programming in C/C++, Summer 2022
-#+STARTUP: overview hideblocks indent
+#+STARTUP: overview hideblocks indent entitiespretty
 #+OPTIONS: toc:1 num:1 ^:nil
 #+PROPERTY: header-args:C :main yes :includes <stdio.h>  :exports both
 * README
@@ -32,6 +32,12 @@ conversion specifications like ~d~, ~e~, ~f~, ~g~
   1  -20  .3   -4.0e3
   #+end_example
 
+- Put the input into a file:
+  #+name: pgm:io_scanf_input
+  #+begin_src bash
+    echo "1  -20 .3 -4.0e+3" > io_scanf_input | ls io_scanf_input
+  #+end_src
+
 - Example program to read this input:
   #+name: pgm:tscanf
   #+begin_src C :cmdline < ../data/io_scanf_input :results output
@@ -43,17 +49,28 @@ conversion specifications like ~d~, ~e~, ~f~, ~g~
     printf("|%5d|%5d|%5.1f|%10.1f|\n", i, j, x, y);
   #+end_src
 
-- Create the input file under Linux (or Emacs with ~M-x eshell~):
-  #+name: pgm:io_scanf_input
-  #+begin_src bash 
-    echo "1  -20 .3 -4.0e+3" > io_scanf_input | ls io_scanf_input
-  #+end_src
+- [ ] Can you tell from the code block header where the file is?
+
+- Practice creating input on the shell yourself now:
+  1) In Emacs, open a shell with ~M-x eshell~
+  2) Put a string into a file on the shell, list it and print it:
+     #+name: tab:shell
+     | COMMAND                           | MEANING                          |
+     |-----------------------------------+----------------------------------|
+     | ~echo "hello there"~                | print ~hello there~ to the screen  |
+     | ~echo "hello there" > hello~        | save "hello there" to file ~hello~ |
+     | ~ls -l hello~                       | long listing of file ~hello~       |
+     | ~cat hello~                         | print content of file ~hello~      |
+     #+end_example
 
 * Main traps
+#+attr_latex: :width 400px
+#+caption: Photo by Jim Petkiewicz on Unsplash
+[[../img/7_traps.jpg]]
 
-- The compiler will not check that specs and input match
+- The compiler will not check that specs and variable input match up
 
-- The ~&~ symbol must not miss in front of the input variable
+- The ~&~ pointer symbol must not miss in front of the input variable
 
 * How scanf works
 
@@ -67,17 +84,15 @@ conversion specifications like ~d~, ~e~, ~f~, ~g~
 - If an item is not read successfully, ~scanf~ aborts
 
 #+caption: How scanf works (Event-controlled Process Chain diagram)
-#+attr_html: :width 400px
+#+attr_latex: :width 400px
 [[../img/7_scanf.png]]
 
-- White-space characters are ignored: space, TAB (~\t~), new-line (~\n~)
+- Ignores white-space characters: space (~" "~), TAB (~\t~), new-line (~\n~)
 
-- In [[pgm:tscanf]] above, the lines can be on one line or spread over
-several lines:
-
-#+caption: Input file for tscanf
-#+attr_html: :width 300px
-[[../img/7_input.png]]
+- Input can be on one line or spread over several lines:
+  #+attr_latex: :width 300px
+  #+caption: Input file for tscanf
+  [[../img/7_input.png]]
 
 - ~scanf~ sees a character stream (~¤~ = new-line, ~s~ = skip'd, ~r~ = read):
 
@@ -92,7 +107,7 @@ several lines:
   - When asked to read a *float* (~%f~, ~%g~, ~%e~), ~scanf~ looks for +/- sign,
     digits, decimal point, or an exponent (~e+02~, ~e-02~)
 
-  - When used with ~scanf~, ~%e~, ~%f~, ~%g~ are interchangeable
+  - When used with ~scanf~, ~%e~, ~%f~, ~%g~ are completely interchangeable
 
   - When it finds a character that cannot be part of the current item,
     the character is returned to be read again during the scanning of
@@ -100,10 +115,8 @@ several lines:
 
 * Walk through example
 
-The extended example below has the same spec as [[pgm:tscanf]] -
-~"%d%d%f%f",&i,&j&x&y~
-
-#+name: ex:sampleInput
+This example has the same spec as our earlier example:
+~"%d%d%f%f",&i,&j&x&y~. This is what the computer "sees":
 #+begin_example
   1-20.3-4.0e3¤
 #+end_example
@@ -117,6 +130,9 @@ The extended example below has the same spec as [[pgm:tscanf]] -
 4) Expects ~%f~. Stores ~-4.0 x 10^3~ in ~y~, returns ~¤~ and finishes.
 
 * Ordinary characters in format strings
+#+attr_latex: :width 400px
+#+caption: Photo by Roberto Carlos Roman Don on Unsplash
+[[../img/7_characters.jpg]]
 
 - ~scanf~ reads white-space until it reaches a symbol
 
@@ -125,6 +141,8 @@ The extended example below has the same spec as [[pgm:tscanf]] -
 - It now either continues processing or aborts
 
 * Example with ordinary characters
+
+- Open the practice file at /"Scanning ordinary characters"/.
 
 - If the format string is ~"%d/%d"~ and the input is ~•5/•96~, ~scanf~
   succeeds.
@@ -141,16 +159,12 @@ The extended example below has the same spec as [[pgm:tscanf]] -
 * Common mistakes:
 
 1. putting ~&~ in front of variables in a ~printf~ call
-
-   #+name: pointer
-   #+begin_example
+   #+begin_example C
     printf("%d %d\n", &i, &j);  /*** WRONG ***/
    #+end_example
 
 2. assuming that ~scanf~ should resemble ~printf~ formats
-
-   #+name: notPrintf
-   #+begin_example
+   #+begin_example C
     scanf("%d, %d", &i, &j);
    #+end_example
 
@@ -160,12 +174,9 @@ The extended example below has the same spec as [[pgm:tscanf]] -
    - Only this input will work: ~100, 100~ but not ~100 100~
 
 3. putting a ~\n~ character at the end of ~scanf~ string
-
-   #+name: noNewline
-   #+begin_example
+   #+begin_example C
     scanf("%d\n", &i);
    #+end_example
 
    - To ~scanf~, the new-line is /white-space/. It will advance to the
      next white-space character and not finding one will hang forever
-
