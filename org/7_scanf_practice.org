@@ -26,14 +26,8 @@
 3) Complete the ~scanf~ /format string/ and enter the variables list to
    scan these variables
 
-4) Run the code block [[pgm:input]] below to generate an input file
-   ~scanf_input~ (the input should *not* contain the ~f~ character).
-
-   #+name: pgm:input
-   #+begin_src bash :results silent
-     echo "100 -1000 .456 -9.34e2" > scanf_input
-     cat scanf_input
-   #+end_src
+4) Create an input file ~scanf_input~ with the following numbers using
+   the Emacs shell: ~100~, ~-1000~, ~.456~, ~-9.34e2~
 
 5) Run the code block [[pgm:scanf]] to get the output:
 
@@ -58,7 +52,7 @@
 
 1) Run the C code block below with two input files, ~ord1~ and ~ord2~.
 
-2) Create the input files here:
+2) Create the input files here (~•~ stands for an empty space):
    - the input file ~ord1~ contains ~•5/•96~ and should succeed
    - the input file ~ord2~ contains ~•5 /•96~ and should fail
 
@@ -74,12 +68,12 @@
      echo "..." > ord2
    #+end_src
 
-3) Run program the program twice:
+3) Run the program twice with:
    - ~ord1~ as input file
    - ~ord2~ as input file
 
-   Change the ~#+name~ of the program accordingly so that you can see
-   both outputs next to each other (from ~pgm:ordTest1~ to
+   Change the ~#+name~ of the program in the header accordingly so that
+   you can see both outputs next to each other (from ~pgm:ordTest1~ to
    ~pgm:ordTest2~).
 
 #+name: pgm:ordTest1
@@ -93,14 +87,14 @@
 
 * TODO Match input patterns exactly
 
-1) Run the code [[pgm:numbers]] below. It creates an input file ~numbers~
-   that contains: ~444==++//555~
+This is useful for the programming exercise "phone numbers":
 
-   #+name: pgm:numbers
-   #+begin_src bash
+1) Create an input file ~numbers~ that contains: ~444==++//555~ by running
+   on the shell:
+   #+begin_example sh
      echo "444==++//555" > numbers
      cat numbers
-   #+end_src
+   #+end_example
 
 2) Complete the code [[pgm:scanf1]] below to pick up only the numbers in
    the input file.
@@ -110,7 +104,7 @@
      int foo, bar;
 
      scanf(...)
-     printf("%d %d", foo,  bar);
+     printf("The numbers were %d and %d\n", foo,  bar);
    #+end_src
 
 * TODO Add fractions
@@ -119,23 +113,21 @@
    then display their sum.
 
    Sample output for the input 5/6 and 3/4:
-   #+name: addFracOut
    #+begin_example
    5/6 + 3/4 = 38/24
    #+end_example
 
-2) Run the code block [[pgm:addFracIn]] to create the input file with the
-   sample numbers.
-
-   #+name: pgm:addFracIn
-   #+begin_src bash :results output
-     echo "5/6" > addFrac_input
+2) Create the input file with the sample numbers. Note that the ~>>~
+   operator attaches input to the end of the file rather than
+   overwriting it (~•~ is an empty space):
+   #+begin_example sh
+     echo "5/6•" > addFrac_input
      echo "3/4" >> addFrac_input
      cat addFrac_input
-   #+end_src
+   #+end_example
 
 3) Complete the format strings below so that the program runs as
-   intended!
+   intended! The output should be: ~5/6 + 3/4 = 38/24~
 
    #+name: pgm:addFrac
    #+begin_src C :cmdline < addFrac_input :results output
@@ -157,5 +149,5 @@
    #+end_src
 
 4) Modify the program [[pgm:addFrac]] so that there is only *on* ~scanf~
-      statement. Make sure that the modified program yields the same
-      result as before.
+   statement. Make sure that the modified program yields the same
+   result as before.
