@@ -629,7 +629,7 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
 - Re-submit as many times as you like
 - Solutions to in-class practice can be found as PDF files in GitHub
 
-* Week 9 - C input/output
+* Week 9 - C input/output - ~printf~
 #+attr_latex: :width 400px
 [[../img/scanner.jpg]]
 
@@ -671,7 +671,7 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
    -mpc64
   #+end_example
 
-* NEXT Week 10 - Conditional statements
+* NEXT Week 10 - Flying with ~scanf~ 
 #+attr_latex: :width 400px
 [[../img/ccTestDensity.png]] [[../img/ccTestBoxplot.png]]
 
@@ -683,6 +683,7 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
   2) The test average went down by 6.8% and the lower quartile is 26%
      (a quarter of the class is only half way to passing)
   3) Three students didn't even try, and the lower quartile is 40%
+
 * TODO Practice assignments - check your submissions!
 #+attr_latex: :width 400px
 #+caption: Photo by Caleb Woods on Unsplash
@@ -765,6 +766,7 @@ computer/data science. It's the academic game of musical chairs.*
 
 - Computational Thinking by Jeannette M. Wing (Columbia U.) - In: CACM
   49(3) 2006: 33-35. URL: [[https://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf][cs.cmu.edu]].
+
 
 * TODO Week 11 - Loops
 * TODO Week 12 - Arrays

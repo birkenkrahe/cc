@@ -35,12 +35,12 @@ conversion specifications like ~d~, ~e~, ~f~, ~g~
 - Put the input into a file:
   #+name: pgm:io_scanf_input
   #+begin_src bash
-    echo "1  -20 .3 -4.0e+3" > io_scanf_input | ls io_scanf_input
+    echo "1  -20 .3 -4.0e+3" > io_scanf_input 
   #+end_src
 
 - Example program to read this input:
   #+name: pgm:tscanf
-  #+begin_src C :cmdline < ../data/io_scanf_input :results output
+  #+begin_src C :cmdline < ../data/io_scanf_input :results output :tangle io.c
     int i, j;
     float x, y;
 
@@ -49,7 +49,10 @@ conversion specifications like ~d~, ~e~, ~f~, ~g~
     printf("|%5d|%5d|%5.1f|%10.1f|\n", i, j, x, y);
   #+end_src
 
-- [ ] Can you tell from the code block header where the file is?
+  #+RESULTS: pgm:tscanf
+  : |    1|  -20|  0.3|   -4000.0|
+
+- [X] Can you tell from the code block header where the file is?
 
 - Practice creating input on the shell yourself now:
   1) In Emacs, open a shell with ~M-x eshell~
@@ -72,6 +75,7 @@ conversion specifications like ~d~, ~e~, ~f~, ~g~
 
 - The ~&~ pointer symbol must not miss in front of the input variable
 
+- ~scanf~ works in mysterious ways (we'll see why in a mo')
 * How scanf works
 
 - ~scanf~ is a pattern-matching function: it tries to math input groups
