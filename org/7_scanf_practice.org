@@ -119,10 +119,10 @@ This is useful for the programming exercise "phone numbers":
 
 2) Create the input file with the sample numbers. Note that the ~>>~
    operator attaches input to the end of the file rather than
-   overwriting it (~•~ is an empty space):
+   overwriting it (~•~ stands for an empty space):
    #+begin_example sh
      echo "5/6•" > addFrac_input
-     echo "3/4" >> addFrac_input
+     echo "3/4" >> addFrac_inputp
      cat addFrac_input
    #+end_example
 
