@@ -95,7 +95,7 @@ conversion specifications like ~d~, ~e~, ~f~, ~g~
 
 - Input can be on one line or spread over several lines:
   #+attr_latex: :width 300px
-  #+caption: Input file for tscanf
+  #+caption: Input file for scanf
   [[../img/7_input.png]]
 
 - ~scanf~ sees a character stream (~¤~ = new-line, ~s~ = skip'd, ~r~ = read):

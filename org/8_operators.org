@@ -48,7 +48,7 @@
   |---------------------+-----------------------+-----------+------------|
   | Arithmetic          | compute               | * + - / % | i * j + k  |
   | Relational          | compare               | < > <= >= | i > j      |
-  | Equality            | compare (in/equality) | == !=       | i == j     |
+  | Equality            | compare (in/equality) | ~==~ ~!=~     | i == j     |
   | Logical             | confirm (truth)       | &&        | i && j     |
   | Assignment          | change                | =         | i = j      |
   | Increment/decrement | change stepwise       | ++, +-    | ++i        |
@@ -104,7 +104,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 * Let's practice!
 #+attr_latex: :width 400px
 #+caption: Women working on an aircraft fuselage, 1943 (Flickr.com)
-[[../img/practice.jpg]]
+P[[../img/practice.jpg]]
 
 - Download the practice file ~8_operator_practice.org~ from GitHub as
   [[https://bit.ly/op-practice][bit.ly/op-practice]].
