@@ -106,7 +106,9 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 #+caption: Women working on an aircraft fuselage, 1943 (Flickr.com)
 [[../img/practice.jpg]]
 
-
+- Download the practice file ~8_operator_practice.org~ from GitHub as
+  [[https://bit.ly/op-practice][bit.ly/op-practice]].
+- Complete the file and upload it to Canvas.
 
 * References
 
