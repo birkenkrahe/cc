@@ -671,7 +671,7 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
    -mpc64
   #+end_example
 
-* NEXT Week 10 - Flying with ~scanf~ 
+* Week 10 - Flying with ~scanf~ - operators
 #+attr_latex: :width 400px
 [[../img/ccTestDensity.png]] [[../img/ccTestBoxplot.png]]
 
@@ -687,7 +687,7 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
 
   3) Three students didn't even try, and the lower quartile is 40%
 
-* TODO Practice assignments - check your submissions!
+** TODO Practice assignments - check your submissions!
 #+attr_latex: :width 400px
 #+caption: Photo by Caleb Woods on Unsplash
 [[../img/guilt.jpg]]
@@ -696,7 +696,7 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
 - Now we do a lot of the work in the class (easier for you)
 - Don't let yourself (or me) down by submitting shoddy work
 
-* TODO Assignment: phone number conversion
+** TODO Assignment: phone number conversion
 #+attr_latex: :width 400px
 #+caption: Photo by Quino Al on Unsplash
 [[../img/phone.jpg]]
@@ -740,7 +740,7 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
    them with an extra ~\~, like the newline character ~\n~. So to
    print (or to scan) the character ~\~, you use ~\\~.
 
-* TODO The ~scanf~ function - lecture & practice
+** TODO The ~scanf~ function - lecture & practice
 #+attr_latex: :width 400px
 #+caption: Scanning computer
 [[../img/scanning.jpg]]
@@ -749,7 +749,7 @@ argument ~:cmdline < input~, and the input should be in the file ~input~.
 - How the computer scans anything
 - Difficulties when using ~scanf~
 
-* TODO Mildly therapeutic reading for spring break
+** TODO Mildly therapeutic reading for spring break
 #+attr_latex: :width 400px
 #+caption: Photo by William Felipe on Unsplash
 [[../img/compthinking.jpg]]
