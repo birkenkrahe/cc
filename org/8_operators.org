@@ -1,0 +1,126 @@
+#+TITLE: OPERATORS
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:CSC100 Introduction to programming in C/C++ (Spring 2023)
+#+STARTUP: overview hideblocks indent inlineimages
+#+OPTIONS: toc:1 ^:nil
+#+PROPERTY: header-args:C :main yes :includes <stdio.h> :exports both :results output :noweb yes :tangle yes
+* README
+#+attr_latex: :width 400px
+#+caption: City, telephone room, 1955 (Flickr.com)
+[[../img/8_operators.jpg]]
+
+- In this section of the course, we go beyond simple statements and
+  turn to program flow and evaluation of logical conditions
+
+- This section follows chapter 3 in Davenport/Vine (2015) and
+  chapters 4 and 5 in King (2008)
+
+- Practice workbooks, input files and PDF solution files in GitHub
+
+* Preamble
+#+attr_latex: :width 400px
+#+caption: Photo: Alan Levine, public domain. Source: Flickr.com
+[[../img/8_stop.jpg]]
+
+- *Algorithms* are the core of programming
+
+- Example for an algorithm: /"When you come to a STOP sign, stop."/
+
+- The human form of algorithm is *heuristics*
+
+- Example for a heuristic: /"To get to the college, go straight."/
+
+- For *programming*, you need both algorithms and heuristics
+
+- Useful tools to master when designing algorithms:
+  - *Pseudocode* (task flow description)
+  - *Visual modeling* (task flow visualization)
+
+* Operators in C
+
+- Mathematically, operators are really functions: ~f(i,j)=i+j~
+
+- C has many operators, both unary (~-1~) and binary (~1+1~)
+
+- Types of operators in C:
+
+  | OPERATOR            | WHY                   | EXAMPLES  | EXPRESSION |
+  |---------------------+-----------------------+-----------+------------|
+  | Arithmetic          | compute               | * + - / % | i * j + k  |
+  | Relational          | compare               | < > <= >= | i > j      |
+  | Equality            | compare (in/equality) | == !=       | i == j     |
+  | Logical             | confirm (truth)       | &&        | i && j     |
+  | Assignment          | change                | =         | i = j      |
+  | Increment/decrement | change stepwise       | ++, +-    | ++i        |
+
+- Conditional operators used in C are important for program flow:
+
+  | OPERATOR | DESCRIPTION              | EXPRESSION | BOOLEAN VALUE |
+  |----------+--------------------------+------------+---------------|
+  | ==       | Equal                    | 5 == 5     | true          |
+  | !=       | Not equal                | 5 != 5     | false         |
+  | >        | Greater than             | 5 > 5      | false         |
+  | <        | Less than                | 5 < 5      | false         |
+  | >=       | Greater than or equal to | 5 >= 5     | true          |
+  | <=       | Less than or equal to    | 5 <= 5     | true          |
+
+- The value of an evaluated conditional operator is *Boolean*
+  (logical) - e.g. ~2==2~ evaluates as ~TRUE~ or ~1~.
+
+* Operators in other languages
+#+attr_latex: :width 400px
+#+caption: Photo: Jack Delano, Sawmill (1939). Source: Library of Congress
+[[../img/8_pipeline.jpg]]
+
+- Different programming languages differ greatly rgd. operators. For
+  example, in the language R, the ~|>~ operator ("pipe") passes a data
+  set to a function[fn:1].
+
+  #+begin_example R
+  ## pipe data set into function
+  mtcars |> head()  ## same as head(mtcars)
+  #+end_example
+
+  Output:
+  #+begin_example
+             mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+
+  #+end_example
+
+- You already met the ~>~ and ~>>~ operators of the ~bash~ shell language
+  that redirects standard output to a file:
+
+  #+begin_example bash
+    ## create empty file called "empty"
+    > empty
+  #+end_example
+
+* Let's practice!
+#+attr_latex: :width 400px
+#+caption: Women working on an aircraft fuselage, 1943 (Flickr.com)
+[[../img/practice.jpg]]
+
+
+
+* References
+
+- Davenport/Vine (2015) C Programming for the Absolute Beginner
+  (3ed). Cengage Learning.
+- <<logic>> GVSUmath (Aug 10, 2012). Proving Logical Equivalences
+  without Truth Tables [video]. [[https://youtu.be/iPbLzl2kMHA][URL: youtu.be/iPbLzl2kMHA]].
+- Kernighan/Ritchie (1978). The C Programming Language
+  (1st). Prentice Hall.
+- King (2008). C Programming - A modern approach (2e). W A Norton.
+- Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
+  orgmode.org]]
+
+* Footnotes
+
+[fn:1]Only from R version 4.1 - before that, you have to use the
+magrittr pipe operator ~%>%~.
