@@ -770,11 +770,235 @@ computer/data science. It's the academic game of musical chairs.*
 - Computational Thinking by Jeannette M. Wing (Columbia U.) - In: CACM
   49(3) 2006: 33-35. URL: [[https://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf][cs.cmu.edu]].
 
+* TODO Week 11 - Operators / Pseudocode / BPMN
+#+attr_latex: :width 400px
+#+caption: Stan Giddings, maintenance worker ascending Sydney Harbour Bridge, 18 September 1945, by Alec Iverson (Flickr.com)
+[[../img/bridge.jpg]]
 
-* TODO Week 11 - Loops
-* TODO Week 12 - Arrays
-* TODO Week 13 - Functions
-* TODO Week 14 - Pointers
+- [ ] Discussion: "Computational thinking" - what are your thoughts?
+- [ ] Review and practice: logical operators
+- [ ] Preview test 5: input/output/operators
+
+* TODO Computational thinking? Who cares?
+#+attr_latex: :width 400px
+[[../img/rose.png]]
+
+* TODO Review and practice: Logical values and operators
+
+- Definitions for ~&&~, ~||~ and ~!~:
+  #+begin_src C
+    int A,B,C,D;
+    printf(" !A   A   B   A&&B   A||B\n");
+    printf("-------------------------\n");
+    for (int i = 1; i >= 0 ; i--) {
+      for (int j = 1; j >= 0 ; j--) {
+        A = i, B = j;
+        printf("%3d%4d%4d%5d%8d\n",!A,A,B,A&&B,A||B);
+      }
+     }
+  #+end_src
+
+  #+RESULTS:
+  :  !A   A   B   A&&B   A||B
+  : -------------------------
+  :   0   1   1    1       1
+  :   0   1   0    0       1
+  :   1   0   1    0       1
+  :   1   0   0    0       0
+
+- This works (in C) for any values of A,B, e.g.
+  #+begin_example
+  | !100 | 100 | 0 | 100 && 0 | 100 || 0 |
+  |------+-----+---+----------+----------|
+  |    0 |   1 | 0 |      0   |   1      |
+  #+end_example
+  Computational "proof":
+  #+begin_src C
+    int i=100,j=0;
+    printf("!100 = %d, 100 && 0 = %d, 100 || 0 = %d\n",
+           !i, i && j, i || j);
+  #+end_src
+
+  #+RESULTS:
+  : !100 = 0, 100 && 0 = 0, 100 || 0 = 1
+
+- What about brackets? (Beyond /Please Excuse My Dear Aunt Sally/) Order
+  of operators matters: ~&&~ has a higher precedence than ~||~: the
+  expression ~A || B && C~ is evaluated as ~A || (B && C)~.
+
+- Expressions with multiple operators of the same precedence
+  (associativity) are evaluated from left to right: ~A || B || C && D~
+  becomes ~(A||B)||(C&&D)~.
+
+- Here is a table that summarizes precedence and associativity rules
+  for the many operators of the C language:
+  #+attr_latex: :width 400px
+  #+caption: Source: ChatGPT (Mar 14 version)
+  [[../img/precedence.png]]
+
+- Exercises! Work this out for yourself first:
+  1) ~0 == 0~
+  2) ~!0~
+  3) ~1 && 1~
+  4) ~1 || 2~
+  5) ~0 && !1~
+  6) ~(1 && 0) || (200 <2)~
+  7) ~(100 > 10) || (200 < 2)~
+  8) ~(100 > 10) && (200 > 2)~
+  9) ~(67 || 0) && (0 || 0)~
+  10) ~67 || 0  &&  0 && 0~
+  #+begin_src C
+    printf("%d %d %d %d %d\n",
+           0==0, // 1
+           !0, // 1
+           1&&1, // 1
+           1||2, // 1||1 == 1
+           0&&!1); // 0 && 0 == 0
+    printf("%d\n", (1 && 0) || (200 < 2)); // 0 || 0 == 0
+    printf("%d\n", (100 > 10) || (200 < 2)); // 1 || 0 == 1
+    printf("%d\n", (100 > 10) && (200 > 2)); // 1 && 1 == 1
+    printf("%d\n", (67 || 0) && (0 || 0)); // (1||0) && 0 == 0
+    printf("%d\n", (67 || 0) && (0 && 0)); // (1||0) && 0 == 0
+    printf("%d\n",  67 || 0  &&  0 && 0 ); // 1 || 0 == 1
+  #+end_src
+
+* TODO Test 5 preview
+
+1) What are some common mistakes when using ~printf~ and ~scanf~?
+   #+begin_notes
+   ~printf~
+   - Putting an ~&~ in front of an output variable in ~printf~
+   - Mismatching format specifier and *output* variable type
+   - Forgetting that it's ~printf~ and not ~print~
+
+   ~scanf~
+   - Forgetting the ~&~ in front of an input variable
+   - Putting a newline character ~\n~ at the end of the format string
+   - Mismatching format specifier and *input* variable type
+   #+end_notes
+
+2) What does the format specifier ~%10.5f\n~ mean to you? What can you
+   print with it?
+   #+begin_src C :results output
+     printf("....|....|....|\n");
+     printf("%10.5f",3.141593);
+   #+end_src
+
+3) What if I want to print " or \ in C?
+   #+begin_src C
+     printf("The \" is printed using \\\"."); // \" is ", \\\" is \"
+   #+end_src
+
+4) You've met the ~main~ function. What does it do again?
+   #+begin_notes
+   Answer: the ~main~ function is the entry point of a C program. All
+   code that you want to execute needs to be inside it.
+   #+end_notes
+   #+begin_src C :tangle hello1.c
+     #include <stdio.h>
+
+     int main (void) {
+
+       int hello(void) {   // definition must be inside main()
+         puts("hello there");
+         return 0; // end of hello()
+       }
+
+       hello();  // function call
+       return 0; // end of main()
+     }
+   #+end_src
+   #+begin_src C :tangle hello1.c
+     #include <stdio.h>
+
+     int main (void) {
+       hello();  // function call
+       return 0; // end of main()
+     }
+     int hello(void) {   // definition must be inside main()
+       puts("hello there");
+       return 0; // end of hello()
+     }
+   #+end_src
+
+5) Can you rely on the compiler (~gcc~) to alert you if format
+   specifiers ~%...~ and input variables in ~scanf~ don't match up?
+   #+begin_src C :cmdline < ../data/input
+     // input file contains 1.67 1.67
+     float x,y;
+     scanf("%f%f", &x, &y);
+     printf("%f %f\n", x, y);
+   #+end_src
+
+6) Which of these are operators in C?
+   1) ++
+   2) %%
+   3) %
+   4) !!
+   5) !=
+   6) --
+   7) //
+   #+begin_src C
+     int i=4;
+     printf("%d ", ++i); // can only be applied to variables
+     printf("%d %d %d %d\n",
+            4%2,
+            !!4,
+            4!=2,
+            --i);
+   #+end_src
+   
+7) If ~int i = 10~ and ~int j = 500~, what will ~!(i > j)~ print in C?
+
+   /Tip: remember that, in C, the *logical* value of any number but 0 is
+   true displayed as ~1~, or ~!0 == 1~./
+
+   #+begin_src C
+     int i = 10, j = 500;
+     printf("%d\n", !(i > j));  // !(10 > 500) == !(0) == 1
+   #+end_src
+
+8) What if there are arithmetic operators and characters present in
+   the Boolean expression? E.g. in ~('m' > 'M') && 5 - 5)~
+   #+begin_notes
+   - you can logically compare characters like "a" just like numbers
+     (a character is always a non-zero number).
+   - Arithmetic operators have higher precedence than logical
+     operators.
+   #+end_notes
+   #+begin_src C
+     printf("%d\n", (int)('M'));
+     printf("%d\n", (int)('m'));
+     printf("%d\n", ('m' > 'M') && 5 - 5);
+     // 'm'>'M' == 1, 5 - 5 = 0 == 0
+     //  1 && 0 == 0
+   #+end_src
+
+9) Test your ~scanf~ expertise: what does this command expect as input?
+   #+begin_src C :cmdline < ../data/scanf_input1
+     int i,j; float x;
+     scanf("%d=%f%d", &i, &x, &j);
+     printf("%d %.1f %d", i, x, j);
+   #+end_src
+
+   #+RESULTS:
+   : 100 10.5 1000
+
+10) Suppose we call ~scanf~ like this and enter the numbers ~100 10.5
+    1000~ - what will the output be?
+    #+begin_src C :cmdline < ../data/scanf_input2 :results output
+      int i=0, j=-34; float x=0.;
+      scanf("%f%d%d", &x, &i, &j);
+      printf("x = %g, i = %d, j = %d\n", x, i, j);
+    #+end_src
+
+    #+RESULTS:
+    : x = 100, i = 10, j = -34
+
+
+* TODO Week 12 - Conditional statements
+* TODO Week 13 - Arrays
+* TODO Week 14 - Functions
 * TODO Week 15 - Pointers and arrays
 * TODO Week 16 - C++
 - [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: whaddayaknow?

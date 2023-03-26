@@ -177,8 +177,6 @@ This example has the same spec as our earlier example:
 
 - To allow spaces after the first number, use ~"%d/•%d"~ instead.
 
-
-
 * Common mistakes:
 
 1. putting ~&~ in front of variables in a ~printf~ call
