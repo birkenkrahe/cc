@@ -100,7 +100,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
     ## create empty file called "empty"
     > empty
   #+end_example
-
+  
 * Let's practice!
 #+attr_latex: :width 400px
 #+caption: Women working on an aircraft fuselage, 1943 (Flickr.com)
