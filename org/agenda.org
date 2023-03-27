@@ -777,21 +777,39 @@ computer/data science. It's the academic game of musical chairs.*
 
 - [ ] Discussion: "Computational thinking" - what are your thoughts?
 - [ ] Review and practice: logical operators
-- [ ] Preview test 5: input/output/operators (Wednesday) - complete
-  test no later than March 31 (open for partial credit until April 7).
+- [ ] Preview test 5: input/output/operators - complete test no later
+  than March 31 (open for partial credit until April 7).
 
 * TODO Computational thinking? Who cares?
 #+attr_latex: :width 400px
 [[../img/rose.png]]
 
-Find someone else in the class to discuss this article and extract:
-1) One central hypothesis
-2) Any questions you have
-3) Your own view of the hypothesis
-4) Any other views you hold on the subject.
-
+*Find* 1-2 people to *discuss* this article and *extract*:
+1) One central *hypothesis* (we'll collect a few contenders)
+2) Any *questions* you have (content, terminology, background)
+3) Your own *view* of the hypothesis
+4) Any other *views* you hold on the subject.
+   
 #+begin_quote
-Computational thinking is [applied in] 33 areas:
+How to "read closely"
+1) *Print* the article and *annotate* it manually
+2) *Ask* yourself WHO wrote this article and for WHOM?
+3) *Verify* important information.
+4) *Extract* hypotheses like: "Computational thinking is a fundamental
+   skill for everyone, not just for computer scientists."
+5) *Eliminate* hyperbole, like: "Quantum computing is changing the way
+   physicists think."
+6) *Summarize* conclusions.
+#+end_quote
+#+begin_quote
+Author information: [[https://www.cs.columbia.edu/~wing/very-short-bio.txt][Jeannette M. Wing bio sketch]]
+
+"Her 2006 seminal essay, titled "Computational Thinking," is credited
+with helping to establish the centrality of computer science to
+problem-solving in fields where previously it had not been embraced."
+#+end_quote
+#+begin_quote
+In the article, "Computational thinking" is [applied in] 33 areas:
 | Approximation  | Randomization | Prediction      |
 | Reduction      | Embedding     | Transformation  |
 | Simulation     | Recursion     | Parallelization |
@@ -829,19 +847,16 @@ not, then listen to the repetition of my explanation and answer.
    - Putting a newline character ~\n~ at the end of the format string
    - Mismatching format specifier and *input* variable type
    #+end_notes
-   
 2) What does the format specifier ~%10.5f\n~ mean to you? What can you
    print with it?
    #+begin_src C :results output
      printf("....|....|....|\n");
      printf("%10.5f",3.141593);
    #+end_src
-
 3) What if I want to print " or \ in C?
    #+begin_src C
      printf("The \" is printed using \\\"."); // \" is ", \\\" is \"
    #+end_src
-
 4) You've met the ~main~ function. What does it do again?
    #+begin_notes
    Answer: the ~main~ function is the entry point of a C program. All
@@ -873,7 +888,6 @@ not, then listen to the repetition of my explanation and answer.
        return 0; // end of hello()
      }
    #+end_src
-
 5) Can you rely on the compiler (~gcc~) to alert you if format
    specifiers ~%...~ and input variables in ~scanf~ don't match up?
    #+begin_src C :cmdline < ../data/input
@@ -882,7 +896,6 @@ not, then listen to the repetition of my explanation and answer.
      scanf("%f%f", &x, &y);
      printf("%f %f\n", x, y);
    #+end_src
-
 6) Which of these are operators in C?
    1) ++
    2) %%
@@ -900,17 +913,14 @@ not, then listen to the repetition of my explanation and answer.
             4!=2,
             --i);
    #+end_src
-   
 7) If ~int i = 10~ and ~int j = 500~, what will ~!(i > j)~ print in C?
 
    /Tip: remember that, in C, the *logical* value of any number but 0 is
    true displayed as ~1~, or ~!0 == 1~./
-
    #+begin_src C
      int i = 10, j = 500;
      printf("%d\n", !(i > j));  // !(10 > 500) == !(0) == 1
    #+end_src
-
 8) What if there are arithmetic operators and characters present in
    the Boolean expression? E.g. in ~('m' > 'M') && 5 - 5)~
    #+begin_notes
@@ -926,17 +936,12 @@ not, then listen to the repetition of my explanation and answer.
      // 'm'>'M' == 1, 5 - 5 = 0 == 0
      //  1 && 0 == 0
    #+end_src
-
 9) Test your ~scanf~ expertise: what does this command expect as input?
    #+begin_src C :cmdline < ../data/scanf_input1
      int i,j; float x;
      scanf("%d=%f%d", &i, &x, &j);
      printf("%d %.1f %d", i, x, j);
    #+end_src
-
-   #+RESULTS:
-   : 100 10.5 1000
-
 10) Suppose we call ~scanf~ like this and enter the numbers ~100 10.5
     1000~ - what will the output be?
     #+begin_src C :cmdline < ../data/scanf_input2 :results output
@@ -944,10 +949,7 @@ not, then listen to the repetition of my explanation and answer.
       scanf("%f%d%d", &x, &i, &j);
       printf("x = %g, i = %d, j = %d\n", x, i, j);
     #+end_src
-
-    #+RESULTS:
-    : x = 100, i = 10, j = -34
-
+  
 * TODO Review and practice: Logical values and operators
 
 - What is "[[https://en.wikipedia.org/wiki/Reverse_Polish_notation][Reverse Polish Notation]]"?
@@ -1033,7 +1035,7 @@ not, then listen to the repetition of my explanation and answer.
     printf("%d\n",  67 || 0  &&  0 && 0 ); // 1 || 0 == 1
   #+end_src  
   
-* TODO What did you learn?
+* TODO What did you learn this week?
 
 Mon:
 
