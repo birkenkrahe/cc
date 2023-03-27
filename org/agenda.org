@@ -785,6 +785,12 @@ computer/data science. It's the academic game of musical chairs.*
 
 * TODO Review and practice: Logical values and operators
 
+- What is "[[https://en.wikipedia.org/wiki/Reverse_Polish_notation][Reverse Polish Notation]]"?
+  #+begin_notes
+  When the operators follow their operands - for example to add 3 and
+  4, the expression is ~3 4 +~ rather than ~3 + 4~ (algebraic notation).
+  #+end_notes
+
 - Definitions for ~&&~, ~||~ and ~!~:
   #+begin_src C
     int A,B,C,D;
@@ -860,8 +866,8 @@ computer/data science. It's the academic game of musical chairs.*
     printf("%d\n", (67 || 0) && (0 || 0)); // (1||0) && 0 == 0
     printf("%d\n", (67 || 0) && (0 && 0)); // (1||0) && 0 == 0
     printf("%d\n",  67 || 0  &&  0 && 0 ); // 1 || 0 == 1
-  #+end_src
-
+  #+end_src  
+  
 * TODO Test 5 preview
 
 1) What are some common mistakes when using ~printf~ and ~scanf~?
@@ -995,6 +1001,13 @@ computer/data science. It's the academic game of musical chairs.*
     #+RESULTS:
     : x = 100, i = 10, j = -34
 
+* TODO What did you learn?
+
+Mon:
+
+Tue:
+
+Wed:
 
 * TODO Week 12 - Conditional statements
 * TODO Week 13 - Arrays
