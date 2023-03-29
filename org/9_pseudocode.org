@@ -15,6 +15,13 @@
 - Practice workbooks, input files and PDF solution files in GitHub
 
 * Pseudocode
+
+A flow diagram example that also illustrates when one might want to
+use an exact algorithm vs. a heuristic.
+#+attr_latex: :width 400px
+#+caption: Source: Harder, Feb 2023 (towardsdatascience.com)
+[[../img/9_heuristics_algorithm.png]]
+
 * Overview
 
 - *Pseudocode* is a method to write down/analyze an /algorithm/ or a

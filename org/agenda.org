@@ -770,17 +770,19 @@ computer/data science. It's the academic game of musical chairs.*
 - Computational Thinking by Jeannette M. Wing (Columbia U.) - In: CACM
   49(3) 2006: 33-35. URL: [[https://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf][cs.cmu.edu]].
 
-* TODO Week 11 - Operators / Pseudocode / BPMN
+* IN PROGRESS Week 11 - Operators / Pseudocode / BPMN
 #+attr_latex: :width 400px
 #+caption: Stan Giddings, maintenance worker ascending Sydney Harbour Bridge, 18 September 1945, by Alec Iverson (Flickr.com)
 [[../img/bridge.jpg]]
 
-- [ ] Discussion: "Computational thinking" - what are your thoughts?
+- [X] Discussion: "Computational thinking" - what are your thoughts?
 - [ ] Review and practice: logical operators
 - [ ] Preview test 5: input/output/operators - complete test no later
   than March 31 (open for partial credit until April 7).
-
-* TODO Computational thinking? Who cares?
+- [ ] *Bonus points* for experience report from the job fair April 4
+  ([[https://lyon.instructure.com/courses/1014/assignments/9614][see Canvas]])
+  
+* DONE Computational thinking? Who cares?
 #+attr_latex: :width 400px
 [[../img/rose.png]]
 
@@ -826,6 +828,17 @@ In the article, "Computational thinking" is [applied in] 33 areas:
 world filled with bad AI drivers can be used to test autonomous
 vehicles." (Bundell, 2023)
 #+end_quote
+
+* TODO Bonus points for job fair experience report!
+#+attr_latex: :width 400px
+[[../img/fair_flickr_color.jpg]]
+
+- Write long paragraph about your job fair experience for 10 points.
+- Great opportunity to network, mix and mingle, and show off.
+- Bring 1 page resume, a few questions, a story, and dress up.
+- Must go: graduating seniors. Should go: everyone else.
+- Motivate each other by going as a pair, a group, a team.
+- Post your experience report in Canvas.
 
 * TODO Test 5 preview
 #+attr_latex: :width 400px
@@ -1039,9 +1052,9 @@ not, then listen to the repetition of my explanation and answer.
 
 Mon:
 
-Tue:
-
 Wed:
+
+Fri:
 
 * TODO Week 12 - Conditional statements
 * TODO Week 13 - Arrays
