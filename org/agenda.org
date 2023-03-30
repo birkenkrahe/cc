@@ -773,15 +773,15 @@ computer/data science. It's the academic game of musical chairs.*
 * IN PROGRESS Week 11 - Operators / Pseudocode / BPMN
 #+attr_latex: :width 400px
 #+caption: Stan Giddings, maintenance worker ascending Sydney Harbour Bridge, 18 September 1945, by Alec Iverson (Flickr.com)
-[[../img/bridge.jpg]]
+n[[../img/bridge.jpg]]
 
 - [X] Discussion: "Computational thinking" - what are your thoughts?
+- [ ] Preview test 5: input/output/operators
+- [ ] Complete test no later than March 31 (partial credit until Apr7) 
 - [ ] Review and practice: logical operators
-- [ ] Preview test 5: input/output/operators - complete test no later
-  than March 31 (open for partial credit until April 7).
 - [ ] *Bonus points* for experience report from the job fair April 4
   ([[https://lyon.instructure.com/courses/1014/assignments/9614][see Canvas]])
-  
+
 * DONE Computational thinking? Who cares?
 #+attr_latex: :width 400px
 [[../img/rose.png]]
@@ -791,7 +791,7 @@ computer/data science. It's the academic game of musical chairs.*
 2) Any *questions* you have (content, terminology, background)
 3) Your own *view* of the hypothesis
 4) Any other *views* you hold on the subject.
-   
+
 #+begin_quote
 How to "read closely"
 1) *Print* the article and *annotate* it manually
@@ -829,7 +829,7 @@ world filled with bad AI drivers can be used to test autonomous
 vehicles." (Bundell, 2023)
 #+end_quote
 
-* TODO Bonus points for job fair experience report!
+* DONE Bonus points for job fair experience report!
 #+attr_latex: :width 400px
 [[../img/fair_flickr_color.jpg]]
 
@@ -840,7 +840,7 @@ vehicles." (Bundell, 2023)
 - Motivate each other by going as a pair, a group, a team.
 - Post your experience report in Canvas.
 
-* TODO Test 5 preview
+* IN PROGRESS Test 5 preview
 #+attr_latex: :width 400px
 #+caption: Photo: Chris Brady serves a pizza (US Dept Agriculture), Aug-5 2016
 [[../img/review.jpg]]
@@ -848,7 +848,7 @@ vehicles." (Bundell, 2023)
 Don't sweat over these now - ask yourself if you know an answer or
 not, then listen to the repetition of my explanation and answer.
 
-1) What are some common mistakes when using ~printf~ and ~scanf~?
+1) [X] What are some common mistakes when using ~printf~ and ~scanf~?
    #+begin_notes
    ~printf~
    - Putting an ~&~ in front of an output variable in ~printf~
@@ -860,17 +860,24 @@ not, then listen to the repetition of my explanation and answer.
    - Putting a newline character ~\n~ at the end of the format string
    - Mismatching format specifier and *input* variable type
    #+end_notes
-2) What does the format specifier ~%10.5f\n~ mean to you? What can you
+2) [X] What does the format specifier ~%10.5f\n~ mean to you? What can you
    print with it?
    #+begin_src C :results output
      printf("....|....|....|\n");
-     printf("%10.5f",3.141593);
+     printf("%10.5f\n",3.141593);
    #+end_src
-3) What if I want to print " or \ in C?
+
+   #+RESULTS:
+   : ....|....|....|
+   :    3.14159
+3) [X] What if I want to print " or \ in C?
    #+begin_src C
-     printf("The \" is printed using \\\"."); // \" is ", \\\" is \"
+     printf("The \" is printed using \\\"."); // \" is ", (\\)(\") is \"
    #+end_src
-4) You've met the ~main~ function. What does it do again?
+
+   #+RESULTS:
+   : The " is printed using \".
+4) [X] You've met the ~main~ function. What does it do again?
    #+begin_notes
    Answer: the ~main~ function is the entry point of a C program. All
    code that you want to execute needs to be inside it.
@@ -889,6 +896,10 @@ not, then listen to the repetition of my explanation and answer.
        return 0; // end of main()
      }
    #+end_src
+
+   #+RESULTS:
+   : hello there
+
    #+begin_src C :tangle hello1.c
      #include <stdio.h>
 
@@ -901,15 +912,18 @@ not, then listen to the repetition of my explanation and answer.
        return 0; // end of hello()
      }
    #+end_src
-5) Can you rely on the compiler (~gcc~) to alert you if format
+5) [X] Can you rely on the compiler (~gcc~) to alert you if format
    specifiers ~%...~ and input variables in ~scanf~ don't match up?
    #+begin_src C :cmdline < ../data/input
      // input file contains 1.67 1.67
      float x,y;
-     scanf("%f%f", &x, &y);
-     printf("%f %f\n", x, y);
+     scanf("%f%d", &x, &y);
+     printf("%.2d %.2f\n", x, y);
    #+end_src
-6) Which of these are operators in C?
+
+   #+RESULTS:
+   : -536870912 0.00
+6) [X] Which of these are operators in C?
    1) ++
    2) %%
    3) %
@@ -921,12 +935,12 @@ not, then listen to the repetition of my explanation and answer.
      int i=4;
      printf("%d ", ++i); // can only be applied to variables
      printf("%d %d %d %d\n",
-            4%2,
-            !!4,
-            4!=2,
+            4%2,   // remainder of 4/2 is 0
+            !!4,   // !(!4) == !(!1) == !0 == 1
+            4!=2,  // 4!=2 is true so == 1
             --i);
    #+end_src
-7) If ~int i = 10~ and ~int j = 500~, what will ~!(i > j)~ print in C?
+7) [X] If ~int i = 10~ and ~int j = 500~, what will ~!(i > j)~ print in C?
 
    /Tip: remember that, in C, the *logical* value of any number but 0 is
    true displayed as ~1~, or ~!0 == 1~./
@@ -934,7 +948,7 @@ not, then listen to the repetition of my explanation and answer.
      int i = 10, j = 500;
      printf("%d\n", !(i > j));  // !(10 > 500) == !(0) == 1
    #+end_src
-8) What if there are arithmetic operators and characters present in
+8) [X] What if there are arithmetic operators and characters present in
    the Boolean expression? E.g. in ~('m' > 'M') && 5 - 5)~
    #+begin_notes
    - you can logically compare characters like "a" just like numbers
@@ -949,7 +963,7 @@ not, then listen to the repetition of my explanation and answer.
      // 'm'>'M' == 1, 5 - 5 = 0 == 0
      //  1 && 0 == 0
    #+end_src
-9) Test your ~scanf~ expertise: what does this command expect as input?
+9) [X] Test your ~scanf~ expertise: what does this command expect as input?
    #+begin_src C :cmdline < ../data/scanf_input1
      int i,j; float x;
      scanf("%d=%f%d", &i, &x, &j);
@@ -962,8 +976,8 @@ not, then listen to the repetition of my explanation and answer.
       scanf("%f%d%d", &x, &i, &j);
       printf("x = %g, i = %d, j = %d\n", x, i, j);
     #+end_src
-  
-* TODO Review and practice: Logical values and operators
+    
+* TODO Review/practice: Logical values/operators
 
 - What is "[[https://en.wikipedia.org/wiki/Reverse_Polish_notation][Reverse Polish Notation]]"?
   #+begin_notes
@@ -984,14 +998,6 @@ not, then listen to the repetition of my explanation and answer.
      }
   #+end_src
 
-  #+RESULTS:
-  :  !A   A   B   A&&B   A||B
-  : -------------------------
-  :   0   1   1    1       1
-  :   0   1   0    0       1
-  :   1   0   1    0       1
-  :   1   0   0    0       0
-
 - This works (in C) for any values of A,B, e.g.
   #+begin_example
   | !100 | 100 | 0 | 100 && 0 | 100 || 0 |
@@ -1004,9 +1010,6 @@ not, then listen to the repetition of my explanation and answer.
     printf("!100 = %d, 100 && 0 = %d, 100 || 0 = %d\n",
            !i, i && j, i || j);
   #+end_src
-
-  #+RESULTS:
-  : !100 = 0, 100 && 0 = 0, 100 || 0 = 1
 
 - What about brackets? (Beyond /Please Excuse My Dear Aunt Sally/) Order
   of operators matters: ~&&~ has a higher precedence than ~||~: the
@@ -1046,11 +1049,17 @@ not, then listen to the repetition of my explanation and answer.
     printf("%d\n", (67 || 0) && (0 || 0)); // (1||0) && 0 == 0
     printf("%d\n", (67 || 0) && (0 && 0)); // (1||0) && 0 == 0
     printf("%d\n",  67 || 0  &&  0 && 0 ); // 1 || 0 == 1
-  #+end_src  
-  
+  #+end_src
+
 * TODO What did you learn this week?
+#+attr_latex: :width 400px
+#+caption: Traditional classroom (Flickr.com)
+[[../img/classroom.jpg]]
 
 Mon:
+1. Integration of computer skills has not been all that fast
+2. There seems to be a shift in education from theory to applications
+3. In the next 20 years things could be a lot more automated[fn:3]
 
 Wed:
 
@@ -1071,6 +1080,17 @@ Bundell (22 Mar 2023). The driving test for driverless cars. Online:
 Powered by OpenAI's GPT-3 language model, URL: [[https://chat.openai.com][chat.openai.com]].
 
 * Footnotes
+
+[fn:3]I found this in a [[http://www.mit.edu/~bhdavis/TeachFuture.html][1994 article from MIT]], "The Teacher of the
+Future" by [[http://www.mit.edu/~bhdavis/Index.html][Ben Howell Davis]]: »The teacher of the future is a teacher
+fully engaged along lines of excellence [quoting what JFK said about
+'happiness']. The only way to be happy in the information age with its
+constantly changing technologies and information overload is to be
+fully engaged in an active understanding of the problem. To be
+interested in making sense of new and difficult time will require a
+measure of involvement in new technologies and a measure of
+involvement in providing a context for them.«
+
 [fn:2] (1) Look through the material on GitHub ([[https://github.com/birkenkrahe/cc/tree/piHome/org][Markdown]] or [[https://github.com/birkenkrahe/cc/tree/piHome/pdf][PDF]]). (2)
 Check the review of questions at the start of each session. (3) After
 each class room session: write down what you didn't understand and ask
