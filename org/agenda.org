@@ -782,7 +782,7 @@ n[[../img/bridge.jpg]]
 - [ ] *Bonus points* for experience report from the job fair April 4
   ([[https://lyon.instructure.com/courses/1014/assignments/9614][see Canvas]])
 
-* DONE Computational thinking? Who cares?
+** DONE Computational thinking? Who cares?
 #+attr_latex: :width 400px
 [[../img/rose.png]]
 
@@ -829,7 +829,7 @@ world filled with bad AI drivers can be used to test autonomous
 vehicles." (Bundell, 2023)
 #+end_quote
 
-* DONE Bonus points for job fair experience report!
+** DONE Bonus points for job fair experience report!
 #+attr_latex: :width 400px
 [[../img/fair_flickr_color.jpg]]
 
@@ -840,7 +840,7 @@ vehicles." (Bundell, 2023)
 - Motivate each other by going as a pair, a group, a team.
 - Post your experience report in Canvas.
 
-* IN PROGRESS Test 5 preview
+** IN PROGRESS Test 5 preview
 #+attr_latex: :width 400px
 #+caption: Photo: Chris Brady serves a pizza (US Dept Agriculture), Aug-5 2016
 [[../img/review.jpg]]
@@ -1062,13 +1062,28 @@ Mon:
 3. In the next 20 years things could be a lot more automated[fn:3]
 
 Wed:
+1. 
+2. 
+3. 
 
 Fri:
 
+* TODO Programming assignments
+#+attr_latex: :width 400px
+[[../img/late1.jpg]]
+
+- Divide two/three floating point numbers
+- Print out Boolean operators as a table (bonus)
+- Print out compound operators as a table (bonus)
+
+* TODO Submit outstanding in-class practice files
+#+attr_latex: :width 400px
+[[../img/late.jpg]]
+
 * TODO Week 12 - Conditional statements
-* TODO Week 13 - Arrays
-* TODO Week 14 - Functions
-* TODO Week 15 - Pointers and arrays
+* TODO Week 13 - Loops
+* TODO Week 14 - Arrays
+* TODO Week 15 - Pointers
 * TODO Week 16 - C++
 - [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: whaddayaknow?
 * TODO What next?
