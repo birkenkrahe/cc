@@ -770,10 +770,10 @@ computer/data science. It's the academic game of musical chairs.*
 - Computational Thinking by Jeannette M. Wing (Columbia U.) - In: CACM
   49(3) 2006: 33-35. URL: [[https://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf][cs.cmu.edu]].
 
-* IN PROGRESS Week 11 - Operators / Pseudocode / BPMN
+* IN PROGRESS Week 11 - Operators
 #+attr_latex: :width 400px
 #+caption: Stan Giddings, maintenance worker ascending Sydney Harbour Bridge, 18 September 1945, by Alec Iverson (Flickr.com)
-n[[../img/bridge.jpg]]
+[[../img/bridge.jpg]]
 
 - [X] Discussion: "Computational thinking" - what are your thoughts?
 - [ ] Preview test 5: input/output/operators
@@ -782,7 +782,7 @@ n[[../img/bridge.jpg]]
 - [ ] *Bonus points* for experience report from the job fair April 4
   ([[https://lyon.instructure.com/courses/1014/assignments/9614][see Canvas]])
 
-** DONE Computational thinking? Who cares?
+** Computational thinking? Who cares?
 #+attr_latex: :width 400px
 [[../img/rose.png]]
 
@@ -829,7 +829,7 @@ world filled with bad AI drivers can be used to test autonomous
 vehicles." (Bundell, 2023)
 #+end_quote
 
-** DONE Bonus points for job fair experience report!
+** Bonus points for job fair experience report!
 #+attr_latex: :width 400px
 [[../img/fair_flickr_color.jpg]]
 
@@ -840,7 +840,7 @@ vehicles." (Bundell, 2023)
 - Motivate each other by going as a pair, a group, a team.
 - Post your experience report in Canvas.
 
-** IN PROGRESS Test 5 preview
+** Test 5 preview
 #+attr_latex: :width 400px
 #+caption: Photo: Chris Brady serves a pizza (US Dept Agriculture), Aug-5 2016
 [[../img/review.jpg]]
@@ -969,15 +969,30 @@ not, then listen to the repetition of my explanation and answer.
      scanf("%d=%f%d", &i, &x, &j);
      printf("%d %.1f %d", i, x, j);
    #+end_src
+
 10) Suppose we call ~scanf~ like this and enter the numbers ~100 10.5
-    1000~ - what will the output be?
+    5000~ - what will the output be?
     #+begin_src C :cmdline < ../data/scanf_input2 :results output
-      int i=0, j=-34; float x=0.;
-      scanf("%f%d%d", &x, &i, &j);
+      float x=0.; int i=0, j=-34; 
+      scanf("%d%f%d", &i, &x, &j);
       printf("x = %g, i = %d, j = %d\n", x, i, j);
     #+end_src
+
+    #+RESULTS:
+    : x = 10.5, i = 100, j = 5000
+
+11)
+    #+begin_src C :cmdline < ./input
+      int i; float x; int j;
+
+      scanf("%d%f%d", &i, &x, &j);
+      printf("i = %d, x = %f, j = %d\n", i, x, j);
+    #+end_src
+
+    #+RESULTS:
+    : i = 10, x = 0.300000, j = 5
     
-* TODO Review/practice: Logical values/operators
+** Review/practice: Logical values/operators
 
 - What is "[[https://en.wikipedia.org/wiki/Reverse_Polish_notation][Reverse Polish Notation]]"?
   #+begin_notes
@@ -998,6 +1013,14 @@ not, then listen to the repetition of my explanation and answer.
      }
   #+end_src
 
+  #+RESULTS:
+  :  !A   A   B   A&&B   A||B
+  : -------------------------
+  :   0   1   1    1       1
+  :   0   1   0    0       1
+  :   1   0   1    0       1
+  :   1   0   0    0       0
+
 - This works (in C) for any values of A,B, e.g.
   #+begin_example
   | !100 | 100 | 0 | 100 && 0 | 100 || 0 |
@@ -1010,6 +1033,9 @@ not, then listen to the repetition of my explanation and answer.
     printf("!100 = %d, 100 && 0 = %d, 100 || 0 = %d\n",
            !i, i && j, i || j);
   #+end_src
+
+  #+RESULTS:
+  : !100 = 0, 100 && 0 = 0, 100 || 0 = 1
 
 - What about brackets? (Beyond /Please Excuse My Dear Aunt Sally/) Order
   of operators matters: ~&&~ has a higher precedence than ~||~: the
@@ -1051,7 +1077,16 @@ not, then listen to the repetition of my explanation and answer.
     printf("%d\n",  67 || 0  &&  0 && 0 ); // 1 || 0 == 1
   #+end_src
 
-* TODO What did you learn this week?
+  #+RESULTS:
+  : 1 1 1 1 0
+  : 0
+  : 1
+  : 1
+  : 0
+  : 0
+  : 1
+
+** What did you learn this week?
 #+attr_latex: :width 400px
 #+caption: Traditional classroom (Flickr.com)
 [[../img/classroom.jpg]]
@@ -1062,13 +1097,13 @@ Mon:
 3. In the next 20 years things could be a lot more automated[fn:3]
 
 Wed:
-1. 
-2. 
-3. 
+1. Logical expressions (like ~!!~) and operators (like ~++~)
+2. How to escape...not from Lyon but from special characters
+3. Typical mistakes people make with ~printf~ and ~scanf~
 
 Fri:
 
-* TODO Programming assignments
+** TODO Programming assignments
 #+attr_latex: :width 400px
 #+caption: Source: Unsplash.com
 [[../img/late1.jpg]]
@@ -1077,12 +1112,14 @@ Fri:
 - Print out Boolean operators as a table (bonus)
 - Print out compound operators as a table (bonus)
 
-* TODO Submit outstanding in-class practice files
+* TODO Week 12 - Pseudocode/BPMN/Conditional statements
 #+attr_latex: :width 400px
-#+caption: Source: Flickr.com
-[[../img/late.jpg]]
+#+caption: Source: twitter.com/@george_mack
+[[../img/high_agency.jpeg]]
 
-* TODO Week 12 - Conditional statements
+- [[https://twitter.com/george__mack/status/1642197538647445504?s=20][Do you have 'high agency'?]] I satisfy criteria 1-5 (I'm always nice)
+- Useful: feed [[https://lyon.instructure.com/calendar][Canvas calendar]] to your Google calendar ([[https://community.canvaslms.com/t5/Student-Guide/How-do-I-subscribe-to-the-Calendar-feed-using-Google-Calendar-as/ta-p/535][instructions]])
+
 * TODO Week 13 - Loops
 * TODO Week 14 - Arrays
 * TODO Week 15 - Pointers
