@@ -1119,10 +1119,9 @@ Fri:
 #+caption: Source: twitter.com/@george_mack
 [[../img/high_agency.jpeg]]
 
-- [[https://twitter.com/george__mack/status/1642197538647445504?s=20][Do you have 'high agency'?]] I satisfy criteria 1-5 (I'm always nice)
-- Useful: feed [[https://lyon.instructure.com/calendar][Canvas calendar]] to your Google calendar ([[https://community.canvaslms.com/t5/Student-Guide/How-do-I-subscribe-to-the-Calendar-feed-using-Google-Calendar-as/ta-p/535][instructions]])
-
-- Now: open Emacs on the file ~8_operators_practice.org~
+- [X]  [[https://twitter.com/george__mack/status/1642197538647445504?s=20][Do you have 'high agency'?]] I satisfy criteria 1-5 (I'm always nice)
+- [X] Useful: feed [[https://lyon.instructure.com/calendar][Canvas calendar]] to your Google calendar ([[https://community.canvaslms.com/t5/Student-Guide/How-do-I-subscribe-to-the-Calendar-feed-using-Google-Calendar-as/ta-p/535][instructions]])
+- [X] Now: open Emacs on the file ~8_operators_practice.org~
 
 * Pseudo-everything
 #+attr_latex: :width 400px

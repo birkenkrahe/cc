@@ -36,17 +36,6 @@
 
     #+name: ex:pseudogold1
 
-    ----- SOLUTION -----
-
-    #+name: ex:pseudogold1_solution
-    #+begin_example C
-    if action == deposit
-       Deposit gold into account
-    else
-       Withdraw gold from account
-    end if
-    #+end_example
-
 * TODO Refine problem and  pseudocode
 
   1) The problem from [[gold1]] is refined in [[gold2]]:
@@ -72,41 +61,4 @@
   Variables and operators used: (make a list)
   1)
 
------ SOLUTION -----
-
-Pseudocode:
-#+name: pseudogold2_solution1
-#+begin_example C
-if action == deposit
-   Deposit gold into account
-else
-     if balance < amount requested
-        Insufficient funds
-     else         
-        Withdraw gold from account
-     end if
-end if
-#+end_example
-
-Pseudocode (alternate solution):
-#+name: pseudogold2_solution2
-#+begin_example C
-if action == deposit
-   Deposit gold into account
-else
-     if balance >= amount requested
-        Withdraw gold from account
-     else         
-        Insufficient funds
-     end if
-end if
-#+end_example
-
-Variables and operators used: (make a list)
-1) action
-2) deposit
-3) balance
-4) amount
-5) ==
-6) < or >=
 
