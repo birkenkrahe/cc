@@ -1123,7 +1123,7 @@ Fri:
 - [X] Useful: feed [[https://lyon.instructure.com/calendar][Canvas calendar]] to your Google calendar ([[https://community.canvaslms.com/t5/Student-Guide/How-do-I-subscribe-to-the-Calendar-feed-using-Google-Calendar-as/ta-p/535][instructions]])
 - [X] Now: open Emacs on the file ~8_operators_practice.org~
 
-* Pseudo-everything
+** Pseudo-everything
 #+attr_latex: :width 400px
 #+caption: Photo: Hoaxbuster - deze kinderen hebben wél aandacht voor Rembrandt (2014)
 [[../img/exhibition.png]]
