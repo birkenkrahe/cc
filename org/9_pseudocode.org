@@ -84,7 +84,7 @@ use an exact algorithm vs. a heuristic.
   #+end_example
 - *Rule:* when making models (via *abstraction*), always stay as close to
   the *problem* description as possible - in terms of *language*, *logic*,
-  *tone*, et.c  If you're unsure, *ask* (your client/professor/colleague).
+  *tone*, etc  If you're unsure, *ask* (your client/professor/colleague).
 
 - In the pseudocode example above, what relates to 1) language, 2)
   logic, and 3) tone? And 4) are there other specifications?[fn:3]

@@ -202,6 +202,9 @@
       }
    #+end_src
 
+   #+RESULTS: caveat
+   : TRUE: 5 < 1 < 100
+
 3) Fix the the code [[caveat1]] so that the output is correct. Test it for
    different values of i, j, k.
 
