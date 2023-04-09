@@ -113,6 +113,9 @@
    value. Put both the lower and the upper case letter into the input
    file ~ascii2~.
 
+   *Important:* when using ~%c~ with ~scanf~, the empty space is accepted as
+   a character with the ASCII value 32.
+
    Inputfile:
    #+begin_example bash
      echo 'b B' > ascii2
