@@ -1114,7 +1114,7 @@ Fri:
 - Print out Boolean operators as a table (bonus)
 - Print out compound operators as a table (bonus)
 
-* IN PROGRESS Week 12 - Pseudocode/BPMN/Conditional statements
+* Week 12 - Pseudocode/BPMN/Conditional statements
 #+attr_latex: :width 400px
 #+caption: Source: twitter.com/@george_mack
 [[../img/high_agency.jpeg]]
@@ -1139,7 +1139,14 @@ Fri:
 - Pseudo- comes from the Greek ψευδής, pseudes, "false"
 - Pseudo-code is real - unlike pseudo-art and pseudo-journalism
 
-* TODO Week 13 - Loops
+* NEXT Week 13 - Conditional statements / Loops
+#+attr_latex: :width 400px
+[[../img/cc_density.png]] [[../img/cc_box.png]]
+
+- This week: test 6 (conditional statements, loops)
+- Topic: conditional statements & practice assignments
+- Topic: loops & practice assignments
+
 * TODO Week 14 - Arrays
 * TODO Week 15 - Pointers
 * TODO Week 16 - C++

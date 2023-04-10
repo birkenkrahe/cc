@@ -15,7 +15,6 @@
 - Practice workbooks, input files and PDF solution files in GitHub
 
 * Process models
-* Objectives
 
 - [X] Understand what a process manager (software) is and does
 - [X] Learn the basics of Business Process Model and Notation (BPMN)
@@ -40,7 +39,7 @@
   #+name: bpmnfig
   #+attr_html: :width 700px
   #+caption: (Free) BPMN 2.0 poster from SAP Signavio
-  [[./img/bpmn.png]]
+  [[../img/bpmn.png]]
 
 * SAP Signavio
 
