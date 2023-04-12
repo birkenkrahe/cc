@@ -1143,9 +1143,22 @@ Fri:
 #+attr_latex: :width 400px
 [[../img/cc_density.png]] [[../img/cc_box.png]]
 
-- This week: test 6 (conditional statements, loops)
-- Topic: conditional statements & practice assignments
-- Topic: loops & practice assignments
+*Agenda:*
+- Topic 1: conditional statements ~if else~
+- Topic 2: loops ~for~ ~while~ ~switch~
+- Assignments: tests and programming (later this week)
+
+*Outlook:*
+- Arrays
+- Pointers
+- C++ overview (io)
+
+*Skipped:*
+- Introduction to BPMN (Business Process Modeling and Notation)
+- To follow the lecture and practice, use ~bpmn.io~ instead of Signavio:
+  #+attr_latex: :width 400px
+  #+caption: Free online BPMN editor at bpmn.io (Camunda)
+  [[../img/bpmnio.png]]
 
 * TODO Week 14 - Arrays
 * TODO Week 15 - Pointers
