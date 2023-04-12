@@ -51,7 +51,7 @@
   #+name: signavio
   #+attr_html: :width 500px
   #+caption: SAP Signavio dashboard / explorer
-  [[./img/signavio.png]]
+  [[../img/signavio.png]]
 
 - [X] Register in my Signavio workspace if you haven't done it yet
 
