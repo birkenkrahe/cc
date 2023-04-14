@@ -14,19 +14,13 @@
 
 - Practice workbooks, input files and PDF solution files in GitHub
 
-* The switch structure
 * Download the practice file
 
-- Get the file with ~wget~
-- Check the file type with ~file~
-- Display the first 2 lines with ~head~
-
-#+begin_src bash :results output
-  wget tinyurl.com/2p95hxrp -O switch.org -o log
-  file switch.org
-  head -n 2 switch.org
-#+end_src
-
+- Open the Emacs browser with ~M-x eww~ on ~tinyurl.com/2p95hxrp~
+- Write file with ~C-x C-w~ to ~switch.org~
+- Kill buffer with ~C-x k~
+- Re-open file with ~C-x C-f~
+  
 * Overview
 
 - The ~switch~ statement is fairly complex: it combines conditional
@@ -59,8 +53,8 @@
   declaration. Depending on the value, a ~case~ is triggered and
   the corresponding statements are executed.
 
-- [ ] What is the output of [[switch]] for different values:
-
+- [ ] What is the output of [[switch]] for 5,3,0,-1,0.5?
+  #+begin_quote
   | VALUE | OUTPUT        |
   |-------+---------------|
   |     5 | Failing       |
@@ -68,13 +62,12 @@
   |     0 | Illegal grade |
   |    -1 | Illegal grade |
   |   0.5 | Illegal grade |
+  #+end_quote
 
-  What does the program implement?
-
+- The code:
   #+name: switch
   #+begin_src C :results output :exports both
-    int grade = 2;
-
+    int grade = 3;
     switch (grade) {
      case 4:
      case 3:
@@ -92,11 +85,7 @@
      }
   #+end_src
 
-  #+RESULTS: switch
-  : Passing
-
-- [ ] Q: Which problem/solution set does the program implement?
-
+- [ ] Which problem/solution set does the program implement?
   #+begin_quote
   Answer: The program reflects "passing" grades 4,3,2,1, and "failing"
   grade 0. Any other grade value is not allowed. (This happens to be
@@ -117,13 +106,11 @@
      case 5: case 6:
        printf("Failing");
        break;
-      default: 
-        printf("Illegal grade"); 
-        break; 
+     default: 
+       printf("Illegal grade"); 
+       break; 
      } 
   #+end_src
-
-  #+RESULTS: switch1
 
 - Note: You cannot write a case label for a range of values.
 
@@ -132,12 +119,11 @@
 
 * The role of the ~break~ statement
 
-- The ~switch~ statement is a /controlled jump/. The ~case~ label is but a
+- The ~switch~ statement is a /controlled jump/. The ~case~ label is a
   marker indicating a position within the switch.
 
 - [ ] Let's run the previous program again, without the ~break~
   statements. What do you think the output will be?
-
   #+name: switch2
   #+begin_src C :results output :exports both
       int grade = 3;
@@ -158,7 +144,6 @@
   #+end_src
 
 - [ ] What happens without the ~break~ statements?
-
   #+begin_quote
   Answer: When the last statement in a case has been executed,
   control falls through to the first statement in the following
@@ -172,7 +157,7 @@
 
 * Let's practice!
 
-Open and complete the ~switch.org~ practice file.
+Open and complete the ~switch.org~ practice file that you downloaded.
 
 * References
 
