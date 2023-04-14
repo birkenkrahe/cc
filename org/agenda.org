@@ -1162,7 +1162,7 @@ Fri:
 
 * [[https://docs.google.com/forms/d/e/1FAIpQLSdLkJ65AaAsx-g2_cGj2y3SXwmpz_HdH9mr86QDKGqZBkSNPA/viewform][2023 Arkansas Summer Research Institute]]
 #+attr_latex: :width 400px
-#+caption: Cat on Sidewalk (1959, Angelo Rizzuto) Flickr.com
+#+caption: Howard Carter examining the coffin of Tut-Ankh-Amun (1925)
 [[../img/mummy.jpg]]
 
 - Great opportunity to network and learn
