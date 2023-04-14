@@ -1139,7 +1139,7 @@ Fri:
 - Pseudo- comes from the Greek ψευδής, pseudes, "false"
 - Pseudo-code is real - unlike pseudo-art and pseudo-journalism
 
-* NEXT Week 13 - Conditional statements / Loops
+* NEXT Week 13 - Conditional statements
 #+attr_latex: :width 400px
 [[../img/cc_density.png]] [[../img/cc_box.png]]
 
@@ -1160,8 +1160,18 @@ Fri:
   #+caption: Free online BPMN editor at bpmn.io (Camunda)
   [[../img/bpmnio.png]]
 
-* TODO Week 14 - Arrays
-* TODO Week 15 - Pointers
+* [[https://docs.google.com/forms/d/e/1FAIpQLSdLkJ65AaAsx-g2_cGj2y3SXwmpz_HdH9mr86QDKGqZBkSNPA/viewform][2023 Arkansas Summer Research Institute]]
+#+attr_latex: :width 400px
+#+caption: Cat on Sidewalk (1959, Angelo Rizzuto) Flickr.com
+[[../img/mummy.jpg]]
+
+- Great opportunity to network and learn
+- Free and virtual
+- Only 2 weeks long (June 1-19)
+- Share link with others: https://tinyurl.com/apply2023asri
+  
+* TODO Week 14 - Loops and Arrays
+* TODO Week 15 - Arrays and Pointers
 * TODO Week 16 - C++
 - [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: whaddayaknow?
 * TODO What next?

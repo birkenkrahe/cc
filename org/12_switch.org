@@ -15,7 +15,7 @@
 - Practice workbooks, input files and PDF solution files in GitHub
 
 * The switch structure
-** Download the practice file
+* Download the practice file
 
 - Get the file with ~wget~
 - Check the file type with ~file~
@@ -27,7 +27,7 @@
   head -n 2 switch.org
 #+end_src
 
-** Overview
+* Overview
 
 - The ~switch~ statement is fairly complex: it combines conditional
   expressions, constant expressions, default and break statements.
@@ -53,7 +53,7 @@
   the statements. The last statement is usually ~break~ to close
   the case.
 
-** Simple example
+* Simple example
 
 - In the example code [[switch]], the ~grade~ is set in the variable
   declaration. Depending on the value, a ~case~ is triggered and
@@ -130,7 +130,7 @@
 - The default case (when none of the case expressions apply) is
   optional, and it does not have to come last.
 
-** The role of the ~break~ statement
+* The role of the ~break~ statement
 
 - The ~switch~ statement is a /controlled jump/. The ~case~ label is but a
   marker indicating a position within the switch.
@@ -170,7 +170,7 @@
 - Deliberate falling through (omission of ~break~) should be
   indicated with an explicit comment.
 
-** Let's practice!
+* Let's practice!
 
 Open and complete the ~switch.org~ practice file.
 
