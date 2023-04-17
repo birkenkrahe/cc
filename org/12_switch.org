@@ -16,7 +16,7 @@
 
 * Download the practice file
 
-- Open the Emacs browser with ~M-x eww~ on ~tinyurl.com/2p95hxrp~
+- Open the Emacs browser with ~M-x eww~ on ~bit.ly/cc_switch~
 - Write file with ~C-x C-w~ to ~switch.org~
 - Kill buffer with ~C-x k~
 - Re-open file with ~C-x C-f~
@@ -53,7 +53,7 @@
   declaration. Depending on the value, a ~case~ is triggered and
   the corresponding statements are executed.
 
-- [ ] What is the output of [[switch]] for 5,3,0,-1,0.5?
+- [X] What is the output of [[switch]] for 5,3,0,-1,0.5?
   #+begin_quote
   | VALUE | OUTPUT        |
   |-------+---------------|
@@ -67,7 +67,7 @@
 - The code:
   #+name: switch
   #+begin_src C :results output :exports both
-    int grade = 3;
+    int grade = 0.5;
     switch (grade) {
      case 4:
      case 3:
@@ -85,7 +85,10 @@
      }
   #+end_src
 
-- [ ] Which problem/solution set does the program implement?
+  #+RESULTS: switch
+  : Illegal grade
+
+- [X] Which problem/solution set does the program implement?
   #+begin_quote
   Answer: The program reflects "passing" grades 4,3,2,1, and "failing"
   grade 0. Any other grade value is not allowed. (This happens to be
@@ -126,7 +129,7 @@
   statements. What do you think the output will be?
   #+name: switch2
   #+begin_src C :results output :exports both
-      int grade = 3;
+      int grade = 5;
 
       switch (grade) {
         // cases 4,3,2,1 all lead to a passing grade
@@ -143,6 +146,9 @@
        }
   #+end_src
 
+  #+RESULTS: switch2
+  : FailingIllegal grade
+
 - [ ] What happens without the ~break~ statements?
   #+begin_quote
   Answer: When the last statement in a case has been executed,
@@ -157,7 +163,8 @@
 
 * Let's practice!
 
-Open and complete the ~switch.org~ practice file that you downloaded.
+- Open and complete the ~switch.org~ practice file that you downloaded
+- Upload the completed file as an assignment to Canvas
 
 * References
 
