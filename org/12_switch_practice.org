@@ -80,7 +80,7 @@
    same statement on one line./
 
    #+name: area_code
-   #+begin_src C :cmdline < ./src/areacode
+   #+begin_src C :cmdline < areacode
      int area_code;
 
      scanf("%d", &area_code);
@@ -90,16 +90,9 @@
          }
    #+end_src
 
-   3) Run and test the file right here with the input file
-      [[area_code_input]]. The following code block initializes the file
-      with 229 - replace it and run the block to try other input
-      numbers.
+   3) To test your solution, create an input file ~areacode~ with an
+      area code number in it - e.g. ~229~, which should return ~Albany~.
 
-      #+name: area_code_input
-      #+begin_src bash :results silent
-        echo 229 > areacode
-        cat areacode
-      #+end_src
 * References
 
 - Davenport/Vine (2015) C Programming for the Absolute Beginner

@@ -777,7 +777,7 @@ computer/data science. It's the academic game of musical chairs.*
 
 - [X] Discussion: "Computational thinking" - what are your thoughts?
 - [X] Preview test 5: input/output/operators
-- [X] Complete test no later than March 31 (partial credit until Apr7) 
+- [X] Complete test no later than March 31 (partial credit until Apr7)
 - [X] Review and practice: logical operators
 - [ ] *Bonus points* for experience report from the job fair April 4
   ([[https://lyon.instructure.com/courses/1014/assignments/9614][see Canvas]])
@@ -973,7 +973,7 @@ not, then listen to the repetition of my explanation and answer.
 10) Suppose we call ~scanf~ like this and enter the numbers ~100 10.5
     5000~ - what will the output be?
     #+begin_src C :cmdline < ../data/scanf_input2 :results output
-      float x=0.; int i=0, j=-34; 
+      float x=0.; int i=0, j=-34;
       scanf("%d%f%d", &i, &x, &j);
       printf("x = %g, i = %d, j = %d\n", x, i, j);
     #+end_src
@@ -991,7 +991,7 @@ not, then listen to the repetition of my explanation and answer.
 
     #+RESULTS:
     : i = 10, x = 0.300000, j = 5
-    
+
 ** Review/practice: Logical values/operators
 
 - What is "[[https://en.wikipedia.org/wiki/Reverse_Polish_notation][Reverse Polish Notation]]"?
@@ -1104,7 +1104,7 @@ Wed:
 Fri:
 - Review logical operators and compound expressions
 - Completed a bunch of exercises
-  
+
 ** Programming assignments
 #+attr_latex: :width 400px
 #+caption: Source: Unsplash.com
@@ -1139,7 +1139,7 @@ Fri:
 - Pseudo- comes from the Greek ψευδής, pseudes, "false"
 - Pseudo-code is real - unlike pseudo-art and pseudo-journalism
 
-* NEXT Week 13 - Conditional statements
+* Week 13 - Conditional statements
 #+attr_latex: :width 400px
 [[../img/cc_density.png]] [[../img/cc_box.png]]
 
@@ -1160,7 +1160,7 @@ Fri:
   #+caption: Free online BPMN editor at bpmn.io (Camunda)
   [[../img/bpmnio.png]]
 
-* [[https://docs.google.com/forms/d/e/1FAIpQLSdLkJ65AaAsx-g2_cGj2y3SXwmpz_HdH9mr86QDKGqZBkSNPA/viewform][2023 Arkansas Summer Research Institute]]
+** [[https://docs.google.com/forms/d/e/1FAIpQLSdLkJ65AaAsx-g2_cGj2y3SXwmpz_HdH9mr86QDKGqZBkSNPA/viewform][2023 Arkansas Summer Research Institute]]
 #+attr_latex: :width 400px
 #+caption: Howard Carter examining the coffin of Tut-Ankh-Amun (1925)
 [[../img/mummy.jpg]]
@@ -1169,8 +1169,75 @@ Fri:
 - Free and virtual
 - Only 2 weeks long (June 1-19)
 - Share link with others: https://tinyurl.com/apply2023asri
-  
+
 * TODO Week 14 - Loops and Arrays
+#+attr_latex: :width 400px
+[[../img/loop.jpg]]
+
+* TODO Test preview
+
+1) What will this program print?
+   #+begin_src C
+     int i = 1, j = 1;
+     i - j;
+     printf("%d %d\n",i,j);
+   #+end_src
+
+2) What does the compound operator expression ~a-=b~ compute?
+   #+begin_src C
+     int a=100,b=50;
+     printf("%d -= %d is ", a, b);
+     printf("%d\n", a-=b);  // same as a = a - b ('assign a-b to a')
+   #+end_src
+
+   Note that ~-=~ has higher precedence than ~,~ therefore this looks
+   wrong:
+   #+begin_src C
+     int c=100,d=50;
+     printf("%d -= %d => c = %d\n", c, d, c-=d); 
+   #+end_src
+
+   What happened: ~(c=100) -= (d=50)~ leads to ~c=100-50=50~. But it is
+   first evaluated and then the *new* value of c is printed, not the old
+   one.
+   
+3) How can you test if 'A' is equal to the character 'B' or not?
+   #+begin_src C
+     char c1='A', c2='B';
+     // Tests if 'A' == 'B'
+     printf("%d\n", c1 == c2);
+   #+end_src
+
+4) What kind of operators are ~||~ and ~>=~ and ~=~?
+   #+begin_quote
+   1) ~||~ is a logical operator
+   2) ~>=~ is a relational operator
+   3) ~=~ is an assignment operator
+   #+end_quote
+
+5) What does ~if ( j = 1 )~ do when used in an ~if~ statement?
+   #+begin_quote
+   ~j=1~ assigns 1 to ~j~, so it reduces to ~if(1)~ which is always true.
+   #+end_quote
+   #+begin_src C
+     int j=1;
+     if (j = 1) {
+       puts("true");
+      } else {
+       puts("false");
+      }
+   #+end_src
+
+   #+RESULTS:
+   : true
+
+6) What is the purpose of ~break~ in a ~switch~ statement?
+   #+begin_quote
+   When ~break~ is executed, the ~switch~ statement (between the ~{...}~) is
+   left and nothing afterwards is executed.
+   #+end_quote
+
+* TODO Loops: ~while~, ~for~ and ~do~ with exercises
 * TODO Week 15 - Arrays and Pointers
 * TODO Week 16 - C++
 - [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: whaddayaknow?
