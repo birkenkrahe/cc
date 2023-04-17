@@ -16,7 +16,7 @@
 - Get the practice file in Emacs, write file and re-open as ~.org~:
   1) ~13_loops_while.org~ with ~M-x eww~ at [[https://bit.ly/cc_while][bit.ly/cc_while]]
   2) ~13_loops_for.org~ with ~M-x eww~ at [[https://bit.ly/cc_for][bit.ly/cc_for]]
-  3) ~13_loops_do.org~ with ~M-x eww~ at [[https://bit.ly/cc_do][bit.ly/cc_do]] 
+  3) ~13_loops_do.org~ with ~M-x eww~ at [[https://bit.ly/cc_do_while][bit.ly/cc_do_while]] 
 
 * Loops
 
@@ -142,7 +142,6 @@
 - Print ~n~ and its square as a table of ~n~ rows
 
 - Sample output:
-
   #+name: square_output
   #+begin_example
 Enter number of rows:
@@ -164,12 +163,12 @@ Enter number of rows:
 
   #+name: square_input
   #+begin_src bash :results silent
-    echo 10 > ./src/square_input
-    cat ./src/square_input
+    echo 10 > ../data/square_input
+    cat ../data/square_input
   #+end_src
 
   #+name: square
-  #+begin_src C :cmdline < ./src/square_input
+  #+begin_src C :cmdline < ../src/square_input
     int i, n;
 
     printf("Enter number of rows: ");
@@ -220,7 +219,6 @@ Enter number of rows:
 - To sum, we can use the compound operator ~+=~
 
 - Pseudocode:
-
   #+begin_example
   declare and initialize variables
   scan first integer
@@ -233,24 +231,22 @@ Enter number of rows:
   #+end_example
 
 - Generate test input file:
-
   #+name: sum_input
   #+begin_src bash :results output
-    echo 8 23 71 5 0 > ./src/sum_input
-    cat ./src/sum_input
+    echo 8 23 71 5 0 > ../data/sum_input
+    cat ../data/sum_input
   #+end_src
 
   #+RESULTS: sum_input
   : 8 23 71 5 0
 
 - Code:
-
   #+name: sum
-  #+begin_src C :cmdline < ./src/sum_input :tangle src/sum.c
+  #+begin_src C :cmdline < ../data/sum_input :tangle ../src/sum.c
     int n, sum = 0;
 
     printf("Enter integers (0 to terminate): ");
-    scanf("%d", &n);  printf("%d ", n);   // need non-zero number to start
+    scanf("%d", &n);  printf("%d ", n);   // need non-0 number to start
     while ( n != 0 ) {
       sum += n;         // sum = sum + n
       scanf("%d", &n); printf("%d ", n);
@@ -260,7 +256,7 @@ Enter number of rows:
   #+end_src
 
   #+RESULTS: sum
-  : Enter integers (0 to terminate): 8 23 71 5 0
+  : Enter integers (0 to terminate): 8 23 71 5 0 
   : The sum is 107
 
   - There are two identical calls to ~scanf~, because we need a non-zero
