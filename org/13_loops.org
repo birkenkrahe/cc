@@ -14,7 +14,7 @@
 - Practice workbooks, input files and PDF solution files in GitHub
 
 - Get the practice file in Emacs, write file and re-open as ~.org~:
-  1) ~13_loops_while.org~ with ~M-x eww~ at [[https://bit.ly/cc_while][bit.ly/cc_while]]
+  1) ~13_loops_practice.org~ with ~M-x eww~ at [[https://bit.ly/cc_while][bit.ly/cc_while]]
   2) ~13_loops_for.org~ with ~M-x eww~ at [[https://bit.ly/cc_for][bit.ly/cc_for]]
   3) ~13_loops_do.org~ with ~M-x eww~ at [[https://bit.ly/cc_do_while][bit.ly/cc_do_while]] 
 
@@ -46,8 +46,9 @@
 - A simple example.
   #+name: double
   #+begin_example C
-    while ( i < n )   /* controlling expression */
+    while ( i < n ) {  /* controlling expression */
       i = i * 2;      /* loop body */
+      }
   #+end_example
 
 - Parentheses ~(...)~ are mandatory
@@ -83,6 +84,8 @@
   #+caption: Simple while example
   [[../img/13_signavio.png]]
 
+- Your turn! Complete a simple practice exercise.
+  
 ** Countdown example
 
 - What does the following statement do?
@@ -95,6 +98,21 @@
      }
     printf("i = %d\n", i);
   #+end_src
+
+  #+RESULTS: counting
+  #+begin_example
+  T minus 10 and counting
+  T minus 9 and counting
+  T minus 8 and counting
+  T minus 7 and counting
+  T minus 6 and counting
+  T minus 5 and counting
+  T minus 4 and counting
+  T minus 3 and counting
+  T minus 2 and counting
+  T minus 1 and counting
+  i = 0
+  #+end_example
 
 - Why are we using ~i--~ and not ~--i~ ?[fn:1]
 
@@ -109,9 +127,25 @@
      }
   #+end_src
 
+  #+RESULTS: concise_counting
+  #+begin_example
+  T minus 10 and counting
+  T minus 9 and counting
+  T minus 8 and counting
+  T minus 7 and counting
+  T minus 6 and counting
+  T minus 5 and counting
+  T minus 4 and counting
+  T minus 3 and counting
+  T minus 2 and counting
+  T minus 1 and counting
+  #+end_example
+
 - Note that in the concise version [[concise_counting]], it makes a
   difference if we use ~i--~ or ~--i~. Try it!
-
+  
+- Your turn! Complete a simple practice exercise.
+  
 ** Infinite loops
 
 - If the controlling expression always has a non-zero value, the
@@ -125,12 +159,14 @@
       puts("Still running...\n");
   #+end_src
 
-- [X] Tangle it, compile and run ~inf.c~ on the CMD line.
+- Tangle it, compile and run ~inf.c~ on the CMD line.
 
-- [X] Why don't you see any output in Emacs? [fn:3]
+- Why don't you see any output in Emacs? [fn:3]
 
 - To stop infinite loops from within, you need to provide ~break~,
   ~goto~ or ~return~ statements.
+
+- Your turn! Complete a simple practice exercise.
 
 ** Printing a table of squares
 *** Problem
@@ -157,6 +193,8 @@ Enter number of rows:
         10       100
   #+end_example
 
+- You find this exercise prepared for you in the practice file.
+  
 *** Solution
 
 - Generate test input file:
@@ -168,7 +206,7 @@ Enter number of rows:
   #+end_src
 
   #+name: square
-  #+begin_src C :cmdline < ../src/square_input
+  #+begin_src C :cmdline < ../data/square_input
     int i, n;
 
     printf("Enter number of rows: ");
@@ -210,6 +248,8 @@ Enter number of rows:
      The sum is 107
   #+end_example
 
+- You find this exercise prepared for you in the practice file.
+  
 *** Solution
 
 - Scan numbers one after the other
@@ -283,7 +323,7 @@ Enter number of rows:
 
 - Always use braces ~{...}~ around /all/ ~do~ statements, because otherwise
   it can be mistaken for a ~while~ statement.
-
+  
 ** Calculating the number of digits in an integer
 
 - ~do~ is handy for loops that must execute at least once.
@@ -298,9 +338,10 @@ Enter number of rows:
     The number has 2 digits(s).
   #+end_example
 
-- Strategy: /digits/ correspond to base 10 - if we divide the input by
-  10 repeatedly until it becomes 0 (via integer truncation), the
-  number of divisions performed is the number of digits.
+- Strategy ("algorithm"): /digits/ correspond to base 10 - if we divide
+  the input by 10 repeatedly until it becomes 0 (via integer
+  truncation), the number of divisions performed is the number of
+  digits.
 
   #+begin_example
     656 / 10 => 65 (remainder 6/10)
@@ -311,8 +352,8 @@ Enter number of rows:
 - Sample input:
   #+name in:dowhile
   #+begin_src bash :results output
-    echo 656 > ./src/dowhile
-    cat ./src/dowhile
+    echo 656 > ../data/dowhile
+    cat ../data/dowhile
   #+end_src
 
   #+RESULTS:
@@ -329,7 +370,7 @@ Enter number of rows:
 
 - Code:
   #+name: pgm:dowhile
-  #+begin_src C :cmdline < ./src/dowhile
+  #+begin_src C :cmdline < ../data/dowhile
     int digits = 0; // number of digits
     int n;  // input
 
@@ -337,16 +378,16 @@ Enter number of rows:
     scanf("%d", &n); printf("%d\n", n);
 
     do {
-      n /= 10;
-      digits++;
-     } while ( n > 0 );
+      n /= 10;  // same as 'overwrite n by itself divided by 10'
+      digits++; // same as 'overwrite digits by itself + 1'
+     } while ( n > 0 );  // test if n is still greater than 0
 
     printf("The number has %d digit(s).\n", digits);
   #+end_src
 
   #+RESULTS: pgm:dowhile
-  : Enter a non-negative integer: -79993
-  : The number has 1 digit(s).
+  : Enter a non-negative integer: 656
+  : The number has 3 digit(s).
 
 - ~int~ is actually a so-called /signed integer/, a 32-bit datum that
   encodes integers in the range ~[-2147483647,2147483647]~. Any integer
@@ -573,7 +614,7 @@ statement.
   ~for~ loop:
 
   #+name: square1
-  #+begin_src C :cmdline < ./src/square1_input
+  #+begin_src C :cmdline < ../data/square1_input
     int i, n;
 
     printf("This program prints a table of squares.\n");
@@ -596,8 +637,8 @@ statement.
 - Inputfile
   #+name: input:square1
   #+begin_src bash
-    echo "5" > ./src/square1_input
-    cat ./src/square1_input
+    echo "5" > ../data/square1_input
+    cat ../data/square1_input
   #+end_src
 
 - In [[square1]], all three expressions are controlled by the variable ~i~
@@ -606,7 +647,7 @@ statement.
   the same program demonstrates this:
 
   #+name: square2
-  #+begin_src C :cmdline < ./src/square1_input
+  #+begin_src C :cmdline < ../data/square1_input
     int i; // testing variable
     int n; // upper bound constant
     int odd; // incrementing variable
@@ -682,15 +723,15 @@ statement.
   number ~0~ is reached.
 
   #+begin_src bash :results silent
-    echo 10 9 8 7 6 5 4 3 2 1 0 > ./src/break_input
-    cat ./src/break_input
+    echo 10 9 8 7 6 5 4 3 2 1 0 > ../data/break_input
+    cat ../data/break_input
   #+end_src
 
 - Here's some code: what does it do? What would happen without the
   ~break~ statement? Would you know how to test that?
 
   #+name: pgm:break
-  #+begin_src C :cmdline < ./src/break_input :tangle ./src/breakInf.c
+  #+begin_src C :cmdline < ../data/break_input :tangle ../src/breakInf.c
     int n;
     for (;;) {
       scanf("%d", &n);
@@ -791,7 +832,7 @@ is skipped, but we're still inside the loop.
 
 Input file:
 #+begin_src bash
-  echo 1 1 1 1 1 1 1 1 0 1 1 > ./src/continue
+  echo 1 1 1 1 1 1 1 1 0 1 1 > ../data/continue
   cat ./src/continue
 #+end_src
 
@@ -806,7 +847,7 @@ print sum               // printf
 #+end_example
 
 Code:
-#+begin_src C :cmdline < ./src/continue
+#+begin_src C :cmdline < ../data/continue
   int n=0, sum = 0;
   int i;
 
@@ -938,7 +979,7 @@ accordingly, from: ~tinyurl.com/475m5x4n~
 - Because the session interactivity is essential, we tangle the file
   ~checking.c~, compile and run it on the command line.
   #+name: pgm:checkbook
-  #+begin_src C :tangle ./src/checking.c :comments none :cmdline < exit
+  #+begin_src C :tangle ../src/checking.c :comments none :cmdline < exit
     /* Balances a checkbook */
     #include <stdio.h>
 
