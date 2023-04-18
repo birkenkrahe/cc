@@ -121,7 +121,7 @@ of ~i~ and ~n~, then run the program for different values of ~n~.
     printf("Enter integers (0 to terminate).\n");
     scanf("%d", &n);
     _______________ // sum up
-    _______________ // scan n
+    _______________ // scan n (next number)
     }
 
     printf("The sum is %d\n", sum);

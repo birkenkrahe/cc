@@ -1174,6 +1174,14 @@ Fri:
 #+attr_latex: :width 400px
 [[../img/loop.jpg]]
 
+SERIOUS PROGRAMMING MEANS KNOWING:
+1) variables (~int~) and data structures (array)
+2) operators (~++~) and functions (~printf~)
+3) numbers (~%d~) and memory management (~&~)
+4) file and process management (~Emacs~, ~Org~, ~gcc~)
+
+We've touched upon every one of these areas: not too shabby!
+   
 * TODO Test preview
 
 1) What will this program print?
@@ -1182,6 +1190,9 @@ Fri:
      i - j;
      printf("%d %d\n",i,j);
    #+end_src
+
+   #+RESULTS:
+   : 0 0
 
 2) What does the compound operator expression ~a-=b~ compute?
    #+begin_src C
@@ -1197,6 +1208,9 @@ Fri:
      printf("%d -= %d => c = %d\n", c, d, c-=d); 
    #+end_src
 
+   #+RESULTS:
+   : 50 -= 50 => c = 50
+
    What happened: ~(c=100) -= (d=50)~ leads to ~c=100-50=50~. But it is
    first evaluated and then the *new* value of c is printed, not the old
    one.
@@ -1205,8 +1219,11 @@ Fri:
    #+begin_src C
      char c1='A', c2='B';
      // Tests if 'A' == 'B'
-     printf("%d\n", c1 == c2);
+     printf("%d\n", c1 != c2);
    #+end_src
+
+   #+RESULTS:
+   : 1
 
 4) What kind of operators are ~||~ and ~>=~ and ~=~?
    #+begin_quote
@@ -1227,9 +1244,6 @@ Fri:
        puts("false");
       }
    #+end_src
-
-   #+RESULTS:
-   : true
 
 6) What is the purpose of ~break~ in a ~switch~ statement?
    #+begin_quote
