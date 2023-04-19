@@ -1182,7 +1182,7 @@ SERIOUS PROGRAMMING MEANS KNOWING:
 
 We've touched upon every one of these areas: not too shabby!
    
-* TODO Test preview
+* DONE Test preview
 
 1) What will this program print?
    #+begin_src C
@@ -1255,7 +1255,7 @@ We've touched upon every one of these areas: not too shabby!
 * TODO Week 15 - Arrays and Pointers
 * TODO Week 16 - C++
 - [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: whaddayaknow?
-* TODO What next?
+* TODO What next? (Further studies)
 * References
 
 Bundell (22 Mar 2023). The driving test for driverless cars. Online:

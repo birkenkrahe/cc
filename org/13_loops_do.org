@@ -45,6 +45,10 @@
 
    ----- PUT THE CODE HERE -----
 
+   #+begin_src C
+
+   #+end_src
+
 * TODO Limits and ~top~
 
 1) What if ~i >= 2147483647~?
@@ -55,9 +59,6 @@
 3) Instead of printing each number, define a counter ~int count=0~ and
    count up while ~i~ counts down, then print ~count~ *after* the loop to see
    how many times the loop was run.
-
-4) For fun, while running it, open a terminal and type the command
-   ~top~. Now you will see the CPU at work while the loop executes.
 
 * TODO Summing numbers
 
@@ -80,7 +81,9 @@
 
    ----- PUT THE CODE HERE -----
 
-
+   #+begin_src C :cmdline < input
+          
+   #+end_src
 
 
 
