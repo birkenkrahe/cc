@@ -15,8 +15,8 @@
 
 - Get the practice file in Emacs, write file and re-open as ~.org~:
   1) ~13_loops_practice.org~ with ~M-x eww~ at [[https://bit.ly/cc_while][bit.ly/cc_while]]
-  2) ~13_loops_for.org~ with ~M-x eww~ at [[https://bit.ly/cc_for][bit.ly/cc_for]]
-  3) ~13_loops_do.org~ with ~M-x eww~ at [[https://bit.ly/cc_do_while][bit.ly/cc_do_while]] 
+  2) ~13_loops_do.org~ with ~M-x eww~ at [[https://bit.ly/cc_do_while][bit.ly/cc_do_while]] 
+  3) ~13_loops_for.org~ with ~M-x eww~ at [[https://bit.ly/cc_for][bit.ly/cc_for]]
 
 * Loops
 
@@ -34,7 +34,7 @@
 - C provides three iteration statements: ~while~, ~do~, and ~for~
 
 * The ~while~ statement
-
+** Overview
 - The ~while~ statement has the general form
 
   ~while ( /expression/ ) statement~
@@ -286,7 +286,7 @@ Enter number of rows:
     int n, sum = 0;
 
     printf("Enter integers (0 to terminate): ");
-    scanf("%d", &n);  printf("%d ", n);   // need non-0 number to start
+    scanf("%d", &n);  printf("%d ", n); // need non-0 number to start
     while ( n != 0 ) {
       sum += n;         // sum = sum + n
       scanf("%d", &n); printf("%d ", n);
@@ -395,8 +395,10 @@ Enter number of rows:
   (and a different conversion specifier).
 
 ** Counting down
+
 Go to the practice workbook and rewrite [[counting]] using a ~do...while~
 statement.
+
 ** Summing numbers
 
 - Go to the practice workbook and rewrite the summing numbers program
