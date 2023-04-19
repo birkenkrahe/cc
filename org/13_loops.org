@@ -57,7 +57,7 @@
 
 - What does the code in [[double]] do?
 
-- We can [[trace]] what happens [do this in the practice file]
+- We can trace what happens [do this in the practice file]
   #+name: trace
   #+begin_src C
     int i = 1, n = 10;
