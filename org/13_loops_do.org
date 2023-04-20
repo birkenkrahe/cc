@@ -32,7 +32,7 @@
   T minus 1 and counting
    #+end_example
 
-2) Set the counter initially to 10, and use the /postfix compound
+2) Initialize the loopvariable ~i~ to 10, and use the /postfix compound
    decrement/ operator ~i--~.
 
 3) Begin by writing the pseudocode for the ~do...while~ loop.

@@ -1181,7 +1181,7 @@ SERIOUS PROGRAMMING MEANS KNOWING:
 4) file and process management (~Emacs~, ~Org~, ~gcc~)
 
 We've touched upon every one of these areas: not too shabby!
-   
+
 * DONE Test preview
 
 1) What will this program print?
@@ -1205,7 +1205,7 @@ We've touched upon every one of these areas: not too shabby!
    wrong:
    #+begin_src C
      int c=100,d=50;
-     printf("%d -= %d => c = %d\n", c, d, c-=d); 
+     printf("%d -= %d => c = %d\n", c, d, c-=d);
    #+end_src
 
    #+RESULTS:
@@ -1214,7 +1214,7 @@ We've touched upon every one of these areas: not too shabby!
    What happened: ~(c=100) -= (d=50)~ leads to ~c=100-50=50~. But it is
    first evaluated and then the *new* value of c is printed, not the old
    one.
-   
+
 3) How can you test if 'A' is equal to the character 'B' or not?
    #+begin_src C
      char c1='A', c2='B';
@@ -1251,7 +1251,32 @@ We've touched upon every one of these areas: not too shabby!
    left and nothing afterwards is executed.
    #+end_quote
 
-* TODO Loops: ~while~, ~for~ and ~do~ with exercises
+* TODO Loops: ~while~, ~do...while~ and ~for~
+
+  - Monday: ~while~ loops
+    #+begin_example C
+      int i = 10;
+      while ( i > 0 ) {
+        printf("T minus %d and counting\n", i--);
+      }
+    #+end_example
+
+  - Wednesday: ~do while~ loops
+    #+begin_example C
+      int i = 3;
+      do {
+        printf("T minus %d and counting\n", i--);
+      } while (i > 0);
+    #+end_example
+
+  - Friday: ~for~ loops
+    #+begin_example C
+    int i;
+    for ( i = 10; i > 0; i-- ) {
+      printf("T minus %d and counting\n", i);
+      }
+    #+end_example
+
 * TODO Week 15 - Arrays and Pointers
 * TODO Week 16 - C++
 - [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: whaddayaknow?
