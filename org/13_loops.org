@@ -284,9 +284,9 @@ Enter number of rows:
   #+name: sum
   #+begin_src C :cmdline < ../data/sum_input :tangle ../src/sum.c
     int n, sum = 0;
-
-    printf("Enter integers (0 to terminate): ");
+    puts("Enter integers (0 to terminate): ");
     scanf("%d", &n);  printf("%d ", n); // need non-0 number to start
+
     while ( n != 0 ) {
       sum += n;         // sum = sum + n
       scanf("%d", &n); printf("%d ", n);
@@ -296,7 +296,8 @@ Enter number of rows:
   #+end_src
 
   #+RESULTS: sum
-  : Enter integers (0 to terminate): 8 23 71 5 0 
+  : Enter integers (0 to terminate): 
+  : 8 23 71 5 0 
   : The sum is 107
 
   - There are two identical calls to ~scanf~, because we need a non-zero
@@ -335,7 +336,7 @@ Enter number of rows:
   #+name: ex:dowhile
   #+begin_example
     Enter a nonnegative integer: 656
-    The number has 2 digits(s).
+    The number has 3 digits(s).
   #+end_example
 
 - Strategy ("algorithm"): /digits/ correspond to base 10 - if we divide
@@ -386,8 +387,9 @@ Enter number of rows:
   #+end_src
 
   #+RESULTS: pgm:dowhile
-  : Enter a non-negative integer: 656
-  : The number has 3 digit(s).
+  : Enter a non-negative integer: 1410065408
+  : The number has 10 digit(s).
+
 
 - ~int~ is actually a so-called /signed integer/, a 32-bit datum that
   encodes integers in the range ~[-2147483647,2147483647]~. Any integer
