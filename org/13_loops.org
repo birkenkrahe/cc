@@ -15,7 +15,7 @@
 
 - Get the practice file in Emacs, write file and re-open as ~.org~:
   1) ~13_loops_practice.org~ with ~M-x eww~ at [[https://bit.ly/cc_while][bit.ly/cc_while]]
-  2) ~13_loops_do.org~ with ~M-x eww~ at [[https://bit.ly/cc_do_while][bit.ly/cc_do_while]] 
+  2) ~13_loops_do.org~ with ~M-x eww~ at [[https://bit.ly/cc_do_while][bit.ly/cc_do_while]]
   3) ~13_loops_for.org~ with ~M-x eww~ at [[https://bit.ly/cc_for][bit.ly/cc_for]]
 
 * Loops
@@ -68,7 +68,7 @@
   #+end_src
 
 - What would the pseudocode look like?
-  #+begin_example 
+  #+begin_example
   While i is smaller than n
     double the value of i
   end when i is greater than n
@@ -85,7 +85,7 @@
   [[../img/13_signavio.png]]
 
 - Your turn! Complete a simple practice exercise.
-  
+
 ** Countdown example
 
 - What does the following statement do?
@@ -143,9 +143,9 @@
 
 - Note that in the concise version [[concise_counting]], it makes a
   difference if we use ~i--~ or ~--i~. Try it!
-  
+
 - Your turn! Complete a simple practice exercise.
-  
+
 ** Infinite loops
 
 - If the controlling expression always has a non-zero value, the
@@ -155,7 +155,7 @@
   stopped manually (~C-g~).
   #+name: inf
   #+begin_src C :tangle ../src/inf.c
-      while (1)
+    while (1)
       puts("Still running...\n");
   #+end_src
 
@@ -194,7 +194,7 @@ Enter number of rows:
   #+end_example
 
 - You find this exercise prepared for you in the practice file.
-  
+
 *** Solution
 
 - Generate test input file:
@@ -249,7 +249,7 @@ Enter number of rows:
   #+end_example
 
 - You find this exercise prepared for you in the practice file.
-  
+
 *** Solution
 
 - Scan numbers one after the other
@@ -296,8 +296,8 @@ Enter number of rows:
   #+end_src
 
   #+RESULTS: sum
-  : Enter integers (0 to terminate): 
-  : 8 23 71 5 0 
+  : Enter integers (0 to terminate):
+  : 8 23 71 5 0
   : The sum is 107
 
   - There are two identical calls to ~scanf~, because we need a non-zero
@@ -324,7 +324,7 @@ Enter number of rows:
 
 - Always use braces ~{...}~ around /all/ ~do~ statements, because otherwise
   it can be mistaken for a ~while~ statement.
-  
+
 ** Calculating the number of digits in an integer
 
 - ~do~ is handy for loops that must execute at least once.
@@ -414,38 +414,31 @@ statement.
 
 - Here, ~expr1~, ~expr2~ and ~expr3~ are expressions.
 
-** Simple example: countdown
+* Simple example: countdown
 
 - You recognize the familiar countdown program - except that the
   ~for~ loop includes initialization, condition and counting down all
-  in one go.
-
+  in one go:
   #+name: for
   #+begin_src C
     int i;
-
-    for ( i = 10; i > 0; i-- )
+    for ( i = 5; i > 0; i-- )  { // declare, discern and decrease
       printf("T minus %d and counting\n", i);
+     }
   #+end_src
 
   #+RESULTS: for
-  #+begin_example
-  T minus 10 and counting
-  T minus 9 and counting
-  T minus 8 and counting
-  T minus 7 and counting
-  T minus 6 and counting
-  T minus 5 and counting
-  T minus 4 and counting
-  T minus 3 and counting
-  T minus 2 and counting
-  T minus 1 and counting
-  #+end_example
+  : T minus 5 and counting
+  : T minus 4 and counting
+  : T minus 3 and counting
+  : T minus 2 and counting
+  : T minus 1 and counting
 
-** Swapping ~for~ and ~while~
+- *Practice that now!*
 
-- ~for~ loops can be replaced by ~while~ loops:
+* Swapping ~for~ and ~while~
 
+- ~for~ loops can be replaced by ~while~ loops and vice versa:
   #+begin_example C
   expr1;
   while (expr2) {
@@ -453,12 +446,17 @@ statement.
     expr3;
     }
   #+end_example
+  Becomes:
+  #+begin_example C
+  for (expr1; expr2; expr3;) {
+    statement
+  }
+  #+end_example
 
 - Studying the equivalent ~while~ loop can yield important insights: you
   remember what happened when we swapped the postfix for a prefix
   operator in the ~while~ loop [[concise_counting]]. Rewriting this program
   as a ~for~ loop, we get:
-
   #+begin_example C
     int i = 10;  /* expr1 */
     while ( i > 0 /* expr2 */) {
@@ -466,33 +464,9 @@ statement.
      }
   #+end_example
 
-- [X] What should the argument of ~for~ look like?
+- **Practice that now!**
 
-  #+begin_src C
-    int i;
-    for ( i = 10; i > 0 ; i-- )
-      printf("T minus %d and counting\n", i );
-  #+end_src
-
-  #+RESULTS:
-  #+begin_example
-  T minus 10 and counting
-  T minus 9 and counting
-  T minus 8 and counting
-  T minus 7 and counting
-  T minus 6 and counting
-  T minus 5 and counting
-  T minus 4 and counting
-  T minus 3 and counting
-  T minus 2 and counting
-  T minus 1 and counting
-  #+end_example
-
-
-- Since the first and third expressions in a ~for~ statement are
-  executed as statements, their values are irrelevant.
-
-** ~for~ statement patterns
+* ~for~ statement patterns
 
 - ~for~ loops are best when counting up or down
 
@@ -512,107 +486,70 @@ statement.
 
   - The following is cool (but also dangerous): you can initialize the
     counting variable inside the first expression:
-
     #+name: init
     #+begin_src C
       // int i;
-      for ( int i = 3 ; i > 0 ; i--)
+      for ( int i = 3 ; i > 0 ; i--) {
         printf("T minus %d and counting\n", i);
+       }
     #+end_src
 
-    #+RESULTS: init
-    : T minus 3 and counting
-    : T minus 2 and counting
-    : T minus 1 and counting
-
-** Omitting expressions
+* Omitting expressions
 
 - Some ~for~ loops may not need all 3 expressions, though the
   separators ~;~ must all three be present
 
 - If the *first* expression is omitted, no initialization is
   performed before the loop is executed:
-
   #+name: omit1
   #+begin_src C
     int i = 3;
-
-    for ( ; i > 0 ; --i)
+    for ( ; i > 0 ; --i) {
       printf("T minus %d and counting\n", i);
+     }
   #+end_src
 
-  #+RESULTS: omit1
-  : T minus 3 and counting
-  : T minus 2 and counting
-  : T minus 1 and counting
-
-- If the *third* expression is omitted, the loop body is responsible
-  for ensuring that the value of the 2nd expression eventually
-  becomes false so that the loop ends:
-
+- If the *third* expression is omitted, the loop body is responsible for
+  ensuring that the value of the 2nd expression eventually becomes
+  false so that the loop ends (just like in ~while~ and ~do while~):
   #+name: omit2
   #+begin_src C
-    for (int i = 3 ; i > 0 ; )
+    for (int i = 3 ; i > 0 ; ) {
       printf("T minus %d and counting\n", i--);
+     }
   #+end_src
-
-  #+RESULTS: omit2
-  : T minus 3 and counting
-  : T minus 2 and counting
-  : T minus 1 and counting
 
 - If the *first* and *third* expressions are omitted, the resulting
   loop is nothing but a ~while~ statement in disguise:
-
   #+name: omit3
   #+begin_src C
     int i = 3;
-
     for ( ; i > 0 ; )
       printf("T minus %d and counting\n", i--);
   #+end_src
 
-  #+RESULTS: omit3
-  : T minus 3 and counting
-  : T minus 2 and counting
-  : T minus 1 and counting
-
 - The ~while~ version is clearer and to be preferred:
-
   #+name: omit4
   #+begin_src C
     int i = 10;
-
-    while ( i > 0 )
+    while ( i > 0 ) {
       printf("T minus %d and counting\n", i--);
+     } 
   #+end_src
 
-  #+RESULTS: omit4
-  #+begin_example
-  T minus 10 and counting
-  T minus 9 and counting
-  T minus 8 and counting
-  T minus 7 and counting
-  T minus 6 and counting
-  T minus 5 and counting
-  T minus 4 and counting
-  T minus 3 and counting
-  T minus 2 and counting
-  T minus 1 and counting
-  #+end_example
-
-- If the *second* expression is missing, it defaults to a true value
+- If the *second* expression is missing, it defaults to a ~TRUE~ value
   so that the ~for~ loop will cause an infinite loop:
-
   #+name: omit5
-  #+begin_src C :results silent
+  #+begin_src C :results silent :tangle forInf.c
     int i;
-
-    //      for ( i=10 ; ; i-- )
+    //      for ( i=10 ; ; i-- ) {
     //         printf("T minus %d and counting\n", i);
+    //      }
   #+end_src
 
-** Printing a table of squares
+- **Practice that now!**
+
+* Printing a table of squares
 
 - The program [[square]] can be improved by converting its ~while~ loop to a
   ~for~ loop:
@@ -639,7 +576,7 @@ statement.
   :          5        25
 
 - Inputfile
-  #+name: input:square1
+  #+name: input:square
   #+begin_src bash
     echo "5" > ../data/square1_input
     cat ../data/square1_input
@@ -649,7 +586,6 @@ statement.
   for initialization, testing, and updating. However, *there is no
   requirement that they be related in any way*: the version [[square2]] of
   the same program demonstrates this:
-
   #+name: square2
   #+begin_src C :cmdline < ../data/square1_input
     int i; // testing variable
@@ -698,7 +634,7 @@ statement.
   loop body.
 
 - You can exit a loop (or any other statement) in the middle,
-  too using: ~break~, ~continue~, and ~goto~, (and ~return~). 
+  too using: ~break~, ~continue~, and ~goto~, (and ~return~).
 
 ** The ~break~ statement
 *** Overview
@@ -923,7 +859,7 @@ accordingly, from: ~tinyurl.com/475m5x4n~
 * Extended example: balancing a checkbook
 
 - Let's develop a program that maintains a checkbook balance.
-  
+
 - The program will offer the user a menu of choices:
   1) clear the account balance
   2) credit money to the account
@@ -934,9 +870,9 @@ accordingly, from: ~tinyurl.com/475m5x4n~
 - These choices are represented by integers 0,1,2,3,4 resp. which are
   implemented as ~switch~ ~case~ labels.
 
-- Here is a sample program session:
+- Here is a sample program session with the compile program ~checking~:
   #+name: ex:checkbook
-  #+begin_example 
+  #+begin_example
     pi@raspberrypi:~$ ./checking
     --- ACME checkbook-balancing program ---
     Commands: 0=clear, 1=credit, 2=debit, 3=balance, 4=exit
@@ -960,7 +896,7 @@ accordingly, from: ~tinyurl.com/475m5x4n~
   statement won't help, and we prefer not to use a ~goto~
   statement. Instead, the program executes a ~return~ statement, which
   will cause the ~main~ function to return to the operating system.
-  
+
 - Pseudo code:
   #+name: pseudoCheckbook
   #+begin_example C
@@ -1000,7 +936,7 @@ accordingly, from: ~tinyurl.com/475m5x4n~
       for(;;) {  // do this forever until exit=4
         printf("Enter command: ");
         scanf("%d", &cmd);
-        switch (cmd) { 
+        switch (cmd) {
         case 0:            // clear balance
           balance = 0.0f;
           break;
@@ -1027,8 +963,38 @@ accordingly, from: ~tinyurl.com/475m5x4n~
       }
     }
   #+end_src
-  
+
 - Get the program: ~tinyurl.com/2p975xs4~ - tangle, compile and run it.
+
+* Solutions
+
+1) Counting up from 1 to 5:
+   #+begin_src C
+     int j;
+     for(j=1;j<=5; j++) printf("%d and counting\n",j);
+   #+end_src
+
+   #+RESULTS:
+   : 1 and counting
+   : 2 and counting
+   : 3 and counting
+   : 4 and counting
+   : 5 and counting
+
+2) Converting ~for~ loop into ~while~ loop:
+   #+begin_src C
+     int i = 3;
+     while(i>0) printf("T minus %d and counting\n", i--);
+   #+end_src
+
+   #+RESULTS:
+   : T minus 3 and counting
+   : T minus 2 and counting
+   : T minus 1 and counting
+
+3) Summing numbers (convert ~do while~ to ~for~):
+
+
 
 * References
 
