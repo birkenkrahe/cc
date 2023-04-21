@@ -1238,13 +1238,14 @@ We've touched upon every one of these areas: not too shabby!
    #+end_quote
    #+begin_src C
      int j=1;
-     if (j = 1) {
+     if (j = 1) {  ## This statement ALWAYS succeeds
        puts("true");
       } else {
        puts("false");
       }
    #+end_src
-
+   Reversely, the statement ~if (j=0)~ always fails.
+   
 6) What is the purpose of ~break~ in a ~switch~ statement?
    #+begin_quote
    When ~break~ is executed, the ~switch~ statement (between the ~{...}~) is
