@@ -1252,7 +1252,28 @@ We've touched upon every one of these areas: not too shabby!
    left and nothing afterwards is executed.
    #+end_quote
 
-* TODO Loops: ~while~, ~do...while~ and ~for~
+* IN PROGRESS Loops: ~while~, ~do...while~ and ~for~
+#+attr_latex: :width 400px
+#+caption: Bodlam castle with loop windows (for archers), Flickr.com
+[[../img/bodlam.jpg]]
+* Assignments
+#+attr_latex: :width 400px
+#+caption: Missing in-class and home assignments
+[[../img/missing.png]]
+[[../img/missing2.png]]
+
+  - Submit anything late for partial credit (50%) no later than May 3rd
+    
+  - New programming *assignment*: [[https://lyon.instructure.com/courses/1014/assignments/10074][compute the Euler number]]
+
+  - Coming: last *test* (due April 28) on loops - *preview* on Monday
+
+  - DIY: exiting from a loop with ~break~, ~continue~, ~goto~.
+    
+  - Download and check the extended example "[[https://github.com/birkenkrahe/cc/blob/piHome/org/13_loops.org#extended-example-balancing-a-checkbook][Balancing checkbook]]"
+
+  - Bonus points for leaving an evaluation in Canvas!
+* Loops
 
   - Monday: ~while~ loops
     #+begin_example C
@@ -1277,9 +1298,8 @@ We've touched upon every one of these areas: not too shabby!
       printf("T minus %d and counting\n", i);
       }
     #+end_example
-
 * TODO Week 15 - Arrays and Pointers
-* TODO Week 16 - C++
+* TODO Week 16 - C++ and final exam test
 - [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: whaddayaknow?
 * TODO What next? (Further studies)
 * References
