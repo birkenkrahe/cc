@@ -1304,12 +1304,18 @@ We've touched upon every one of these areas: not too shabby!
 [[../img/overload.jpg]]
 
 - Mon: ARRAYS
+
 - Wed: FUNCTIONS
+
 - Fri: POINTERS
-- Next week Monday: transition to C++
+
+- Next week Monday last lecture: transition to C++
+
 - Last meeting Wednesday: final exam pre-view (will include a few
   questions from the last week on arrays/pointers).
-- PDF copies of all practice files will be online early this week!
+
+- PDF copies of all practice files will be online in GitHub today: if
+  you want to complete them for partial credit, work through the PDFs.
 
 * TODO Test 7 preview - loop loop loop
 
