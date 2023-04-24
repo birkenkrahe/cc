@@ -18,32 +18,26 @@
 * Overview
 
 - Variables that can hold only a single data item (a number or a
-  character, which is a number, too) are called *scalars.*
+  character, which is a number, too) are called *scalars*: ~1~, ~'a'~
 
-- In mathematics, /ordered tuples/ of data are called
-  *vectors*[fn:1]. In [[Rvec]], a vector ~v~ is defined and printed
-
+- In mathematics, /ordered tuples/ of data (x_{1},...x_{n}) are called
+  *vectors*. In the R code below,a vector ~v~ is defined and printed:
   #+name: Rvec
   #+begin_src R
     v <- c(1,2,3)  ## create a vector of three numbers
     v
   #+end_src
-
-  #+RESULTS: Rvec
-  : [1] 1 2 3
-
 - In C there are two *aggregate* stuctures that can store /collections/
   of values: *arrays* and *structures*.
 
-- *structures* are the forerunners of classes, a concept that becomes
-  central in C++ ([[https://www.tutorialspoint.com/cprogramming/c_structures.htm][short overview of structures]]).
+- A *structure* is a forerunners of a class, a concept that becomes
+  central in C++. Classes contain objects and their properties.
 
-- Different programming languages have different data
-  structures. The language Python also knows *dictionaries* (see
-  [[PyDict]], and R knows *data frames* and *lists* (see [[Rdf]]).
+- Different programming languages have different data structures. The
+  language Python has *dictionaries*, and the language R has *data frames*
+  and *lists*.
 
 - Example with Python: a /dictionary/ of car data.
-
   #+name: PyDict
   #+begin_src python
     thisDict = {
@@ -54,55 +48,40 @@
     print(thisDict)
   #+end_src
 
-  #+RESULTS: PyDict
-  : {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
-
 - Example with R: a /data frame/ of tooth growth data, consisting of
   three different vectors of the same length but different data
   types.
-
   #+name: Rdf
   #+begin_src R
     str(ToothGrowth)
   #+end_src
 
-  #+RESULTS: Rdf
-  : 'data.frame':	60 obs. of  3 variables:
-  :  $ len : num  4.2 11.5 7.3 5.8 6.4 10 11.2 11.2 5.2 7 ...
-  :  $ supp: Factor w/ 2 levels "OJ","VC": 2 2 2 2 2 2 2 2 2 2 ...
-  :  $ dose: num  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 ...
-
-** What is an array?
+* What is an array?
 
 - An *array* is a /data structure/ containing a number of data values,
   all of which have the same type (like ~int~, ~char~ or ~float~).
 
 - You can visualize arrays as box collections.
-
   #+attr_html: :width 600px
   #+caption: Arrays of different dimensions with values in them
   [[../img/arrays.png]]
 
 - The computer stores them differently - sequentially as a set of
   memory addresses.
-
   #+name: fig:storage
   #+attr_html: :width 600px
   #+caption: Memory representation of a 2D character array (Source: TheCguru.com)
   [[../img/storage.png]]
-
 * One-dimensional arrays
 
 - The simplest kind of array has one dimension - conceptually
   arranged visually in a single row (or column).
-
   #+attr_html: :width 600px
   #+caption: Visualization of a 1-dim array 'a' (Source: King)
   [[../img/one.png]]
 
-- Each element of an array of type T is treated as if it were a variable of
-  type T:
-
+- Each element of an array of type T is treated as if it were a
+  variable of type T:
   #+name: ex:oneDimArrays
   #+begin_example C
     for ( int i = 0; i < N; i++ )
@@ -120,34 +99,23 @@
 
 - To declare an array, we must specify the /type/ and /number/ of its
   elements, e.g. for an array of 10 elements:
-
   #+name: pgm:arrayDef
   #+begin_src C
     int a[10];           // declare array a of 10 integers
-    printf("a[0] = %d\na[9] = %d\n", a[1], a[9]);  // print two array elements
+    printf("a[0] = %d\na[9] = %d\n",
+           a[1], a[9]);  // print two array elements
   #+end_src
-
-  #+RESULTS: pgm:arrayDef
-  : a[0] = 1
-  : a[9] = 208796
-
-- If you run this block repeatedly, you see what the computer stores
-  in the respective memory locations - random integers[fn:3]
-
 - The array must be initialized, just like any scalar variable, to
-  be of use to us.
+  be of use to us (otherwise strange values may appear).
 
 - You can initialize arrays explicitly using ~{...}~:
-
   #+begin_src C :results silent
-    int int_array[5] = {1,2,3,4,5};
-    double double_array[] = {2.1, 2.3, 2.4, 2.5};
-    char char_arrray[] = {'h','e','l','l','o','\0'};
+    int int_array[5] = {1,2,3,4,5};  // initialize with integers
+    double double_array[] = {2.1, 2.3, 2.4, 2.5}; // initialize with floats
+    char char_arrray[] = {'h','e','l','l','o','\0'}; // initialize with chars
   #+end_src
-
   This is how ~char_array~ looks like (the last character ~\0~ is only a
   terminating character):
-
   #+attr_html: :width 600px
   [[../img/hello.png]]
 
@@ -155,15 +123,12 @@
 
 - An array can have any length. Since the length may have to be
   adjusted, it can be useful to define it as a macro with ~#define~.
-
   #+begin_src C :results silent
     #define N 10  // directive to define N = 10 everywhere
-    // ...
-    int a[N];
+    int a[N]; // declare array of length N
   #+end_src
-
-- Remember that now ~N~ will be blindly replaced by ~10~ everywhere in
-  the program by the pre-processor.
+- Remember that now ~N~ will *blindly* be replaced by ~10~ *everywhere* in the
+  program by the pre-processor.
 
 * Array subscripting
 
@@ -172,13 +137,10 @@
 
 - Array elements in C are always numbered starting from 0, so the
   elements of an array of length ~n~ are /indexed/ from ~0~ to ~n-1~.
-
   #+attr_html: :width 600px
   #+caption: Indexing of an 1-dim array 'a' (Source: King)
   [[../img/index.png]]
-
 - Index expressions ~a[i]~ can be used like other variables:
-
   #+begin_src C
     int a[10];  // declare array
 
@@ -189,12 +151,6 @@
     printf("%d\n", a[5] - 4); // subtracts 4 from 4
     printf("%d\n", ++a[0]); // ++a[0] => a[0] + 1
   #+end_src
-
-  #+RESULTS:
-  : 4
-  : 0
-  : 2
-
 * Array subscripting side effects
 ** C is too permissive
 
@@ -205,26 +161,21 @@
 
 - An array subscript may be an integer expression, therefore it's easy
   to miss subscript violations.
-
   #+begin_example C
     foo[i+j*10] = 0; // e.g. i=-10, j=1 => foo[0]
     bar[i++];        // e.g. i = -1 => bar[0]
   #+end_example
-
 ** Weird ~while~ loop
 
 - As an example for the weird effects, trace this code:
-
   #+name: trace
   #+begin_example C
     i = 0;
     while ( i < N )
        a[i++] = 0;
   #+end_example
-
 - After ~i~ is set to ~0~, the ~while~ statement checks whether ~i~ is less
   than ~N~: to test this, we need to introduce a support variable.
-
   #+name: pgm:arrayTest
   #+begin_src C
     #define N 10
@@ -253,7 +204,6 @@
 
 - Without the support variable, we would get weird printing results:
   can you explain them?
-
   #+name: pgm:arrayTest1
   #+begin_src C
     #define N 10
@@ -264,7 +214,6 @@
       printf("a[%d] = %d\n", i, a[i]); // print i then a[i]
      }
   #+end_src
-
   #+RESULTS: pgm:arrayTest1
   #+begin_example
   0 < N	a[1] = -1225222896
@@ -287,7 +236,6 @@
   value at all, because ~a[N]~ has the elements ~{a[0] ... a[N-1]}~.
 
 - What would happen if the assignment were with ~a[++i]~? Let's see:
-
   #+name: pgm:arrayTest2
   #+begin_src C
     #define N 10
@@ -327,7 +275,6 @@
 - Be careful when an array subscript has a side effect. Example: the
   following loop to copy all elements of ~foo~ into ~bar~ may not work
   properly:
-
   #+name: copy1
   #+begin_example C
     i = 0;
@@ -337,7 +284,6 @@
 
   The statement in the loop accesses the value of ~i~ and modifies
   ~i~. This causes undefined behavior. To do it right, use this code:
-
   #+name: copy2
   #+begin_example C
   for (i = 0; i < N; i++)
@@ -347,7 +293,6 @@
 ** Weird ~for~ loop
 
 This innocent-looking ~for~ statement can cause an infinite loop:
-
 #+name: ex:infArray
 #+begin_example C
   int a[10], i;
@@ -365,61 +310,55 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
 
 - ~for~ loops are made for arrays. Here are a few examples. Can you
   see what each of them does?
-
   #+name: ex:for_array_1
   #+begin_example C
-    for (i = 0; i < 10 ; i++ ) // execute the loop for i = 0, 1....,9
-      a[i] = 0;   // assign the value 0 to a[i=0], a[i=1],....,a[i=9]
+    for (i = 0; i < 10 ; i++ ) 
+      a[i] = 0;   
   #+end_example
-
   #+begin_quote
   *Answer 1:* ~0~ is assigned to ~a[0]~ through ~a[9]~.
   #+end_quote
-
   #+name: ex:for_array_2
   #+begin_example C
-    for (i = 0; i < 10 ; i++ )  // execute the loop for i = 0, 1....,9
-      scanf("%d", &a[i]);     // scan input values and assign them to a[0]...a[9]
+    for (i = 0; i < 10 ; i++ ) 
+      scanf("%d", &a[i]);
   #+end_example
-
   #+begin_quote
   *Answer 2:* external integer input is assigned to ~a[0]~ through ~a[9]~.
   #+end_quote
-
   #+name: ex:for_array_3
   #+begin_example C
-    for (i = 0; i < 10 ; i++ )   // execute the loop for i = 0, 1....,9
-      sum += a[i];  // add a[0] through a[9] and store result in sum
-                    // sum = sum + a[i=0]
-                    // sum = sum + a[i=1] = sum + a[i=1] + a[i=0] ...
+    for (i = 0; i < 10 ; i++ ) 
+      sum += a[i]; 
   #+end_example
-
   #+begin_quote
-  *Answer 3:* The values ~a[0]~ through ~a[9]~ are summed up.
+  *Answer 3:* The values ~a[0]~ through ~a[9]~ are summed up: ~sum = sum +
+   a[i=1] = sum + a[i=1] + a[i=0] ...~
   #+end_quote
 
 * Let's practice!
 
-- [[https://raw.githubusercontent.com/birkenkrahe/cc101/piHome/7_arrays/org/array1.org][Download ~array1.org~ from GitHub]]: *tinyurl.com/27uv358b*
+- [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/14_arrays_practice.org][The practice file is in GitHub.]] Remember to download the *raw*
+  Org-mode file and open it in Emacs.
+
+- The first two problems can be solved with what you've already heard
+  (one-dimensional arrays).
 
 * Multi-dimensional arrays
-** Setup
 
 - An array may have any number of dimensions.
 
 - Example: the following array declares a 5 x 9 matrix of 5 rows and
   9 columns.
-
-  #+begin_src C
-    int m[5][9]
+  #+begin_src C :results silent
+    int m[5][9];
   #+end_src
-
   #+attr_html: :width 500px
   #+name: matrix
   #+caption: Matrix indexes in a 2-dim C array (Source: King)
   [[../img/matrix.png]]
 
-** Accessing arrays
+* Accessing arrays
 
 - To access the element in row ~i~ and column ~j~, we must write ~m[i][j]~.
 
@@ -428,7 +367,6 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
 - The expression ~m[i,j]~ is the same as ~m[j]~ (don't use it)
 
 - C stores arrays not in 2 dim but in row-major order:
-
   #+attr_html: :width 500px
   #+name: matrix
   #+caption: Row-major memory storage in C (Source: King)
@@ -438,12 +376,11 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
   other programming languages because C has a more flexible way to
   store multi-dimensional data, namely /arrays of pointers/.
 
-** Accessing arrays with nested ~for~ loops
+* Accessing arrays with nested ~for~ loops
 
 - Nested ~for~ loops are ideal for processing multi-dimensional arrays.
 
 - The code in [[identityMatrix]] initializes a 10x10 /identity/ matrix.
-
   #+name: identityMatrix
   #+begin_src C 
     #define N 5
@@ -468,9 +405,8 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
 
 - To initialize an array, you can use brackets as in the 1-dim case.
 
-- [ ] What happens in [[initArray]]? What do you think the output looks
-  like?
-
+- What happens in the next code block? What do you think the output
+  looks like?
   #+name: initArray
   #+begin_src C
     int m[3][3] = {1,2,3,4,5,6,7,8,9};
@@ -483,16 +419,9 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
      }
   #+end_src
 
-  #+RESULTS: initArray
-  : 1 2 3 
-  : 4 5 6 
-  : 7 8 9 
-
-
-- [ ] How could you populate the matrix column-wise instead of row-wise?
-
+- How could you populate the matrix column-wise instead of row-wise?
   #+begin_quote Answer
-  By swapping the indices in the ~printf~ statement.
+  By swapping the indices in the printx statement.
   #+end_quote
   
 * The size of arrays
@@ -500,7 +429,7 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
 - The ~sizeof~ operator can determine the size of arrays (in bytes).
 
 - If ~a~ is an array of ~10~ integers, then ~sizeof(a)~ is 40 provided
-  each integer requires 4 bytes of storage[fn:2].
+  each integer requires 4 bytes of storage.
 
 - The block [[sizeof]] declares and initializes an array of 10 elements
   and prints its size in bytes.
@@ -594,7 +523,11 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
 
 * Let's practice!
 
-[[https://raw.githubusercontent.com/birkenkrahe/cc101/piHome/7_arrays/org/array1.org][Download ~array2.org~ from GitHub]]: *tinyurl.com/3hazjds8*
+- [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/14_arrays_practice.org][The practice file is in GitHub.]] Remember to download the *raw*
+  Org-mode file and open it in Emacs.
+
+- The last two problems can be solved with what you've just heard
+  (multi-dimensional arrays).
 
 * References
 
@@ -607,16 +540,3 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
   orgmode.org]]
 - Image [[fig:storage]] from: [[https://overiq.com/media/uploads/memory-representation-of-array-of-strings-1504599913892.png][TheCguru.com]]
 
-* Footnotes
-
-[fn:3]What exactly is displayed depends on the computer you use. On
-Windows, the array is not automatically initialized, but on the Pi,
-some elements seem to be initialized with ~0~.
-
-[fn:2]On a 32-bit computer, an ~int~ ranges from -32,768 to 32,767 and
-only requires 2 bytes of storage.
-
-[fn:1]The code block is an example of the statistical programming
-language R, which is especially strong when it comes to vector
-manipulation. ~c()~ is R's concatenation function that chains elements
-together to form a vector.
