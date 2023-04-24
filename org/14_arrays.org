@@ -380,7 +380,13 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
 
 - Nested ~for~ loops are ideal for processing multi-dimensional arrays.
 
-- The code in [[identityMatrix]] initializes a 10x10 /identity/ matrix.
+- This code initializes a 10x10 /identity/ matrix.
+  1) Set the dimension of the matrix to N = 10
+  2) Declare a ~double~ matrix named ~ident~
+  3) Loop over rows with loopindex ~row~
+  4) For each row, loop over columns with column index ~col~
+  5) Set each diagonal element ~ident[row][col]~ to 1, all others to 0
+  6) Print the resulting matrix
   #+name: identityMatrix
   #+begin_src C 
     #define N 5
@@ -403,7 +409,15 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
       }
   #+end_src
 
-- To initialize an array, you can use brackets as in the 1-dim case.
+- By comparison, this is how easy it is to declare, create and print
+  an identity matrix in a language that is built for math
+  manipulation, R:
+  #+begin_src R
+    diag(5)
+  #+end_src
+
+- To initialize an array, you can use brackets as in the 1-dim case,
+  but for each dimension, you need a new set of ~[ ]~.
 
 - What happens in the next code block? What do you think the output
   looks like?
@@ -419,10 +433,32 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
      }
   #+end_src
 
+- By comparison, in R this looks like:
+  #+begin_src R
+    (matrix(1:9,3,byrow=TRUE))
+  #+end_src  
+  
 - How could you populate the matrix column-wise instead of row-wise?
   #+begin_quote Answer
-  By swapping the indices in the printx statement.
+  By swapping the indices in the print statement.
   #+end_quote
+
+- Test it:
+  #+begin_src C
+    int m[3][3] = {1,2,3,4,5,6,7,8,9};
+
+    for (int i=0;i<3;i++) {
+      for(int j=0;j<3;j++) {
+        printf("%d ", m[j][i]);
+      }
+      printf("\n");
+     }
+  #+end_src
+
+- In R, that's the default, so the command is even shorter:
+  #+begin_src R
+    (matrix(1:9,3))
+  #+end_src  
   
 * The size of arrays
 
@@ -431,55 +467,41 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
 - If ~a~ is an array of ~10~ integers, then ~sizeof(a)~ is 40 provided
   each integer requires 4 bytes of storage.
 
-- The block [[sizeof]] declares and initializes an array of 10 elements
-  and prints its size in bytes.
-  
+- The block below declares and initializes an array of 10 elements and
+  prints its size in bytes.
   #+name: sizeof
   #+begin_src C
-    int a[10] = {0};
-    printf("%d", sizeof(a));
+    int a[10] = {0};  // initialize all array elements with 0
+    printf("%d", sizeof(a)); 
   #+end_src
-
-  #+RESULTS: sizeof
-  : 40
 
 - You can use the operator also to measure the size of an array:
   dividing the array size by the element size gives you the length of
   the array:
-
   #+begin_src C
     int a[10] = {0};
     printf("%d", sizeof(a)/sizeof(a[0])); // prints length of array a
   #+end_src
 
-  #+RESULTS:
-  : 10
-
 - You can use this last fact to write a ~for~ loop that goes over the
   whole /length/ of an array - then the array does not have to be
-  modified if its length changes.
+  modified if its length changes (see practice file).
 
 * Use ~sizeof~ to print a matrix
 
   - If an array of ~N~ elements has length ~N * 4~ (one for every byte of
     length 4), what is the length of a matrix of size ~M x N~?
-
     #+name: sizeof1
     #+begin_src C
       int B[3][3] = {0};
       printf("%d", sizeof(B));
     #+end_src
-
-    #+RESULTS: sizeof1
-    : 36
-
     #+begin_quote Answer
     It is the number of matrix elements (stored linearly) times the
     byte length.
     #+end_quote
 
   - Storing a matrix:
-
     #+name: 2x3matrix
     #+begin_src C :results silent
       #define M 4
@@ -487,9 +509,7 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
       int C[M][N] = {1,2,3,4,5,6,7,8,9,10,11,12};
     #+end_src
 
-  - Can we use ~sizeof~ when looping over rows and columns? [[matrixLoop]]
-    executes such a loop.
-
+  - Can we use ~sizeof~ when looping over rows and columns? 
     #+name: matrixLoop
     #+begin_src C :noweb yes
       <<2x3matrix>>
@@ -501,25 +521,13 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
       }
     #+end_src
 
-    #+RESULTS: matrixLoop
-    :  1  2  3
-    :  4  5  6
-    :  7  8  9
-    : 10 11 12
-
   - The length of the row vectors:
-
     #+begin_src C :noweb yes
       <<2x3matrix>>
       printf("%d\n", sizeof(C)); // size of matrix C
       printf("%d\n", sizeof(C)/sizeof(C[0][0])); // size of row
       printf("%d\n", sizeof(C)/sizeof(C[0][0])*M/N); // size of column
     #+end_src
-
-    #+RESULTS:
-    : 48
-    : 12
-    : 16
 
 * Let's practice!
 
