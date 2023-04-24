@@ -1170,7 +1170,7 @@ Fri:
 - Only 2 weeks long (June 1-19)
 - Share link with others: https://tinyurl.com/apply2023asri
 
-* TODO Week 14 - Loops and Arrays
+* Week 14 - Loops: ~for~, ~while~ and ~do while~
 #+attr_latex: :width 400px
 [[../img/loop.jpg]]
 
@@ -1182,7 +1182,7 @@ SERIOUS PROGRAMMING MEANS KNOWING:
 
 We've touched upon every one of these areas: not too shabby!
 
-* DONE Test preview
+** Test 6 preview
 
 1) What will this program print?
    #+begin_src C
@@ -1239,7 +1239,7 @@ We've touched upon every one of these areas: not too shabby!
    #+begin_src C
      int j=1;
      if (j = 1) {  ## This statement ALWAYS succeeds
-       puts("true");
+         puts("true");
       } else {
        puts("false");
       }
@@ -1252,56 +1252,184 @@ We've touched upon every one of these areas: not too shabby!
    left and nothing afterwards is executed.
    #+end_quote
 
-* IN PROGRESS Loops: ~while~, ~do...while~ and ~for~
-#+attr_latex: :width 400px
-#+caption: Bodlam castle with loop windows (for archers), Flickr.com
-[[../img/bodlam.jpg]]
-* Assignments
+** Assignments
 #+attr_latex: :width 400px
 #+caption: Missing in-class and home assignments
 [[../img/missing.png]]
 [[../img/missing2.png]]
 
-  - Submit anything late for partial credit (50%) no later than May 3rd
-    
-  - New programming *assignment*: [[https://lyon.instructure.com/courses/1014/assignments/10074][compute the Euler number]]
+- Submit anything late for partial credit (50%) no later than May 3rd
 
-  - Coming: last *test* (due April 28) on loops - *preview* on Monday
+- New programming *assignment*: [[https://lyon.instructure.com/courses/1014/assignments/10074][compute the Euler number]]
 
-  - DIY: exiting from a loop with ~break~, ~continue~, ~goto~.
-    
-  - Download and check the extended example "[[https://github.com/birkenkrahe/cc/blob/piHome/org/13_loops.org#extended-example-balancing-a-checkbook][Balancing checkbook]]"
+- Coming: *test 7* (due April 28) on loops - *preview* on Monday
 
-  - Bonus points for leaving an evaluation in Canvas!
-* Loops
+- DIY: exiting from a loop with ~break~, ~continue~, ~goto~.
 
-  - Monday: ~while~ loops
-    #+begin_example C
-      int i = 10;
-      while ( i > 0 ) {
-        printf("T minus %d and counting\n", i--);
+- Download and check the extended example "[[https://github.com/birkenkrahe/cc/blob/piHome/org/13_loops.org#extended-example-balancing-a-checkbook][Balancing checkbook]]"
+
+- Bonus points for leaving an evaluation in Canvas!
+** Loops: ~while~, ~do...while~ and ~for~
+#+attr_latex: :width 400px
+#+caption: Bodlam castle with loop windows (for archers), Flickr.com
+[[../img/bodlam.jpg]]
+
+
+- Monday: ~while~ loops
+  #+begin_example C
+    int i = 10;
+    while ( i > 0 ) {
+      printf("T minus %d and counting\n", i--);
+    }
+  #+end_example
+
+- Wednesday: ~do while~ loops
+  #+begin_example C
+    int i = 3;
+    do {
+      printf("T minus %d and counting\n", i--);
+    } while (i > 0);
+  #+end_example
+
+- Friday: ~for~ loops
+  #+begin_example C
+  int i;
+  for ( i = 10; i > 0; i-- ) {
+    printf("T minus %d and counting\n", i);
+    }
+  #+end_example
+* NEXT Week 15 - Arrays, Functions and Pointers
+#+attr_latex: :width 400px
+#+caption: Carter Buton early flight pioneer (flickr.com)
+[[../img/overload.jpg]]
+
+- Mon: ARRAYS
+- Wed: FUNCTIONS
+- Fri: POINTERS
+- Next week Monday: transition to C++
+- Last meeting Wednesday: final exam pre-view (will include a few
+  questions from the last week on arrays/pointers).
+- PDF copies of all practice files will be online early this week!
+
+* TODO Test 7 preview - loop loop loop
+
+The penultimate test deals exclusively with loops!
+
+1) Which loops do you know that go on indefinitely?
+   #+begin_example C
+     while(1000);
+     while(i > 1); { int i = 1; i++; }
+     do { /* whatever */ } while(1);
+     for (;;;) { /* whatever */ }
+   #+end_example
+   #+begin_quote
+   All loops have conditions that are never wrong - they enter the
+   loop body (the first one doesn't even have one) and never leave.
+   #+end_quote
+2) What's the output of this program?
+   #+begin_src C
+     int k = 100;
+     while ( k > 95 ) {
+       printf("%d ", k);
       }
-    #+end_example
-
-  - Wednesday: ~do while~ loops
-    #+begin_example C
-      int i = 3;
-      do {
-        printf("T minus %d and counting\n", i--);
-      } while (i > 0);
-    #+end_example
-
-  - Friday: ~for~ loops
-    #+begin_example C
-    int i;
-    for ( i = 10; i > 0; i-- ) {
-      printf("T minus %d and counting\n", i);
+   #+end_src
+   #+begin_quote
+   None! There's no decrement in the loop body so the condition ~k>95~
+   is never wrong.
+   #+end_quote
+3) Well then, what's the output of this program?
+   #+begin_src C
+     int k = 100;
+     while ( k > 95 ) {
+       printf("%d ", k--);
       }
-    #+end_example
-* TODO Week 15 - Arrays and Pointers
+   #+end_src
+
+   #+RESULTS:
+   : 100 99 98 97 96 
+4) Which of the following statements is *not* equivalent to the other
+   two? (Assuming that the loop bodies are identical.)
+   #+begin_example C
+     for (k = 0; k == 100; k++) ...  
+     for (k = 0; k == 100; ++k) ...  
+     for (k = 0; k == 100;    ) ...  
+   #+end_example
+   #+begin_quote
+   The last ~for~ statement is missing an incrementing operator for the
+   loop variable
+   #+end_quote
+5) Which of the following statements is *not* equivalent to the other
+   two? (Assuming that the loop bodies are identical.)
+   #+begin_example C
+     while ( i == 100 ) {...}
+     do {...} while ( i == 100 );
+     for ( ; i == 100; ) {...}
+   #+end_example
+   #+begin_quote
+   The ~do..while~ statement is executed once before the first check,
+   and that's the only difference to the other two.
+   #+end_quote
+6) What is wrong with this program? It does not compile.
+   #+begin_src C :results silentx
+     for (int i = 1; i == 5; i++);
+     i++;
+   #+end_src
+   The error message:
+   #+begin_example Compilation
+   In function 'main':
+   error: 'i' undeclared (first use in this function)
+      10 | i++;
+         | ^
+   #+end_example
+   #+begin_src C :results silent
+     int i;
+     for (int k = 1; k == 5; k++);
+     i++;
+   #+end_src
+7) Which ~for~ loop counts down from ~n-1~ to ~0~?
+   #+begin_src C
+     int i, n = 10;
+     for(i = n - 1; i >= 0; i--) {
+       printf("%d\n", i);
+      }
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   9
+   8
+   7
+   6
+   5
+   4
+   3
+   2
+   1
+   0
+   #+end_example
+8) Will this program compile?
+   #+begin_src C :results silent
+     int i=0;
+     do /* do nothing */ while(i==1);
+   #+end_src
+   
+* TODO Review of arrays - freedom of flight
+#+attr_latex: :width 400px
+#+caption: Carter Buton early flight pioneer (flickr.com)
+[[../img/arrays.jpg]]
+
+* TODO Review of functions - dancing with tigers
+#+attr_latex: :width 400px
+#+caption: Myrtle Beach Safari program (Flickr.com)
+[[../img/function.jpg]]
+
+* TODO Review of pointers - the old reliable 
+#+attr_latex: :width 400px
+#+caption: Roadside stand near Birmingham, AL (LOC@flickr.com)
+[[../img/pointer.jpg]]
 * TODO Week 16 - C++ and final exam test
 - [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: whaddayaknow?
-* TODO What next? (Further studies)
+* TODO What next? (Further studies/career advice)
 * References
 
 Bundell (22 Mar 2023). The driving test for driverless cars. Online:
