@@ -1303,19 +1303,20 @@ We've touched upon every one of these areas: not too shabby!
 #+caption: Carter Buton early flight pioneer (flickr.com)
 [[../img/overload.jpg]]
 
-- Mon: ARRAYS
+- Only five more sessions left! 
 
-- Wed: FUNCTIONS
-
-- Fri: POINTERS
-
-- Next week Monday last lecture: transition to C++
-
-- Last meeting Wednesday: final exam pre-view (will include a few
-  questions from the last week on arrays/pointers).
+- Test 7 is live now - for full points, complete it by Fri, April 28
 
 - PDF copies of all practice files will be online in GitHub today: if
   you want to complete them for partial credit, work through the PDFs.
+
+  | DAY       | TOPIC              | MOTTO               |
+  |-----------+--------------------+---------------------|
+  | Monday    | Arrays             | Freedom of flight   |
+  | Wednesday | Functions          | Dancing with tigers |
+  | Friday    | Pointers           | The Old Reliable    |
+  | Monday    | C++                | DoublePlusGood      |
+  | Wednesday | Final exam preview | Pull-ups            |
 
 * TODO Test 7 preview - loop loop loop
 
@@ -1434,7 +1435,17 @@ The penultimate test deals exclusively with loops!
 #+caption: Roadside stand near Birmingham, AL (LOC@flickr.com)
 [[../img/pointer.jpg]]
 * TODO Week 16 - C++ and final exam test
+#+attr_latex: :width 400px
+#+caption: From the film version of Orwell's "1984"
+[[../img/ingsoc.jpg]]
+
 - [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: whaddayaknow?
+
+* TODO Final exam preview
+#+attr_latex: :width 400px
+#+caption: Bodybuilder Gene Jantzen with wife Pat and 11-month old son Kent
+[[../img/pullups.jpg]]
+
 * TODO What next? (Further studies/career advice)
 * References
 
