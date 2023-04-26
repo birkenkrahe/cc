@@ -140,9 +140,6 @@
   printf("Average of %g and %g: %g\n", 5.1, 8.9, avg);
 #+end_src
 
-#+RESULTS: simpleCall
-: Average of 5.1 and 8.9: 7
-
 *** Call with expressions
 
 - Functions can have expressions as arguments.
@@ -152,7 +149,7 @@
     // function definition
     <<average>>
 
-      // declarations
+    // declarations
     double x=5.1, y=8.9, avg2;
 
     // function call with expression
@@ -161,9 +158,6 @@
     // function call inside function
     printf("Average of %g/2 and %g/2: %g\n", x, y, avg2);
   #+end_src
-
-  #+RESULTS: exprCall
-  : Average of 5.1/2 and 8.9/2: 3.5
 
 *** Call by other functions
 - Functions can be called by other functions.
@@ -180,12 +174,8 @@
     printf("Average of %g and %g: %g\n", x, y, average(x,y));
   #+end_src
 
-  #+RESULTS: nestedCall
-  : Average of 5.1 and 8.9: 7
-
-- [ ] What's happening in the last line exactly? Describe it!
-
-  #+begin_quote Answer
+- What's happening in the last line exactly? Describe it!
+  #+begin_quote
   1. The ~average~ function is called with ~x~ and ~y~ as arguments.
   2. ~average~ executes its ~return~ statement, returning ~(a+b)/2~.
   3. ~printf~ prints the value that ~average~ returns.
@@ -211,11 +201,8 @@
     cat ./src/input
   #+end_src
 
-  #+RESULTS:
-  : 3.5 9.6 10.2
-
   Sample output:
-  #+begin_example
+  #+begin_example org
   : Enter three numbers: 3.5 9.6 10.2
   : Average of 3.5 and 9.6: 6.55
   : Average of 9.6 and 10.2: 9.9
@@ -245,20 +232,13 @@
     }
   #+end_src
 
-  #+RESULTS:
-  : Enter three numbers: 3.5 9.6 10.2
-  : Average of 3.5 and 9.6: 6.55
-  : Average of 9.6 and 10.2: 9.9
-  : Average of 3.5 and 10.2: 6.85
-
-
 - Important: the definition of ~average~ needs to be put *before* ~main~ -
   otherwise the function needs to be declared.
 
 * Let's practice!
 
-- [[https://raw.githubusercontent.com/birkenkrahe/cc101/piHome/8_functions/org/functions.org][Download ~functions.org~ from GitHub]] (tinyurl.com/4nacv9az)
-- Upload the completed file to Schoology
+- [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/15_functions_practice.org][The practice file is in GitHub.]] Remember to download the *raw*
+  Org-mode file and open it in Emacs.
 
 * References
 
