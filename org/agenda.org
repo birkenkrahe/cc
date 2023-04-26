@@ -1425,15 +1425,63 @@ The penultimate test deals exclusively with loops!
      do { /* do nothing */} while(i==1);
    #+end_src
    
+
+* TODO SURVEY - BONUS POINTS! DO IT NOW! PAYBACK TIME!
+#+attr_latex: :width 400px
+#+caption: Current course evaluation status
+[[../img/eval.png]]
+
+* TODO Last (bonus) assignments (practice files)
+
+- Arrays practice: [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/14_arrays_practice.org][problems]] / [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/14_arrays_practice.pdf][solutions]]
+- Functions practice: [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/15_functions_practice.org][problems]] / [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/15_functions.pdf][solutions]]
+- Pointers practice: [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/16_pointers_practice.org][problems]] / [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/16_pointers_practice.pdf][solutions]]
+
 * TODO Review of arrays - freedom of flight
 #+attr_latex: :width 400px
 #+caption: Carter Buton early flight pioneer (flickr.com)
 [[../img/arrays.jpg]]
 
-1) 
+There will be a last test from Monday to Wednesday next week (review
+on Monday) with questions on arrays, functions and pointers!
 
+1) What's an array?
+   #+begin_quote
+   Answer: a data structure in C that holds values of the same type.
+   #+end_quote
+   
+2) Examples for arrays in C?
+   #+begin_quote
+   - Scalars (number, character)
+   - Vectors ~a[4]~
+   - Matrices ~m[2][2]~
+   #+end_quote
 
-1)
+4) What is the index of the third element of an array ~a[]~?
+   #+begin_quote
+   Array indices begin with 0 so the third element has the index 2.
+   #+end_quote
+   
+3) How would you declare an integer array of four elements and
+   initialize it with four different numbers?
+   #+begin_src C
+     int a[] = {100,200,300,400};
+     printf("%d %d %d %d\n", a[0], a[1], a[2], a[3]);
+   #+end_src
+
+4) If ~a[0] = 2~ what is ~--a[0]~?
+   #+begin_quote
+   --a[0] is a[0] = a[0] - 1 => --a[0] puts 2-1 = 1 into a[0]
+   #+end_quote
+
+5) What is the output of this code?
+   #+begin_src C
+     int a[]={10,20,30};
+     for (int i = 2; i >= 0; --i) {
+       printf("%d\n", a[i]);
+       }
+   #+end_src   
+
 
 * TODO Review of functions - dancing with tigers
 #+attr_latex: :width 400px
