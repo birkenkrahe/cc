@@ -237,8 +237,9 @@
 
 * Let's practice!
 
-- [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/15_functions_practice.org][The practice file is in GitHub.]] Remember to download the *raw*
-  Org-mode file and open it in Emacs.
+- [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/15_functions_practice.org][The practice file is in GitHub:]] ~15_functions_practice.org~
+
+- Remember to download the *raw* Org-mode file and open it in Emacs.
 
 * References
 
