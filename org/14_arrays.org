@@ -366,7 +366,7 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
 - The first two problems can be solved with what you've already heard
   (one-dimensional arrays).
 
-* Multi-dimensional arrays
+* NEXT Multi-dimensional arrays
 
 - An array may have any number of dimensions.
 
@@ -492,7 +492,7 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
 - The block below declares and initializes an array of 10 elements and
   prints its size in bytes.
   #+name: sizeof
-  #+begin_src C
+  #+begin_src C :tangle sizeof.c
     int a[10] = {0};  // initialize all array elements with 0
     printf("%d", sizeof(a)); 
   #+end_src
@@ -520,7 +520,7 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
     #+end_src
     #+begin_quote Answer
     It is the number of matrix elements (stored linearly) times the
-    byte length.
+    byte length. In the case of N = 4, M = 3 that is 4 * 3 * 4 = 48.
     #+end_quote
 
   - Storing a matrix:
@@ -543,6 +543,12 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
       }
     #+end_src
 
+    #+RESULTS: matrixLoop
+    :  1  2  3
+    :  4  5  6
+    :  7  8  9
+    : 10 11 12
+
   - The length of the row vectors:
     #+begin_src C :noweb yes
       <<2x3matrix>>
@@ -550,6 +556,11 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
       printf("%d\n", sizeof(C)/sizeof(C[0][0])); // size of row
       printf("%d\n", sizeof(C)/sizeof(C[0][0])*M/N); // size of column
     #+end_src
+
+    #+RESULTS:
+    : 48
+    : 12
+    : 16
 
 * Let's practice!
 
