@@ -1,0 +1,53 @@
+#+title: cc-practice-continue
+#+author: Marcus Birkenkrahe [pledged]
+#+startup: overview hideblocks indent
+#+property: header-args:C :main yes :includes <stdio.h> :exports both :noweb yes
+* Example: summing up numbers.
+
+The loop terminates when 10 non-zero numbers have been read. Whenever
+the number ~0~ is read, ~continue~ is executed, the rest of the loop body
+is skipped, but we're still inside the loop.
+
+Input file:
+#+begin_src bash
+  echo 1 1 1 1 1 1 1 1 0 1 1 > continue
+  cat continue
+#+end_src
+
+#+RESULTS:
+: 1 1 1 1 1 1 1 1 0 1 1
+
+Pseudo code:
+#+begin_example C
+while n smaller than 10
+  get input i           // scanf
+  if input is 0 go back // continue
+  else add input to sum // sum += i
+  increment n           // n++
+print sum               // printf
+#+end_example
+
+Code:
+#+name: pgm:continue
+#+begin_src C :cmdline < continue
+  int n=0, sum = 0;
+  int i;
+
+  while ( n < 10 ) {
+    scanf("%d", &i);
+    if ( i == 0 )
+      continue;
+    sum += i;
+    n++;
+    /* continue jumps to here */
+   }
+  printf("sum is %d\n", sum);
+#+end_src
+
+#+RESULTS:
+: sum is 10
+* Problem
+
+Change the code in [[pgm:continue]] so that you do not use ~continue~ but
+still get the desired result.
+

@@ -155,8 +155,8 @@
   stopped manually (~C-g~).
   #+name: inf
   #+begin_src C :tangle ../src/inf.c
-    while (1)
-      puts("Still running...\n");
+//    while (1)
+  //    puts("Still running...\n");
   #+end_src
 
 - Tangle it, compile and run ~inf.c~ on the CMD line.
@@ -995,7 +995,6 @@ accordingly, from: ~tinyurl.com/475m5x4n~
    : T minus 1 and counting
 
 3) Summing numbers (convert ~do while~ to ~for~):
-
 
 
 * References
