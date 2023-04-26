@@ -24,13 +24,14 @@
   *vectors*. In the R code below,a vector ~v~ is defined and printed:
   #+name: Rvec
   #+begin_src R
-    v <- c(1,2,3)  ## create a vector of three numbers
+    c(1,2,3) -> v ## create a vector of three numbers
     v
   #+end_src
+
 - In C there are two *aggregate* stuctures that can store /collections/
   of values: *arrays* and *structures*.
 
-- A *structure* is a forerunners of a class, a concept that becomes
+- A *structure* is a forerunners of a /class/, a concept that becomes
   central in C++. Classes contain objects and their properties.
 
 - Different programming languages have different data structures. The
@@ -48,6 +49,9 @@
     print(thisDict)
   #+end_src
 
+  #+RESULTS: PyDict
+  : {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+
 - Example with R: a /data frame/ of tooth growth data, consisting of
   three different vectors of the same length but different data
   types.
@@ -55,6 +59,12 @@
   #+begin_src R
     str(ToothGrowth)
   #+end_src
+
+  #+RESULTS: Rdf
+  : 'data.frame':	60 obs. of  3 variables:
+  :  $ len : num  4.2 11.5 7.3 5.8 6.4 10 11.2 11.2 5.2 7 ...
+  :  $ supp: Factor w/ 2 levels "OJ","VC": 2 2 2 2 2 2 2 2 2 2 ...
+  :  $ dose: num  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 ...
 
 * What is an array?
 
@@ -84,7 +94,7 @@
   variable of type T:
   #+name: ex:oneDimArrays
   #+begin_example C
-    for ( int i = 0; i < N; i++ )
+    for ( int i = 0; i < N; i++ ) 
       a[i] = 0;                    /* clears a */
 
     for ( int i = 0; i < N; i++ )
@@ -105,6 +115,11 @@
     printf("a[0] = %d\na[9] = %d\n",
            a[1], a[9]);  // print two array elements
   #+end_src
+
+  #+RESULTS: pgm:arrayDef
+  : a[0] = 0
+  : a[9] = 0
+
 - The array must be initialized, just like any scalar variable, to
   be of use to us (otherwise strange values may appear).
 
@@ -112,7 +127,7 @@
   #+begin_src C :results silent
     int int_array[5] = {1,2,3,4,5};  // initialize with integers
     double double_array[] = {2.1, 2.3, 2.4, 2.5}; // initialize with floats
-    char char_arrray[] = {'h','e','l','l','o','\0'}; // initialize with chars
+    char char_array[] = {'h','e','l','l','o','\0'}; // initialize with chars
   #+end_src
   This is how ~char_array~ looks like (the last character ~\0~ is only a
   terminating character):
@@ -140,9 +155,10 @@
   #+attr_html: :width 600px
   #+caption: Indexing of an 1-dim array 'a' (Source: King)
   [[../img/index.png]]
+
 - Index expressions ~a[i]~ can be used like other variables:
   #+begin_src C
-    int a[10];  // declare array
+    int a[10];  // declare array 
 
     a[0] = 1;   // assign value to array element
     a[5] = 2 * 2; // assign operation result to array element
@@ -151,6 +167,12 @@
     printf("%d\n", a[5] - 4); // subtracts 4 from 4
     printf("%d\n", ++a[0]); // ++a[0] => a[0] + 1
   #+end_src
+
+  #+RESULTS:
+  : 4
+  : 0
+  : 2
+
 * Array subscripting side effects
 ** C is too permissive
 

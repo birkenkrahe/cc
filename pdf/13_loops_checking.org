@@ -1,0 +1,111 @@
+* Extended example: balancing a checkbook
+
+- Let's develop a program that maintains a checkbook balance.
+  
+- The program will offer the user a menu of choices:
+  1) clear the account balance
+  2) credit money to the account
+  3) debit money from the account
+  4) display the current balance
+  5) exit the program
+
+- These choices are represented by integers 0,1,2,3,4 resp. which are
+  implemented as ~switch~ ~case~ labels.
+
+- Here is a sample program session:
+
+  #+name: ex:checkbook
+  #+begin_example 
+    pi@raspberrypi:~$ ./checking
+    --- ACME checkbook-balancing program ---
+    Commands: 0=clear, 1=credit, 2=debit, 3=balance, 4=exit
+
+    Enter command: 3
+    Current balance: $0.00
+    Enter command: 1
+    Enter amount of credit: 100.00
+    Enter command: 3
+    Current balance: $100.00
+    Enter command: 2
+    Enter amount of debit: 50.00
+    Enter command: 3
+    Current balance: $50.00
+    Enter command: 4
+    pi@raspberrypi:~$
+    #+end_example
+
+  When the user enters the command ~4~ (exit), the program needs to exit
+  from the ~switch~ statement /and/ the surrounding loop: the ~break~
+  statement won't help, and we prefer not to use a ~goto~
+  statement. Instead, the program executes a ~return~ statement, which
+  will cause the ~main~ function to return to the operating system.
+  
+- Pseudo code:
+
+  #+name: pseudoCheckbook
+  #+begin_example C
+  for ever until exit (4)
+      Get input cmd (0...4)
+      cmd = 0:
+        clear balance
+      cmd = 1:
+        get credit amount
+        credit amount to balance
+      cmd = 2:
+        get debit amount
+        subtract amount from balance
+      cmd = 3:
+        print current balance
+      cmd = 4:
+        end program
+  #+end_example
+
+- Because the session interactivity is essential, we tangle the file
+  ~checking.c~, compile and run it on the command line.
+
+  #+name: pgm:checkbook
+  #+begin_src C :tangle checking.c :comments none
+    /* Balances a checkbook */
+    #include <stdio.h>
+
+    int main(void)
+    {
+      int cmd; // user choice 0...4
+      float balance = 0.0f, credit, debit;
+
+      // User instructions
+      printf("*** ACME checkbook-balancing program ***\n");
+      printf("Commands: 0=clear, 1=credit, 2=debit, ");
+      printf("3=balance, 4=exit\n\n");
+
+      for(;;) {  // do this forever until exit=4
+        printf("Enter command: ");
+        scanf("%d", &cmd);
+        switch (cmd) { 
+        case 0:            // clear balance
+          balance = 0.0f;
+          break;
+        case 1:            // credit amount
+          printf("Enter amount of credit: ");
+          scanf("%f", &credit);
+          balance += credit;
+          break;
+        case 2:            // debit amount
+          printf("Enter amount of debit: ");
+          scanf("%f", &debit);
+          balance -= debit;
+          break;
+        case 3:          // print balance
+          printf("Current balance: $%.2f\n", balance);
+          break;
+        case 4:
+          return 0;
+        default:
+          printf("Commands: 0=clear, 1=credit, 2=debit, ");
+          printf("3=balance, 4=exit\n\n");
+          break;
+        }
+      }
+    }
+  #+end_src
+

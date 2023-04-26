@@ -1307,10 +1307,10 @@ We've touched upon every one of these areas: not too shabby!
 
 - Test 7 is live now - for full points, complete it by Fri, April 28
 
-- PDF copies of all practice files will be online in GitHub today: if
-  you want to complete them for partial credit, work through the PDFs.
+- PDF copies of all practice files are now online in GitHub: if you
+  want to complete them for partial credit, work through the PDFs.
 
-  | DAY       | TOPIC              | MOTTO               |
+  | DAY       | TOPIC              | CODE NAME           |
   |-----------+--------------------+---------------------|
   | Monday    | Arrays             | Freedom of flight   |
   | Wednesday | Functions          | Dancing with tigers |
@@ -1318,14 +1318,16 @@ We've touched upon every one of these areas: not too shabby!
   | Monday    | C++                | DoublePlusGood      |
   | Wednesday | Final exam preview | Pull-ups            |
 
-* TODO Test 7 preview - loop loop loop
+* DONE Test 7 preview - loop at your leisure
 
 The penultimate test deals exclusively with loops!
 
 1) Which loops do you know that go on indefinitely?
    #+begin_example C
      while(1000);
-     while(i > 1); { int i = 1; i++; }
+     while(i > 1); {
+       int i = 1; i++; // starts at 1, goes to 2,3,4,.... < 1
+     }
      do { /* whatever */ } while(1);
      for (;;;) { /* whatever */ }
    #+end_example
@@ -1381,6 +1383,9 @@ The penultimate test deals exclusively with loops!
      for (int i = 1; i == 5; i++);
      i++;
    #+end_src
+
+   #+RESULTS:
+
    The error message:
    #+begin_example Compilation
    In function 'main':
@@ -1395,7 +1400,7 @@ The penultimate test deals exclusively with loops!
    #+end_src
 7) Which ~for~ loop counts down from ~n-1~ to ~0~?
    #+begin_src C
-     int i, n = 10;
+     int i, n = 5;
      for(i = n - 1; i >= 0; i--) {
        printf("%d\n", i);
       }
@@ -1417,13 +1422,18 @@ The penultimate test deals exclusively with loops!
 8) Will this program compile?
    #+begin_src C :results silent
      int i=0;
-     do /* do nothing */ while(i==1);
+     do { /* do nothing */} while(i==1);
    #+end_src
    
 * TODO Review of arrays - freedom of flight
 #+attr_latex: :width 400px
 #+caption: Carter Buton early flight pioneer (flickr.com)
 [[../img/arrays.jpg]]
+
+1) 
+
+
+1)
 
 * TODO Review of functions - dancing with tigers
 #+attr_latex: :width 400px
