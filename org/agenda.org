@@ -1425,13 +1425,12 @@ The penultimate test deals exclusively with loops!
      do { /* do nothing */} while(i==1);
    #+end_src
    
-
-* TODO SURVEY - BONUS POINTS! DO IT NOW! PAYBACK TIME!
+* DONE SURVEY - BONUS POINTS! DO IT NOW! PAYBACK TIME!
 #+attr_latex: :width 400px
 #+caption: Current course evaluation status
 [[../img/eval.png]]
 
-* TODO Last (bonus) assignments (practice files)
+* DONE Last (bonus) assignments (practice files)
 
 - Arrays practice: [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/14_arrays_practice.org][problems]] / [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/14_arrays_practice.pdf][solutions]]
 - Functions practice: [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/15_functions_practice.org][problems]] / [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/15_functions.pdf][solutions]]
@@ -1489,7 +1488,6 @@ on Monday) with questions on arrays, functions and pointers!
    : 30
    : 20
    : 10
-
 
 * TODO Review of functions - dancing with tigers
 #+attr_latex: :width 400px
