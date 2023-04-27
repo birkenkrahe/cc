@@ -1469,6 +1469,9 @@ on Monday) with questions on arrays, functions and pointers!
      printf("%d %d %d %d\n", a[0], a[1], a[2], a[3]);
    #+end_src
 
+   #+RESULTS:
+   : 100 200 300 400
+
 4) If ~a[0] = 2~ what is ~--a[0]~?
    #+begin_quote
    --a[0] is a[0] = a[0] - 1 => --a[0] puts 2-1 = 1 into a[0]
@@ -1481,6 +1484,11 @@ on Monday) with questions on arrays, functions and pointers!
        printf("%d\n", a[i]);
        }
    #+end_src   
+
+   #+RESULTS:
+   : 30
+   : 20
+   : 10
 
 
 * TODO Review of functions - dancing with tigers
