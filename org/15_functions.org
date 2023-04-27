@@ -20,7 +20,7 @@
 
 - C functions don't need to have arguments (e.g. ~main(void)~)
 
-- C functions need not compute a value (e.g. ~void hello()~)
+- C functions need not compute a value (e.g. ~void hello(void)~)
 
 - Each function is a small program with its own declarations and
   statements
@@ -33,7 +33,7 @@
 - Once upon a time, programs didn't use to have functions!
   #+attr_latex: :width 400px
   #+caption: BASIC program snippet (Source: Collingbourne, 2022).
-  [[../img/15_basic.png]]
+  _[[../img/15_basic.png]]
 
 * Example: ~hello_world~ function: mostly ~void~
 
@@ -51,6 +51,11 @@
     hello_world();
   #+end_src
 
+  #+RESULTS: pgm:hello_world
+  : Hello world
+  : Hello world
+  : Hello world
+  
 - function is doubly ~void~: no return value, no argument
 
 - function code can be reused elsewhere
@@ -71,6 +76,7 @@
 
   #+begin_src C
     #include <stdio.h>
+    #include <math.h>
 
     int main(void)
     {
@@ -80,6 +86,9 @@
       return 0;
     }
   #+end_src
+
+  #+RESULTS:
+  : 1
 
   Answer:
   #+begin_quote
@@ -106,8 +115,8 @@
 
 - Here, ~double~ is /return type/ and /argument data type/.
 
-- ~a~ and ~b~ are /function parameters/ - their values are supplied when
-  the function is called
+- ~a~ and ~b~ are /function parameters/ or /arguments/ - their values are
+  supplied when the function is called
 
 - The /function body/ is the executable part, enclosed in ~{...}~
 
@@ -140,6 +149,9 @@
   printf("Average of %g and %g: %g\n", 5.1, 8.9, avg);
 #+end_src
 
+#+RESULTS: simpleCall
+: Average of 5.1 and 8.9: 7
+
 *** Call with expressions
 
 - Functions can have expressions as arguments.
@@ -158,6 +170,9 @@
     // function call inside function
     printf("Average of %g/2 and %g/2: %g\n", x, y, avg2);
   #+end_src
+
+  #+RESULTS: exprCall
+  : Average of 5.1/2 and 8.9/2: 3.5
 
 *** Call by other functions
 - Functions can be called by other functions.
@@ -232,6 +247,8 @@
     }
   #+end_src
 
+  #+RESULTS:
+  
 - Important: the definition of ~average~ needs to be put *before* ~main~ -
   otherwise the function needs to be declared.
 

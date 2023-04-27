@@ -366,14 +366,14 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
 - The first two problems can be solved with what you've already heard
   (one-dimensional arrays).
 
-* NEXT Multi-dimensional arrays
+* Multi-dimensional arrays
 
 - An array may have any number of dimensions.
 
 - Example: the following array declares a 5 x 9 matrix of 5 rows and
   9 columns.
   #+begin_src C :results silent
-    int m[5][9];
+    int m[5][9]; // This goes from m[0][0] to m[4][8]
   #+end_src
   #+attr_html: :width 500px
   #+name: matrix
@@ -413,8 +413,8 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
   #+begin_src C 
     #define N 5
 
-    double ident[N][N];
-    int row, col;
+    double ident[N][N];   // matrix dimension is N * N
+    int row, col;         // loop indices for row and column
 
     for (row = 0; row < N; row++)
       {
@@ -431,12 +431,25 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
       }
   #+end_src
 
+  #+RESULTS: identityMatrix
+  : 1 0 0 0 0 
+  : 0 1 0 0 0 
+  : 0 0 1 0 0 
+  : 0 0 0 1 0 
+  : 0 0 0 0 1 
+
 - By comparison, this is how easy it is to declare, create and print
   an identity matrix in a language that is built for math
   manipulation, R:
   #+begin_src R
     diag(5)
+#    diag
   #+end_src
+
+  #+RESULTS:
+  :      [,1] [,2]
+  : [1,]    1    0
+  : [2,]    0    1
 
 - To initialize an array, you can use brackets as in the 1-dim case,
   but for each dimension, you need a new set of ~[ ]~.
@@ -454,6 +467,11 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
       printf("\n");
      }
   #+end_src
+
+  #+RESULTS: initArray
+  : 1 2 3 
+  : 4 5 6 
+  : 7 8 9 
 
 - By comparison, in R this looks like:
   #+begin_src R
@@ -477,10 +495,21 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
      }
   #+end_src
 
+  #+RESULTS:
+  : 1 4 7 
+  : 2 5 8 
+  : 3 6 9 
+
 - In R, that's the default, so the command is even shorter:
   #+begin_src R
     (matrix(1:9,3))
   #+end_src  
+
+  #+RESULTS:
+  :      [,1] [,2] [,3]
+  : [1,]    1    4    7
+  : [2,]    2    5    8
+  : [3,]    3    6    9
   
 * The size of arrays
 
@@ -493,9 +522,12 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
   prints its size in bytes.
   #+name: sizeof
   #+begin_src C :tangle sizeof.c
-    int a[10] = {0};  // initialize all array elements with 0
+    int a[100000] = {0};  // initialize all array elements with 0
     printf("%d", sizeof(a)); 
   #+end_src
+
+  #+RESULTS: sizeof
+  : 400000
 
 - You can use the operator also to measure the size of an array:
   dividing the array size by the element size gives you the length of
@@ -504,6 +536,9 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
     int a[10] = {0};
     printf("%d", sizeof(a)/sizeof(a[0])); // prints length of array a
   #+end_src
+
+  #+RESULTS:
+  : 10
 
 - You can use this last fact to write a ~for~ loop that goes over the
   whole /length/ of an array - then the array does not have to be
@@ -518,6 +553,10 @@ memory, then ~i~ will be reset to ~0~, causing the loop to start over!
       int B[3][3] = {0};
       printf("%d", sizeof(B));
     #+end_src
+
+    #+RESULTS: sizeof1
+    : 36
+
     #+begin_quote Answer
     It is the number of matrix elements (stored linearly) times the
     byte length. In the case of N = 4, M = 3 that is 4 * 3 * 4 = 48.
