@@ -16,16 +16,26 @@
 
 * Overview
 
+- Remember the fundamental architectural problem of the "von Neumann" architecture of digital computers.
+  #+caption: Computer architecture (simplified)
+  #+attr_latex: :width 400px
+  [[../img/1_computer.png]]
+
+- Imagine: CPU=brain, Memory=house, Harddisk=moon
+
 - Computer memory is like a list of /locations/
+  #+caption: Sample data stored in an imaginary memory stack
+  #+attr_latex: :width 400px
+  [[../img/memory.png]]
 
 - Each chunk of memory has an /address/ to a location
 
 - /Pointers/ point to these addresses
   #+attr_latex: :width 300px
-  #+caption: pointer p points to address of i
+  #+caption: A pointer p points to address of i
   [[../img/16_pointer.png]]
 
-- The /address/ is not the house, it's a /reference/
+- The /address/ is not the house, it's a /reference/ to the house:
   #+attr_html: :width 300px
   #+caption: envelope = pointer to an address
   [[../img/16_letter.png]]
@@ -39,7 +49,7 @@
 
 - Examples:
   - *String manipulation* (working with text - e.g. when creating
-    fast-performing chat bots or AI agents)
+    fast-performing chat bots or AI agents[fn:1]
   - *Dynamic memory allocation* - the process of assigning memory
     during the execution time (when a program typically competes
     with thousands of other processes)
@@ -131,38 +141,33 @@
 
 * ~*~ and ~&~ are inverse to one another
 
-- Address and indirection operator are /inverse/ to one another
-  (i.e. they reverse each other's operation - applying both amounts
-  to doing nothing).
+  - Address and indirection operator are /inverse/ to one another
+    (i.e. they reverse each other's operation - applying both amounts
+    to doing nothing).
 
-- Applying indirection ~*~ to an address /dereferences/ it.
+  - Applying indirection ~*~ to an address /dereferences/ it.
 
-- Applying referencing ~&~ to a pointer extracts its address.
+  - Applying referencing ~&~ to a pointer extracts its address.
 
-  #+name: inverseOps
-  #+begin_src C
-    int iResult = 75, *myPointer = &iResult;
-    // declaring and initializing
+    #+name: inverseOps
+    #+begin_src C
+      // declaring and initializing
+      int iResult = 75, *myPointer = &iResult;
+      // print variable and dereferenced pointer
+      printf("iResult = %d => *&iResult = %d\n",
+             iResult, *&iResult);
+      // print pointer and address of pointer
+      printf("myPointer = %p => &*myPointer = %p\n",
+             myPointer, &*myPointer);
+    #+end_src
 
-    // print variable and dereferenced pointer
-    printf("iResult = %d => *&iResult = %d\n",
-           iResult, *&iResult);
-    // print pointer and address of pointer
-    printf("myPointer = %p => &*myPointer = %p\n",
-           myPointer, &*myPointer);
-  #+end_src
+  - Applying ~*~ to the pointer takes us back to the original variable
+    (dereferences the pointer)
+    #+begin_example C
+      j = *&i  // same as j = i
+    #+end_example
 
-  #+RESULTS: inverseOps
-  : iResult = 75 => *&iResult = 75
-  : myPointer = 0xbe932178 => &*myPointer = 0xbe932178
-
-- Applying ~*~ to the pointer takes us back to the original variable
-  (dereferences the pointer)
-  #+begin_example C
-    j = *&i  // same as j = i
-  #+end_example
-
-* Pointers  must be initialized
+* Pointers must be initialized
 
 - Non-initialized pointers lead to invalid data or expressions.
 
@@ -195,7 +200,7 @@
     int *iPtr; // declare pointer iPtr
 
     iPtr = &i;   // wrong because the pointer needs an address
-    ,*iPtr = 7;   // wrong because the pointer needs to look like one
+    *iPtr = 7;   // wrong because the pointer needs to look like one
   #+end_src
 
 - Solution:
@@ -204,7 +209,7 @@
     int *iPtr;
 
     iPtr = &i;   // pointer initialized with memory address
-    ,*iPtr = 7;   // value of i indirectly changed
+    *iPtr = 7;   // value of i indirectly changed
 
     printf("%p %p %d\n", iPtr, &i, i);
   #+end_src
@@ -227,3 +232,11 @@
   [[http://knking.com/books/c2/][URL: knking.com]].
 - Orgmode.org (n.d.). 16 Working with Source Code [website]. [[https://orgmode.org/manual/Working-with-Source-Code.html][URL:
   orgmode.org]]
+
+* Footnotes
+
+[fn:1]To recall: GPT-4, the most recent Large Language Model by
+OpenAI, was trained on 45 Gigabytes of training data, or 100 trillion
+parameters (aka words - ) - it took 1024 dedicated GPUs (powerful CPUs)
+over 34 days and cost $4.6M to train the model.
+[[../img/gpt.png]]
