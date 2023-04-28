@@ -15,14 +15,15 @@
 
 * TODO Indirection operator ~*~ 
 
-Put the code from this diagram into the code block below and run it
+Put the code [[https://github.com/birkenkrahe/cc/blob/piHome/img/16_indirection.png][from this diagram]] into the code block below and run it
 to confirm the claims.
   - Make sure you declare your variables!
   - Comment your code to indicate you know what you're doing
 
-    #+attr_html: :width 500px
-    #+caption: indirection operator (Source: King)
-    [[indirection.png]]
+#+begin_src C
+  /* demonstrate pointer arithmetic */
+  
+#+end_src    
 
 * TODO Initializing pointers
 
