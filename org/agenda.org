@@ -1298,15 +1298,13 @@ We've touched upon every one of these areas: not too shabby!
     printf("T minus %d and counting\n", i);
     }
   #+end_example
-* NEXT Week 15 - Arrays, Functions and Pointers
+* IN PROGRESS Week 15 - Arrays, Functions and Pointers
 #+attr_latex: :width 400px
 #+caption: Carter Buton early flight pioneer (flickr.com)
 [[../img/overload.jpg]]
 
 - Only five more sessions left! 
-
 - Test 7 is live now - for full points, complete it by Fri, April 28
-
 - PDF copies of all practice files are now online in GitHub: if you
   want to complete them for partial credit, work through the PDFs.
 
@@ -1427,16 +1425,23 @@ The penultimate test deals exclusively with loops!
    
 * DONE SURVEY - BONUS POINTS! DO IT NOW! PAYBACK TIME!
 #+attr_latex: :width 400px
-#+caption: Current course evaluation status
+#+caption: Current course evaluation status Apr 26
 [[../img/eval.png]]
 
+#+attr_latex: :width 400px
+#+caption: Current course evaluation status Apr 28
+[[../img/eval1.png]]
+
 * DONE Last (bonus) assignments (practice files)
+#+attr_latex: :width 400px
+#+caption: Current course evaluation status
+[[../img/practice1.jpg]]
 
 - Arrays practice: [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/14_arrays_practice.org][problems]] / [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/14_arrays_practice.pdf][solutions]]
 - Functions practice: [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/15_functions_practice.org][problems]] / [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/15_functions.pdf][solutions]]
 - Pointers practice: [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/16_pointers_practice.org][problems]] / [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/16_pointers_practice.pdf][solutions]]
 
-* TODO Review of arrays - freedom of flight
+* DONE Review of arrays - freedom of flight
 #+attr_latex: :width 400px
 #+caption: Carter Buton early flight pioneer (flickr.com)
 [[../img/arrays.jpg]]
@@ -1494,10 +1499,45 @@ on Monday) with questions on arrays, functions and pointers!
 #+caption: Myrtle Beach Safari program (Flickr.com)
 [[../img/function.jpg]]
 
-* TODO Review of pointers - the old reliable 
-#+attr_latex: :width 400px
-#+caption: Roadside stand near Birmingham, AL (LOC@flickr.com)
-[[../img/pointer.jpg]]
+1) How many dimensions can an array have?
+   #+begin_quote
+   An array can have any number of dimensions.
+   #+end_quote
+
+2) How many dimensions does ~a[2][2][2][2]~ have?
+
+3) ~x[]~ is an array. What is ~sizeof(x)/sizeof(x[0])~?
+   #+begin_quote
+   The length of ~x~ - the number of its elements starting with ~x[0]~.
+   #+end_quote
+
+4) What's the size of the array ~a[2][2][2][2]~?
+   #+begin_src C
+     int a[2][2][2][2];
+     printf("%d\n",sizeof(a));
+   #+end_src
+
+5) How does the computer store ~a[2][2][2][2]~?
+   #+begin_quote
+   N-dimensional arrays are not stored in N but in 1 dimension.
+   #+end_quote
+
+6) Which value of ~m~ does ~m[9999][1]~ refer to?
+   #+begin_quote
+   The value stored in the matrix element in row 9999 and column 1.
+   #+end_quote
+
+7) In C, can you call a function from inside another function?
+   #+begin_quote
+   Yes! Every user-defined function is called from within ~main~. 
+   #+end_quote
+
+8) Do you need to define (= create) a mathematical function like ~log~
+   #+begin_quote
+   No, you only need to declare it - in the case of ~log~ with the
+   declaration ~#include <math.h>~ that makes constants (like ~pi~) and
+   functions (like ~log~) available to you.
+   #+end_quote
 * TODO Week 16 - C++ and final exam test
 #+attr_latex: :width 400px
 #+caption: From the film version of Orwell's "1984"
@@ -1505,6 +1545,10 @@ on Monday) with questions on arrays, functions and pointers!
 
 - [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: whaddayaknow?
 
+* TODO Review of pointers - the old reliable 
+#+attr_latex: :width 400px
+#+caption: Roadside stand near Birmingham, AL (LOC@flickr.com)
+[[../img/pointer.jpg]]
 * TODO Final exam preview
 #+attr_latex: :width 400px
 #+caption: Bodybuilder Gene Jantzen with wife Pat and 11-month old son Kent
