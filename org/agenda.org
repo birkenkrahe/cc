@@ -1245,7 +1245,7 @@ We've touched upon every one of these areas: not too shabby!
       }
    #+end_src
    Reversely, the statement ~if (j=0)~ always fails.
-   
+
 6) What is the purpose of ~break~ in a ~switch~ statement?
    #+begin_quote
    When ~break~ is executed, the ~switch~ statement (between the ~{...}~) is
@@ -1303,7 +1303,7 @@ o* Week 15 - Arrays, Functions and Pointers
 #+caption: Carter Buton early flight pioneer (flickr.com)
 [[../img/overload.jpg]]
 
-- Only five more sessions left! 
+- Only five more sessions left!
 - Test 7 is live now - for full points, complete it by Fri, April 28
 - PDF copies of all practice files are now online in GitHub: if you
   want to complete them for partial credit, work through the PDFs.
@@ -1353,13 +1353,13 @@ The penultimate test deals exclusively with loops!
    #+end_src
 
    #+RESULTS:
-   : 100 99 98 97 96 
+   : 100 99 98 97 96
 4) Which of the following statements is *not* equivalent to the other
    two? (Assuming that the loop bodies are identical.)
    #+begin_example C
-     for (k = 0; k == 100; k++) ...  
-     for (k = 0; k == 100; ++k) ...  
-     for (k = 0; k == 100;    ) ...  
+     for (k = 0; k == 100; k++) ...
+     for (k = 0; k == 100; ++k) ...
+     for (k = 0; k == 100;    ) ...
    #+end_example
    #+begin_quote
    The last ~for~ statement is missing an incrementing operator for the
@@ -1422,7 +1422,7 @@ The penultimate test deals exclusively with loops!
      int i=0;
      do { /* do nothing */} while(i==1);
    #+end_src
-   
+
 ** SURVEY - BONUS POINTS! DO IT NOW! PAYBACK TIME!
 #+attr_latex: :width 400px
 #+caption: Current course evaluation status Apr 26
@@ -1453,7 +1453,7 @@ on Monday) with questions on arrays, functions and pointers!
    #+begin_quote
    Answer: a data structure in C that holds values of the same type.
    #+end_quote
-   
+
 2) Examples for arrays in C?
    #+begin_quote
    - Scalars (number, character)
@@ -1465,7 +1465,7 @@ on Monday) with questions on arrays, functions and pointers!
    #+begin_quote
    Array indices begin with 0 so the third element has the index 2.
    #+end_quote
-   
+
 3) How would you declare an integer array of four elements and
    initialize it with four different numbers?
    #+begin_src C
@@ -1487,7 +1487,7 @@ on Monday) with questions on arrays, functions and pointers!
      for (int i = 2; i >= 0; --i) {
        printf("%d\n", a[i]);
        }
-   #+end_src   
+   #+end_src
 
    #+RESULTS:
    : 30
@@ -1532,7 +1532,7 @@ on Monday) with questions on arrays, functions and pointers!
 
 7) In C, can you call a function from inside another function?
    #+begin_quote
-   Yes! Every user-defined function is called from within ~main~. 
+   Yes! Every user-defined function is called from within ~main~.
    #+end_quote
 
 8) Do you need to define (= create) a mathematical function like ~log~
@@ -1543,15 +1543,61 @@ on Monday) with questions on arrays, functions and pointers!
    #+end_quote
 * TODO Week 16 - C++ - Final exam preview
 #+attr_latex: :width 400px
-#+caption: From the film version of Orwell's "1984"
-[[../img/ingsoc.jpg]]
+[[../img/stroustrup.png]]
 
 - *Test 8 is on! 10 questions on arrays and functions in C!*
+
 - [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: write down as many FACTS and/or QUESTIONS as you can!
   #+begin_quote
-  
+    1. Widespread use
+    2. Hard to learn
+    3. Created in 1979 by Bjarne Stroustrup @ATT Bell Labs
+    4. Object-orientation from Simula, performance from C
+    5. C++ = C with classes
+    6. Superset of C (any C program is a valid C++ program)
+    7. Zero overhead abstractions: polymorphism, encapsulation, inheritance
+    8. Used in game engines (Unreal), databases (MySQL), embedded devices (IoT)
+    9. Low-level infrastructure like compilers, virtual machines
+    10. Low-level memory management + high level abstractions (classes, pointers)
+    11. C++ compilers: GCC / LLVM CLANG
+    12. C++ files end in ~.cpp~
+    13. Standard I/O library ~<iostream>~
+    14. Hello world with ~std::cout << "Hello, world!";~
+    15. Get rid of ~std::~ by ~using namespace std;~
+    16. C++ supports Object-Oriented Programming (OOP)
+    17. A class is a blueprint for an object like ~class Human~
+    18. You can make classes private or public
+    19. Classes also have methods like ~Human::walk~
+    20. Overloading is a form of polymorphism
+    21. Constructors and destructors create or destroy objects: ~Human()~, ~~Human()~
+    22. Inheritance helps developers to share logic around programs
+    23. Instantiating a class - for example ~Human jeff~ creates the human object "jeff"
+    24. Smart pointers make sure that only one object can be allocated to memory
+    25. C++ is compiled
   #+end_quote
+  #+begin_src C++ :includes <iostream> :main no
+  #include <iostream>
+  #include <string>
 
+  using namespace std;
+
+  int main() {
+    cout << "Hi Mom!";
+    string hello = "Look at my string!";
+    return 0;
+  }
+#+end_src
+  #+begin_src C :main no
+  #include <stdio.h>
+  int main() {
+    puts("Hi, Mom!");
+    char hello[] = "Look at my string!";
+    return 0;
+  }
+#+end_src
+
+- Lecture time!
+  
 * TODO Final exam preview
 #+attr_latex: :width 400px
 #+caption: Bodybuilder Gene Jantzen with wife Pat and 11-month old son Kent
@@ -1560,7 +1606,7 @@ on Monday) with questions on arrays, functions and pointers!
 * TODO What next? (Further studies/career advice)
 
 
-- 
+-
 
 * References
 
