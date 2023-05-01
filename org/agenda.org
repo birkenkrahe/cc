@@ -1298,7 +1298,7 @@ We've touched upon every one of these areas: not too shabby!
     printf("T minus %d and counting\n", i);
     }
   #+end_example
-* IN PROGRESS Week 15 - Arrays, Functions and Pointers
+o* Week 15 - Arrays, Functions and Pointers
 #+attr_latex: :width 400px
 #+caption: Carter Buton early flight pioneer (flickr.com)
 [[../img/overload.jpg]]
@@ -1316,7 +1316,7 @@ We've touched upon every one of these areas: not too shabby!
   | Monday    | C++                | DoublePlusGood      |
   | Wednesday | Final exam preview | Pull-ups            |
 
-* DONE Test 7 preview - loop at your leisure
+** Test 7 preview - loop at your leisure
 
 The penultimate test deals exclusively with loops!
 
@@ -1423,7 +1423,7 @@ The penultimate test deals exclusively with loops!
      do { /* do nothing */} while(i==1);
    #+end_src
    
-* DONE SURVEY - BONUS POINTS! DO IT NOW! PAYBACK TIME!
+** SURVEY - BONUS POINTS! DO IT NOW! PAYBACK TIME!
 #+attr_latex: :width 400px
 #+caption: Current course evaluation status Apr 26
 [[../img/eval.png]]
@@ -1432,7 +1432,7 @@ The penultimate test deals exclusively with loops!
 #+caption: Current course evaluation status Apr 28
 [[../img/eval1.png]]
 
-* DONE Last (bonus) assignments (practice files)
+** Last (bonus) assignments (practice files)
 #+attr_latex: :width 400px
 #+caption: Current course evaluation status
 [[../img/practice1.jpg]]
@@ -1441,7 +1441,7 @@ The penultimate test deals exclusively with loops!
 - Functions practice: [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/15_functions_practice.org][problems]] / [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/15_functions.pdf][solutions]]
 - Pointers practice: [[https://raw.githubusercontent.com/birkenkrahe/cc/piHome/org/16_pointers_practice.org][problems]] / [[https://github.com/birkenkrahe/cc/blob/piHome/pdf/16_pointers_practice.pdf][solutions]]
 
-* DONE Review of arrays - freedom of flight
+** Review of arrays - freedom of flight
 #+attr_latex: :width 400px
 #+caption: Carter Buton early flight pioneer (flickr.com)
 [[../img/arrays.jpg]]
@@ -1494,7 +1494,7 @@ on Monday) with questions on arrays, functions and pointers!
    : 20
    : 10
 
-* TODO Review of functions - dancing with tigers
+** Review of functions - dancing with tigers
 #+attr_latex: :width 400px
 #+caption: Myrtle Beach Safari program (Flickr.com)
 [[../img/function.jpg]]
@@ -1517,6 +1517,9 @@ on Monday) with questions on arrays, functions and pointers!
      printf("%d\n",sizeof(a));
    #+end_src
 
+   #+RESULTS:
+   : 64
+
 5) How does the computer store ~a[2][2][2][2]~?
    #+begin_quote
    N-dimensional arrays are not stored in N but in 1 dimension.
@@ -1538,23 +1541,27 @@ on Monday) with questions on arrays, functions and pointers!
    declaration ~#include <math.h>~ that makes constants (like ~pi~) and
    functions (like ~log~) available to you.
    #+end_quote
-* TODO Week 16 - C++ and final exam test
+* TODO Week 16 - C++ - Final exam preview
 #+attr_latex: :width 400px
 #+caption: From the film version of Orwell's "1984"
 [[../img/ingsoc.jpg]]
 
-- [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: whaddayaknow?
+- *Test 8 is on! 10 questions on arrays and functions in C!*
+- [[https://youtu.be/MNeX4EGtR5Y][C++ in 100 seconds]]: write down as many FACTS and/or QUESTIONS as you can!
+  #+begin_quote
+  
+  #+end_quote
 
-* TODO Review of pointers - the old reliable 
-#+attr_latex: :width 400px
-#+caption: Roadside stand near Birmingham, AL (LOC@flickr.com)
-[[../img/pointer.jpg]]
 * TODO Final exam preview
 #+attr_latex: :width 400px
 #+caption: Bodybuilder Gene Jantzen with wife Pat and 11-month old son Kent
 [[../img/pullups.jpg]]
 
 * TODO What next? (Further studies/career advice)
+
+
+- 
+
 * References
 
 Bundell (22 Mar 2023). The driving test for driverless cars. Online:
