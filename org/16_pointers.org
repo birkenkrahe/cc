@@ -81,6 +81,11 @@
     printf("a[0] = %p\na[1] = %p\n&a   = %p\n", a[0], a[1], &a);
   #+end_src
 
+  #+RESULTS: ptrprint
+  : a[0] = 0x64
+  : a[1] = 0x3e8
+  : &a   = 0x7ffe20731020
+
 - You already worked with pointers: arguments in the call of ~scanf~
   are /pointers/: without the ~&~, the function would be supplied with
   the /value/ of ~i~, not the /address/. But ~scanf~'s job is to assign a
@@ -124,6 +129,10 @@
            myPointer, *myPointer);
   #+end_src
 
+  #+RESULTS: indirection
+  : iResult = 75 and 'lives' at &iResult = 0x7ffc7600b79c
+  : myPointer = 0x7ffc7600b79c points to iResult = 75
+
 - The figure illustrates these concepts. Can you describe what
   goes on from line to line?
   #+attr_html: :width 500px
@@ -153,13 +162,19 @@
     #+begin_src C
       // declaring and initializing
       int iResult = 75, *myPointer = &iResult;
+
       // print variable and dereferenced pointer
       printf("iResult = %d => *&iResult = %d\n",
              iResult, *&iResult);
+
       // print pointer and address of pointer
       printf("myPointer = %p => &*myPointer = %p\n",
              myPointer, &*myPointer);
     #+end_src
+
+    #+RESULTS: inverseOps
+    : iResult = 75 => *&iResult = 75
+    : myPointer = 0x7fffb301bcdc => &*myPointer = 0x7fffb301bcdc
 
   - Applying ~*~ to the pointer takes us back to the original variable
     (dereferences the pointer)
@@ -192,6 +207,9 @@
     printf("%p %d %p\n", ptr1, ptr2, ptr3);
   #+end_src
 
+  #+RESULTS: ptrInit
+  : 0x7ffe05acd058 0 (nil)
+
 - Here are a few non-valid initializations:
   + can you tell why?
   + can you right the wrongs?
@@ -199,13 +217,13 @@
     int i = 5; // declare and initialize i
     int *iPtr; // declare pointer iPtr
 
-    iPtr = &i;   // wrong because the pointer needs an address
-    *iPtr = 7;   // wrong because the pointer needs to look like one
+    iPtr = &i;   
+    iPtr = 7;   
   #+end_src
 
 - Solution:
   #+begin_src C :results output
-    int i = 5; //
+    int i = 5; 
     int *iPtr;
 
     iPtr = &i;   // pointer initialized with memory address
@@ -213,6 +231,9 @@
 
     printf("%p %p %d\n", iPtr, &i, i);
   #+end_src
+
+  #+RESULTS:
+  : 0x7ffcea7a2cbc 0x7ffcea7a2cbc 7
 
 * Let's practice!
 
