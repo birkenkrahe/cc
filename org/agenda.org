@@ -1566,7 +1566,7 @@ on Monday) with questions on arrays, functions and pointers!
     15. Get rid of ~std::~ by ~using namespace std;~
     16. C++ supports Object-Oriented Programming (OOP)
     17. A class is a blueprint for an object like ~class Human~
-    18. You can make classes private or public
+    18. You can make classes private (hidden) or public (visible)
     19. Classes also have methods like ~Human::walk~
     20. Overloading is a form of polymorphism
     21. Constructors and destructors create or destroy objects: ~Human()~, ~~Human()~
