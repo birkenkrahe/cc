@@ -1541,7 +1541,7 @@ on Monday) with questions on arrays, functions and pointers!
    declaration ~#include <math.h>~ that makes constants (like ~pi~) and
    functions (like ~log~) available to you.
    #+end_quote
-* TODO Week 16 - C++ - Final exam preview
+* Week 16 - C++ - Final exam preview
 #+attr_latex: :width 400px
 [[../img/stroustrup.png]]
 
@@ -1603,10 +1603,63 @@ on Monday) with questions on arrays, functions and pointers!
 #+caption: Bodybuilder Gene Jantzen with wife Pat and 11-month old son Kent
 [[../img/pullups.jpg]]
 
+- What will this program print out?
+  #+begin_src C
+    int i[]={0,0,1,1};
+    printf("%d\n",(i[0] || i[1]) && (i[2] || i[3]));
+    printf("%d\n", i[0] || i[1]  &&  i[2] || i[3]);
+  #+end_src
+
+- What will this program print out?
+  #+begin_src C
+    printf("%d\n",
+           (10 == 10) || -1 + 1 && ('Z'=='Z'));
+  #+end_src
+
+- What will this program print out?
+  #+begin_src C :cmdline < ../src/final
+    int i,j;float x;
+    scanf("%d%d%f",&i,&j,&x);
+    printf("%d %d %f",i,j,x);
+  #+end_src
+
+  #+RESULTS:
+  : 100 1 0.000000
+  
+
 * TODO What next? (Further studies/career advice)
+#+attr_latex: :width 400px
+#+caption: Women spectators at Sydney stadium, 1940
+[[../img/next.jpg]]
 
+- What should you read?
+- What should you study?
+- What should you do with the rest of your life?
 
--
+* Books
+#+attr_latex: :width 300px
+#+caption: C++ for dummies (2023) and The Rook's Guide to C++ (2013)
+[[../img/dummies.jpg]] [[../img/rook.jpg]]
+
+* Courses
+#+attr_latex: :width 400px
+#+caption: NYC women transcribing popular fiction into Braille
+[[../img/course.jpg]]
+
+- [[https://w3schools.com][w3schools.com]]: HTML/CSS, JavaScript, Python, SQL, Java, C++
+- [[https://www.freecodecamp.org/learn/][freeCodeCamp.org]]: Many [[https://www.youtube.com/c/freecodecamp/videos][YouTube courses]] with certifications
+- [[https://datacamp.com][DataCamp.com]]: Python, R, SQL, bash - get access from me
+
+* Careers
+#+attr_latex: :width 400px
+#+caption: Computer or data science career?
+[[../img/data-science-careers.jpg]] [[../img/career1.jpg]]
+
+- Get as many internships as possible
+- Many shorter ones are more useful than one long one
+- Lyon IT services is a great place to start, too
+- Join me for my [[https://github.com/birkenkrahe/org/blob/master/internship.md][internship supervision course]] (CSC/DSC 301/401)
+- Keep your skills current no matter at what level
 
 * References
 
