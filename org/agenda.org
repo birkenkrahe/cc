@@ -1598,7 +1598,7 @@ on Monday) with questions on arrays, functions and pointers!
 
 - Lecture time!
   
-* TODO Final exam preview
+** Final exam preview
 #+attr_latex: :width 400px
 #+caption: Bodybuilder Gene Jantzen with wife Pat and 11-month old son Kent
 [[../img/pullups.jpg]]
@@ -1626,8 +1626,7 @@ on Monday) with questions on arrays, functions and pointers!
   #+RESULTS:
   : 100 1 0.000000
   
-
-* TODO What next? (Further studies/career advice)
+** What next? (Further studies/career advice)
 #+attr_latex: :width 400px
 #+caption: Women spectators at Sydney stadium, 1940
 [[../img/next.jpg]]
@@ -1636,12 +1635,12 @@ on Monday) with questions on arrays, functions and pointers!
 - What should you study?
 - What should you do with the rest of your life?
 
-* Books
+*** Books
 #+attr_latex: :width 300px
 #+caption: C++ for dummies (2023) and The Rook's Guide to C++ (2013)
 [[../img/dummies.jpg]] [[../img/rook.jpg]]
 
-* Courses
+*** Courses
 #+attr_latex: :width 400px
 #+caption: NYC women transcribing popular fiction into Braille
 [[../img/course.jpg]]
@@ -1650,7 +1649,7 @@ on Monday) with questions on arrays, functions and pointers!
 - [[https://www.freecodecamp.org/learn/][freeCodeCamp.org]]: Many [[https://www.youtube.com/c/freecodecamp/videos][YouTube courses]] with certifications
 - [[https://datacamp.com][DataCamp.com]]: Python, R, SQL, bash - get access from me
 
-* Careers
+*** Careers
 #+attr_latex: :width 400px
 #+caption: Computer or data science career?
 [[../img/data-science-careers.jpg]] [[../img/career1.jpg]]
