@@ -32,12 +32,19 @@
     int s = sizeof('a');
     printf("%d\n", s);
   #+end_src
+
+  #+RESULTS: sizeofAinC
+  : 4
+
   #+name: sizeofAinC++
   #+begin_src C++ :includes <iostream> :exports both
     using namespace std;
     int s = sizeof('a');
     cout << s;
   #+end_src
+
+  #+RESULTS: sizeofAinC++
+  : 1
 
 - C++ employs stricter /data type/ checking: the language doesn't quite
   let you get away with as much.
@@ -55,12 +62,20 @@
       return 0;
     }
   #+end_src
+
+  #+RESULTS:
+  : Hello World!
+
 - Org-mode requires the ~C++~ header option and ~.cpp~ file extension,
   otherwise everything is as usual:
   #+name: cpp
   #+begin_src C++ :includes <iostream>
     std::cout << "Hello World!\n";
   #+end_src
+
+  #+RESULTS: cpp
+  : Hello World!
+
 - Similarities and the differences between C and C++[fn:1]:
 
   | C               | C++                  | Difference  |
@@ -198,6 +213,11 @@
     cout << myVariable << endl;
     cout << a;
   #+end_src
+
+  #+RESULTS:
+  : 1
+  : 2.2
+
 - Pipelining console output:
 
   #+begin_src C++ :includes <iostream> :results output :exports both
@@ -205,12 +225,23 @@
 
     cout << "Go Scots! " << "You can do it!" << endl << myVal;
   #+end_src
+
+  #+RESULTS:
+  : Go Scots! You can do it!
+  : 1000
+
 - You can still use ~\n~:
   #+begin_src C++ :includes <iostream> :results output :exports both
     using namespace std; int myVal = 1000;
 
     cout << "Go Scots!\nYou can do it!" << endl << myVal;
   #+end_src
+
+  #+RESULTS:
+  : Go Scots!
+  : You can do it!
+  : 1000
+
 - Formatted print example.
   #+begin_src C++ :includes <iostream> :results output :exports both
     using namespace std;
@@ -222,6 +253,12 @@
     cout << "****************" << endl;
     cout << "Freshmen/juniors" << endl;
   #+end_src
+
+  #+RESULTS:
+  : Lyon
+  :          College
+  : ****************
+  : Freshmen/juniors
 
 ** Input
 
@@ -239,6 +276,10 @@
     cout << "You entered: " << x << endl;
   #+end_src
 
+  #+RESULTS:
+  : Please enter a value for x 
+  : You entered: 1000
+
 - "Exception handling": Checking failed input with ~cin.fail~. This
   time, no input was provided.
   #+begin_src C++ :includes <iostream> :results output :exports both
@@ -254,6 +295,10 @@
         cout << "That is not a valid input" << endl;
       }
   #+end_src
+
+  #+RESULTS:
+  : Please enter a value for x 
+  : That is not a valid input
 
 ** Other differences:
 
@@ -314,6 +359,10 @@ There are slight differences in all areas we've covered:
       printf("%d\n", add(2,2));     // works well
       printf("%g\n", add(2.0,2.0)); // returns 0
     #+end_src
+
+    #+RESULTS: datastructure_example
+    : 4
+    : 1.97626e-323
 
   + Large programs become difficult to understand/maintain/debug
 
