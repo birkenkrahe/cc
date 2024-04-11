@@ -41,21 +41,15 @@
   #+caption: (Free) BPMN 2.0 poster from SAP Signavio
   [[../img/bpmn.png]]
 
-* SAP Signavio
+* Process modeling tool
 
-- [[https://signavio.com][SAP Signavio]] is a state-of-the-art process modeling environment
+- [[https://signavio.com][SAP Signavio]] is a state-of-the-art process modeling tool. It
+  includes process mining and workflow management tools.
 
-- It includes process mining and workflow management tools. The figure
-  [[signavio]] below shows the app dashboard.
+- We're cheap, therefore we'll use bpmn.io, a free online tool to draw
+  process models.
 
-  #+name: signavio
-  #+attr_html: :width 500px
-  #+caption: SAP Signavio dashboard / explorer
-  [[../img/signavio.png]]
-
-- [X] Register in my Signavio workspace if you haven't done it yet
-
-- [X] Use the link in Schoology to register
+- Another good (free) one is mermaid.
 
 * Points to remember
 
@@ -77,30 +71,12 @@
 
 * Let's practice
 
-Download the [raw] Org-mode file ~bpmn.org~ from GitHub:
+- Download the [raw] Org-mode file ~bpmn.org~ from GitHub:
+  [[http://tinyurl.com/bpmn-org][tinyurl.com/bpmn-org]].
 
-#+begin_src bash
-  wget tinyurl.com/58mw8wuc -O bpmn.org -o log
-  file bpmn.org
-#+end_src
+- Start the practice file in class and finish it at home if necessary.
 
-#+RESULTS:
-: bpmn.org: ASCII text
-
-Download the [raw] image file ~battle.png~ from GitHub
-
-#+begin_src bash :results output
-  wget tinyurl.com/2s3f3t9c -O battle.png -o log
-  file battle.png
-#+end_src
-
-#+RESULTS:
-: battle.png: PNG image data, 627 x 367, 8-bit/color RGBA, non-interlaced
-
-The new ~file~ command provides file type information. It should tell
-you that ~bpmn.org~ is a ~text~, and that ~battle.png~ is a ~PNG~ file.
-
-Now open the file ~bpmn.org~ in Emacs.
+- Upload the Zip file with images and Org-mode file to Canvas.
 
 * References
 
